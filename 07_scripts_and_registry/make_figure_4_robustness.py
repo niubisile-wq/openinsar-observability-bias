@@ -186,14 +186,14 @@ def main() -> int:
         fontsize=9.2,
         fontweight="bold",
     )
-    save_pub(fig, "fig3_chao_phraya_robustness_grid")
+    save_pub(fig, "fig4_chao_phraya_robustness_grid")
 
     meta = {
         "input": str(INPUT),
         "output_dir": str(OUTDIR),
         "rows": int(len(df)),
     }
-    (OUTDIR / "fig3_chao_phraya_robustness_grid_meta.json").write_text(
+    (OUTDIR / "fig4_chao_phraya_robustness_grid_meta.json").write_text(
         json.dumps(meta, indent=2, ensure_ascii=False),
         encoding="utf-8",
     )

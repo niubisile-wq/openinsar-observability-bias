@@ -76,8 +76,8 @@ Paragraph 4: What this paper contributes:
 ## Figure-to-section map
 - Fig. 1: problem framing and benchmark boundary
 - Fig. 2: Chao Phraya lead case
-- Fig. 3: robustness screening
-- Fig. 4: exposure translation
+- Fig. 3: exposure translation
+- Fig. 4: robustness screening
 - Fig. 5: controls and transfer
 - Fig. 6: transfer and scope limits
 

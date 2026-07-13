@@ -174,7 +174,7 @@ def main() -> int:
         fontweight="bold",
     )
 
-    save_pub(fig, "fig4_exposure_translation")
+    save_pub(fig, "fig3_exposure_translation")
     meta = {
         "benchmark": str(BENCHMARK),
         "area_summary": str(AREA_SUMMARY),
@@ -182,7 +182,7 @@ def main() -> int:
         "output_dir": str(FIG_DIR),
         "regions": int(len(benchmark)),
     }
-    (FIG_DIR / "fig4_exposure_translation_meta.json").write_text(
+    (FIG_DIR / "fig3_exposure_translation_meta.json").write_text(
         json.dumps(meta, indent=2, ensure_ascii=False),
         encoding="utf-8",
     )

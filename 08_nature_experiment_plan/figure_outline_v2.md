@@ -40,28 +40,7 @@ Conclusion: Transport infrastructure also falls into the hidden-exposure zone.
 Source: `03_exposure_closure/chao_phraya_osm_exposure_censoring/chao_phraya_osm_exposure_censoring_summary.csv`
 Export target: road + railway stacked exposure bars.
 
-## Figure 3. Mechanism and robustness
-### Panel A
-Conclusion: The censoring signal survives reasonable observability thresholds.
-Source: `03_exposure_closure/chao_phraya_robustness_grid/chao_phraya_robustness_grid.csv`
-Export target: threshold x strong-threshold heatmap of odds ratios.
-
-### Panel B
-Conclusion: The signal survives block bootstrap correction for spatial dependence.
-Source: `03_exposure_closure/chao_phraya_robustness_grid/chao_phraya_robustness_grid.md`
-Export target: interval plot for OR and not-majority fractions.
-
-### Panel C
-Conclusion: The result remains robust for moderate and strong deformation thresholds.
-Source: `03_exposure_closure/chao_phraya_robustness_grid/chao_phraya_robustness_grid.csv`
-Export target: line plot of OR vs strong threshold, faceted by observability threshold.
-
-### Panel D
-Conclusion: The robustness check is still a screening model, not a final spatial model.
-Source: `08_nature_experiment_plan/claim_collision_matrix.md`
-Export target: small text callout or boxed note in the figure caption, not a plotted panel.
-
-## Figure 4. Exposure-to-risk translation
+## Figure 3. Exposure-to-risk translation
 ### Panel A
 Conclusion: Visible-only exposure materially undercounts strong-motion exposure.
 Source: `03_exposure_closure/chao_phraya_area_weighted_exposure_censoring/chao_phraya_area_weighted_exposure_summary.csv`
@@ -81,6 +60,27 @@ Export target: dual-axis or paired bar chart for missed population and missed bu
 Conclusion: Roads and rail are a separate infrastructure exposure layer.
 Source: `03_exposure_closure/chao_phraya_osm_exposure_censoring/chao_phraya_osm_exposure_censoring_summary.csv`
 Export target: transport exposure bars with hidden fraction.
+
+## Figure 4. Mechanism and robustness
+### Panel A
+Conclusion: The censoring signal survives reasonable observability thresholds.
+Source: `03_exposure_closure/chao_phraya_robustness_grid/chao_phraya_robustness_grid.csv`
+Export target: threshold x strong-threshold heatmap of odds ratios.
+
+### Panel B
+Conclusion: The signal survives block bootstrap correction for spatial dependence.
+Source: `03_exposure_closure/chao_phraya_robustness_grid/chao_phraya_robustness_grid.md`
+Export target: interval plot for OR and not-majority fractions.
+
+### Panel C
+Conclusion: The result remains robust for moderate and strong deformation thresholds.
+Source: `03_exposure_closure/chao_phraya_robustness_grid/chao_phraya_robustness_grid.csv`
+Export target: line plot of OR vs strong threshold, faceted by observability threshold.
+
+### Panel D
+Conclusion: The robustness check is still a screening model, not a final spatial model.
+Source: `08_nature_experiment_plan/claim_collision_matrix.md`
+Export target: small text callout or boxed note in the figure caption, not a plotted panel.
 
 ## Figure 5. Controls and transfers
 ### Panel A
