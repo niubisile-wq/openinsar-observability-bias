@@ -1,0 +1,41 @@
+{
+  "product": "ACS 2017-2021 block-group population benchmark",
+  "sources": [
+    {
+      "file": "ca_seq0002.zip",
+      "url": "https://www2.census.gov/programs-surveys/acs/summary_file/2021/sequence-based-SF/data/5_year_seq_by_state/California/Tracts_Block_Groups_Only/20215ca0002000.zip",
+      "bytes": 4886309,
+      "sha256": "cd724ee6cdb16278b0e7b957dbc69cef15898ac58405ccf198052c3ab8689766"
+    },
+    {
+      "file": "lookup.xlsx",
+      "url": "https://www2.census.gov/programs-surveys/acs/summary_file/2021/sequence-based-SF/documentation/user_tools/ACS_5yr_Seq_Table_Number_Lookup.xlsx",
+      "bytes": 846790,
+      "sha256": "a204c19546966667fa05c560adc6be93411d569214567790af17f0efc8a1f5bc"
+    },
+    {
+      "file": "mini_geo.xlsx",
+      "url": "https://www2.census.gov/programs-surveys/acs/summary_file/2021/sequence-based-SF/documentation/geography/5_year_Mini_Geo.xlsx",
+      "bytes": 21166174,
+      "sha256": "11f3a072e3902e2f43cc9fd9b59e96d68e5f507fc8cae102e41734de6c576f44"
+    },
+    {
+      "file": "replicate_bg_B01003_06.csv.zip",
+      "url": "https://www2.census.gov/programs-surveys/acs/replicate_estimates/2021/data/5-year/150/B01003_06.csv.zip",
+      "bytes": 4454495,
+      "sha256": "ae1c68c7680fbbbb319b9112fa1e5226db816b16945ebc49bea71000d4a6c333"
+    },
+    {
+      "file": "replicate_table_list.csv",
+      "url": "https://www2.census.gov/programs-surveys/acs/replicate_estimates/2021/documentation/5-year/VRE_TABLE_LIST_2021.csv",
+      "bytes": 8231,
+      "sha256": "772eedce826cdb60de3db4cc9ed4337ffb21cd08aa1c736d303f6eb1c72118d4"
+    },
+    {
+      "file": "tl_2020_06_bg.zip",
+      "url": "https://www2.census.gov/geo/tiger/TIGER2020/BG/tl_2020_06_bg.zip",
+      "bytes": 51862487,
+      "sha256": "4f26c1828b2039ab7a9e9046b0ab65786c0882e1243f71e074246812312d615c"
+    }
+  ]
+}

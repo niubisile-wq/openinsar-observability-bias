@@ -1,0 +1,16 @@
+{
+  "roi": [
+    -119.9,
+    36.6,
+    -119.7,
+    36.85
+  ],
+  "selection": "Fresno fixed geographic rectangle, selected before outcome calculation",
+  "support": "DWR 2026Q1 published actual observation-cell polygons; nonduplicated union",
+  "epoch": "GHSL 2020 compared with published 2015-2026 observation availability; explicit epoch mismatch",
+  "crs": "EPSG:32611",
+  "metric_integration_m": 50,
+  "meaning": "Published observation coverage, not a coherence proxy or interpolated velocity raster",
+  "no_unobserved_velocity_inference": true,
+  "limitation": "No per-cell uncertainty or velocity was obtained from this polygon layer. It validates transferable support geometry/accounting, not independent physical accuracy."
+}

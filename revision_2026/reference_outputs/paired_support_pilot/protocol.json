@@ -1,0 +1,44 @@
+{
+  "status": "exploratory, not integrated into manuscript",
+  "input": "01_当前返修工作区\\InSAR_revision_20260926\\strengthening\\results\\timeseries\\matched_quality.npz",
+  "sha256": "58211202a7c7bec7e82a810a2f01a44d6b288c1a4c2097de92b49f49a4f243a1",
+  "fields": [
+    "matched437_mean_support",
+    "final_quality_mask"
+  ],
+  "scales_m": [
+    250,
+    500,
+    1000,
+    2000
+  ],
+  "integration_m": [
+    50,
+    25,
+    12.5
+  ],
+  "primary_integration_m": 25,
+  "refinement": "Initial 50/25-m check failed at a 250-m half-grid origin (0.055095 pp). All cases retained; refine to 25/12.5 m under the unchanged 0.01-pp gate. See initial_50m_gate_failure.json.",
+  "origins": "four combinations of 0 and half coarse-cell size",
+  "methods": [
+    "uniform_area",
+    "center"
+  ],
+  "reference": "Fixed GHSL allocation on the processing grid; not household truth",
+  "primary_metric": "signed difference in percentage points of fixed total population",
+  "secondary_metrics": [
+    "difference relative to native deficit",
+    "sum absolute cell difference"
+  ],
+  "projection_max_relative_drift": 0.0001,
+  "convergence_max_pp_total": 0.01,
+  "center_rule": "source pixel containing nominal coarse-cell center; zero outside domain",
+  "boundary": "Partial cells retain their included area and population; no full-cell extrapolation",
+  "limitation": "The two support definitions estimate different quantities; neither supplies hidden-motion validation",
+  "dependencies": {
+    "python": "3.10.11",
+    "numpy": "2.2.6",
+    "rasterio": "1.4.4",
+    "scipy": "1.15.3"
+  }
+}

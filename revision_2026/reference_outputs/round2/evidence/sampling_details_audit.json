@@ -1,0 +1,8 @@
+{
+  "temporal_rows": 528,
+  "max_absolute_arithmetic_difference": 3.814697265625e-06,
+  "ranking_rows": 10,
+  "manifest_all_224_ok": true,
+  "year_quarter_rank_groups": 28,
+  "scope": "Temporal and ranking arithmetic independently recomputed from retained pair/block tables; spatial blocks not independently regenerated."
+}

@@ -1,0 +1,7 @@
+See DATA_LICENSES.md for input-specific attribution and terms.
+Author-owned code and aggregate outputs retain CC BY 4.0.
+Bundled GHSL/WorldPop and Census subsets, processed satellite/support/model arrays,
+and the unmodified Springer Nature LaTeX support files retain provider terms.
+Raw LiCSAR/LiCSBAS stacks, original DWR/TRE velocity rasters and observation polygons,
+and the CA-POP source raster are obtained separately from the documented providers.
+The authors do not assert a new license for these third-party materials.

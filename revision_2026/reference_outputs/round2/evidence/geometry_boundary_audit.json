@@ -1,0 +1,40 @@
+{
+  "native": {
+    "pairs": 28,
+    "sampled_pixels": 80,
+    "comparisons": 8960,
+    "max_abs_fraction_difference": 2.9760567121783765e-08,
+    "method": "Retained completed direct-overlap check from this round; continuing boundary calculation after performance optimization"
+  },
+  "allocation": {
+    "comparisons": 32,
+    "maximum_total_difference": 9.313225746154785e-10,
+    "boundary_definition": "Coarse UTM rectangles fully covered by the union of native GHSL domain pixels; geographic boundaries densified at native pixel spacing before projection",
+    "fresh_projection": [
+      {
+        "moment": "A",
+        "max_pixel_difference": 9.094947017729282e-13,
+        "source_total": 15060840963.31184,
+        "metric_total": 15060840963.31186
+      },
+      {
+        "moment": "S",
+        "max_pixel_difference": 9.094947017729282e-13,
+        "source_total": 4703293069.642435,
+        "metric_total": 4703293069.642435
+      },
+      {
+        "moment": "P",
+        "max_pixel_difference": 5.684341886080802e-14,
+        "source_total": 22500616.064821858,
+        "metric_total": 22500616.064821906
+      },
+      {
+        "moment": "H",
+        "max_pixel_difference": 2.842170943040401e-14,
+        "source_total": 19480327.531763554,
+        "metric_total": 19480327.531763576
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "all_twelve_stages_complete": true,
+  "heldout_input_leakage": "No held-out edge occurs in training input directories",
+  "confusion_population_conservation": "pass",
+  "heldout_bin_observation_conservation": "pass",
+  "pooled_residual_reconstruction": "pass",
+  "independently_recomputed_pair_rmse_max_difference_mm": 1.1102230246251565e-16,
+  "upstream_tracked_source_diff": "",
+  "logs": [
+    "results\\timeseries\\logs\\full_11_check_unw.success.json",
+    "results\\timeseries\\logs\\full_12_loop_closure.success.json",
+    "results\\timeseries\\logs\\full_13_sb_inv.success.json",
+    "results\\timeseries\\logs\\full_14_vel_std.success.json",
+    "results\\timeseries\\logs\\full_15_mask_ts.success.json",
+    "results\\timeseries\\logs\\full_16_filt_ts.success.json",
+    "results\\timeseries\\logs\\train_11_check_unw.success.json",
+    "results\\timeseries\\logs\\train_12_loop_closure.success.json",
+    "results\\timeseries\\logs\\train_13_sb_inv.success.json",
+    "results\\timeseries\\logs\\train_14_vel_std.success.json",
+    "results\\timeseries\\logs\\train_15_mask_ts.success.json",
+    "results\\timeseries\\logs\\train_16_filt_ts.success.json"
+  ],
+  "scope": "Implementation and design audit, not external physical accuracy"
+}

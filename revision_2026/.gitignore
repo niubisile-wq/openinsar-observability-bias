@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.venv*/
+reproduction_output/
+core/results/
+followup/results/
+*.aux
+*.log
+*.out
+*.synctex.gz

@@ -1,0 +1,14 @@
+{
+  "command": [
+    "D:\\InSAR_revision_20260926\\strengthening\\.venv_licsbas\\Scripts\\python.exe",
+    "D:\\InSAR_revision_20260926\\strengthening\\licsbas_portable.py",
+    "LiCSBAS16_filt_ts.py",
+    "-t",
+    "D:\\InSAR_revision_20260926\\strengthening\\results\\timeseries\\TS_full",
+    "--n_para",
+    "1"
+  ],
+  "returncode": 0,
+  "seconds": 99.30881118774414,
+  "expected_output": "D:\\InSAR_revision_20260926\\strengthening\\results\\timeseries\\TS_full\\cum_filt.h5"
+}

@@ -1,0 +1,13 @@
+{
+  "command": [
+    "D:\\InSAR_revision_20260926\\strengthening\\.venv_licsbas\\Scripts\\python.exe",
+    "D:\\InSAR_revision_20260926\\strengthening\\licsbas_portable.py",
+    "LiCSBAS15_mask_ts.py",
+    "-t",
+    "D:\\InSAR_revision_20260926\\strengthening\\results\\timeseries\\TS_train",
+    "--noautoadjust"
+  ],
+  "returncode": 0,
+  "seconds": 6.799712419509888,
+  "expected_output": "D:\\InSAR_revision_20260926\\strengthening\\results\\timeseries\\TS_train\\results\\mask"
+}

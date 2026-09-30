@@ -1,0 +1,5 @@
+Author-owned source code and summary outputs: Creative Commons Attribution 4.0 International.
+Copyright 2026 Zixuan Liu and Wei Xiong.
+License: https://creativecommons.org/licenses/by/4.0/legalcode
+This continues the CC-BY-4.0 license identified in the preceding public repository and Zenodo release.
+Third-party data and software are not included and retain their own licenses.

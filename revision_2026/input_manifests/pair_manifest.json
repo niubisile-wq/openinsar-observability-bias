@@ -1,0 +1,254 @@
+[
+  {
+    "pair": "20160120_20160320",
+    "cc": "project_inputs/raw/licsar/20160120_20160320.geo.cc.tif",
+    "unw": "backup_inputs/revision_scientific_reports_v1/inputs_needed/licsar_chao_28_unw/20160120_20160320.geo.unw.tif",
+    "cc_sha256": "4927e9d0c2c14289b6fc0fd856617a1863a0ab5698197a78e1b0830711edf328",
+    "unw_sha256": "3e32c1e152f9a40216a22cd826c6c8019102c48b7c1a72a141601a817e68a812",
+    "fine_file": "20160120_20160320.npz",
+    "fine_sha256": "a7fd558edf2a49fc10258837efacae5f8f1506f3a3a318d9e4bc009b57ce94b9"
+  },
+  {
+    "pair": "20160507_20160519",
+    "cc": "project_inputs/raw/licsar/20160507_20160519.geo.cc.tif",
+    "unw": "backup_inputs/revision_scientific_reports_v1/inputs_needed/licsar_chao_28_unw/20160507_20160519.geo.unw.tif",
+    "cc_sha256": "764886bbbe879324eabd00796fa6ed8fc7a41c06bc50d33b25f290aa0bf9329f",
+    "unw_sha256": "68827b890dc203da5baa9aa82d1a4ac61ea0b52baa16eb63fb65cf915ead7ddb",
+    "fine_file": "20160507_20160519.npz",
+    "fine_sha256": "d144aafdcc29828c9c076dbecbf2834f9c574949f5a8743db3fde4b4507efe81"
+  },
+  {
+    "pair": "20160823_20160928",
+    "cc": "project_inputs/raw/licsar/20160823_20160928.geo.cc.tif",
+    "unw": "backup_inputs/revision_scientific_reports_v1/inputs_needed/licsar_chao_28_unw/20160823_20160928.geo.unw.tif",
+    "cc_sha256": "b6e834c7a2ba4f590b1c021b5d8c8e31bfc1484b160abf66d9094039958c2990",
+    "unw_sha256": "31d05ca8ed49c1749854ae73280e2e1b957bd9e0d699cefe2a8b792dd7e7a937",
+    "fine_file": "20160823_20160928.npz",
+    "fine_sha256": "70b766d6c1c7513acfad1f984fbdfdb70b4848964904709fbc14436f428a6b2d"
+  },
+  {
+    "pair": "20161127_20161221",
+    "cc": "project_inputs/raw/licsar/20161127_20161221.geo.cc.tif",
+    "unw": "backup_inputs/revision_scientific_reports_v1/inputs_needed/licsar_chao_28_unw/20161127_20161221.geo.unw.tif",
+    "cc_sha256": "cbd5587a6721d88b9884f9694b11325929940f195e2d6ce1903e0951a414ff61",
+    "unw_sha256": "6858a5ae1c3b5bb237142db158ee5778eff02dd265bd4d5f2ae88a4cef987c1e",
+    "fine_file": "20161127_20161221.npz",
+    "fine_sha256": "8c1ec1ac98c9aa0fb4df60ffbb25bf49e43eb43090c715c5920885f4c8f5a3df"
+  },
+  {
+    "pair": "20170126_20170327",
+    "cc": "project_inputs/raw/licsar/20170126_20170327.geo.cc.tif",
+    "unw": "backup_inputs/revision_scientific_reports_v1/inputs_needed/licsar_chao_28_unw/20170126_20170327.geo.unw.tif",
+    "cc_sha256": "757c11b314e7a3711ab72fd439a330f498105e24d6e1e177cf2d6f70b0ce0896",
+    "unw_sha256": "906eb65da82aac50025bfb63adb10cd83e78986805bef2059b3b2ecea9c02f12",
+    "fine_file": "20170126_20170327.npz",
+    "fine_sha256": "783579e298a31225bce51dbf750987729b3f661dcc9d32412e6424e2f32c6707"
+  },
+  {
+    "pair": "20170514_20170830",
+    "cc": "project_inputs/raw/licsar/20170514_20170830.geo.cc.tif",
+    "unw": "backup_inputs/revision_scientific_reports_v1/inputs_needed/licsar_chao_28_unw/20170514_20170830.geo.unw.tif",
+    "cc_sha256": "f08a1f7919a541cfe90493b02bb1e859061d2cc516356a3ba86c6698e4df78a9",
+    "unw_sha256": "9569291bb5b84be7c5733c30a9b8beb3570999090863a5bf6f3007eceb5de5ba",
+    "fine_file": "20170514_20170830.npz",
+    "fine_sha256": "6fa8ad85aad4428c7ed9da8b53207a212d138ace8721e7454846448446563632"
+  },
+  {
+    "pair": "20170911_20171017",
+    "cc": "project_inputs/raw/licsar/20170911_20171017.geo.cc.tif",
+    "unw": "backup_inputs/revision_scientific_reports_v1/inputs_needed/licsar_chao_28_unw/20170911_20171017.geo.unw.tif",
+    "cc_sha256": "7075f0339dc2f83a794af1fee2a8fa8490e1e7ceea586e6cf13f375351ac4d69",
+    "unw_sha256": "1dcc1fb71b8279c2a14aac3c27429126c47e4358b5917aa6902b0a31cbe508df",
+    "fine_file": "20170911_20171017.npz",
+    "fine_sha256": "9c9a848a20db762741828464b342e5ed7c25ebad49bd19c14360b387b8a02af3"
+  },
+  {
+    "pair": "20171204_20171216",
+    "cc": "project_inputs/raw/licsar/20171204_20171216.geo.cc.tif",
+    "unw": "backup_inputs/revision_scientific_reports_v1/inputs_needed/licsar_chao_28_unw/20171204_20171216.geo.unw.tif",
+    "cc_sha256": "afbf01b31e345808d68728231e50d56afd9cdcd575880e371670e4a6a25ab7ab",
+    "unw_sha256": "535b4be5ca6c7a4aba238f5c79a050c1ff7b6b4d9fd5b7bcc87aee504a21394f",
+    "fine_file": "20171204_20171216.npz",
+    "fine_sha256": "c245c4662006f91c7fb14e3ecb77fee04653b4427d09d7f86eef6986cd5c23ed"
+  },
+  {
+    "pair": "20180202_20180214",
+    "cc": "project_inputs/raw/licsar/20180202_20180214.geo.cc.tif",
+    "unw": "backup_inputs/revision_scientific_reports_v1/inputs_needed/licsar_chao_28_unw/20180202_20180214.geo.unw.tif",
+    "cc_sha256": "a494cd6cca7bf049339635b6ab7ba06ac8d23ff0fe34d7f67b8459f0de43a845",
+    "unw_sha256": "5d8a4f712b093352a8ae190da268184784fd47049f707819d9209408e42bba02",
+    "fine_file": "20180202_20180214.npz",
+    "fine_sha256": "170c53302827381c65c169b11475a6c8938012844bdf09f0d7d7c53e706ed2d9"
+  },
+  {
+    "pair": "20180608_20190311",
+    "cc": "project_inputs/raw/licsar/20180608_20190311.geo.cc.tif",
+    "unw": "backup_inputs/revision_scientific_reports_v1/inputs_needed/licsar_chao_28_unw/20180608_20190311.geo.unw.tif",
+    "cc_sha256": "143be4550a9c4b6e2831d3cbdd758bc98d57f8370ff3de6161e71113174de09f",
+    "unw_sha256": "07df514bcd1dd4b08f1a159e287039345772ed11e102a74c063449855839e24b",
+    "fine_file": "20180608_20190311.npz",
+    "fine_sha256": "d36b305b366ca3247a810797f6a0e3ca8b19e51eb91296410f5050148b9e20f2"
+  },
+  {
+    "pair": "20180912_20190329",
+    "cc": "project_inputs/raw/licsar/20180912_20190329.geo.cc.tif",
+    "unw": "backup_inputs/revision_scientific_reports_v1/inputs_needed/licsar_chao_28_unw/20180912_20190329.geo.unw.tif",
+    "cc_sha256": "6bef823b6946572d556302fe1bfa79dc07994c66c72a167ebd92f7258734c9bd",
+    "unw_sha256": "59b02aa71a1e5ded293f9a6d8595fa250553279da93c3d340c1c4a5d718d9432",
+    "fine_file": "20180912_20190329.npz",
+    "fine_sha256": "33097869d9dae3d756eac4968d9f76eeaefc87dfc4c7a07fb3e1e6a6fff55af4"
+  },
+  {
+    "pair": "20181217_20190110",
+    "cc": "project_inputs/raw/licsar/20181217_20190110.geo.cc.tif",
+    "unw": "backup_inputs/revision_scientific_reports_v1/inputs_needed/licsar_chao_28_unw/20181217_20190110.geo.unw.tif",
+    "cc_sha256": "329dee4935558788f055e74314ef260bf0a1b5a13225767264712a3a17f7b7a5",
+    "unw_sha256": "5a660103966dcb8290c23619b00fee57b30a369e64ebde0c02448dde77471f0e",
+    "fine_file": "20181217_20190110.npz",
+    "fine_sha256": "eb320057c38098527a6a16d684d111114d3b19fadaf61af2e0cdc33f77636d27"
+  },
+  {
+    "pair": "20190122_20190203",
+    "cc": "project_inputs/raw/licsar/20190122_20190203.geo.cc.tif",
+    "unw": "backup_inputs/revision_scientific_reports_v1/inputs_needed/licsar_chao_28_unw/20190122_20190203.geo.unw.tif",
+    "cc_sha256": "d5ce7d19a9e8c36cd2e78cd33f1c1ba60d15edec45510a4fa34937d6f4999bb0",
+    "unw_sha256": "deaf7a4a90247aca9e9e56c70e373842f0dd6b0f9b88b689d2b2e5e4fa957b34",
+    "fine_file": "20190122_20190203.npz",
+    "fine_sha256": "85efa49224655d50787950880af32e46b7440ff1861a7e53c2dce120a6bf8b1c"
+  },
+  {
+    "pair": "20190428_20190510",
+    "cc": "project_inputs/raw/licsar/20190428_20190510.geo.cc.tif",
+    "unw": "backup_inputs/revision_scientific_reports_v1/inputs_needed/licsar_chao_28_unw/20190428_20190510.geo.unw.tif",
+    "cc_sha256": "f4c8691e725c2c238f062efa2fcde79f6163e8b73fd41770864e6ef8c7b27110",
+    "unw_sha256": "c6d35be53d1e7f0f2734aa4f4f1d46aad0ef796fd6adc2d404d4768342935ced",
+    "fine_file": "20190428_20190510.npz",
+    "fine_sha256": "93f44e0fdb5fcc0a3fb4c072d13dd687271c9fed590a7b3dbb62cace717f2c95"
+  },
+  {
+    "pair": "20190901_20190907",
+    "cc": "project_inputs/raw/licsar/20190901_20190907.geo.cc.tif",
+    "unw": "backup_inputs/revision_scientific_reports_v1/inputs_needed/licsar_chao_28_unw/20190901_20190907.geo.unw.tif",
+    "cc_sha256": "0ceb5f5f3c4707a126df3c282574eaf1477fcb78819872af108cddf1cc8d451a",
+    "unw_sha256": "feeb925c0cc2afdb8f77c086341470d230b10c2d72e932317fde48e805bfaa06",
+    "fine_file": "20190901_20190907.npz",
+    "fine_sha256": "03d9a4cf85c48b5891a375f4844afbf97fc219e34f36ec1f2506ae011598a828"
+  },
+  {
+    "pair": "20191124_20191224",
+    "cc": "project_inputs/raw/licsar/20191124_20191224.geo.cc.tif",
+    "unw": "backup_inputs/revision_scientific_reports_v1/inputs_needed/licsar_chao_28_unw/20191124_20191224.geo.unw.tif",
+    "cc_sha256": "9bc02656e0a44ac7419699f6506c9db68a9e44c83c73329ed80771792d9741da",
+    "unw_sha256": "1ee87c41b6b3fb5a2b4da95ae5a07f222fd9099f8666790941e8e509d3accbfa",
+    "fine_file": "20191124_20191224.npz",
+    "fine_sha256": "bba2a04e0275d08e23917c87a7ae1ac04b43f9c5393243e877cd0e7fea45cccf"
+  },
+  {
+    "pair": "20200105_20200111",
+    "cc": "project_inputs/raw/licsar/20200105_20200111.geo.cc.tif",
+    "unw": "backup_inputs/revision_scientific_reports_v1/inputs_needed/licsar_chao_28_unw/20200105_20200111.geo.unw.tif",
+    "cc_sha256": "345b76070e70197bc7170e984bff1cc0979ffd1b72a8999be20c053381338c22",
+    "unw_sha256": "7e7fa659b8693a9271bb32775587e5ee0fd259fd4fcfc08778bd6730604f56d2",
+    "fine_file": "20200105_20200111.npz",
+    "fine_sha256": "dcfe798a1d1717abe9c1ad07c873879b7be65482234966326681bf21bcc87301"
+  },
+  {
+    "pair": "20200329_20200919",
+    "cc": "project_inputs/raw/licsar/20200329_20200919.geo.cc.tif",
+    "unw": "backup_inputs/revision_scientific_reports_v1/inputs_needed/licsar_chao_28_unw/20200329_20200919.geo.unw.tif",
+    "cc_sha256": "5eed521a8bba93a5599e402e5e37300fc2369a7b0e3cd991adc56c0ed9ad66c2",
+    "unw_sha256": "788932174e71d754f8a07dfe9c91922b855a0b0165ce4e403a6b082b7a81aab3",
+    "fine_file": "20200329_20200919.npz",
+    "fine_sha256": "286feda231da659833e7eebf231a6b6d19fc5866d1075547c9e7f27cd1871fb8"
+  },
+  {
+    "pair": "20200907_20200919",
+    "cc": "project_inputs/raw/licsar/20200907_20200919.geo.cc.tif",
+    "unw": "backup_inputs/revision_scientific_reports_v1/inputs_needed/licsar_chao_28_unw/20200907_20200919.geo.unw.tif",
+    "cc_sha256": "9ba35b92cfe3a84fc175946d21838168d9ac82bb00f27303859e323670daeb3b",
+    "unw_sha256": "9dcf03315885cf9a0017977d33087c56a3e6e545d96c4c47d07d533d512b2852",
+    "fine_file": "20200907_20200919.npz",
+    "fine_sha256": "79cd83c28ab541971ace65406fba0845803156dd7b7a75ef9b021fe53c3a50c7"
+  },
+  {
+    "pair": "20201212_20201218",
+    "cc": "project_inputs/raw/licsar/20201212_20201218.geo.cc.tif",
+    "unw": "backup_inputs/revision_scientific_reports_v1/inputs_needed/licsar_chao_28_unw/20201212_20201218.geo.unw.tif",
+    "cc_sha256": "f9d535014bb9876077e5f9dd9215d25aaab1c6d9d04911739c91f37d887d0f84",
+    "unw_sha256": "6d226de83522db704226093eb9449dc4d26b508a56b31aac8eb88d36a4a88426",
+    "fine_file": "20201212_20201218.npz",
+    "fine_sha256": "440ebc8a076c713335996326dcf6b0ec92cde478c8dd0aa70dbd25b33bb7c079"
+  },
+  {
+    "pair": "20210111_20210129",
+    "cc": "project_inputs/raw/licsar/20210111_20210129.geo.cc.tif",
+    "unw": "backup_inputs/revision_scientific_reports_v1/inputs_needed/licsar_chao_28_unw/20210111_20210129.geo.unw.tif",
+    "cc_sha256": "2a02215632d901362ad4df74e11767e6808126c9d16784d6c09908239f3f6447",
+    "unw_sha256": "bb64a301e5db340dcddc3308d979f2e2f56ac8af35b273a5d870bd732a3df078",
+    "fine_file": "20210111_20210129.npz",
+    "fine_sha256": "a001239a94b4f07fe3975fc99d84cb7ced7049874a885ac75529c93a45e15cfc"
+  },
+  {
+    "pair": "20210405_20210429",
+    "cc": "project_inputs/raw/licsar/20210405_20210429.geo.cc.tif",
+    "unw": "backup_inputs/revision_scientific_reports_v1/inputs_needed/licsar_chao_28_unw/20210405_20210429.geo.unw.tif",
+    "cc_sha256": "98e18fb5cfbc76d5216384edd311bdba385abf45d4c5d600c9542ca65efe6c06",
+    "unw_sha256": "45e19291201815af063f1be48dca6a8710fdb01663aedf816a4a59c326dc8b7d",
+    "fine_file": "20210405_20210429.npz",
+    "fine_sha256": "a4d065b71e606d8cbec101ff9d0bdeed1e165e2d660d992b9f86f52b0ce3b27d"
+  },
+  {
+    "pair": "20210902_20220325",
+    "cc": "project_inputs/raw/licsar/20210902_20220325.geo.cc.tif",
+    "unw": "backup_inputs/revision_scientific_reports_v1/inputs_needed/licsar_chao_28_unw/20210902_20220325.geo.unw.tif",
+    "cc_sha256": "4182fa3b4e3d204f6481d5a3c8e54459b40bc6c9d8d12ae36f7e83db8b4670f7",
+    "unw_sha256": "ba70dda38fc14c595ebc726c4c4e7cc55c87af3648b0f41e61c5f9a2c59915a0",
+    "fine_file": "20210902_20220325.npz",
+    "fine_sha256": "2ee35d232f10496cef7c6e7acfb4c8170677a1601fa4ec7e382b71f6a3dea376"
+  },
+  {
+    "pair": "20211213_20211231",
+    "cc": "project_inputs/raw/licsar/20211213_20211231.geo.cc.tif",
+    "unw": "backup_inputs/revision_scientific_reports_v1/inputs_needed/licsar_chao_28_unw/20211213_20211231.geo.unw.tif",
+    "cc_sha256": "64cac421c76c4b4b81c97ff7aa3a594cd4dae9f616bdb3072df31e5fafddebc1",
+    "unw_sha256": "eca37c086e5941b730b04675e3753645e3735c18df06c21b1d77e62f5bbe6751",
+    "fine_file": "20211213_20211231.npz",
+    "fine_sha256": "972569d4ba855788460e64d78217c89d0639d062f1b5ab9c7c89246cc2ce4f74"
+  },
+  {
+    "pair": "20220205_20220406",
+    "cc": "project_inputs/raw/licsar/20220205_20220406.geo.cc.tif",
+    "unw": "backup_inputs/revision_scientific_reports_v1/inputs_needed/licsar_chao_28_unw/20220205_20220406.geo.unw.tif",
+    "cc_sha256": "d9dc3aae082c67e559752ef77b71bdb3f1b049cce4a8d28fb038016eed16d6ea",
+    "unw_sha256": "2e9a80cec7577b81a4eb1032f4e70d692ff54f4a66d1303dd100d4c6b49635ad",
+    "fine_file": "20220205_20220406.npz",
+    "fine_sha256": "852ca9467a4234f19aba33ec1f332f9bc0ef43491d0ac01ee0815d7986eab03d"
+  },
+  {
+    "pair": "20220325_20220909",
+    "cc": "project_inputs/raw/licsar/20220325_20220909.geo.cc.tif",
+    "unw": "backup_inputs/revision_scientific_reports_v1/inputs_needed/licsar_chao_28_unw/20220325_20220909.geo.unw.tif",
+    "cc_sha256": "2fdbcdc2149bb11c4ee1149491b0a64713715d7188a460398998b9fe1adc71f4",
+    "unw_sha256": "e0ef9c0bf714991433da88fae4df3ba5bd44c22f2039b9473d77fa563e456b08",
+    "fine_file": "20220325_20220909.npz",
+    "fine_sha256": "f54fa8bbe2fc06cf662713d6000a2f0d83d9154b013a09f858635937c155527c"
+  },
+  {
+    "pair": "20220711_20220828",
+    "cc": "project_inputs/raw/licsar/20220711_20220828.geo.cc.tif",
+    "unw": "backup_inputs/revision_scientific_reports_v1/inputs_needed/licsar_chao_28_unw/20220711_20220828.geo.unw.tif",
+    "cc_sha256": "cb8783b134f40b6de045faea0cf968018d7ffd19c17320106be811486b8d643d",
+    "unw_sha256": "0ef9d2e62b8c8460f1897b39fff3ed96539cc1f5700cf63cb280f2a57a26beae",
+    "fine_file": "20220711_20220828.npz",
+    "fine_sha256": "ac592e5a801f490ce4306e5cc61787c388994d439d275964c8acc1a938ad8266"
+  },
+  {
+    "pair": "20221003_20221027",
+    "cc": "project_inputs/raw/licsar/20221003_20221027.geo.cc.tif",
+    "unw": "backup_inputs/revision_scientific_reports_v1/inputs_needed/licsar_chao_28_unw/20221003_20221027.geo.unw.tif",
+    "cc_sha256": "9653a53637ffbafc33f0c8bec856690ed2c87dd26a79e906bff5d398e3279492",
+    "unw_sha256": "e2669fb65775a7eaf4a75292e88af3fbbe658ab8af595016b782ea2f7802adc6",
+    "fine_file": "20221003_20221027.npz",
+    "fine_sha256": "110306f9568de43d5447e4f8c7b214b255d78fa0967599926cdb9ff7c6e31038"
+  }
+]

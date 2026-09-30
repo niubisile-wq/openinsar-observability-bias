@@ -1,0 +1,18 @@
+{
+  "command": [
+    "D:\\InSAR_revision_20260926\\strengthening\\.venv_licsbas\\Scripts\\python.exe",
+    "D:\\InSAR_revision_20260926\\strengthening\\licsbas_portable.py",
+    "LiCSBAS13_sb_inv.py",
+    "-d",
+    "D:\\InSAR_revision_20260926\\strengthening\\results\\timeseries\\GEOC_train",
+    "-t",
+    "D:\\InSAR_revision_20260926\\strengthening\\results\\timeseries\\TS_train",
+    "--n_para",
+    "1",
+    "--mem_size",
+    "512"
+  ],
+  "returncode": 0,
+  "seconds": 343.79372477531433,
+  "expected_output": "D:\\InSAR_revision_20260926\\strengthening\\results\\timeseries\\TS_train\\cum.h5"
+}

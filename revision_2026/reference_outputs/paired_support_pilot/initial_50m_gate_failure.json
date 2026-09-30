@@ -1,0 +1,13 @@
+{
+  "stage": "original 50-m primary versus 25-m diagnostic",
+  "status": "failed convergence gate",
+  "threshold_pp_total": 0.01,
+  "max_discrepancy_pp_total": 0.0550952635580196,
+  "script_sha256": "0b83ab02517ff2d8ab61d984358b06c7b9bb267bc497fb9b6ad097aa50634dbc",
+  "decision": "Preserve 50-m results and refine primary to 25 m, validated at 12.5 m; same 0.01-pp gate. No case will be dropped.",
+  "output_sha256": {
+    "all_cases.csv": "3df27ff3ceed9db56541b4b3ec06ae6f45b6e244f351200d2ef7f27ebf893da7",
+    "convergence.csv": "8b041ce99e405c45f6da386a78994f5e8fb6313a76644f590ac1f244955c4236",
+    "projection_ledger.csv": "80c68c13eee57e8ca2460a2d0a8476b8b9f37b2dbbe086d8e0724dce17078f7f"
+  }
+}

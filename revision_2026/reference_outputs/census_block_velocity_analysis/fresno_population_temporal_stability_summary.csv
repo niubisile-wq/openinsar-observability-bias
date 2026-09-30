@@ -1,0 +1,9 @@
+metric,value
+Common blocks with valid rates in both periods,6129.0
+2020 Census population in common blocks,501411.0
+"Population share below -5 mm/yr, 2015-2021 (%)",65.23211497155029
+"Population share below -5 mm/yr, 2025-2026 (%)",99.86677595824582
+Population share changing class (%),60.87540959412538
+Population share below -5 in both periods (%),65.23211497155029
+Population share switching from >=-5 to <-5 (%),34.63466098669554
+Population share switching from <-5 to >=-5 (%),0.0

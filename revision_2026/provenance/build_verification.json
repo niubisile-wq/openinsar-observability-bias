@@ -1,0 +1,76 @@
+{
+  "pdfs": {
+    "cover_letter.pdf": {
+      "pages": 1,
+      "bytes": 108781,
+      "sha256": "4a720924d97659beb7da3b5ba239c52b51ba419212aaa1d0e15079d155f006df"
+    },
+    "manuscript.pdf": {
+      "pages": 14,
+      "bytes": 934013,
+      "sha256": "e6d3f3d8714777b46b5ab9f28daec71ff566345ff610d878a904b19009bd6f6f"
+    },
+    "manuscript_numbered.pdf": {
+      "pages": 14,
+      "bytes": 936998,
+      "sha256": "be3bc1570c011fc85c82c18aca8adc8bd11292262be702d55ede5dcb77b1e7e9"
+    },
+    "manuscript_marked_local_baseline.pdf": {
+      "pages": 14,
+      "bytes": 933899,
+      "sha256": "1b036ba8da84adf2ea7acb4b5e9fed39658d23e6e2579b8b60778ecb8ce6d19c"
+    },
+    "response.pdf": {
+      "pages": 9,
+      "bytes": 167150,
+      "sha256": "b0ef3f32e53e765c15256bf18f1e0d25802f5f093781e778faaccdb0b21cef48"
+    },
+    "supplementary.pdf": {
+      "pages": 28,
+      "bytes": 1019735,
+      "sha256": "c61f3e8446bc805a1fab79ceb9eba4c49711f5c5d53968ebac18d9879846db69"
+    }
+  },
+  "undefined_references": 0,
+  "overfull_boxes": 0,
+  "reviewer_comment_replies": 7,
+  "supplementary_sections": [
+    "S21",
+    "S22",
+    "S23",
+    "S24"
+  ],
+  "portal_pdf_copies_match": true,
+  "handoff_zip_crc": "passed",
+  "handoff_manifest_entries_verified": 370,
+  "visual_review_pages": [
+    "manuscript pp. 9-10",
+    "numbered manuscript p. 10",
+    "marked manuscript p. 10",
+    "response pp. 3 and 7-8",
+    "supplementary pp. 23-26",
+    "response p. 1 (additional-analysis summary)"
+  ],
+  "review_response_line_references": "removed; clean-PDF page/section locators verified",
+  "acs_benchmark": {
+    "block_groups": 319,
+    "acs_estimate": 493571,
+    "aggregate_90pct_moe_exact_replicates": 4370.547188,
+    "census_p1_total": 491790,
+    "ghsl_total": 545746.623848,
+    "worldpop_total": 523348.613221,
+    "reproduction": "passed through reproduce.py acs-population-benchmark"
+  },
+  "manuscript_variant_content_sync": {
+    "clean": "contains Fresno S20 and ACS S24 summary",
+    "numbered": "regenerated from canonical clean source; contains Fresno S20 and ACS S24 summary",
+    "marked": "contains Fresno S20 and ACS S24 summary",
+    "singlefile_source": "contains matching ACS S24 summary",
+    "pages": {
+      "clean": 14,
+      "numbered": 14,
+      "marked": 14
+    }
+  },
+  "response_additional_analyses_summary": "Added an opening summary of the extra robustness, controlled-mask, population-model, scale/origin and Fresno Census/CA-POP/ACS analyses; caveats retained. Rendered first page and confirmed legible, no overflow; response remains 9 pages."
+}

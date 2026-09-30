@@ -1,0 +1,14 @@
+{
+  "command": [
+    "D:\\InSAR_revision_20260926\\strengthening\\.venv_licsbas\\Scripts\\python.exe",
+    "D:\\InSAR_revision_20260926\\strengthening\\licsbas_portable.py",
+    "LiCSBAS14_vel_std.py",
+    "-t",
+    "D:\\InSAR_revision_20260926\\strengthening\\results\\timeseries\\TS_train",
+    "--mem_size",
+    "512"
+  ],
+  "returncode": 0,
+  "seconds": 32.476174116134644,
+  "expected_output": "D:\\InSAR_revision_20260926\\strengthening\\results\\timeseries\\TS_train\\results\\vstd"
+}

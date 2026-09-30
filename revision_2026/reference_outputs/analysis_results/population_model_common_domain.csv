@@ -1,0 +1,3 @@
+model,common_pixels,common_GHSL_allocation_units,native_total_before_normalization,normalized_total,worldpop_resampling,independence_note
+GHSL,120175,11311359.282376565,11311359.282376565,11311359.282376565,Rasterio average to the 0.001-degree matched grid; normalized to GHSL on common coverage,Alternative model sensitivity only; not independent population truth. Census/ancillary source overlap and resampling effects remain.
+WorldPop_normalized,120175,11311359.282376565,7580153.052753699,11311359.282376563,Rasterio average to the 0.001-degree matched grid; normalized to GHSL on common coverage,Alternative model sensitivity only; not independent population truth. Census/ancillary source overlap and resampling effects remain.

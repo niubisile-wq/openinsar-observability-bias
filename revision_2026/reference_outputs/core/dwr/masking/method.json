@@ -1,0 +1,34 @@
+{
+  "region": "dwr",
+  "seed": 20260927,
+  "replicates": 100,
+  "rectangle": [
+    -119.9,
+    36.6,
+    -119.7,
+    36.85
+  ],
+  "shape": [
+    301,
+    241
+  ],
+  "domain": "Fixed rectangle for Chao; published observed DWR footprint within fixed rectangle for Fresno",
+  "missing_fractions": [
+    0.1,
+    0.3,
+    0.5
+  ],
+  "mechanisms": [
+    "random",
+    "spatial",
+    "density_positive",
+    "density_negative"
+  ],
+  "reference": "GHSL 2020 native 3ss population model, held fixed; known introduced missingness; DWR includes fractional published support before introducing masks",
+  "grids": "5, 10, 20 native pixels with zero/half-pixel-count origins; angular grids, not exact metric grids",
+  "center_rule": "Fine-pixel introduced mask at included rectangle cell center; center outside observed domain has zero support",
+  "building_weighting": "Redistribute each coarse-cell population in proportion to GHSL built area, fallback to included area when built area is zero",
+  "hazard_truth": "Synthetic two-valued -10 or 0 mm/yr; density positive/negative or independent spatial field",
+  "interpretation": "Monte Carlo intervals describe introduced-mask variation conditional on fixed allocation models, not uncertainty in real exposure or motion",
+  "no_physical_validation": true
+}

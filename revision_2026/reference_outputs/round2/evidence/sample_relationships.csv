@@ -1,0 +1,5 @@
+sample,pairs,purpose
+legacy28,28,Historical sample and primary mean support
+nested28,28,Date/baseline stratified subset of expanded pool
+expanded224,224,Conditional sampling/temporal sensitivity; disconnected date graph
+matched437,437,Separate 2019-2020 connected processing ROI; 44 edges held out

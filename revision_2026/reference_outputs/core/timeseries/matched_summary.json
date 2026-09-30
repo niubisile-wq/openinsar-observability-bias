@@ -1,0 +1,37 @@
+{
+  "shape": [
+    401,
+    301
+  ],
+  "dates_in_training": 104,
+  "planned_input_pairs": 437,
+  "heldout_pairs": 44,
+  "evaluated_heldout_pairs": 44,
+  "excluded_heldout_pairs": [],
+  "population_total": 11314756.61992068,
+  "final_valid_population": 11281443.14811726,
+  "final_valid_population_fraction": 0.9970557500331232,
+  "final_valid_pixel_fraction": 0.970190802064606,
+  "mean_matched_support": 0.7903467416763306,
+  "mean_legacy_support": 0.7602080292393649,
+  "training_reference": "141:142/218:219",
+  "holdout": {
+    "all_predictions": {
+      "pixels": 120693,
+      "observations": 5196148,
+      "pooled_rmse_mm": 0.9841883969418381
+    },
+    "training_mask_pass": {
+      "pixels": 117670,
+      "observations": 5100293,
+      "pooled_rmse_mm": 0.698838607376705
+    },
+    "training_mask_fail": {
+      "pixels": 3023,
+      "observations": 95855,
+      "pooled_rmse_mm": 5.149955784426701
+    }
+  },
+  "interpretation": "Mask association is descriptive and partially shares coherence information with the processing algorithm. Held-out edges were excluded from training; training-only support and training mask are used for predictive strata. LOS displacement residuals are not external velocity/vertical-motion accuracy.",
+  "row_order": "north-to-south arrays, south-to-north y_edges"
+}

@@ -1,0 +1,10 @@
+support,metric,pixels,spearman_r
+legacy28,full_vstd,120697,-0.2322480338203744
+legacy28,full_resid_rms,120697,-0.5474182470092832
+legacy28,heldout_rmse,120693,-0.6661161361390749
+matched437,full_vstd,120697,-0.202414837562295
+matched437,full_resid_rms,120697,-0.5646678793802269
+matched437,heldout_rmse,120693,-0.6473457957247757
+training_only,full_vstd,120697,-0.20611212554787925
+training_only,full_resid_rms,120697,-0.566713053127491
+training_only,heldout_rmse,120693,-0.6470017333157823

@@ -1,0 +1,642 @@
+[
+  {
+    "path": "CITATION.cff",
+    "bytes": 366,
+    "sha256": "cd6699539a31a8a6e25b3a57bbab9873342732824eac830e3b00acaf21bbe5cb"
+  },
+  {
+    "path": "core/analyse_timeseries.py",
+    "bytes": 10085,
+    "sha256": "eb65400c5e1c5212dd3aae77469a651b82a1472bd5ed24deb6f987cee1de4b03"
+  },
+  {
+    "path": "core/audit_matched.py",
+    "bytes": 4084,
+    "sha256": "0a719f61adbcc0e4dd0c39c7dd2a4858381e4696f0708e39715cd6a08138d619"
+  },
+  {
+    "path": "core/audit_sbkk_support.py",
+    "bytes": 3072,
+    "sha256": "5d0fd2ae0c5a996f4b8baa5f8953bd9633a99e79f9a851872399ab46f7a2496f"
+  },
+  {
+    "path": "core/build_baseline.py",
+    "bytes": 6534,
+    "sha256": "b49d15403cf03f8ed70cbd4548e49f6020ddc605a34b1e87b909f2857cdf3b31"
+  },
+  {
+    "path": "core/build_papers.py",
+    "bytes": 3156,
+    "sha256": "6f4b9f9fe5672ed384868fdae64d6b31fd49ef9bf65341b3b4fbb72c8db6c2e7"
+  },
+  {
+    "path": "core/check_results.py",
+    "bytes": 5850,
+    "sha256": "1f7c686c1b0873468c359deab004b717a3edc8c187ce13f29bfb54d29d18f322"
+  },
+  {
+    "path": "core/common.py",
+    "bytes": 6308,
+    "sha256": "04d9b3ee3ed28728ae5dce876eaaaf9f660346b658ecf47505d8a7af7770c15d"
+  },
+  {
+    "path": "core/config.json",
+    "bytes": 772,
+    "sha256": "72a8815ea97f687efbea9510545d4387b7ddee020f065fb29d343aa616016913"
+  },
+  {
+    "path": "core/environment_licsbas.json",
+    "bytes": 528,
+    "sha256": "688d256ef66469e6f097f8fdabea0e8696d3c692ae90e92ec773693770743897"
+  },
+  {
+    "path": "core/environment_main.json",
+    "bytes": 472,
+    "sha256": "68b37dc37ab6dbd76aa5ccee674fe52a6a77e153993007708ad9d0b6b2d5ba83"
+  },
+  {
+    "path": "core/experiment_allocation.py",
+    "bytes": 6955,
+    "sha256": "3f9ae695cda4d31598ec0374c8472075f9704b097d985913b731d22f924478d5"
+  },
+  {
+    "path": "core/experiment_cross_sensitivity.py",
+    "bytes": 7967,
+    "sha256": "0e02b740cca935da47aa1bf5e1153f1f03eca599854e4c7746afad6f108972f1"
+  },
+  {
+    "path": "core/experiment_dwr.py",
+    "bytes": 7784,
+    "sha256": "4b7b1c8852fe9f3660fd9b90cfe5ce832a5ec9b48bd1f099f7f711edfa9dff3f"
+  },
+  {
+    "path": "core/experiment_lineage.py",
+    "bytes": 6750,
+    "sha256": "6fe7d7b699d03bf45a2b5cf4e72abd4231f992d6249d343e5002110ca9adba42"
+  },
+  {
+    "path": "core/experiment_masking.py",
+    "bytes": 7399,
+    "sha256": "da4b1fb275dea9b3cc52154c594d6f3d16fba94d46623e7e30c890d2882516aa"
+  },
+  {
+    "path": "core/experiment_population.py",
+    "bytes": 6645,
+    "sha256": "4d9fefaf9a634d2febbcb6c415c865cb5af07c08a6b1d7b17fc0af0fab606c8a"
+  },
+  {
+    "path": "core/experiment_sampling.py",
+    "bytes": 6681,
+    "sha256": "d46fcdc084019fb97cac7931ae1568e21345e6f5209d9950af6d0e0d531577c2"
+  },
+  {
+    "path": "core/fetch_ancillary.py",
+    "bytes": 955,
+    "sha256": "9f526c228be5748a7da17563c9ac57588fc0a04d8f231638308aa5c520e50b18"
+  },
+  {
+    "path": "core/fetch_dwr.py",
+    "bytes": 2788,
+    "sha256": "6ef78c4ac8f6fde8d18a8b95d7a535c1f2c9579d009cb33a567ea632f6d988d3"
+  },
+  {
+    "path": "core/fetch_external.py",
+    "bytes": 2910,
+    "sha256": "14325be6861d577a4683ce332f10c1e5bd0fb2f610fb655bd9df7122e51e7a3b"
+  },
+  {
+    "path": "core/fetch_licsar_expansion.py",
+    "bytes": 5757,
+    "sha256": "ba99be90d533123facc133f5fc354d6b89420a8c47cfc6f91076120135a48e9e"
+  },
+  {
+    "path": "core/finalize_artifacts.py",
+    "bytes": 4134,
+    "sha256": "e9e0450490ea3fa04f8eb1bf46016fee5d0b696299fcc93932f446cae96ccd32"
+  },
+  {
+    "path": "core/gnss_feasibility.py",
+    "bytes": 8177,
+    "sha256": "ffb82a1d22b1a428690a20148c0db45c72ea3ced3ebe528ff537aeceb8ce6a4f"
+  },
+  {
+    "path": "core/licsbas_portable.py",
+    "bytes": 2240,
+    "sha256": "bbb6f4a7bf7c24e74a60480c25dd774c3cdc48ebac89fddb018ac04b4401794b"
+  },
+  {
+    "path": "core/make_cross_sensitivity_paper.py",
+    "bytes": 8517,
+    "sha256": "c0400c4250650940b85825198d2251f8b0d07bcd44112aa49d07cb1c9697bd07"
+  },
+  {
+    "path": "core/make_dwr_mask_figure.py",
+    "bytes": 1781,
+    "sha256": "45879cea55f06a76bed29c153b1e553b9ad54f3b13cbb87880a3025a650bbdf5"
+  },
+  {
+    "path": "core/make_figures.py",
+    "bytes": 10680,
+    "sha256": "d96bfbe76cee767d4fba21849ac29951045e2635d6fe0998e87df78cb18e25ea"
+  },
+  {
+    "path": "core/make_matched_figures.py",
+    "bytes": 3308,
+    "sha256": "905415df201713ef03c1e910678210ae79f9d4fe33e5901cf21af7945c39cf36"
+  },
+  {
+    "path": "core/make_sampling_figures.py",
+    "bytes": 3020,
+    "sha256": "c19b413a385eb39fbaa028793d260e7a615ffb9ce47119eb3ad8452732b5f907"
+  },
+  {
+    "path": "core/make_si_tables.py",
+    "bytes": 1451,
+    "sha256": "e9db74aad4a95c2471fca413431675f8efca51294d0c3bb1a31d55413bd1866e"
+  },
+  {
+    "path": "core/paper_numbers.py",
+    "bytes": 4112,
+    "sha256": "4ac7c6d10bd89fece5553fab1e7ff2f6ea87821877efa64ed776b6f04448f7fd"
+  },
+  {
+    "path": "core/prepare_timeseries.py",
+    "bytes": 5344,
+    "sha256": "f013cc0c807bcfa93dba56d301847a007932628de9eded4f686abdd3412f02f1"
+  },
+  {
+    "path": "core/render_papers.py",
+    "bytes": 2125,
+    "sha256": "6b8d523c43e04cb2cd43d99f0217d39301fed8daaf75e10eeff8996c79fb74f9"
+  },
+  {
+    "path": "core/requirements_licsbas.txt",
+    "bytes": 171,
+    "sha256": "dc7080a35996523de4170c681c08b326f6d839a4549dd93e95cf49e44819d02a"
+  },
+  {
+    "path": "core/requirements_main.txt",
+    "bytes": 137,
+    "sha256": "251f7428e5b6b539c63feee5458252e7c17d9ba3ef12921bbc8611106468b02f"
+  },
+  {
+    "path": "core/revision_round2/audit_geometry_boundary.py",
+    "bytes": 11478,
+    "sha256": "35467059250255dcc2f4f598293b86e001e6681c2d8af3b803f1f347fd6a3125"
+  },
+  {
+    "path": "core/revision_round2/audit_holdout.py",
+    "bytes": 7204,
+    "sha256": "aac0d7fb768052261b843ba27635d5d4d7345e56aa560e6c150e91c3aac2cc7a"
+  },
+  {
+    "path": "core/revision_round2/audit_inputs.py",
+    "bytes": 2189,
+    "sha256": "f571ed5b53f38c07ba847a3a3d4fbb1a66dcda57fa3debf55bb0d0c944a67729"
+  },
+  {
+    "path": "core/revision_round2/audit_sampling_details.py",
+    "bytes": 3258,
+    "sha256": "8aaf4deac55f74b158dfa3b91068215d31eca48756b7390f0dd8294bb236c97a"
+  },
+  {
+    "path": "core/revision_round2/audit_sensitivity.py",
+    "bytes": 13470,
+    "sha256": "6a6f507aa5cddf7470f5f4f49c505540a357dd73bc4f60f8b08ac71e2e3d6707"
+  },
+  {
+    "path": "core/run_timeseries.py",
+    "bytes": 2269,
+    "sha256": "9eb352bb79caa06d35613cb05e1fbeb91dc6971b3f1df156dda1022e9ce9a584"
+  },
+  {
+    "path": "core/sampling_spatial.py",
+    "bytes": 3095,
+    "sha256": "a340c7d880e61aa41c1eeec7220f33be9a5ed82d3e367dc6a569ce1ced26bda3"
+  },
+  {
+    "path": "core/test_geometry.py",
+    "bytes": 2070,
+    "sha256": "a81b714b769806335ce4cdb710a6bd5c87106cd60a3f734063558c316e2f1306"
+  },
+  {
+    "path": "core/write_completion_report.py",
+    "bytes": 12360,
+    "sha256": "19085635e30ce901ad6129e8c8a0d57cd42c1d082d2b1ac65b327384cbc6e828"
+  },
+  {
+    "path": "core/write_matched_paper.py",
+    "bytes": 16165,
+    "sha256": "7d519149d37045e1fec13122920de65e8fec10ee23ee4a800e0e938b4d6dc214"
+  },
+  {
+    "path": "followup/acs_population_benchmark.py",
+    "bytes": 12464,
+    "sha256": "e400f61530c11a507ecee7f38fd97ee73a029f18f36f966af8b25fc92595048d"
+  },
+  {
+    "path": "followup/bangkok_spatial_effect_decomposition.py",
+    "bytes": 5978,
+    "sha256": "94b68d8184a31257116a55ffdb115eb7da199d856065e73b13c4d3c02aad6d71"
+  },
+  {
+    "path": "followup/build_dwr_annual_rate_median.py",
+    "bytes": 2657,
+    "sha256": "8f3bda8c82f4732c147aceba831541f9ff70f90ec036041426e604e625b2ce7e"
+  },
+  {
+    "path": "followup/download_fresno_population_rasters.py",
+    "bytes": 1122,
+    "sha256": "6b4b04e50be1d3078b4b7d05e9ca993ec43f98196e9bc10a5a824e7f7943af8f"
+  },
+  {
+    "path": "followup/dwr_census_velocity_analysis.py",
+    "bytes": 9927,
+    "sha256": "7b8a25bf48c6e58bf57a6a687a7fdb85a3a566efa25378873679e28dcb69973f"
+  },
+  {
+    "path": "followup/followup_quality.py",
+    "bytes": 14717,
+    "sha256": "9fdaf8479d1cc41f078a7bc5e20e0cad102e8792a4e1b516e8375d9474edfdf3"
+  },
+  {
+    "path": "followup/fresno_capop_support_sensitivity.py",
+    "bytes": 16791,
+    "sha256": "8d323b378fced90075fb86e2d86d01e6309a532ed48cfe27e940464703307bd2"
+  },
+  {
+    "path": "followup/fresno_census_block_analysis.py",
+    "bytes": 6719,
+    "sha256": "4a94b5f9087a4adc2a4a12b3640535189df4cd7db9abe5a86926179f450c522f"
+  },
+  {
+    "path": "followup/fresno_census_population_model_benchmark.py",
+    "bytes": 9397,
+    "sha256": "1229634e20141a9491af4dd615160287c6cfaea8236cb4acfc6978e7262c2884"
+  },
+  {
+    "path": "followup/fresno_population_source_manifest.json",
+    "bytes": 1638,
+    "sha256": "5844b1e6aa22ef03bf055890befc1b9a865468752658dbab56533553c0f1967e"
+  },
+  {
+    "path": "followup/fresno_six_year_persistence.py",
+    "bytes": 5946,
+    "sha256": "63aab4b4d1850dfa56781d62a5d7a74fa2c5269ac4a6727e2a34c7847eb75db9"
+  },
+  {
+    "path": "followup/fresno_temporal_class_stability.py",
+    "bytes": 3825,
+    "sha256": "6f6745358a9de60b4551d01181c16753a29deb5150c48b9dbc355150f7421163"
+  },
+  {
+    "path": "followup/partial_identification.py",
+    "bytes": 3194,
+    "sha256": "eff71f7628ba5f19f7bef9fcf8d8d52532c6fb7e98ae79a0a33486b0f4dd9cef"
+  },
+  {
+    "path": "followup/published_method_benchmark.py",
+    "bytes": 9574,
+    "sha256": "5b9a73d5c270f77bb15a777e1d444df3cc6bbc5d656c59741846821e4b525590"
+  },
+  {
+    "path": "followup/reporting_tolerance_audit.py",
+    "bytes": 2728,
+    "sha256": "e137503cae7cfc7b54ae4d3065850cf83c07c1b7a339125a7c3142f9d0898a05"
+  },
+  {
+    "path": "followup/S20_README.txt",
+    "bytes": 1468,
+    "sha256": "aabd8e2b4e577eea722a001d527768b30f19a5f1612f57dd04df8e4918579956"
+  },
+  {
+    "path": "followup/spatial_dependence_audit.py",
+    "bytes": 3022,
+    "sha256": "a71aa6081e688a03c8552f6b1cc55a61dd568d4fc600bff92df14377989be416"
+  },
+  {
+    "path": "INPUT_ACQUISITION.txt",
+    "bytes": 5208,
+    "sha256": "96c1b24f09ae3546f62dad1666266fec92fe1868578ae71e4f0f857716977cb0"
+  },
+  {
+    "path": "input_manifests/followup_input_hashes.json",
+    "bytes": 5914,
+    "sha256": "b7f9c130905827c3b2da8926a706338b8aadba6069484fa3abf3fd903b6a4783"
+  },
+  {
+    "path": "input_manifests/pair_manifest.json",
+    "bytes": 15123,
+    "sha256": "ff21de72fdebff0a0734c7a07f3b8feb742603b8174ed4e80f74ab46f91f1841"
+  },
+  {
+    "path": "input_manifests/sampling_manifest.json",
+    "bytes": 315760,
+    "sha256": "5b81518f81b4e373f2db79f9a656e68d537d5e14ba49a87975f7464e21a48ce1"
+  },
+  {
+    "path": "input_manifests/timeseries_manifest.json",
+    "bytes": 602797,
+    "sha256": "82641b4b9536c691208d7ae9682944c25650dd1456c57e0fce01446bd848b18d"
+  },
+  {
+    "path": "LICENSE.txt",
+    "bytes": 384,
+    "sha256": "e05597ec76dd34365ed58411caead4ebe0ec1bdedcf4a272c471738930cb3f60"
+  },
+  {
+    "path": "manuscript_number_ledger.json",
+    "bytes": 3835,
+    "sha256": "241b5647335b0865192f45cd5b2df85e9752b288264685fecb3a941dacf97085"
+  },
+  {
+    "path": "paired_support/actual_los_masking.py",
+    "bytes": 7232,
+    "sha256": "a553363eb550c921cbfb033999400b7d85c548d82599efb21205580d545b2cb4"
+  },
+  {
+    "path": "paired_support/direct_geometry_audit.py",
+    "bytes": 5583,
+    "sha256": "6a8fb2ff47de3d985c31550a6a4f062a21d289a1a4069c026a03681596a62e28"
+  },
+  {
+    "path": "paired_support/paired_support_pilot.py",
+    "bytes": 10968,
+    "sha256": "dccf9a23c0e014c9e357ea49bd158eaf6c457a8231e883f0dd67f856cc969b73"
+  },
+  {
+    "path": "README.txt",
+    "bytes": 5337,
+    "sha256": "2cf60ed6d7f828abd3065a04c91aec517ac91ac65abb38c4d16c65d7fb28afe3"
+  },
+  {
+    "path": "reference_outputs/actual_los_masking/method.json",
+    "bytes": 1438,
+    "sha256": "313c5fa8a90b45878217c7268a8aefb61dfd7bbc07e17af518649a60cac1603f"
+  },
+  {
+    "path": "reference_outputs/actual_los_masking/summary.csv",
+    "bytes": 119098,
+    "sha256": "4ee537413090e334dd59650a5ff5ee844485870dfacc038c398b686c71bc3cbc"
+  },
+  {
+    "path": "reference_outputs/analysis_results/allocation_covariance_bounds.csv",
+    "bytes": 26178,
+    "sha256": "1694eb7078de9cf093cbdb645687e42616fe2a299da329e8b48b0428bc46d989"
+  },
+  {
+    "path": "reference_outputs/analysis_results/block_median_baseline_summary.csv",
+    "bytes": 127668,
+    "sha256": "b69d1369d09a9d8737fa86df291090e79efa5e5ed9592a7918b73da0363a71d2"
+  },
+  {
+    "path": "reference_outputs/analysis_results/followup_method.json",
+    "bytes": 2368,
+    "sha256": "e6b7f2697f7ad9d570d1f1e9c54b562c3b1e63f40f32fb0facadcb4de3f30dbc"
+  },
+  {
+    "path": "reference_outputs/analysis_results/population_model_common_domain.csv",
+    "bytes": 737,
+    "sha256": "ec3428ae0e8cdc7066f344ffd6f174d30d1b5053058e5223af2a38b2cf23acb1"
+  },
+  {
+    "path": "reference_outputs/bangkok_spatial_decomposition/bangkok_spatial_effect_summary.csv",
+    "bytes": 1354,
+    "sha256": "a3588a53f5b74df060ebde4c620afa330849339a4efa595e71ba0305cccb92cd"
+  },
+  {
+    "path": "reference_outputs/bangkok_spatial_decomposition/method.json",
+    "bytes": 1393,
+    "sha256": "21756413f8923fcc344685b2718c352cf3dba5f113516dac2c45613361e56a0a"
+  },
+  {
+    "path": "reference_outputs/census_block_analysis/fresno_block_support_method.json",
+    "bytes": 2287,
+    "sha256": "d508363f9eb1d6b1a3d202d2d042274d28910227e8e84e1f85ab60e8fc142cac"
+  },
+  {
+    "path": "reference_outputs/census_block_analysis/fresno_block_support_summary.csv",
+    "bytes": 1219,
+    "sha256": "c4510e8e59850cde1a72c1510987651ca1f6bd5e8eb97923c9f793b955790b29"
+  },
+  {
+    "path": "reference_outputs/census_block_velocity_analysis/fresno_census_block_velocity_summary.csv",
+    "bytes": 1873,
+    "sha256": "1f0f5ef87b873ed691b6fe2c1d21dd4df82614b74f5db5e2527b855c777acd1a"
+  },
+  {
+    "path": "reference_outputs/census_block_velocity_analysis/fresno_population_temporal_stability_summary.csv",
+    "bytes": 495,
+    "sha256": "0d0b18b60f911247f1133fa286c286d2e005330e5793b4917f3648e4e4d5a7c7"
+  },
+  {
+    "path": "reference_outputs/census_block_velocity_analysis/fresno_six_year_stability_method.json",
+    "bytes": 1903,
+    "sha256": "3ead9c7e8c88904dbdbd8071f44ca2536eac9b86d38a2cf8a8ecd803eb70e026"
+  },
+  {
+    "path": "reference_outputs/census_block_velocity_analysis/fresno_temporal_stability_method.json",
+    "bytes": 1363,
+    "sha256": "e2552d55d485a2a4b21c420689eb7fe579f4cb708a2ee5a12f1eb7d2623f39dc"
+  },
+  {
+    "path": "reference_outputs/census_block_velocity_analysis/method.json",
+    "bytes": 2815,
+    "sha256": "7cad9ad9fb5c6eb92c798527e66ae47477a236f35206e4760f054c2f4046a65c"
+  },
+  {
+    "path": "reference_outputs/core/allocation/conservation.csv",
+    "bytes": 1724,
+    "sha256": "571cadc6eaf31440922902a8d9f51770f9b4ab50160fc30c09ef2e69696fa2c5"
+  },
+  {
+    "path": "reference_outputs/core/allocation/integration_convergence.csv",
+    "bytes": 426,
+    "sha256": "c12c8f3e0b521b9269ffac8163fa64b79307a4b748e4d9ac61b44bbd3a591d42"
+  },
+  {
+    "path": "reference_outputs/core/allocation/scale_origin_comparison.csv",
+    "bytes": 126988,
+    "sha256": "03437875313bdb52af9563b177974e719650fa6fe647ebc7aaadd1bc2c9a2464"
+  },
+  {
+    "path": "reference_outputs/core/cross_sensitivity/conservation.csv",
+    "bytes": 2205,
+    "sha256": "eee2fe38496362caa659bd3259523b734ab105a31be58d5d81c39b79b20233a3"
+  },
+  {
+    "path": "reference_outputs/core/cross_sensitivity/integration_convergence.csv",
+    "bytes": 7819,
+    "sha256": "edb464be2f2ea64298800d98681b0c52276621ee5d8f12d59dd00a5a3a77f7aa"
+  },
+  {
+    "path": "reference_outputs/core/cross_sensitivity/summary.csv",
+    "bytes": 872,
+    "sha256": "d95900f64f1f60b41fff1301e4da251460d5afff9554ff46182f2fac09865550"
+  },
+  {
+    "path": "reference_outputs/core/dwr/scale_origin_comparison.csv",
+    "bytes": 10876,
+    "sha256": "b62f3105c019be780909f11d9f82973f2f0d5fb1854044f0f5921542eb351894"
+  },
+  {
+    "path": "reference_outputs/core/dwr/summary.csv",
+    "bytes": 222,
+    "sha256": "7f911ee421c84a8006273b9900cf343ca98dff10dd9e07abf79701814c5a3c14"
+  },
+  {
+    "path": "reference_outputs/core/fine/allocation_summary.csv",
+    "bytes": 2518,
+    "sha256": "b5f14a3cea5c8b1f0e457ff8bed370c08f7ac001bbe928abf7a8a6341547100c"
+  },
+  {
+    "path": "reference_outputs/core/fine/support_curves.csv",
+    "bytes": 172032,
+    "sha256": "9e435bd2c58baa94ac3e43fad7a4a508b8cf66cda94fe00add009c0880fd8ec5"
+  },
+  {
+    "path": "reference_outputs/core/masking/summary.csv",
+    "bytes": 31352,
+    "sha256": "df1758e8d8b0d3d3a8cd7e2cb9aad3142222aa3b969a1438513e3f17b2eb0b3c"
+  },
+  {
+    "path": "reference_outputs/core/population/landcover_strata.csv",
+    "bytes": 9473,
+    "sha256": "062cdab583d8de202076a26dc8065c1e9cdd300eb35c635a4647580d870a04a9"
+  },
+  {
+    "path": "reference_outputs/core/population/model_curves.csv",
+    "bytes": 196205,
+    "sha256": "b04b13ff3feac4086b4a4478aab9456396305a419e1068451b7d1d49601a6748"
+  },
+  {
+    "path": "reference_outputs/core/population/model_epoch_comparison.csv",
+    "bytes": 10409,
+    "sha256": "d3b4b85542905a232fc3e827732635169404501cc8546b223edf66d34fc9aa40"
+  },
+  {
+    "path": "reference_outputs/core/sampling/nested_curves.csv",
+    "bytes": 215545,
+    "sha256": "793acb46252bdc0441c0dc469b07fcdd4554d46df80b4fa57322eb9c74bd8073"
+  },
+  {
+    "path": "reference_outputs/core/sampling/nested_summary.csv",
+    "bytes": 2612,
+    "sha256": "f6ff5636185c6bed710eb9d38b2f86db5c9875153980a4c7cbcab4e9df207ba9"
+  },
+  {
+    "path": "reference_outputs/core/timeseries/heldout_prediction_comparison.csv",
+    "bytes": 1586,
+    "sha256": "c948afd880c860b9fd3b05e76b0e0f3a86db4e5f5b2c05d3534a278dfd1b83b4"
+  },
+  {
+    "path": "reference_outputs/core/timeseries/heldout_support_bins.csv",
+    "bytes": 590,
+    "sha256": "8db010e4f03ec7dccb7d758fa2be22e112e18a61445a32910bde0228add4360f"
+  },
+  {
+    "path": "reference_outputs/core/timeseries/support_quality_bins.csv",
+    "bytes": 1791,
+    "sha256": "e14ba5b42a096d0c49ed25d9418d904b51e1466b2ecc43fdbcceb99b24952374"
+  },
+  {
+    "path": "reference_outputs/direct_geometry_audit/method.json",
+    "bytes": 886,
+    "sha256": "9e0527791fe52a0e2df220512062392dd39aa4aa9a7fa8f07dca990e0003858d"
+  },
+  {
+    "path": "reference_outputs/direct_geometry_audit/summary.csv",
+    "bytes": 2337,
+    "sha256": "5560b722419ce393eb1ee8cb9e82405e6f348d218dbd755e02d1638d4b371363"
+  },
+  {
+    "path": "reference_outputs/followup/fresno_population_allocation/method_summary.csv",
+    "bytes": 452,
+    "sha256": "3290aff89bb07b88fd9a694a3ddfe76c08e08da7016080dde8791e14e2328d8a"
+  },
+  {
+    "path": "reference_outputs/followup/fresno_population_allocation/per_block.csv",
+    "bytes": 807090,
+    "sha256": "b8e44dca60af01573cea325bad6fcdcbf60720229db27e4f5d9818a720c65d96"
+  },
+  {
+    "path": "reference_outputs/followup/fresno_population_allocation/scale_method_sensitivity.csv",
+    "bytes": 8119,
+    "sha256": "2f27536d69c297189cfa27212761d5aaf431a899279ab99a0af826e9e2f71b82"
+  },
+  {
+    "path": "reference_outputs/followup/fresno_population_allocation/spatial_autocorrelation.json",
+    "bytes": 862,
+    "sha256": "1a92a3448498a9f9d6112ca5b67196b7a94cf244ab9b3bffafe44d2dbb3de853"
+  },
+  {
+    "path": "reference_outputs/followup/fresno_population_allocation/summary.json",
+    "bytes": 3167,
+    "sha256": "9070f0f5960e20d412d30d73809904f92eb9941d5137fa8342410181b8aebba7"
+  },
+  {
+    "path": "reference_outputs/followup/fresno_population_allocation/support_share_comparison.pdf",
+    "bytes": 17185,
+    "sha256": "fb5919286d9a629280182ba15cd2ca8f40e9d32a4c8e6230c8f4cbe7f85a67e1"
+  },
+  {
+    "path": "reference_outputs/followup/fresno_population_allocation/support_share_comparison.png",
+    "bytes": 84556,
+    "sha256": "719261155a14afbb6fff1fa808a83777579efcf16581f649c7d947498f163538"
+  },
+  {
+    "path": "reference_outputs/followup/fresno_population_allocation/tract_decomposition.csv",
+    "bytes": 12107,
+    "sha256": "cd7ec843889f5268d49f44646ef2c0c142eb73ffe0fb3ff5cb91b90a2d0a5c00"
+  },
+  {
+    "path": "reference_outputs/fresno_population_benchmark/fresno_census_block_population_model_metrics.csv",
+    "bytes": 1155,
+    "sha256": "fdd3fbb7518e81d9e1609e60586d1eb5f523ca8ac18053d7d2bc2fbfb7fdbcad"
+  },
+  {
+    "path": "reference_outputs/fresno_population_benchmark/method.json",
+    "bytes": 2093,
+    "sha256": "968a8d5069b7f39bd7c241190ad87d2fd385749d1393db90c7e8c6c35e6092c6"
+  },
+  {
+    "path": "reference_outputs/paired_support_pilot/audit.json",
+    "bytes": 2371,
+    "sha256": "95e54aa0ba2737a0c2f424d57882ba59c8427bb1db813fc5ad1d2733c77f5f7e"
+  },
+  {
+    "path": "RELEASE_NOTES_v0.4.0.txt",
+    "bytes": 1424,
+    "sha256": "56f53f13d53724e7d04946a0ae21dabff811d55e67b3bc6662ef3149c7f153fe"
+  },
+  {
+    "path": "reproduce.py",
+    "bytes": 3854,
+    "sha256": "933e0a81470c90d3e3ed7ef1aa57820796a3b1bf7998c9c1b52aa920a5cc1992"
+  },
+  {
+    "path": "requirements_followup.txt",
+    "bytes": 174,
+    "sha256": "84570ac3a007a6e3ab7dc9f8473d58877812b12db00156e2b4c584b8d79b7fd3"
+  },
+  {
+    "path": "RERUN_VERIFICATION.json",
+    "bytes": 3368,
+    "sha256": "2525f910a365e7495044d20935c08def84a0a98d22c534d04b58c77b8c8ae239"
+  },
+  {
+    "path": "source_provenance.json",
+    "bytes": 15074,
+    "sha256": "e50002d406c21f529fa38e46a2fc88e157a94b931491692d9a6bd9ff472689a2"
+  },
+  {
+    "path": "THIRD_PARTY_NOTICES.txt",
+    "bytes": 1071,
+    "sha256": "6b4335a15b84a1eeaa13a184a0ce5ade50085129f547d6d5c0a2f706de2846bb"
+  },
+  {
+    "path": "VERSION",
+    "bytes": 7,
+    "sha256": "be36d0066e8b6749a88a1c6bf1ce96482157ec618cb7f2aab162d3efae41f4d9"
+  }
+]

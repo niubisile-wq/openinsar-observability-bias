@@ -1,0 +1,22 @@
+[
+  {
+    "file": "analysis_results\\allocation_local_effects.csv",
+    "origin": "Recomputed from the released inputs; original retained aggregate reference tables matched."
+  },
+  {
+    "file": "analysis_results\\block_median_baseline_replicates.csv",
+    "origin": "Recomputed from the released inputs; original retained aggregate reference tables matched."
+  },
+  {
+    "file": "bangkok_spatial_decomposition\\bangkok_1km_support_local_effects.csv",
+    "origin": "Recomputed from the released inputs; original retained aggregate reference tables matched."
+  },
+  {
+    "file": "bangkok_spatial_decomposition\\bangkok_5km_support_local_effects.csv",
+    "origin": "Recomputed from the released inputs; original retained aggregate reference tables matched."
+  },
+  {
+    "file": "fresno_population_benchmark\\fresno_census_block_population_model_counts.csv",
+    "origin": "Recomputed from the released inputs; original retained aggregate reference tables matched."
+  }
+]

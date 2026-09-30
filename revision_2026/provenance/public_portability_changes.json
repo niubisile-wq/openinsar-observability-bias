@@ -1,0 +1,80 @@
+{
+  "source": "Locally verified 2026-09-30 v0.4.0 candidate; submission delivery remains unchanged.",
+  "changes": [
+    {
+      "file": "CITATION.cff",
+      "source_archive_sha256": "cd6699539a31a8a6e25b3a57bbab9873342732824eac830e3b00acaf21bbe5cb",
+      "reviewer_release_sha256": "3bdbedfeb7783a3d0a3e658fd96ee1d6f36b7289f2717b05fb831f5dab272b76"
+    },
+    {
+      "file": "core/common.py",
+      "source_archive_sha256": "04d9b3ee3ed28728ae5dce876eaaaf9f660346b658ecf47505d8a7af7770c15d",
+      "reviewer_release_sha256": "beeda7c083b55ff6f89638944d0db03c3bd5f20fc6be3773731bb0f5867c39ef"
+    },
+    {
+      "file": "core/experiment_cross_sensitivity.py",
+      "source_archive_sha256": "0e02b740cca935da47aa1bf5e1153f1f03eca599854e4c7746afad6f108972f1",
+      "reviewer_release_sha256": "80a1381fc212c2051c1bbbf5e328b588ad2fef2c70ac67f70ada637ce672c2b3"
+    },
+    {
+      "file": "core/experiment_dwr.py",
+      "source_archive_sha256": "4b7b1c8852fe9f3660fd9b90cfe5ce832a5ec9b48bd1f099f7f711edfa9dff3f",
+      "reviewer_release_sha256": "1a3ee62d4f7fd4ec05208fb5dc6161c8301c61221b568cf401f323d06a4a4e7a"
+    },
+    {
+      "file": "core/experiment_population.py",
+      "source_archive_sha256": "4d9fefaf9a634d2febbcb6c415c865cb5af07c08a6b1d7b17fc0af0fab606c8a",
+      "reviewer_release_sha256": "a785bcacdaea84b21827f626d3ba9deae25a344ea34279b3958185dc7093d929"
+    },
+    {
+      "file": "core/experiment_sampling.py",
+      "source_archive_sha256": "d46fcdc084019fb97cac7931ae1568e21345e6f5209d9950af6d0e0d531577c2",
+      "reviewer_release_sha256": "364e3dad7b9d41e40a2aa1f10c3f3ae860c79183a6384f2dc19994d1dbce9d75"
+    },
+    {
+      "file": "followup/acs_population_benchmark.py",
+      "source_archive_sha256": "e400f61530c11a507ecee7f38fd97ee73a029f18f36f966af8b25fc92595048d",
+      "reviewer_release_sha256": "54e37fa7eb7d11bd60161d74ae4955058855f74cd31ffe3c62d296e5fc33f86a"
+    },
+    {
+      "file": "followup/followup_quality.py",
+      "source_archive_sha256": "9fdaf8479d1cc41f078a7bc5e20e0cad102e8792a4e1b516e8375d9474edfdf3",
+      "reviewer_release_sha256": "5cc65172d8fae1420148be38e011deaee08b448b6e62df83fc8351279fc32a50"
+    },
+    {
+      "file": "followup/fresno_capop_support_sensitivity.py",
+      "source_archive_sha256": "8d323b378fced90075fb86e2d86d01e6309a532ed48cfe27e940464703307bd2",
+      "reviewer_release_sha256": "80d01085929dd62956457c9022fc7e7dc31911bea6661b5632df0c0ef0e19876"
+    },
+    {
+      "file": "followup/spatial_dependence_audit.py",
+      "source_archive_sha256": "a71aa6081e688a03c8552f6b1cc55a61dd568d4fc600bff92df14377989be416",
+      "reviewer_release_sha256": "0f4f076b9fc91dfed8ca37d64ec73dbc543498c55b86084a9179cd13ef12cc41"
+    },
+    {
+      "file": "INPUT_ACQUISITION.txt",
+      "source_archive_sha256": "96c1b24f09ae3546f62dad1666266fec92fe1868578ae71e4f0f857716977cb0",
+      "reviewer_release_sha256": "78d9746f69f0a75cb59d584be12ab70833bfa2413d82e6f98a2da91eaa5bfd3a"
+    },
+    {
+      "file": "README.txt",
+      "source_archive_sha256": "2cf60ed6d7f828abd3065a04c91aec517ac91ac65abb38c4d16c65d7fb28afe3",
+      "reviewer_release_sha256": "affe5b468ef9c14d61a22063a4eef9d7bfbd48502eeb49e88e4b88ffbb442839"
+    },
+    {
+      "file": "RELEASE_NOTES_v0.4.0.txt",
+      "source_archive_sha256": "56f53f13d53724e7d04946a0ae21dabff811d55e67b3bc6662ef3149c7f153fe",
+      "reviewer_release_sha256": "4402833b98803d70a61d53c0e8c555eef1ea3a0ac66e83ce495de9b3ee79ef7b"
+    },
+    {
+      "file": "reproduce.py",
+      "source_archive_sha256": "933e0a81470c90d3e3ed7ef1aa57820796a3b1bf7998c9c1b52aa920a5cc1992",
+      "reviewer_release_sha256": "07eabb0808e3d2736e97b04852239610a64853e09cf1334a2e4e9a34cc3559c8"
+    },
+    {
+      "file": "THIRD_PARTY_NOTICES.txt",
+      "source_archive_sha256": "6b4335a15b84a1eeaa13a184a0ce5ade50085129f547d6d5c0a2f706de2846bb",
+      "reviewer_release_sha256": "48e0f2855d1a38f378781842243a17a1c7727919057828cc705208068db24c54"
+    }
+  ]
+}

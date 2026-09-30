@@ -1,14 +1,17 @@
 {
-  "title": "Open InSAR observability-bias manuscript repository",
+  "title": "Code for Quantifying how spatial allocation and sampling alter population-weighted InSAR support summaries",
   "upload_type": "software",
-  "description": "Manuscript source, reproducibility scripts, figure source data, and lightweight audit tables for the open-InSAR observability-bias study.",
+  "description": "2026 scientific revision: current manuscript and Supplementary Information, portable analysis code, frozen processed inputs, full reference tables, reviewer-to-experiment mapping and numerical reproduction verification. Author-owned code/outputs are CC BY 4.0; third-party materials retain provider terms recorded in DATA_LICENSES.md. Raw processing and optional provider inputs use separate acquisition workflows. Computational reproduction is not independent geodetic validation.",
   "creators": [
     {
       "name": "Liu, Zixuan"
+    },
+    {
+      "name": "Xiong, Wei"
     }
   ],
   "access_right": "open",
   "license": "CC-BY-4.0",
-  "version": "0.3.0",
-  "publication_date": "2026-07-20"
+  "version": "0.4.0",
+  "publication_date": "2026-10-01"
 }

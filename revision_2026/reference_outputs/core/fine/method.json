@@ -1,0 +1,6 @@
+{
+  "method": "Exact spherical rectangle intersections on union of cc and unw source boundaries, aggregated to GHSL3ss pixels; equal-weight mean over the 28 pairs",
+  "unwrapped_rule": "GDAL mask AND finite AND nonzero, product-specific",
+  "support_interpretation": "Mean area-pair quality support, not final-product validity or velocity accuracy",
+  "epoch": 2020
+}

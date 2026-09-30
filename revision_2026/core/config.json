@@ -1,0 +1,32 @@
+{
+  "project_root": "..",
+  "backup_root": "../backup_inputs",
+  "seed": 20260927,
+  "coherence_thresholds": [
+    0.2,
+    0.3,
+    0.4
+  ],
+  "primary_domain": "All finite cells of the archived Chao Phraya grid, independent of unconfirmed velocity scale",
+  "secondary_domain": "Inherited VLM x10 <= -5 mm/year screen; conditional on source scale",
+  "synthetic_missing_fractions": [
+    0.1,
+    0.3,
+    0.5
+  ],
+  "synthetic_replicates": 100,
+  "metric_grid_sizes_m": [
+    250,
+    500,
+    1000,
+    2000
+  ],
+  "sampling_sizes": [
+    28,
+    56,
+    112,
+    224
+  ],
+  "frame": "062D_07629_131313",
+  "catalogue_url": "https://gws-access.jasmin.ac.uk/public/nceo_geohazards/LiCSAR_products/62/062D_07629_131313/interferograms/"
+}

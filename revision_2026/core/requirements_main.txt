@@ -1,0 +1,8 @@
+numpy==2.2.6
+pandas==2.3.3
+scipy==1.15.3
+rasterio==1.4.4
+requests==2.34.2
+matplotlib==3.10.9
+networkx==3.4.2
+tifffile==2025.5.10

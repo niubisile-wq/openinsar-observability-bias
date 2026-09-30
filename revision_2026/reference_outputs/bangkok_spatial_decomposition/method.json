@@ -1,0 +1,25 @@
+{
+  "source": "matched_quality.npz",
+  "source_sha256": "58211202a7c7bec7e82a810a2f01a44d6b288c1a4c2097de92b49f49a4f243a1",
+  "method": "Fixed projected UTM Zone 47N grids aligned to integer kilometre coordinates; exact sums of supplied per-pixel area, GHSL allocation, and support. At each reporting unit, compare population-weighted support with area-weighted support; 5-km signed contributions decompose the AOI aggregate.",
+  "support_fields": [
+    "437_pair_mean_input",
+    "final_quality_mask"
+  ],
+  "reporting_scales_m": [
+    1000,
+    5000
+  ],
+  "support_cutoff": 0.5,
+  "meanings": {
+    "native": "input GHSL allocation units multiplied by pixel support",
+    "uniform": "same unit population multiplied by within-unit area-average support",
+    "low_support": "unit support fraction below 50%; exploratory support-category threshold, not a hazard threshold"
+  },
+  "caveats": [
+    "This is a finite-domain decomposition, not spatial cross-validation or an uncertainty interval.",
+    "All pixels of the matched LiCSBAS processing grid are retained; it does not impute or establish motion in invalid locations.",
+    "Population raster units are allocation values, not household truth.",
+    "UTM grid origins are fixed at integer kilometres; other grid origins are represented in the prior factorial sensitivity, not this regional decomposition."
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "generated_utc": "2026-09-30",
+  "data": [
+    {
+      "product": "2020 Census PL94-171 California",
+      "file": "ca2020.pl.zip",
+      "url": "https://www2.census.gov/programs-surveys/decennial/2020/data/01-Redistricting_File--PL_94-171/California/ca2020.pl.zip",
+      "bytes": 79627235,
+      "sha256": "e02c83c85a9a5d69ded4bf0d4c8ebe3f4bcd2d8e5911db765e9e42915ad1f753"
+    },
+    {
+      "product": "2020 Census TIGER/Line Fresno tabulation blocks",
+      "file": "tl_2020_06019_tabblock20.zip",
+      "url": "https://www2.census.gov/geo/tiger/TIGER2020PL/STATE/06_CALIFORNIA/06019/tl_2020_06019_tabblock20.zip",
+      "bytes": 8263416,
+      "sha256": "0344e4404093375ade715f73c27eae48017209d88ecdde4e71581e735405d3e9"
+    },
+    {
+      "product": "CA-POP source archive",
+      "file": "CA-POP-v1_0_0.zip",
+      "url": "https://zenodo.org/records/5874927/files/CA-POP-v1_0_0.zip",
+      "bytes": 73199614,
+      "sha256": "d2b964c9396719fbbdedda16491dd774d59cb0edf59a954bf5d030593eab5dde"
+    },
+    {
+      "product": "CA-POP 2020 total population 100-m raster",
+      "file": "CAPOP_2020_100m_TOTAL.tif",
+      "url": "https://zenodo.org/records/5874927/files/CA-POP-v1_0_0.zip",
+      "bytes": 389949196,
+      "sha256": "4e43c47579ce778dc9d336806ade0eafe145ba7a4eeb5889b6aaad4b5ae759c6"
+    }
+  ],
+  "study_geometry_note": "This experiment uses official TIGER/Line tabulation blocks and PL94-171 P1 totals. It retains 6,787 complete blocks (523,953 residents); the 6,788-block ESRI-hosted TIGER-derived geometry used in S16-S19 has the same population total. Source geometries differ."
+}

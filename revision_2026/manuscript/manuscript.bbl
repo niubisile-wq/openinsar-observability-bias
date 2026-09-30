@@ -1,0 +1,248 @@
+\begin{thebibliography}{10}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\burl{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\providecommand{\bibinfo}[2]{#2}
+\providecommand{\eprint}[2][]{\url{#2}}
+\providecommand{\doi}[1]{\url{https://doi.org/#1}}
+\bibcommenthead
+
+\bibitem{ferretti2001ps}
+\bibinfo{author}{Ferretti, A.}, \bibinfo{author}{Prati, C.} \&
+  \bibinfo{author}{Rocca, F.}
+\newblock \bibinfo{title}{Permanent scatterers in {SAR} interferometry}.
+\newblock \emph{\bibinfo{journal}{IEEE Transactions on Geoscience and Remote
+  Sensing}} \textbf{\bibinfo{volume}{39}}, \bibinfo{pages}{8--21}
+  (\bibinfo{year}{2001}).
+
+\bibitem{berardino2002sbas}
+\bibinfo{author}{Berardino, P.}, \bibinfo{author}{Fornaro, G.},
+  \bibinfo{author}{Lanari, R.} \& \bibinfo{author}{Sansosti, E.}
+\newblock \bibinfo{title}{A new algorithm for surface deformation monitoring
+  based on small baseline differential {SAR} interferograms}.
+\newblock \emph{\bibinfo{journal}{IEEE Transactions on Geoscience and Remote
+  Sensing}} \textbf{\bibinfo{volume}{40}}, \bibinfo{pages}{2375--2383}
+  (\bibinfo{year}{2002}).
+
+\bibitem{ferretti2011squeeSAR}
+\bibinfo{author}{Ferretti, A.} \emph{et~al.}
+\newblock \bibinfo{title}{A new algorithm for processing interferometric
+  data-stacks: {SqueeSAR}}.
+\newblock \emph{\bibinfo{journal}{IEEE Transactions on Geoscience and Remote
+  Sensing}} \textbf{\bibinfo{volume}{49}}, \bibinfo{pages}{3460--3470}
+  (\bibinfo{year}{2011}).
+
+\bibitem{morishita2020licsbas}
+\bibinfo{author}{Morishita, Y.} \emph{et~al.}
+\newblock \bibinfo{title}{{LiCSBAS}: An open-source {InSAR} time series
+  analysis package integrated with the {LiCSAR} automated {Sentinel-1} {InSAR}
+  processor}.
+\newblock \emph{\bibinfo{journal}{Remote Sensing}}
+  \textbf{\bibinfo{volume}{12}}, \bibinfo{pages}{424} (\bibinfo{year}{2020}).
+
+\bibitem{yunjun2019mintpy}
+\bibinfo{author}{Zhang, Y.}, \bibinfo{author}{Fattahi, H.} \&
+  \bibinfo{author}{Amelung, F.}
+\newblock \bibinfo{title}{Small baseline {InSAR} time series analysis:
+  Unwrapping error correction and noise reduction}.
+\newblock \emph{\bibinfo{journal}{Computers \& Geosciences}}
+  \textbf{\bibinfo{volume}{133}}, \bibinfo{pages}{104331}
+  (\bibinfo{year}{2019}).
+
+\bibitem{blackwell2020california}
+\bibinfo{author}{Blackwell, E.}, \bibinfo{author}{Shirzaei, M.},
+  \bibinfo{author}{Ojha, C.} \& \bibinfo{author}{Werth, S.}
+\newblock \bibinfo{title}{Tracking california's sinking coast from space:
+  Implications for relative sea-level rise}.
+\newblock \emph{\bibinfo{journal}{Science Advances}}
+  \textbf{\bibinfo{volume}{6}}, \bibinfo{pages}{eaba4551}
+  (\bibinfo{year}{2020}).
+
+\bibitem{fernandeztorres2024mexico}
+\bibinfo{author}{Fernandez-Torres, E.~A.} \emph{et~al.}
+\newblock \bibinfo{title}{Country-scale assessment of urban areas, population,
+  and households exposed to land subsidence using sentinel-1 insar, and gps
+  time series}.
+\newblock \emph{\bibinfo{journal}{Natural Hazards}}
+  \textbf{\bibinfo{volume}{120}}, \bibinfo{pages}{1577--1601}
+  (\bibinfo{year}{2024}).
+
+\bibitem{ao2024national}
+\bibinfo{author}{Ao, Z.}, \bibinfo{author}{Hu, X.}, \bibinfo{author}{Tao, S.},
+  \bibinfo{author}{Hu, X.} \emph{et~al.}
+\newblock \bibinfo{title}{A national-scale assessment of land subsidence in
+  china's major cities}.
+\newblock \emph{\bibinfo{journal}{Science}}  (\bibinfo{year}{2024}).
+
+\bibitem{ohenhen2025uscities}
+\bibinfo{author}{Ohenhen, L.~O.}, \bibinfo{author}{Zhai, G.},
+  \bibinfo{author}{Lucy, J.} \emph{et~al.}
+\newblock \bibinfo{title}{Land subsidence risk to infrastructure in {US}
+  metropolises}.
+\newblock \emph{\bibinfo{journal}{Nature Cities}} \textbf{\bibinfo{volume}{2}},
+  \bibinfo{pages}{543--554} (\bibinfo{year}{2025}).
+
+\bibitem{xiong2026nationwide}
+\bibinfo{author}{Xiong, Z.} \emph{et~al.}
+\newblock \bibinfo{title}{Nationwide mapping and characterization of land
+  subsidence in the {United States} using {InSAR}}.
+\newblock \emph{\bibinfo{journal}{Remote Sensing of Environment}}
+  \textbf{\bibinfo{volume}{333}}, \bibinfo{pages}{115134}
+  (\bibinfo{year}{2026}).
+
+\bibitem{yang2026buildingrisk}
+\bibinfo{author}{Yang, M.}, \bibinfo{author}{Huang, W.}, \bibinfo{author}{Li,
+  M.} \& \bibinfo{author}{Chang, L.}
+\newblock \bibinfo{title}{From {PS-InSAR} observations to building-level risk:
+  A data-driven framework for urban structural resilience}.
+\newblock \emph{\bibinfo{journal}{Remote Sensing of Environment}}
+  \textbf{\bibinfo{volume}{341}}, \bibinfo{pages}{115454}
+  (\bibinfo{year}{2026}).
+
+\bibitem{oelsmann2026coastal}
+\bibinfo{author}{Oelsmann, J.}, \bibinfo{author}{Nicholls, R.~J.},
+  \bibinfo{author}{Lincke, D.} \emph{et~al.}
+\newblock \bibinfo{title}{Subsidence more than doubles sea-level rise today
+  along densely populated coasts}.
+\newblock \emph{\bibinfo{journal}{Nature Communications}}
+  \textbf{\bibinfo{volume}{17}}, \bibinfo{pages}{4382} (\bibinfo{year}{2026}).
+
+\bibitem{murray2025hawaii}
+\bibinfo{author}{Murray, K.}, \bibinfo{author}{Barbee, M.},
+  \bibinfo{author}{Thompson, P.} \& \bibinfo{author}{Fletcher, C.}
+\newblock \bibinfo{title}{Coastal land subsidence accelerates timelines for
+  future flood exposure in hawai'i}.
+\newblock \emph{\bibinfo{journal}{Communications Earth \& Environment}}
+  \textbf{\bibinfo{volume}{6}}, \bibinfo{pages}{123} (\bibinfo{year}{2025}).
+
+\bibitem{luachapichatikul2020bangkok}
+\bibinfo{author}{Luachapichatikul, S.}
+\newblock \emph{\bibinfo{title}{Measuring Land Subsidence with {PS-InSAR} in
+  {Bangkok} using {Sentinel-1} Time-Series Techniques}}.
+\newblock \bibinfo{type}{Master's thesis}, \bibinfo{school}{Burapha University}
+  (\bibinfo{year}{2020}).
+\newblock \urlprefix\url{https://ir.buu.ac.th/dspace/handle/1513/311}.
+
+\bibitem{pumpuang2024bangkapi}
+\bibinfo{author}{Pumpuang, A.} \& \bibinfo{author}{Aobpaet, A.}
+\newblock \bibinfo{title}{Evolution pattern of land subsidence using {InSAR}
+  time-series analysis in {Bangkapi}, {Bangkok}, {Thailand}}.
+\newblock \emph{\bibinfo{journal}{Journal of Current Science and Technology}}
+  \textbf{\bibinfo{volume}{14}}, \bibinfo{pages}{49} (\bibinfo{year}{2024}).
+\newblock
+  \urlprefix\url{https://ph04.tci-thaijo.org/index.php/JCST/article/view/2549}.
+
+\bibitem{aieorattanawadee2022bangkok}
+\bibinfo{author}{Aieorattanawadee, N.}
+\newblock \emph{\bibinfo{title}{Monitoring land subsidence in {Bangkok} during
+  2018--2022 using time-series {InSAR} analysis with {MintPy}}}.
+\newblock \bibinfo{type}{Master's thesis}, \bibinfo{school}{Chulalongkorn
+  University} (\bibinfo{year}{2022}).
+\newblock \urlprefix\url{https://digital.car.chula.ac.th/chulaetd/6585/}.
+
+\bibitem{eicher2001dasymetric}
+\bibinfo{author}{Eicher, C.~L.} \& \bibinfo{author}{Brewer, C.~A.}
+\newblock \bibinfo{title}{Dasymetric mapping and areal interpolation:
+  Implementation and evaluation}.
+\newblock \emph{\bibinfo{journal}{Cartography and Geographic Information
+  Science}} \textbf{\bibinfo{volume}{28}}, \bibinfo{pages}{125--138}
+  (\bibinfo{year}{2001}).
+
+\bibitem{mennis2003population}
+\bibinfo{author}{Mennis, J.}
+\newblock \bibinfo{title}{Generating surface models of population using
+  dasymetric mapping}.
+\newblock \emph{\bibinfo{journal}{The Professional Geographer}}
+  \textbf{\bibinfo{volume}{55}}, \bibinfo{pages}{31--42}
+  (\bibinfo{year}{2003}).
+
+\bibitem{ohenhen2026deltas}
+\bibinfo{author}{Ohenhen, L.~O.} \emph{et~al.}
+\newblock \bibinfo{title}{Global subsidence of river deltas}.
+\newblock \emph{\bibinfo{journal}{Nature}} \textbf{\bibinfo{volume}{649}},
+  \bibinfo{pages}{894--901} (\bibinfo{year}{2026}).
+
+\bibitem{ohenhen2025deltadata}
+\bibinfo{author}{Ohenhen, L.}
+\newblock \bibinfo{title}{Global subsidence of river deltas}
+  (\bibinfo{year}{2025}).
+\newblock \bibinfo{note}{1-km vertical land motion GeoTIFFs for 40 river
+  deltas}.
+
+\bibitem{licsarproducts}
+\bibinfo{author}{{COMET}}.
+\newblock \bibinfo{title}{{LiCSAR} product details} (\bibinfo{year}{2026}).
+\newblock
+  \urlprefix\url{https://comet.nerc.ac.uk/comet-lics-portal-product-details/}.
+\newblock \bibinfo{note}{Accessed 27 September 2026; product-specific coherence
+  encoding and unwrapped validity}.
+
+\bibitem{pesaresi2024ghsl}
+\bibinfo{author}{Pesaresi, M.} \emph{et~al.}
+\newblock \bibinfo{title}{Advances on the global human settlement layer by
+  joint assessment of earth observation and population survey data}.
+\newblock \emph{\bibinfo{journal}{International Journal of Digital Earth}}
+  \textbf{\bibinfo{volume}{17}}, \bibinfo{pages}{2390454}
+  (\bibinfo{year}{2024}).
+
+\bibitem{worldpop2020}
+\bibinfo{author}{{WorldPop}}.
+\newblock \bibinfo{title}{Thailand 2020 population counts: unconstrained,
+  un-adjusted, 3 arc-second product} (\bibinfo{year}{2020}).
+\newblock \urlprefix\url{https://hub.worldpop.org/geodata/summary?id=29165}.
+\newblock \bibinfo{note}{File tha\_ppp\_2020\_UNadj.tif; accessed 27 September
+  2026}.
+
+\bibitem{worldcover2021}
+\bibinfo{author}{Zanaga, D.}, \bibinfo{author}{Van De~Kerchove, R.},
+  \bibinfo{author}{Daems, D.} \emph{et~al.}
+\newblock \bibinfo{title}{{ESA WorldCover} 10 m 2021 v200}
+  (\bibinfo{year}{2022}).
+
+\bibitem{licsbas2}
+\bibinfo{author}{Morishita, Y.}
+\newblock \bibinfo{title}{{LiCSBAS2}: time-series processing software}
+  (\bibinfo{year}{2026}).
+\newblock \urlprefix\url{https://github.com/yumorishita/LiCSBAS2}.
+\newblock \bibinfo{note}{Commit 2627e50a1c703becd4a0b18754b05c1cf8c564d5; local
+  Windows I/O portability patch documented}.
+
+\bibitem{dwr2026}
+\bibinfo{author}{{California Department of Water Resources}}.
+\newblock \bibinfo{title}{Vertical displacement point data locations, 2026q1:
+  published observation-cell polygons} (\bibinfo{year}{2026}).
+\newblock
+  \urlprefix\url{https://gis.water.ca.gov/arcgis/rest/services/Elevation/Vertical_Displacement_Point_Data_Locations_2026Q1/MapServer}.
+\newblock \bibinfo{note}{Service layer 0, geometry type polygon; accessed 27
+  September 2026}.
+
+\bibitem{dwrdocumentation}
+\bibinfo{author}{{California Department of Water Resources}}.
+\newblock \bibinfo{title}{{SGMA} data viewer documentation: {TRE Altamira
+  InSAR} dataset} (\bibinfo{year}{2026}).
+\newblock
+  \urlprefix\url{https://sgma.water.ca.gov/webgis/config/custom/html/SGMADataViewer/doc/}.
+\newblock \bibinfo{note}{100 m measurement support distinguished from
+  interpolated display rasters; accessed 27 September 2026}.
+
+\bibitem{haghshenas2024iran}
+\bibinfo{author}{Haghshenas~Haghighi, M.} \& \bibinfo{author}{Motagh, M.}
+\newblock \bibinfo{title}{Uncovering the impacts of depleting aquifers: A
+  remote sensing analysis of land subsidence in iran}.
+\newblock \emph{\bibinfo{journal}{Science Advances}}
+  \textbf{\bibinfo{volume}{10}} (\bibinfo{year}{2024}).
+
+\bibitem{payne2025iran}
+\bibinfo{author}{Payne, J.~A.} \emph{et~al.}
+\newblock \bibinfo{title}{Widespread extent of irrecoverable aquifer depletion
+  revealed by country-wide analysis of land surface subsidence hazard in iran}.
+\newblock \emph{\bibinfo{journal}{Journal of Geophysical Research: Solid
+  Earth}} \textbf{\bibinfo{volume}{130}} (\bibinfo{year}{2025}).
+
+\bibitem{payne2024data}
+\bibinfo{author}{Payne, J.}
+\newblock \bibinfo{title}{Accompanying data for paper: Widespread extent of
+  irrecoverable aquifer depletion revealed by country-wide analysis of land
+  surface subsidence hazard in iran} (\bibinfo{year}{2024}).
+
+\end{thebibliography}

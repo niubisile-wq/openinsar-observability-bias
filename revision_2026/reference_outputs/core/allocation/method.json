@@ -1,0 +1,17 @@
+{
+  "crs": "EPSG:32647",
+  "integration_grid_m": 50,
+  "scales_m": [
+    250,
+    500,
+    1000,
+    2000
+  ],
+  "origins": "four combinations of zero and half-cell shift",
+  "transfer": "GDAL sum conservative projection of extensive first and cross moments, then exact rectangular mass splitting on the projected integration grid",
+  "fine_reference": "GHSL 3ss within-pixel uniform population times exact spherical support; an allocation-model reference, not ground truth",
+  "area_uniform": "Redistribute the same cell exposure uniformly over its included-domain area",
+  "cell_center": "Use support of the fine pixel containing the metric cell center; centers outside the fixed domain have zero support",
+  "identity": "U_uniform - U_fine = sum_c [H_c - P_c S_c/A_c] = sum_c A_c Cov_area(density,support)",
+  "boundary": "Retain partial domain cells and their exact projected extensive weights; no full-cell population extrapolation"
+}

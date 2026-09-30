@@ -1,0 +1,93 @@
+{
+  "inputs": [
+    {
+      "path": "results\\fine\\grid.npz",
+      "sha256": "3e244c82c1c43f420436445e1ad70cce8f88d78faf8933d9d5175a90c19f0446"
+    },
+    {
+      "path": "results\\population\\population_models.npz",
+      "sha256": "48f6617c2c86563bf9523020c1420b9ebb54628459847f87fbe5b46488024e19"
+    },
+    {
+      "path": "results\\fine\\mean_support.npz",
+      "sha256": "06298685b9a5245dcdf7cb905da2bbb71a14de12c48bbf85bcb06f5540b8cae8"
+    },
+    {
+      "path": "results\\sampling\\mean_224.npz",
+      "sha256": "b274f215ee17192d008f239beaff8e687e2b5a7bac73a44f00b9d084c956290a"
+    }
+  ],
+  "primary_rows": 16,
+  "common_cells": 1754190,
+  "common_population": 22357666.84345355,
+  "excluded_ghsl_population": 142949.22136832483,
+  "original_common_domain_totals": {
+    "GHSL_2020_3ss": 22357666.84345355,
+    "WorldPop_2020_3ss": 22562098.47824386
+  },
+  "normalization_factors": {
+    "GHSL_2020_3ss": 1.0,
+    "WorldPop_2020_3ss": 0.9909391568790713
+  },
+  "max_integration_difference_pp_total": 0.00043563511463240445,
+  "all_signed_differences_positive": true,
+  "projection_diagnostic": "50-m production conserved at 1e-8 relative; 25-m raw diagnostic allows at most 1e-4 relative moment drift, reports it without renormalization, and must change uniform-minus-native by <0.01 percentage points of common population",
+  "common_domain": "Inherited primary footprint intersected with full GHSL/WorldPop 2020 coverage only; not the four-layer epoch intersection",
+  "sampling": "Legacy 28 and expanded 224 are different pair selections; this comparison jointly changes sample size and composition, not sample size alone",
+  "transfer": "Spherical fine-pixel support; conservative UTM47N transfer of A, A*s, P and P*s separately; aggregate extensive cross moment, never multiply separate projected averages",
+  "interpretation": "Conditional model-allocation comparison; four origins are not independent replicates; no population truth or physical missing-motion validation",
+  "summary": [
+    {
+      "model": "GHSL_2020_3ss",
+      "sample": "legacy28",
+      "native_deficit": 2989291.74093953,
+      "uniform_min": 4644813.442076539,
+      "uniform_max": 4652596.954804637,
+      "delta_min": 1655521.7011370086,
+      "delta_max": 1663305.2138651065,
+      "pct_min": 55.381737368219554,
+      "pct_max": 55.64211719737773,
+      "pp_min": 7.404715853084441,
+      "pp_max": 7.439529471082228
+    },
+    {
+      "model": "GHSL_2020_3ss",
+      "sample": "expanded224",
+      "native_deficit": 3267987.2403386813,
+      "uniform_min": 4944183.191124481,
+      "uniform_max": 4951389.7872098945,
+      "delta_min": 1676195.9507857999,
+      "delta_max": 1683402.5468712132,
+      "pct_min": 51.29138602793582,
+      "pct_max": 51.511906964996356,
+      "pp_min": 7.497186367980072,
+      "pp_max": 7.529419588628154
+    },
+    {
+      "model": "WorldPop_2020_3ss",
+      "sample": "legacy28",
+      "native_deficit": 5186340.867100168,
+      "uniform_min": 5654424.336727547,
+      "uniform_max": 5656945.648434795,
+      "delta_min": 468083.46962737944,
+      "delta_max": 470604.7813346274,
+      "pct_min": 9.025312481805662,
+      "pct_max": 9.073926943752081,
+      "pp_min": 2.0936150131624176,
+      "pp_max": 2.1048921814148205
+    },
+    {
+      "model": "WorldPop_2020_3ss",
+      "sample": "expanded224",
+      "native_deficit": 5488307.155799415,
+      "uniform_min": 5962752.590752364,
+      "uniform_max": 5964541.758259979,
+      "delta_min": 474445.4349529492,
+      "delta_max": 476234.6024605641,
+      "pct_min": 8.644658935526403,
+      "pct_max": 8.677258559724265,
+      "pp_min": 2.1220704211891834,
+      "pp_max": 2.130072899802639
+    }
+  ]
+}

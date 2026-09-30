@@ -1,0 +1,31 @@
+{
+  "path": "D:\\科研项目\\InSAR_Nature论文返修\\01_当前返修工作区\\InSAR_revision_20260926\\archive\\nature\\03_exposure_closure\\chao_phraya\\gridVLM\\chaoPhraya_vlm.tif",
+  "sha256": "5393e5c865c5105705b4b0e915f9133591816933965c88b67dfd273db6f2603d",
+  "band_units": [
+    null
+  ],
+  "scales": [
+    1.0
+  ],
+  "offsets": [
+    0.0
+  ],
+  "tags": {
+    "TIFFTAG_SOFTWARE": "MATLAB 9.10, Mapping Toolbox 5.1",
+    "AREA_OR_POINT": "Area"
+  },
+  "band_tags": {},
+  "cells": 18077,
+  "raw_below_minus5": 0,
+  "inherited_times10_below_minus5": 17808,
+  "raw_quantiles": [
+    -3.593841191492489,
+    -1.767189313972824,
+    -0.9756024344671386,
+    -0.5865738016018981,
+    1.0470936920209242
+  ],
+  "status": "The archived x10 scale is not independently established by the public GeoTIFF unit metadata; retained only as a conditional legacy screen. Main analyses use geographic footprint without a velocity threshold.",
+  "source_record": "https://zenodo.org/records/18092985",
+  "source_processing": "Ohenhen et al. WabInSAR, distinct from LiCSAR support sample"
+}

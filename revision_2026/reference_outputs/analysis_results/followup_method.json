@@ -1,0 +1,46 @@
+{
+  "source": "strengthening_inputs/results/timeseries/matched_quality.npz",
+  "source_sha256": "58211202a7c7bec7e82a810a2f01a44d6b288c1a4c2097de92b49f49a4f243a1",
+  "worldpop_source": "strengthening_inputs/external/worldpop_thailand_2020_UNadj.tif",
+  "worldpop_sha256": "5ae1dc11b888da6a5e8c947a3a8e10b055d43a1cf093faef63d9d28eb570083f",
+  "seed": 20260930,
+  "replicates": 30,
+  "projected_scales_m": [
+    250,
+    500,
+    1000,
+    2000
+  ],
+  "block_source_pixel_sizes": [
+    5,
+    10,
+    20
+  ],
+  "mask_mechanisms": [
+    "random",
+    "spatial_cluster",
+    "high_velocity_spread",
+    "low_velocity_spread"
+  ],
+  "mask_fraction": 0.3,
+  "thresholds_mm_yr": [
+    -2.0,
+    -5.0,
+    -10.0
+  ],
+  "origins": "zero and half-unit in both dimensions",
+  "population_models": "GHSL native; WorldPop average-resampled to processing grid and normalized to GHSL total over common cells; no independent-truth claim",
+  "support_estimand": "Difference in fixed-domain population-weighted mean deficit between native population weighting and area-uniform support within projected units",
+  "geometry_approximation": "Projected pixel-centre grouping for 250-2000 m sensitivity. Compare 1-km GHSL effect estimates with prior direct polygon intersection audit; differences are not to be pooled.",
+  "covariance_diagnostic": "Compute exact identity for grouped centre-assigned data and Cauchy-Schwarz bound. Mathematical bound uses model-specific population density and area-weighted support spread.",
+  "block_baseline": "Unweighted median LOS velocity within visible pixels in artificial square reporting units; assigns all artificially hidden population in a unit to the median category. This is not actual Census block geography.",
+  "artificial_truth": "Velocity known in all originally final-valid pixels before simulated removal. Original failed pixels excluded.",
+  "interval_interpretation": "2.5th-97.5th percentiles across seeded artificial masks are design sensitivity ranges, not confidence intervals.",
+  "limitations": [
+    "No independent household or building occupancy truth",
+    "No deformation truth in original invalid pixels",
+    "WorldPop and GHSL lineage overlap may occur",
+    "Projected centre-bin approximation",
+    "Square blocks approximate but do not reproduce real Census polygons"
+  ]
+}

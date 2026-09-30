@@ -1,0 +1,57 @@
+{
+  "primary_cases": 64,
+  "input_population": 11314756.61992068,
+  "shape": [
+    401,
+    301
+  ],
+  "max_projection_relative_drift": 1.0408600985172538e-15,
+  "max_integration_discrepancy_pp_total": 1.509903313490213e-14,
+  "summary_1000m": [
+    {
+      "support": "final_quality_mask",
+      "method": "center",
+      "native_deficit_pct": 0.2944249966876661,
+      "difference_pp_total_min": 0.3314087034917248,
+      "difference_pp_total_max": 1.836303879413353,
+      "relative_difference_pct_min": 112.56133386096019,
+      "relative_difference_pct_max": 623.6915683356034
+    },
+    {
+      "support": "final_quality_mask",
+      "method": "uniform_area",
+      "native_deficit_pct": 0.2944249966876661,
+      "difference_pp_total_min": 0.10776972640998292,
+      "difference_pp_total_max": 0.11693450651141733,
+      "relative_difference_pct_min": 36.6034567792856,
+      "relative_difference_pct_max": 39.71622920164778
+    },
+    {
+      "support": "matched437_mean_support",
+      "method": "center",
+      "native_deficit_pct": 3.4538769459194665,
+      "difference_pp_total_min": 2.144472989476686,
+      "difference_pp_total_max": 4.136514234923534,
+      "relative_difference_pct_min": 62.08886486272312,
+      "relative_difference_pct_max": 119.76437781926654
+    },
+    {
+      "support": "matched437_mean_support",
+      "method": "uniform_area",
+      "native_deficit_pct": 3.4538769459194665,
+      "difference_pp_total_min": 3.0659776060229817,
+      "difference_pp_total_max": 3.1891237620773647,
+      "relative_difference_pct_min": 88.76916155467661,
+      "relative_difference_pct_max": 92.33460867345346
+    }
+  ],
+  "convergence_pass": true,
+  "primary_integration_m": 25,
+  "diagnostic_integration_m": 12.5,
+  "status": "direct geometry and numerical convergence gates passed; physical/demographic validation not implied",
+  "interpretation": "The two support definitions estimate different quantities; neither supplies hidden-motion validation",
+  "direct_geometry_audit": "passed: 0.001-degree source cells intersected directly with densified 1-km UTM cells in spherical equal-area coordinates",
+  "max_direct_vs_25m_uniform_difference_pp": 0.00018113660728502623,
+  "max_direct_population_conservation_drift": 1.862645149230957e-09,
+  "max_direct_area_conservation_drift_m2": 0.0
+}

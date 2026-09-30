@@ -1,0 +1,24 @@
+{
+  "estimand": "population-weighted block rate-class transition using the same complete Census blocks with valid DWR cells in both selected periods",
+  "early_period": "2015-10 to 2021-10 temporal median of annual rates",
+  "late_period": "2025-04 to 2026-04 annual",
+  "population_vintage": "2020 Census P0010001 held fixed in both periods to isolate rate-class changes; late-period values are not a contemporaneous exposure estimate",
+  "thresholds_mm_per_year": [
+    ">=0",
+    "[-3,0)",
+    "[-5,-3)",
+    "[-10,-5)",
+    "<-10"
+  ],
+  "common_blocks": 6129,
+  "common_population_2020": 501411,
+  "input_csv": "followup_inputs/census_block_velocity_analysis/fresno_census_block_velocity_by_block.csv",
+  "input_sha256": "30dc15bb761647c2a028fe6f94d244bb21b35433b485cc7ff5b40c1d009cef2d",
+  "limitations": [
+    "Different temporal estimands (six-year pixelwise median vs single annual raster).",
+    "The 2025-2026 rate is a single annual product and must not be interpreted as long-term trend or persistent hazard.",
+    "DWR annual rates are interpolated vertical products, not the manuscript LOS field.",
+    "Census 2020 population is intentionally held fixed; it is not a population estimate for 2025-2026.",
+    "This is an exploratory sensitivity that demonstrates temporal class instability, not independent validation."
+  ]
+}

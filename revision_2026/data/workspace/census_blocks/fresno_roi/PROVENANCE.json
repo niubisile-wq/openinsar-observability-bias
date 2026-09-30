@@ -1,0 +1,36 @@
+{
+  "source": "Esri-hosted U.S. Census 2020 DHC/TIGER Block layer; source service and query specified in INPUT_ACQUISITION.txt",
+  "query_date": "2026-10-01",
+  "unique_GEOIDs": 6999,
+  "validation": "Recomputed S19 metrics match the retained manuscript table; serialization hashes differ from the historical response-manifest files.",
+  "files": [
+    {
+      "file": "blocks_0.geojson",
+      "sha256": "6a3f20583e011fe1e13438cdfef68e9148299a2a188967673c6289d99c2dd5d3"
+    },
+    {
+      "file": "blocks_1000.geojson",
+      "sha256": "1d15fea32c57bfcbe5021c92ccd4369ac35c535bc4239f07fc1b67e0a4d381b1"
+    },
+    {
+      "file": "blocks_2000.geojson",
+      "sha256": "42dfd7c740b36e13c956e374dd24698c46bd2eea7cdd88414a368d5e739b709e"
+    },
+    {
+      "file": "blocks_3000.geojson",
+      "sha256": "0f94b7d732adfb50461dc5bcf91dce5a02cf01936c9c168065bc15841282fb88"
+    },
+    {
+      "file": "blocks_4000.geojson",
+      "sha256": "f4ea403d1028382ca92a4eb877d4a9f1686db80983d5e1a2d082f43ab25645a4"
+    },
+    {
+      "file": "blocks_5000.geojson",
+      "sha256": "bbee6bca9885d4afb515adc55e0fc4d80c605236595056d32427c03c8198f112"
+    },
+    {
+      "file": "blocks_6000.geojson",
+      "sha256": "75a1fcb06ec20891a26ab645da9fa78e25ff3668ec42ba666e5601d477d38304"
+    }
+  ]
+}

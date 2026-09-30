@@ -1,0 +1,62 @@
+{
+  "experiment": "Within-block normalization of alternative fine-resolution population distributions against the same 2020 Census block totals and DWR support field.",
+  "scope": "Fresno fixed rectangle; complete 2020 Census blocks only; DWR 100-m measurement-cell polygon-union support.",
+  "support": "Fractional observed area in 100-m projected target cells, reprojected from the area-weighted DWR mask field.",
+  "models": {
+    "Area_uniform": {
+      "census_units_reallocated": 523908.00000000006,
+      "population_weighted_support_share": 0.9915682696177038,
+      "support_deficit_units": 4417.451001128007,
+      "below_50pct_support_units": 3618.3516595589244,
+      "blocks": 5713,
+      "census_units_denominator": 523908.0
+    },
+    "GHSL_2020_100m": {
+      "census_units_reallocated": 523908.0,
+      "population_weighted_support_share": 0.9961514804159924,
+      "support_deficit_units": 2016.2701982182334,
+      "below_50pct_support_units": 1285.0334186403738,
+      "blocks": 5713,
+      "census_units_denominator": 523908.0
+    },
+    "CA_POP_2020_100m": {
+      "census_units_reallocated": 523907.99999999994,
+      "population_weighted_support_share": 0.9975789788253805,
+      "support_deficit_units": 1268.392361552571,
+      "below_50pct_support_units": 596.4795382381598,
+      "blocks": 5713,
+      "census_units_denominator": 523908.0
+    }
+  },
+  "domain": {
+    "complete_blocks": 6787,
+    "complete_block_census_population": 523953.0,
+    "positive_population_blocks": 5716,
+    "blocks_with_GHSL_mass": 6784,
+    "blocks_with_CA_POP_mass": 6787,
+    "common_block_count": 5713,
+    "common_census_population_units": 523908.0,
+    "common_population_share_of_all_complete_blocks": 0.9999141144339282,
+    "population_in_positive_blocks_without_GHSL_mass": 45.0,
+    "population_in_positive_blocks_without_CA_POP_mass": 0.0,
+    "candidate_cell_intersections": 88864
+  },
+  "reprojection": {
+    "input_GHSL_100m_domain_mass": 598097.8971288954,
+    "reprojected_GHSL_domain_mass": 598097.8971288954,
+    "GHSL_mass_relative_error": 0.0,
+    "input_area_m2": 495509920.1525193,
+    "reprojected_area_m2": 495509920.15251917,
+    "area_mass_relative_error": 2.405790170943264e-16
+  },
+  "tract_decomposition": {
+    "tract_count": 125,
+    "tracts_CA_POP_deficit_higher": 19,
+    "tracts_CA_POP_deficit_lower": 48,
+    "net_CA_POP_minus_GHSL_units": -747.877836665512,
+    "summed_absolute_tract_difference_units": 768.3234455597201,
+    "cross_tract_sign_cancellation_fraction": 0.026610679411603333,
+    "tract_resampling_inference": "Not performed: the full fixed study region is a finite descriptive domain, and no random sampling design is defined."
+  },
+  "interpretation": "CA-POP is an alternative dasymetric allocation model built from the same 2020 Census block counts and residential parcels/building footprints. Census block totals are normalized by construction. This is population-allocation sensitivity, not independent validation or household-level truth. Four partial block totals are not inferred; only blocks wholly inside the fixed ROI are retained."
+}

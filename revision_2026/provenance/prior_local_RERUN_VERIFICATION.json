@@ -1,0 +1,91 @@
+{
+  "scope": "Portable follow-up and Fresno population-benchmark scripts executed with retained inputs",
+  "tables": [
+    {
+      "table": "analysis_results/allocation_covariance_bounds.csv",
+      "rows": 64,
+      "columns": 17,
+      "every_value_identical": true
+    },
+    {
+      "table": "analysis_results/allocation_local_effects.csv",
+      "rows": 64,
+      "columns": 11,
+      "every_value_identical": true
+    },
+    {
+      "table": "analysis_results/block_median_baseline_replicates.csv",
+      "rows": 17280,
+      "columns": 17,
+      "every_value_identical": true
+    },
+    {
+      "table": "analysis_results/block_median_baseline_summary.csv",
+      "rows": 576,
+      "columns": 16,
+      "every_value_identical": true
+    },
+    {
+      "table": "analysis_results/population_model_common_domain.csv",
+      "rows": 2,
+      "columns": 7,
+      "every_value_identical": true
+    },
+    {
+      "table": "fresno_population_benchmark/fresno_census_block_population_model_counts.csv",
+      "rows": 6788,
+      "columns": 7,
+      "every_value_identical": true
+    },
+    {
+      "table": "fresno_population_benchmark/fresno_census_block_population_model_metrics.csv",
+      "rows": 5,
+      "columns": 12,
+      "every_value_identical": true
+    }
+  ],
+  "external_inputs_bundled": false,
+  "scientific_independence_claimed": false,
+  "supplementary_s20_reproduction": {
+    "scope": "Re-ran both S20 scripts from a fresh clone of the versioned code directory with the retained third-party inputs mounted read-only and the frozen DWR grid copied into expected layout.",
+    "files": [
+      {
+        "file": "summary.json",
+        "reference_sha256": "9070f0f5960e20d412d30d73809904f92eb9941d5137fa8342410181b8aebba7",
+        "rerun_sha256": "9070f0f5960e20d412d30d73809904f92eb9941d5137fa8342410181b8aebba7",
+        "identical": true
+      },
+      {
+        "file": "method_summary.csv",
+        "reference_sha256": "3290aff89bb07b88fd9a694a3ddfe76c08e08da7016080dde8791e14e2328d8a",
+        "rerun_sha256": "3290aff89bb07b88fd9a694a3ddfe76c08e08da7016080dde8791e14e2328d8a",
+        "identical": true
+      },
+      {
+        "file": "per_block.csv",
+        "reference_sha256": "b8e44dca60af01573cea325bad6fcdcbf60720229db27e4f5d9818a720c65d96",
+        "rerun_sha256": "b8e44dca60af01573cea325bad6fcdcbf60720229db27e4f5d9818a720c65d96",
+        "identical": true
+      },
+      {
+        "file": "scale_method_sensitivity.csv",
+        "reference_sha256": "2f27536d69c297189cfa27212761d5aaf431a899279ab99a0af826e9e2f71b82",
+        "rerun_sha256": "2f27536d69c297189cfa27212761d5aaf431a899279ab99a0af826e9e2f71b82",
+        "identical": true
+      },
+      {
+        "file": "tract_decomposition.csv",
+        "reference_sha256": "cd7ec843889f5268d49f44646ef2c0c142eb73ffe0fb3ff5cb91b90a2d0a5c00",
+        "rerun_sha256": "cd7ec843889f5268d49f44646ef2c0c142eb73ffe0fb3ff5cb91b90a2d0a5c00",
+        "identical": true
+      },
+      {
+        "file": "spatial_autocorrelation.json",
+        "reference_sha256": "1a92a3448498a9f9d6112ca5b67196b7a94cf244ab9b3bffafe44d2dbb3de853",
+        "rerun_sha256": "1a92a3448498a9f9d6112ca5b67196b7a94cf244ab9b3bffafe44d2dbb3de853",
+        "identical": true
+      }
+    ],
+    "every_value_identical": true
+  }
+}

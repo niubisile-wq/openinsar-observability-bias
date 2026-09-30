@@ -1,0 +1,61 @@
+{
+  "masking": {
+    "rows": 21600,
+    "complete_factorial_groups": 216,
+    "repeats_each": 100,
+    "independent_recomputed_rows": 144,
+    "independent_scope": "Repetitions 0,1,49,99; all four mechanisms and three fractions; 10-pixel zero-origin cells; three methods",
+    "synthetic_bounds": 3600,
+    "maximum_recomputed_difference": 2.7939677238464355e-09
+  },
+  "dwr/masking": {
+    "rows": 21600,
+    "complete_factorial_groups": 216,
+    "repeats_each": 100,
+    "independent_recomputed_rows": 144,
+    "independent_scope": "Repetitions 0,1,49,99; all four mechanisms and three fractions; 10-pixel zero-origin cells; three methods",
+    "synthetic_bounds": 3600,
+    "maximum_recomputed_difference": 1.1641532182693481e-10
+  },
+  "population": {
+    "model_rows": 64,
+    "landcover_rows": 108,
+    "maximum_landcover_fraction_closure_error": 8.195638656616211e-08
+  },
+  "sampling": {
+    "nested_rows": 48,
+    "maximum_nested_difference_fraction_total": 1.3482458544975463e-08,
+    "nested_tolerance": "One float32 support ULP (2^-24) times total exposure plus 1e-6; retained mean fields are rounded to float32",
+    "conditional_draws_recomputed": 400,
+    "networks": {
+      "legacy28": {
+        "pairs": 28,
+        "dates": 54,
+        "components": 26,
+        "cycle_rank": 0
+      },
+      "expanded224": {
+        "pairs": 224,
+        "dates": 225,
+        "components": 29,
+        "cycle_rank": 28
+      },
+      "catalogue2016_2022": {
+        "pairs": 1603,
+        "dates": 288,
+        "components": 1,
+        "cycle_rank": 1316
+      }
+    }
+  },
+  "dwr": {
+    "unique_polygons": 38738,
+    "global_union_area_m2": 388905253.2777503,
+    "retained_union_area_m2": 388905253.2758955,
+    "area_difference_m2": 0.0018548369407653809,
+    "independent_pixel_intersections": 128,
+    "max_support_difference": 2.3351542921545843e-11,
+    "method": "Global union of original polygon rings in longitude-radians/sine-latitude; independent random pixel intersections",
+    "tolerance": "1 m2 global area and 1e-6 pixel fraction, allowing GEOS floating-point union order"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "operation": "Original followup_quality.py reproject_worldpop with Rasterio average; before any normalization or support/outcome calculation.",
+  "shape": [
+    401,
+    301
+  ],
+  "parents": [
+    {
+      "file": "worldpop_thailand_2020_UNadj.tif",
+      "sha256": "5ae1dc11b888da6a5e8c947a3a8e10b055d43a1cf093faef63d9d28eb570083f",
+      "bytes": 262740152
+    },
+    {
+      "file": "geometry.json",
+      "sha256": "26d3d72789221560720b399a1986ecd9980b8eda4792d7f9d3830637e572fd5f",
+      "bytes": 900
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "command": [
+    "D:\\InSAR_revision_20260926\\strengthening\\.venv_licsbas\\Scripts\\python.exe",
+    "D:\\InSAR_revision_20260926\\strengthening\\licsbas_portable.py",
+    "LiCSBAS12_loop_closure.py",
+    "-d",
+    "D:\\InSAR_revision_20260926\\strengthening\\results\\timeseries\\GEOC_full",
+    "-t",
+    "D:\\InSAR_revision_20260926\\strengthening\\results\\timeseries\\TS_full",
+    "--n_para",
+    "1"
+  ],
+  "returncode": 0,
+  "seconds": 343.01852536201477,
+  "expected_output": "D:\\InSAR_revision_20260926\\strengthening\\results\\timeseries\\TS_full\\info\\12ref.txt"
+}

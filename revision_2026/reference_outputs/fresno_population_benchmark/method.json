@@ -1,0 +1,35 @@
+{
+  "blocks": 6788,
+  "Census_total": 523953.0,
+  "Census_source_field": "2020 DHC P0010001; differential privacy applies",
+  "geometry_transfer": "Raster-cell counts allocated to Census blocks in ESRI:54009 by exact polygon intersection area fraction; assumes uniform within source raster cell. GHSL 1-km cells are equal-area; WorldPop 30-arcsecond cells are transformed from EPSG:4326 to the equal-area projection before intersection.",
+  "WorldPop_license": "CC BY 4.0",
+  "WorldPop_doi": "10.5258/SOTON/WP00671",
+  "GHSL_product": "GHS-POP E2020 GLOBE R2023A, 1 km, ESRI:54009, V1.0",
+  "source_sha256": {
+    "WorldPop": "0b75ab7c839bfa81439fafa204f0fba930f15467993c574694be98831fcafb94",
+    "GHSL_tile_zip": "b9ee3a07a9b042aea86c1d07f1d14a3815c8a546fe60e135568ce3b25dc21c72",
+    "Census_block_geojson": {
+      "blocks_0.geojson": "f87e801f74925ac77458b2e6cac940b034ae605ac2c2628ea7f3bb2c5b6ba3e4",
+      "blocks_1000.geojson": "298630dcf7395e5345a307bbc090c9a3024263b884fd6987fa9219968f4add4a",
+      "blocks_2000.geojson": "7f70de11c04fe54996f269b6be80346900faa23a9f3c018ce00f21ec81d64d34",
+      "blocks_3000.geojson": "7be5a6b2ac073690a91fc234c35d79e881a11cdf9cd53b3935eee7d5646993d0",
+      "blocks_4000.geojson": "8f38ecad686ea0278e63529d136086228204ff5971a2962b28040811f5621d7e",
+      "blocks_5000.geojson": "10862726cca35b701b4b14638ac46806c5f9a2b5ede07606363c36669eb678dc",
+      "blocks_6000.geojson": "616f4c8574db9cec4bcc156337913ce9ad4763dcb2b6b8bd8ce53fd3e926ab40"
+    }
+  },
+  "interpretation": "Coarse block-total benchmark only. Census, GHSL and WorldPop may share census inputs. Does not independently validate within-block household locations; normalized models isolate relative allocation shape but are calibrated to the Census total.",
+  "ghsl_tile": "GHS_POP_E2020_GLOBE_R2023A_54009_1000_V1_0_R5_C8.tif",
+  "worldpop_window_shape": [
+    30,
+    82
+  ],
+  "models": [
+    "GHSL raw",
+    "WorldPop raw",
+    "GHSL normalized to Census total",
+    "WorldPop normalized to Census total",
+    "Uniform over Census land area"
+  ]
+}

@@ -1,0 +1,23 @@
+\section*{S14. Artificial masking of observed LOS classes}
+We used the unfiltered fitted LOS velocity from the full LiCSBAS branch, positive toward the satellite, only inside the final full-stack validity mask. The observed-domain reference contains 117,103 of 120,701 grid cells and 11.281 million GHSL allocation units. Population-weighted shares at or below $-2$, $-5$ and $-10$ mm yr$^{-1}$ are 2.474\%, 0.2805\% and 0.0223\%, respectively. These are relative LOS classes and are not vertical-settlement or hazard thresholds.
+
+For each of 100 seeded repetitions, we artificially removed 10\% or 30\% of otherwise valid cells under four mechanisms: random, spatially clustered, preferentially high velocity spread, and preferentially low velocity spread. The latter two scores include a small seeded spatial perturbation so that replicates vary while remaining associated with the quality diagnostic. We estimated the threshold-class population among artificially masked cells from the within-block observed-population prevalence and from the nearest observed pixel to each block center. Nominal cell sizes were 5, 10 and 20 source pixels (about 0.55, 1.11 and 2.22 km); four zero/half-cell origins retain partial raster-edge blocks. The known hidden class population is calculated directly from the observed LOS values before artificial masking. Every comparison therefore has a defined conditional reference.
+
+\begin{table}[htbp]\centering\scriptsize
+\caption{Observed LOS population-class masking, 30\% removed cells, nominal 1.11-km blocks, threshold $v_{LOS}\leq-5$ mm yr$^{-1}$. Estimates and biases are GHSL model allocation units, not verified person counts. Bias ranges are the 2.5th--97.5th percentiles across seeded masks and the four grid origins; they are design-sensitivity ranges, not confidence intervals.}
+\begin{tabular}{llrrrr}\toprule
+Removal pattern & Estimator & Known hidden class & Mean bias & Relative bias (\%) & Bias range\\\midrule
+Random & Local observed prevalence & 9,514 & 91 & 1 & $[-835,1194]$\\
+Random & Nearest observed centre pixel & 9,514 & 9,455 & 100 & $[6,139,13,265]$\\
+Spatial clusters & Local observed prevalence & 9,542 & 153 & 5 & $[-5,596,7,924]$\\
+Spatial clusters & Nearest observed centre pixel & 9,542 & 4,368 & 52 & $[-2,803,15,074]$\\
+High-spread selection & Local observed prevalence & 16,657 & $-5,018$ & $-30$ & $[-9,879,1,332]$\\
+High-spread selection & Nearest observed centre pixel & 16,657 & $-1,952$ & $-12$ & $[-8,068,6,793]$\\
+Low-spread selection & Local observed prevalence & 1,375 & 1,079 & 79 & $[-453,3,357]$\\
+Low-spread selection & Nearest observed centre pixel & 1,375 & 1,566 & 114 & $[-77,4,924]$\\\bottomrule
+\end{tabular}
+\end{table}
+
+The local prevalence estimator is close to aggregate reference under random masking, while center sampling overestimates the $-5$ mm yr$^{-1}$ class in that case. Under quality-selective removal the local estimator has a negative or positive bias depending on which velocity-spread tail is removed; spatial clustering also broadens the conditional range. Velocity spread is a processing diagnostic, not a calibrated uncertainty interval. Across all three predeclared LOS thresholds and all scales, neither estimator is uniformly accurate across mechanisms. The complete factorial is retained in \path{actual_los_masking/replicates.csv}, with grouped summaries in \path{actual_los_masking/summary.csv}.
+
+This experiment is closer to the observed product than synthetic two-valued fields, but remains conditional on a fixed population model, the final valid domain and known observed velocities. Original invalid pixels are excluded before artificial masking. It does not validate motion or exposure in permanently unobserved locations.

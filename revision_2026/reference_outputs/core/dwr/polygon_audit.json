@@ -1,0 +1,9 @@
+{
+  "features": 38738,
+  "unique_codes": 38738,
+  "raw_polygon_area_m2": 388905253.27768,
+  "union_area_m2": 388905253.2777503,
+  "overlap_removed_m2": -7.033348083496094e-05,
+  "domain_area_m2": 495509920.1525193,
+  "union_intersection": "Each source rectangle clipped to AOI and GHSL pixels; union in longitude-radians/sine-latitude coordinates gives exact spherical rectangular area"
+}

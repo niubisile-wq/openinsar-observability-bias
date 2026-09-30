@@ -1,59 +1,33 @@
-# Open InSAR Observability-Bias Repository
+# Open InSAR observability-bias manuscript repository
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21444768.svg)](https://doi.org/10.5281/zenodo.21444768)
+The current scientific revision is **[Quantifying how spatial allocation and sampling alter population-weighted InSAR support summaries](revision_2026/manuscript/manuscript.pdf)**.
 
-This repository contains the manuscript source, reproducibility scripts, figure source data, and lightweight audit tables for the open-InSAR observability-bias study.
+## Current revision and reviewer reproduction
 
-## Current Manuscript Package
+Start with **[revision_2026/README.md](revision_2026/README.md)** for installation, a data-based quick reproduction, the full analysis suite, provider downloads, numerical comparisons, and the limits of each experiment.
 
-The current Earth Science Informatics manuscript package is in:
-
-- `14_esin_strengthened_v1/`
-
-Key files:
-
-- `14_esin_strengthened_v1/ESIN_strengthened_v1.tex`
-- `14_esin_strengthened_v1/ESIN_strengthened_v1.pdf`
-- `14_esin_strengthened_v1/ESIN_supplementary_information.tex`
-- `14_esin_strengthened_v1/ESIN_supplementary_information.pdf`
-- `14_esin_strengthened_v1/source_data_inventory_strengthened_v1.csv`
-
-## Release and DOI
-
-- GitHub repository: `https://github.com/niubisile-wq/openinsar-observability-bias`
-- Zenodo DOI: `10.5281/zenodo.21444768`
-
-Recommended citation:
-
-```text
-Liu, Z. Open InSAR observability-bias manuscript repository. Zenodo. https://doi.org/10.5281/zenodo.21444768
+```sh
+git clone https://github.com/niubisile-wq/openinsar-observability-bias.git
+cd openinsar-observability-bias
+python -m venv .venv
+# Linux/macOS:
+.venv/bin/python -m pip install -r revision_2026/requirements_reviewer_lock.txt
+.venv/bin/python revision_2026/reproduce.py quick --workspace reproduction_output
 ```
 
-## What Is Included
+For Windows, use the explicit PowerShell commands in the [reproduction guide](revision_2026/README.md#start-here).
 
-- Manuscript and Supplementary Information source files
-- Compiled manuscript and Supplementary Information PDFs
-- Final figure files used by the manuscript
-- Figure source-data tables
-- Reproducibility scripts and lightweight input manifests
-- Bibliography and Springer Nature LaTeX support files
+- [Current clean manuscript](revision_2026/manuscript/manuscript.pdf)
+- [Supplementary Information, S1–S24](revision_2026/manuscript/supplementary.pdf)
+- [Point-by-point response](revision_2026/manuscript/response.pdf)
+- [Reviewer-to-experiment map](revision_2026/REVIEWER_MAP.md)
+- [Scientific reference outputs](revision_2026/reference_outputs/)
+- [Frozen analysis inputs and provenance](revision_2026/data/)
 
-## What Is Excluded
+The quick route reruns S21–S24 and checks scientific results against frozen tables. The wider suite replays the main allocation, masking, sampling, population-model and paired/LOS analyses from processed inputs. The retained raw-processing code, pinned LiCSBAS commit and acquisition manifests document the separate upstream-data route.
 
-- Large third-party remote-sensing products
-- Local submission bundles
-- Temporary LaTeX outputs
-- Internal drafting notes and cover-letter material
-- Duplicate handoff packages
+## Version history and DOI
 
-## Reproducibility Goal
+The earlier manuscript in `14_esin_strengthened_v1/` and the historical folders remain available as source history. **DOI [10.5281/zenodo.21444768](https://doi.org/10.5281/zenodo.21444768) archives the earlier v0.3.0 release only.** It does not cover the 2026 revision. Publication of an updated Zenodo DOI remains pending; use the revision GitHub tag/commit to identify the current code in the meantime.
 
-The GitHub repository is the versioned source for the Zenodo release. The Zenodo DOI identifies the archived release used for reproducibility.
-
-## Key Folders
-
-- `03_exposure_closure/`
-- `07_scripts_and_registry/`
-- `08_nature_experiment_plan/`
-- `10_manuscript_skeleton/`
-- `14_esin_strengthened_v1/`
+This repository release does not submit the manuscript to a journal. Numerical reproduction verifies computations for defined inputs and does not provide independent geodetic or household-population validation.

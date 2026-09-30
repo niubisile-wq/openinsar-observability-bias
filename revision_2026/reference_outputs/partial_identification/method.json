@@ -1,0 +1,16 @@
+{
+  "source": "D:\\科研项目\\InSAR_Nature论文返修\\01_当前返修工作区\\InSAR_revision_20260926\\strengthening\\results\\timeseries\\matched_quality.npz",
+  "source_sha256": "58211202a7c7bec7e82a810a2f01a44d6b288c1a4c2097de92b49f49a4f243a1",
+  "population_surface": "GHSL model allocation; units are not verified residents",
+  "support_definition": "The retained final full-stack LiCSBAS validity mask",
+  "observed_rate": "Relative LOS mm per year; not vertical velocity or a hazard threshold",
+  "bound": "For unknown invalid-domain class share theta in [0, 1], total allocation is E_visible + theta * U_invalid.",
+  "valid_population_units": 11281443.14811726,
+  "unsupported_population_units": 33313.47180341894,
+  "domain_population_units": 11314756.61992068,
+  "limitations": [
+    "Bounds are allocation sensitivity, not motion estimates in invalid cells.",
+    "They are conditional on one population surface, one final mask, and a finite geographic domain.",
+    "This provides no probabilistic coverage or external population validation."
+  ]
+}

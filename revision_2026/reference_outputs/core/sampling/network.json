@@ -1,0 +1,29 @@
+{
+  "legacy28": {
+    "pairs": 28,
+    "dates": 54,
+    "components": 26,
+    "largest_component": 3,
+    "cycle_rank": 0,
+    "start": "20160120",
+    "end": "20221027"
+  },
+  "expanded224": {
+    "pairs": 224,
+    "dates": 225,
+    "components": 29,
+    "largest_component": 137,
+    "cycle_rank": 28,
+    "start": "20160108",
+    "end": "20221226"
+  },
+  "catalogue2016_2022": {
+    "pairs": 1603,
+    "dates": 288,
+    "components": 1,
+    "largest_component": 288,
+    "cycle_rank": 1316,
+    "start": "20160108",
+    "end": "20221226"
+  }
+}

@@ -1,0 +1,13 @@
+v0.4.0: current scientific revision and reviewer reproduction
+
+Manuscript: Quantifying how spatial allocation and sampling alter population-weighted InSAR support summaries.
+
+Includes current manuscript, Supplementary S1-S24, point-by-point response, all retained revision code, processed analysis inputs, full scientific reference tables and input/checksum provenance. See revision_2026/README.md and REVIEWER_MAP.md.
+
+Quick start: install Python 3.10 and revision_2026/requirements_reviewer_lock.txt; run python revision_2026/reproduce.py quick. This reruns S21-S24 and compares six tables. The standard mode runs the wider allocation/masking/sampling/population/paired/LOS suite. S20 and full ACS source routes have automatic provider download and SHA-256 verification.
+
+Portability fixes: explicit workspace roots; frozen-input replay modes; float64 support-threshold comparisons across NumPy versions; correct owner-prefixed/nested CA-POP source archive handling; complete Census/ACS provenance; cross-platform Git byte preservation for the release manifest. Scientific outputs are compared with stated tolerances, rather than claimed byte-identical across numerical environments.
+
+GitHub Actions reruns the quick suite on Windows and Linux. Local validation details are retained in revision_2026/provenance/current_reproduction_verification.json.
+
+The previous Zenodo DOI 10.5281/zenodo.21444768 archives older v0.3.0 code and must not be cited as this revision archive. This GitHub release does not perform journal submission or provide matched independent GNSS/leveling or household-position validation. Third-party terms are preserved separately in DATA_LICENSES.md.

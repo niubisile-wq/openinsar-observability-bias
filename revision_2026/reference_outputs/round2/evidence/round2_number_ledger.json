@@ -1,0 +1,11 @@
+{
+  "source": "boundary_allocation.csv",
+  "values": {
+    "InteriorPopulationMin": 99.27386996083924,
+    "InteriorPopulationMax": 99.48995191015752,
+    "InteriorBiasMin": 58.24007400250042,
+    "InteriorBiasMax": 58.56427873634115,
+    "InteriorErrorMin": 98.55043973318499,
+    "InteriorErrorMax": 98.87058425122753
+  }
+}

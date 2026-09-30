@@ -1,0 +1,21 @@
+{
+  "method": "Global Moran I with binary queen-contiguity weights; queen adjacency includes shared edges or vertices; each unordered pair counted once.",
+  "domain": "Fresno fixed ROI; common population-allocation domain only; complete 2020 Census blocks.",
+  "n_blocks": 5713,
+  "undirected_neighbor_pairs": 17083,
+  "isolates": 12,
+  "degree_quantiles": {
+    "min": 0.0,
+    "q25": 4.0,
+    "median": 6.0,
+    "q75": 8.0,
+    "q95": 10.0,
+    "max": 27.0
+  },
+  "fields": {
+    "GHSL_unsupported_fraction": 0.8598865414478266,
+    "CA_POP_unsupported_fraction": 0.656737733682296,
+    "CA_POP_minus_GHSL_unsupported_fraction": 0.39893365196995734
+  },
+  "interpretation": "Descriptive spatial dependence for this fixed domain. No permutation p-value, spatial-sampling confidence interval, or extrapolation to other regions is reported."
+}

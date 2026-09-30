@@ -1,0 +1,46 @@
+name: Revision reproduction
+
+on:
+  push:
+    paths:
+      - 'revision_2026/**'
+      - '.github/workflows/revision-reproduction.yml'
+  pull_request:
+    paths:
+      - 'revision_2026/**'
+      - '.github/workflows/revision-reproduction.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  reproduce:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.10'
+          cache: pip
+          cache-dependency-path: revision_2026/requirements_reviewer_lock.txt
+      - name: Install frozen reviewer environment
+        run: python -m pip install -r revision_2026/requirements_reviewer_lock.txt
+      - name: Verify release integrity
+        run: python revision_2026/reproduce.py check-code
+      - name: Check intersection and registration mathematics
+        run: python -m unittest discover -s revision_2026/core -p test_geometry.py
+      - name: Reproduce S21-S24 and compare tables
+        run: python revision_2026/reproduce.py quick --workspace reproduction_output
+      - name: Preserve numerical verification
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: reproduction-${{ matrix.os }}
+          path: reproduction_output/reproduction_verification.json
+          if-no-files-found: warn

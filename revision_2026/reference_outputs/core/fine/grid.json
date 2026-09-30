@@ -1,0 +1,41 @@
+{
+  "shape": [
+    1661,
+    1591
+  ],
+  "crs": "EPSG:4326",
+  "transform": [
+    0.0008333333300326821,
+    0.0,
+    99.82291629368422,
+    0.0,
+    -0.0008333333299795073,
+    14.691250143775402
+  ],
+  "row_order": "south-to-north",
+  "domain_definition": "GHSL 3ss pixels whose centers fall in the frozen 18077-cell VLM footprint; does not condition on velocity scale",
+  "primary_cells": 1807700,
+  "conditional_screen_cells": 1780800,
+  "inputs": [
+    {
+      "path": "D:\\InSAR_revision_20260926\\archive\\nature\\03_exposure_closure\\chao_phraya\\gridVLM\\chaoPhraya_vlm.tif",
+      "sha256": "5393e5c865c5105705b4b0e915f9133591816933965c88b67dfd273db6f2603d"
+    },
+    {
+      "path": "D:\\InSAR_revision_20260926\\raw\\ghsl_3ss\\GHS_POP_E2020_GLOBE_R2023A_4326_3ss_V1_0_R8_C28.tif",
+      "sha256": "a2af851248edfff0c7e5be9120410cd7ae37776700266a94df791440e76fbc92"
+    },
+    {
+      "path": "D:\\InSAR_revision_20260926\\raw\\ghsl_3ss\\GHS_POP_E2020_GLOBE_R2023A_4326_3ss_V1_0_R8_C29.tif",
+      "sha256": "0162df808dc408ffb70f53e6d5484c1a89085e976f1a2e22f55232e74c7c35b9"
+    },
+    {
+      "path": "D:\\InSAR_revision_20260926\\raw\\ghsl_3ss\\GHS_BUILT_S_E2020_GLOBE_R2023A_4326_3ss_V1_0_R8_C28.tif",
+      "sha256": "6d03264ef9ccf9cd23b151ef20195572ed957b6350bc5f17032301220c92f8ba"
+    },
+    {
+      "path": "D:\\InSAR_revision_20260926\\raw\\ghsl_3ss\\GHS_BUILT_S_E2020_GLOBE_R2023A_4326_3ss_V1_0_R8_C29.tif",
+      "sha256": "d674c5172602b46e7ce827d7c507d697cd77345190521519a7a1106bb731e2a8"
+    }
+  ]
+}

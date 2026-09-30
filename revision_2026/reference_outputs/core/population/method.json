@@ -1,0 +1,31 @@
+{
+  "inputs": [
+    {
+      "model": "WorldPop_2020_3ss",
+      "path": "D:\\InSAR_revision_20260926\\strengthening\\external\\worldpop_thailand_2020_UNadj.tif",
+      "sha256": "5ae1dc11b888da6a5e8c947a3a8e10b055d43a1cf093faef63d9d28eb570083f"
+    },
+    {
+      "model": "GHSL_2015_30ss",
+      "path": "D:\\InSAR_revision_20260926\\analysis\\GHS_POP_2015_study_crop.tif",
+      "sha256": "f29e194c0f238c8e7cb5dec0a8ed6fbe5f9abceffcc62323ab2b2df084310ae9"
+    },
+    {
+      "model": "GHSL_2020_30ss",
+      "path": "D:\\InSAR_revision_20260926\\analysis\\GHS_POP_2020_study_crop.tif",
+      "sha256": "e180f3f2e58b95e8a61488bb0c141037443cfa2c70e3d681a18d390d40a2285a"
+    },
+    {
+      "model": "ESA_WorldCover_2021_v200",
+      "path": "D:\\InSAR_revision_20260926\\strengthening\\external\\worldcover2021_N12E099.tif",
+      "sha256": "4e118e57dd2c4808a5d00e4c93bf8fed2ce244a939ddf1deab2d7f7d4d0c60fd"
+    }
+  ],
+  "population_transfer": "Exact spherical source-area fractions onto GHSL fine grid; no interpolation of counts",
+  "model_comparison": "GHSL and WorldPop 2020 at native 3ss, including native totals and common-total normalization",
+  "epoch_comparison": "GHSL 2015 versus 2020 both at 30ss; these are modelled epoch differences, not measured population migration",
+  "joint_coverage": "All four models must cover each included fine cell to within 1e-5",
+  "landcover": "ESA WorldCover 2021 v200, exact native-class area fractions within GHSL 3ss pixels",
+  "landcover_limitation": "Population and built area are assumed uniform within each GHSL pixel for splitting among cover classes; cover stratification does not resolve building occupancy",
+  "dependencies": "GHSL population and built layers share modelling inputs; WorldPop is an alternative model, not census ground truth"
+}

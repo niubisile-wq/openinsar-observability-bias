@@ -1,0 +1,14 @@
+{
+  "command": [
+    "D:\\InSAR_revision_20260926\\strengthening\\.venv_licsbas\\Scripts\\python.exe",
+    "D:\\InSAR_revision_20260926\\strengthening\\licsbas_portable.py",
+    "LiCSBAS11_check_unw.py",
+    "-d",
+    "D:\\InSAR_revision_20260926\\strengthening\\results\\timeseries\\GEOC_full",
+    "-t",
+    "D:\\InSAR_revision_20260926\\strengthening\\results\\timeseries\\TS_full"
+  ],
+  "returncode": 0,
+  "seconds": 9.51156234741211,
+  "expected_output": "D:\\InSAR_revision_20260926\\strengthening\\results\\timeseries\\TS_full\\info\\11ifg_stats.txt"
+}

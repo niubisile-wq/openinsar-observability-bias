@@ -1,0 +1,22 @@
+{
+  "source": "D:\\科研项目\\InSAR_Nature论文返修\\01_当前返修工作区\\InSAR_revision_20260926\\strengthening\\results\\timeseries\\matched_quality.npz",
+  "source_sha256": "58211202a7c7bec7e82a810a2f01a44d6b288c1a4c2097de92b49f49a4f243a1",
+  "seed": 20260930,
+  "replicates_per_mechanism": 100,
+  "missing_fraction": 0.3,
+  "threshold_mm_per_year": -5.0,
+  "block_size_pixels": 10,
+  "grid_origins": "four zero/half-block origins, matching the existing S14 design",
+  "methods": [
+    "within-block observed-population class prevalence",
+    "observed median LOS rate assigned to whole census-like unit",
+    "nearest observed pixel to unit centre"
+  ],
+  "truth": "Known full-rate GHSL-model allocation hidden by artificial masks inside the final valid LOS domain.",
+  "uncertainty": "2.5th and 97.5th percentiles span seeded masks and the four predeclared grid origins; they are design-sensitivity ranges, not confidence intervals.",
+  "limitations": [
+    "The fixed square units approximate census units but do not reproduce Fresno census block boundaries.",
+    "The reference uses a population allocation surface, not enumerated household locations.",
+    "No inference about genuinely invalid or permanently unobserved pixels, vertical motion, or hazard is made."
+  ]
+}

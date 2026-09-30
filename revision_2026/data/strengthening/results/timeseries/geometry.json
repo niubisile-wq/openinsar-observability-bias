@@ -1,0 +1,31 @@
+{
+  "predeclared_roi": [
+    100.35,
+    13.65,
+    100.65,
+    14.05
+  ],
+  "shape": [
+    401,
+    301
+  ],
+  "transform": [
+    0.0009999992100000025,
+    0.0,
+    100.349109942255,
+    0.0,
+    -0.0009999992100000006,
+    14.050056298294997
+  ],
+  "crs": "EPSG:4326",
+  "pairs": 437,
+  "dates": 104,
+  "holdout_pairs": 44,
+  "row_order": "north-to-south",
+  "phase_unit": "radians",
+  "frequency_hz": 5405000000,
+  "velocity_sign": "LiCSBAS convention: -wavelength/(4*pi)*1000 phase-to-mm, LOS positive toward satellite",
+  "registration": "Actual source GDAL affine, nearest neighbor onto first unwrapped raster native grid; DEM parameters converted to pixel centers",
+  "no_atmospheric_correction": "No GACOS/weather correction; infer relative LOS displacement, not validated vertical land motion",
+  "upstream_commit": "2627e50a1c703becd4a0b18754b05c1cf8c564d5"
+}

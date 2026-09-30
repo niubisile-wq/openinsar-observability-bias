@@ -1,0 +1,38 @@
+{
+  "DWR_service": "DWR TRE ALTAMIRA annual rate and cumulative vertical displacement ImageServer, raw GeoTIFF export",
+  "raster_grid": "native grid alignment: 177 x 279, EPSG:4326, 0.0011335841623633 degree x 0.0008998200359928 degree; nearest-neighbor export snapped to service pixel boundaries with adjustAspectRatio=false",
+  "DWR_support_geometry": "38,738 DWR 100 m observation-cell polygons from project external/dwr/roi_features.json, rasterized with pixel-centre inclusion; exact validation gives 38,738 polygons to 38,738 raster cells",
+  "population": "2020 Census DHC P1 total (P0010001), Census block GEOID prefix 06019; 6,788 complete blocks",
+  "estimand": "median DWR vertical displacement rate across valid published DWR observation-cell centers assigned to each Census block; whole block population is assigned to this median-rate class",
+  "classification_mm_yr": {
+    "VLM >= 0": "not subsiding",
+    "-3 <= VLM < 0": "0 to -3",
+    "-5 <= VLM < -3": "-3 to -5",
+    "-10 <= VLM < -5": "-5 to -10",
+    "VLM < -10": "below -10"
+  },
+  "threshold_source": "Ohenhen et al., Nature Cities 2, 543-554 (2025), https://doi.org/10.1038/s44284-025-00240-y",
+  "limitations": [
+    "DWR rasters are interpolated products from DWR/TRE ALTAMIRA Sentinel-1 observations, not the manuscript original LOS field; this is a transfer benchmark, not independent InSAR validation.",
+    "DWR values are vertical rates (feet/year converted to mm/year), not LOS rates; they share provider lineage with the DWR observation footprint.",
+    "Raster values are sampled only at published DWR 100m observation-cell footprints, then median-aggregated within Census blocks.",
+    "Observation-cell locations and annual-rate rasters have slightly different product vintages; this is documented as a cross-product sensitivity, not a pixelwise accuracy assessment.",
+    "The 2015-2021 temporal median summarizes six overlapping annual-rate rasters; the cumulative end-point rate is a different temporal estimand from a fitted linear trend.",
+    "Census DHC population is differentially private and population source independence is unverified.",
+    "A complete Census block with no DWR observation cells is excluded from rate-class population assignment and reported as uncovered."
+  ],
+  "periods": [
+    "2015-10 to 2016-10 annual",
+    "2020-10 to 2021-10 annual",
+    "2023-10 to 2024-10 annual",
+    "2025-04 to 2026-04 annual",
+    "2015-10 to 2021-10 temporal median of annual rates",
+    "2015-06 to 2021-01 cumulative average rate"
+  ],
+  "raster_pixel_count": 49383,
+  "DWR_cell_feature_count": 38738,
+  "DWR_rasterized_support_cell_count": 38738,
+  "complete_block_count": 6788,
+  "complete_block_population": 523953,
+  "cumulative_rate_duration_years": 5.555213317179682
+}

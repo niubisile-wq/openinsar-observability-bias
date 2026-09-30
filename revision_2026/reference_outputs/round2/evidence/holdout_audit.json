@@ -1,0 +1,29 @@
+{
+  "cohort": [
+    {
+      "branch": "full",
+      "inputs": 437,
+      "rejected": 6,
+      "inversion_pairs": 431
+    },
+    {
+      "branch": "train",
+      "inputs": 393,
+      "rejected": 11,
+      "inversion_pairs": 382
+    }
+  ],
+  "holdout_design_recreated": true,
+  "all_44_edges_recomputed": true,
+  "training_inputs_identical_to_full_copies": true,
+  "no_heldout_edges_in_training": true,
+  "training_support_recomputed": true,
+  "reference_from_training_h5": "141:142/218:219",
+  "upstream_commit": "2627e50a1c703becd4a0b18754b05c1cf8c564d5",
+  "tracked_upstream_source_unchanged": true,
+  "max_group_rmse_difference_mm": 7.269254460595675e-07,
+  "tolerance_mm": 0.0001,
+  "tolerance_reason": "Independent float64 phase/reference arithmetic compared with original float32 intermediate subtraction; much smaller than 0.001 mm reported rounding",
+  "pooling": "Each evaluable pixel-edge residual receives equal weight; all models use identical common observations; strata from training inputs only",
+  "limitation": "Acquisition dates and atmospheric components are shared; internal edge reconstruction, not independent physical accuracy or new-date prediction"
+}

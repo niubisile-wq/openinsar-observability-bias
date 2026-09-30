@@ -1,0 +1,170 @@
+[
+  {
+    "path": "inputs/bangkok_matched/geometry.json",
+    "bytes": 900,
+    "sha256": "26d3d72789221560720b399a1986ecd9980b8eda4792d7f9d3830637e572fd5f",
+    "included_in_code_archive": false
+  },
+  {
+    "path": "inputs/bangkok_matched/matched_quality.npz",
+    "bytes": 4082478,
+    "sha256": "58211202a7c7bec7e82a810a2f01a44d6b288c1a4c2097de92b49f49a4f243a1",
+    "included_in_code_archive": false
+  },
+  {
+    "path": "inputs/fresno_population/ghsl_2020_1km_fresno_tile.zip",
+    "bytes": 2588274,
+    "sha256": "b9ee3a07a9b042aea86c1d07f1d14a3815c8a546fe60e135568ce3b25dc21c72",
+    "included_in_code_archive": false
+  },
+  {
+    "path": "inputs/fresno_population/worldpop_2020_1km_us_unadj.tif",
+    "bytes": 51821771,
+    "sha256": "0b75ab7c839bfa81439fafa204f0fba930f15467993c574694be98831fcafb94",
+    "included_in_code_archive": false
+  },
+  {
+    "path": "census_blocks/fresno_roi/blocks_0.geojson",
+    "bytes": 860488,
+    "sha256": "f87e801f74925ac77458b2e6cac940b034ae605ac2c2628ea7f3bb2c5b6ba3e4",
+    "included_in_code_archive": false
+  },
+  {
+    "path": "census_blocks/fresno_roi/blocks_1000.geojson",
+    "bytes": 1087316,
+    "sha256": "298630dcf7395e5345a307bbc090c9a3024263b884fd6987fa9219968f4add4a",
+    "included_in_code_archive": false
+  },
+  {
+    "path": "census_blocks/fresno_roi/blocks_2000.geojson",
+    "bytes": 889240,
+    "sha256": "7f70de11c04fe54996f269b6be80346900faa23a9f3c018ce00f21ec81d64d34",
+    "included_in_code_archive": false
+  },
+  {
+    "path": "census_blocks/fresno_roi/blocks_3000.geojson",
+    "bytes": 1000918,
+    "sha256": "7be5a6b2ac073690a91fc234c35d79e881a11cdf9cd53b3935eee7d5646993d0",
+    "included_in_code_archive": false
+  },
+  {
+    "path": "census_blocks/fresno_roi/blocks_4000.geojson",
+    "bytes": 1450548,
+    "sha256": "8f38ecad686ea0278e63529d136086228204ff5971a2962b28040811f5621d7e",
+    "included_in_code_archive": false
+  },
+  {
+    "path": "census_blocks/fresno_roi/blocks_5000.geojson",
+    "bytes": 1051349,
+    "sha256": "10862726cca35b701b4b14638ac46806c5f9a2b5ede07606363c36669eb678dc",
+    "included_in_code_archive": false
+  },
+  {
+    "path": "census_blocks/fresno_roi/blocks_6000.geojson",
+    "bytes": 1261771,
+    "sha256": "616f4c8574db9cec4bcc156337913ce9ad4763dcb2b6b8bd8ce53fd3e926ab40",
+    "included_in_code_archive": false
+  },
+  {
+    "path": "dwr_velocity/annual_2015_2016.tif",
+    "bytes": 854,
+    "sha256": "db810669811be1cbaed79ad6f65a444df1e1a1d3d7975b89522ab9dc13e40711",
+    "included_in_code_archive": false
+  },
+  {
+    "path": "dwr_velocity/annual_2016_2017.tif",
+    "bytes": 394070,
+    "sha256": "0165f9c402a9b4c278af38d0474c5446699ea06f1d01c5a83e4a495bf66661d0",
+    "included_in_code_archive": false
+  },
+  {
+    "path": "dwr_velocity/annual_2017_2018.tif",
+    "bytes": 394070,
+    "sha256": "1d8c52a38d386a925b3749df02ce3ca3c6fc60a1aa4c5f0dddca857ae38126a9",
+    "included_in_code_archive": false
+  },
+  {
+    "path": "dwr_velocity/annual_2018_2019.tif",
+    "bytes": 394070,
+    "sha256": "5cb744241710a3b3dccdd45646a1eaf01876b6350eb6b02d4988717f143d0f71",
+    "included_in_code_archive": false
+  },
+  {
+    "path": "dwr_velocity/annual_2019_2020.tif",
+    "bytes": 394070,
+    "sha256": "93a0ecf3ab58b2e38f3dfe4600e034efa53addc777af5ef9d97dcb779dd0ce2f",
+    "included_in_code_archive": false
+  },
+  {
+    "path": "dwr_velocity/annual_2020_2021.tif",
+    "bytes": 394070,
+    "sha256": "6e732ea59eae15acc70fdb1aa84985cf0c3574e9d266a0c76f1de01dae183012",
+    "included_in_code_archive": false
+  },
+  {
+    "path": "dwr_velocity/annual_oct_2016_2017.tif",
+    "bytes": 394070,
+    "sha256": "cafdd39ae220bb53f16ed59c03fc0c944483c147e3953eb7100ebb4efef17a80",
+    "included_in_code_archive": false
+  },
+  {
+    "path": "dwr_velocity/annual_oct_2017_2018.tif",
+    "bytes": 394070,
+    "sha256": "b6fd897e4934c4c89b0a1856f1bedaf9f49f80a6e008def9b5583ef5b1bb7b72",
+    "included_in_code_archive": false
+  },
+  {
+    "path": "dwr_velocity/annual_oct_2018_2019.tif",
+    "bytes": 394070,
+    "sha256": "82aed74ac62c8faa29931237f2631ef0a22df815617abbf1da15b58283a3f348",
+    "included_in_code_archive": false
+  },
+  {
+    "path": "dwr_velocity/annual_oct_2019_2020.tif",
+    "bytes": 394070,
+    "sha256": "3f9f117718479d805d0ab5ac87387593b0b87441257e752547a1152bc6f800ff",
+    "included_in_code_archive": false
+  },
+  {
+    "path": "dwr_velocity/rate_2015_2016.tif",
+    "bytes": 394070,
+    "sha256": "7c68479fd85512d5fee91d59c4ee499e96a7c5784e722c8a03846c6695e1dd41",
+    "included_in_code_archive": false
+  },
+  {
+    "path": "dwr_velocity/rate_2020_2021.tif",
+    "bytes": 394070,
+    "sha256": "a7be736854c46fd3ade6fee0ab36fc6d837e70cb836f864a1d9a9857f554565b",
+    "included_in_code_archive": false
+  },
+  {
+    "path": "dwr_velocity/rate_2023_2024.tif",
+    "bytes": 394070,
+    "sha256": "f325a84a8d41f3492d6044007563c2f0c5db973f0d35a7f8771b701c8751487d",
+    "included_in_code_archive": false
+  },
+  {
+    "path": "dwr_velocity/rate_2025_2026.tif",
+    "bytes": 394070,
+    "sha256": "c16c62f50a36008690e9728fb74f90d7bb5bf5afd05e8b648ee959c4c58846d6",
+    "included_in_code_archive": false
+  },
+  {
+    "path": "dwr_velocity/rate_median_2015_2021.tif",
+    "bytes": 169008,
+    "sha256": "961ce6a95fae5996b30c3e78a649b37fe7bf2d4649ba15251def7207f6d95bde",
+    "included_in_code_archive": false
+  },
+  {
+    "path": "dwr_velocity/total_since_20150613_20210101.tif",
+    "bytes": 394070,
+    "sha256": "d2e938e6a3570d24299075b6e59843159f3067cc690b7d1debc4e63ad0918330",
+    "included_in_code_archive": false
+  },
+  {
+    "path": "dwr_velocity/total_since_20150613_20260401.tif",
+    "bytes": 394070,
+    "sha256": "0339caabb81ec45dd8a2fea5a19b260bdc41cc2843c1e0e1c1de55551e783619",
+    "included_in_code_archive": false
+  }
+]

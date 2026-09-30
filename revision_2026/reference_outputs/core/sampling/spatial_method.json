@@ -1,0 +1,6 @@
+{
+  "blocks": "0.05-degree longitude/latitude, integer-multiple origin, native pixels assigned by center; all blocks retained in CSV",
+  "eligibility": "At least 1,000 GHSL population units and 5 square kilometers in primary domain; fixed before extracting rankings",
+  "eligible_blocks": 539,
+  "interpretation": "Descriptive ranking changes across selected samples; nested224 is a comparator, not truth or evidence of better measurement priorities. Spatial blocks are not treated as independent replicates."
+}

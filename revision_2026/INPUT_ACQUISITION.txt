@@ -1,0 +1,69 @@
+External inputs for the current scientific revision
+
+The reviewer checkout bundles attributed processed analysis inputs, Census subsets, and two Fresno population grids. Complete provider archives and raw processing stacks are separate. Obtain the following inputs from their providers and preserve source-provider terms.
+The input manifests give the retained hashes; a live provider may update byte serialization or product versions.
+Do not substitute a changed input silently. Compare identities, geometries, vintages and reported checksums.
+
+1. LiCSAR/LiCSBAS matched processing
+Frame 062D_07629_131313; 2019-2020 catalogue pairs, temporal baseline <=96 days, 437 full inputs and 44 excluded
+training edges. LiCSAR catalogue is configured in core/config.json; use core/fetch_licsar_expansion.py and the
+frozen timeseries manifest, then core/prepare_timeseries.py, run_timeseries.py and analyse_timeseries.py.
+Install LiCSBAS2 commit 2627e50a1c703becd4a0b18754b05c1cf8c564d5 separately. The primary 28-pair and expanded
+224-pair support calculations have separate sampling manifests. The exact processing wrapper and environment
+are retained under core/; do not infer final-product quality from pair support.
+
+2. Primary population and land-cover inputs
+GHSL GHS-POP/GHS-BUILT-S R2023A epoch 2020, 3 arcseconds; source download scripts are under core/.
+WorldPop Thailand 2020 UN-adjusted, unconstrained, 3 arcseconds: record 29165,
+https://hub.worldpop.org/geodata/summary?id=29165 ; exact file tha_ppp_2020_UNadj.tif.
+ESA WorldCover 2021 v200, tile N12E099. See the source metadata and core/fetch_ancillary.py.
+
+3. Fresno observation footprint and fine population grid
+https://gis.water.ca.gov/arcgis/rest/services/Elevation/Vertical_Displacement_Point_Data_Locations_2026Q1/MapServer/0
+Query fixed ROI [-119.9,36.6,-119.7,36.85] in WGS84. core/fetch_dwr.py preserves the query and retrieves
+38,738 actual observation-cell polygons, plus the fine GHSL tile. core/experiment_dwr.py builds the retained
+results/dwr/grid.npz. The layer represents observation footprints, not invented point buffers.
+
+4. Fresno Census blocks
+https://services.arcgis.com/P3ePLMYs2RVChkJx/ArcGIS/rest/services/USA_Census_2020_DHC_Blocks/FeatureServer/1
+Service item 87cc27d8181a46ec974301ece2a2575a. Query GEOID prefix 06019 and the same WGS84 ROI using spatial
+intersection. Retrieve GEOID, P0010001, ALAND, AWATER and geometry; order by GEOID and page at 1,000 records.
+The retained seven GeoJSON pages contain 6,999 unique intersecting blocks; the analysis retains 6,788 complete
+blocks with 523,953 Census residents. Place pages at census_blocks/fresno_roi/blocks_*.geojson.
+The service identifies TIGER-derived cartographic boundaries and 2020 DHC counts; differential privacy applies.
+An official Census re-download requires a new geometry/count comparison before claiming exact equivalence.
+
+5. Fresno DWR vertical-rate rasters
+https://gis.water.ca.gov/arcgisimg/rest/services/SAR/Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate_Mosaic/ImageServer
+Obtain raw floating-point annual rasters, with no classification render function. Document raster catalog
+selection and dates. The six annual windows are October 2015-October 2016 through October 2020-October 2021.
+Additional sensitivities use October 2023-October 2024, April 2025-April 2026 and the separate cumulative
+June 2015-January 2021 product. Exact filenames and hashes are in followup_input_hashes.json and S17 methods.
+Retained exports have 177 rows x 279 columns, EPSG:4326, source-grid alignment, nearest-neighbor export and
+adjustAspectRatio=false. Retained values are feet/year; the script converts by 304.8 to mm/year.
+Use the retained exact source exports for byte-identical reproduction; live ImageServer exports may differ.
+Do not redistribute these source files from the code archive.
+
+6. Fresno 1-km population grids (S19)
+GHSL tile GHS_POP_E2020_GLOBE_R2023A_54009_1000_V1_0_R5_C8.zip:
+https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GHSL/GHS_POP_GLOBE_R2023A/GHS_POP_E2020_GLOBE_R2023A_54009_1000/V1-0/tiles/GHS_POP_E2020_GLOBE_R2023A_54009_1000_V1_0_R5_C8.zip
+WorldPop USA 2020 UN-adjusted 1-km raster:
+https://data.worldpop.org/GIS/Population/Global_2000_2020_1km_UNadj/2020/USA/usa_ppp_2020_1km_Aggregated_UNadj.tif
+The included download script retrieves these two files into inputs/fresno_population/.
+WorldPop exact record 34816, DOI 10.5258/SOTON/WP00671; GHSL dataset DOI 10.2905/2FF68A52-5B5B-4A22-8F40-C41DA8332CFE.
+Both are CC BY 4.0 with attribution. Use the exact Census block pages described above.
+
+
+7. Fresno 100-m allocation-model sensitivity (S20)
+2020 Census California PL94-171 P1 block population: https://www2.census.gov/programs-surveys/decennial/2020/data/01-Redistricting_File--PL_94-171/California/ca2020.pl.zip
+2020 TIGER/Line Fresno County tabulation blocks: https://www2.census.gov/geo/tiger/TIGER2020PL/STATE/06_CALIFORNIA/06019/tl_2020_06019_tabblock20.zip
+CA-POP total-population raster, 100 m, DOI 10.5281/zenodo.5874927; study: https://doi.org/10.1371/journal.pone.0270746
+Exact downloaded artifacts, sizes and SHA-256 values are recorded in followup/fresno_population_source_manifest.json.
+CA-POP shares the Census block totals by construction; S20 is model sensitivity, not independent sub-block validation.
+
+8. ACS source archives and reviewer subsets (S24)
+All official source URLs and SHA-256 values are in input_manifests/acs_population_source_manifest.json.
+Run reproduce.py fetch-inputs --dataset acs --workspace OUTPUT, followed by acs-population-benchmark.
+The no-download route uses all 637 Fresno county block groups in the compact Census value/geography subset, applies ROI selection itself, and reruns raster overlays and 80-replicate MOE aggregation.
+The compact subset provenance and parent checksums are in data/workspace/inputs/acs_compact/PROVENANCE.json.
+S20 is acquired by reproduce.py fetch-inputs --dataset s20. The actual Zenodo CA-POP archive has an owner-prefixed name and contains a nested TOTAL raster ZIP; the downloader handles both.

@@ -1,0 +1,16 @@
+{
+  "input": "D:\\\u79d1\u7814\u9879\u76ee\\InSAR_Nature\u8bba\u6587\u8fd4\u4fee\\11_\u7b2c\u4e09\u8f6e\u79d1\u5b66\u8865\u5f3a_20260930\\04_Code_DOI_Release\\insar_revision_v0.4.0\\reference_outputs\\followup\\fresno_population_allocation\\scale_method_sensitivity.csv",
+  "tolerances_pp": [
+    0.5,
+    1.0,
+    2.0
+  ],
+  "scope": "Finite Fresno domain, two 100-m allocation surfaces normalized to identical 2020 Census block totals, DWR footprint support, four grid origins at each scale.",
+  "interpretation": "If the computed Cauchy-Schwarz upper bound is at or below the user-declared tolerance for all tested origins, the signed aggregate uniform-minus-native difference is bounded by that tolerance for the tested inputs. A failed bound is inconclusive; it does not establish that a coarse result is unacceptable.",
+  "not_included": [
+    "probability or confidence statements",
+    "cross-region inference",
+    "household location truth",
+    "claims about physical deformation"
+  ]
+}

@@ -1,0 +1,23 @@
+[
+  {
+    "filename": "Iran_subsidence_mask_2014-2020_Sentinel-1_InSAR_desc_v1.0.0.tif",
+    "checksum": "md5:734c58f4f2f2fbc7017d705f9b81fe3d",
+    "official_checksum": "md5:734c58f4f2f2fbc7017d705f9b81fe3d",
+    "matches": true,
+    "used_in_new_exposure_experiments": false
+  },
+  {
+    "filename": "Iran_subsidence_rate_2014-2020_Sentinel-1_InSAR_desc_v1.0.0.tif",
+    "checksum": "md5:c0a19300c161940dc2e6a8de267cef4f",
+    "official_checksum": "md5:c0a19300c161940dc2e6a8de267cef4f",
+    "matches": true,
+    "used_in_new_exposure_experiments": false
+  },
+  {
+    "filename": "Iran_subsidence_seasonal_amplitude_2014-2020_Sentinel-1_InSAR_desc_v1.0.0.tif",
+    "checksum": "md5:ce55f443ad5551e47023c8d2450f1861",
+    "official_checksum": "md5:5e1f826223ffd53102ff0a9b8f21667b",
+    "matches": false,
+    "used_in_new_exposure_experiments": false
+  }
+]

@@ -1,0 +1,6 @@
+# Preserve the exact bytes covered by the reviewer-release SHA-256 manifest.
+revision_2026/** -text
+revision_2026/**/*.npz binary
+revision_2026/**/*.pdf binary
+revision_2026/**/*.tif binary
+revision_2026/**/*.zip binary

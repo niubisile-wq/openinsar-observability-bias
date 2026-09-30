@@ -1,0 +1,174 @@
+{
+  "PopTwenty": {
+    "printed_value": "1.665",
+    "source": "numbers.tex"
+  },
+  "BuiltTwenty": {
+    "printed_value": "197.5",
+    "source": "numbers.tex"
+  },
+  "PopPctTwenty": {
+    "printed_value": "7.40",
+    "source": "numbers.tex"
+  },
+  "PopThirty": {
+    "printed_value": "3.020",
+    "source": "numbers.tex"
+  },
+  "BuiltThirty": {
+    "printed_value": "325.6",
+    "source": "numbers.tex"
+  },
+  "PopPctThirty": {
+    "printed_value": "13.42",
+    "source": "numbers.tex"
+  },
+  "PopForty": {
+    "printed_value": "4.891",
+    "source": "numbers.tex"
+  },
+  "BuiltForty": {
+    "printed_value": "464.6",
+    "source": "numbers.tex"
+  },
+  "PopPctForty": {
+    "printed_value": "21.74",
+    "source": "numbers.tex"
+  },
+  "PopTotal": {
+    "printed_value": "22.501",
+    "source": "numbers.tex"
+  },
+  "BuiltTotal": {
+    "printed_value": "1253.6",
+    "source": "numbers.tex"
+  },
+  "UniformOneMin": {
+    "printed_value": "4.763",
+    "source": "numbers.tex"
+  },
+  "UniformBiasMin": {
+    "printed_value": "57.7",
+    "source": "numbers.tex"
+  },
+  "UniformOneMax": {
+    "printed_value": "4.770",
+    "source": "numbers.tex"
+  },
+  "UniformBiasMax": {
+    "printed_value": "57.9",
+    "source": "numbers.tex"
+  },
+  "GHSLJointPct": {
+    "printed_value": "13.37",
+    "source": "numbers.tex"
+  },
+  "GHSLJointCommon": {
+    "printed_value": "2.989",
+    "source": "numbers.tex"
+  },
+  "WPJointPct": {
+    "printed_value": "23.20",
+    "source": "numbers.tex"
+  },
+  "WPJointCommon": {
+    "printed_value": "5.186",
+    "source": "numbers.tex"
+  },
+  "EpochOldPct": {
+    "printed_value": "20.86",
+    "source": "numbers.tex"
+  },
+  "EpochOldCommon": {
+    "printed_value": "4.664",
+    "source": "numbers.tex"
+  },
+  "EpochNewPct": {
+    "printed_value": "20.28",
+    "source": "numbers.tex"
+  },
+  "EpochNewCommon": {
+    "printed_value": "4.534",
+    "source": "numbers.tex"
+  },
+  "JointExcluded": {
+    "printed_value": "142.9",
+    "source": "numbers.tex"
+  },
+  "SampleTwentyEight": {
+    "printed_value": "3.051",
+    "source": "numbers.tex"
+  },
+  "SampleFiftySix": {
+    "printed_value": "3.232",
+    "source": "numbers.tex"
+  },
+  "SampleOneTwelve": {
+    "printed_value": "3.369",
+    "source": "numbers.tex"
+  },
+  "SampleTwoTwentyFour": {
+    "printed_value": "3.301",
+    "source": "numbers.tex"
+  },
+  "DWRTotal": {
+    "printed_value": "598098",
+    "source": "numbers.tex"
+  },
+  "DWRUnsupported": {
+    "printed_value": "1710",
+    "source": "numbers.tex"
+  },
+  "DWRSupportPct": {
+    "printed_value": "99.71",
+    "source": "numbers.tex"
+  },
+  "DWRUniformMin": {
+    "printed_value": "9022",
+    "source": "numbers.tex"
+  },
+  "DWRUniformMax": {
+    "printed_value": "9556",
+    "source": "numbers.tex"
+  },
+  "InteriorPopulationMin": {
+    "printed_value": "99.27",
+    "source": "round2_numbers.tex"
+  },
+  "InteriorPopulationMax": {
+    "printed_value": "99.49",
+    "source": "round2_numbers.tex"
+  },
+  "InteriorBiasMin": {
+    "printed_value": "58.24",
+    "source": "round2_numbers.tex"
+  },
+  "InteriorBiasMax": {
+    "printed_value": "58.56",
+    "source": "round2_numbers.tex"
+  },
+  "InteriorErrorMin": {
+    "printed_value": "98.55",
+    "source": "round2_numbers.tex"
+  },
+  "InteriorErrorMax": {
+    "printed_value": "98.87",
+    "source": "round2_numbers.tex"
+  },
+  "CrossGHLow": {
+    "printed_value": "51.3",
+    "source": "cross_numbers.tex"
+  },
+  "CrossGHHigh": {
+    "printed_value": "55.6",
+    "source": "cross_numbers.tex"
+  },
+  "CrossWPLow": {
+    "printed_value": "8.6",
+    "source": "cross_numbers.tex"
+  },
+  "CrossWPHigh": {
+    "printed_value": "9.1",
+    "source": "cross_numbers.tex"
+  }
+}

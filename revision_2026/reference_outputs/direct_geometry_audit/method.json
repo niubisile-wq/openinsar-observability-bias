@@ -1,0 +1,29 @@
+{
+  "source": "strengthening_inputs/results/timeseries/matched_quality.npz",
+  "source_sha256": "58211202a7c7bec7e82a810a2f01a44d6b288c1a4c2097de92b49f49a4f243a1",
+  "geometry": "Exact Shapely intersections in spherical equal-area lon-radians/sine-latitude coordinates; 24-segment densification per inverse-projected UTM cell edge; source-cell uniform density/support assumption",
+  "crs": "EPSG:32647",
+  "cell_size_m": 1000,
+  "origins": [
+    [
+      0,
+      0
+    ],
+    [
+      500,
+      0
+    ],
+    [
+      0,
+      500
+    ],
+    [
+      500,
+      500
+    ]
+  ],
+  "population_total": 11314756.61992068,
+  "area_total_m2": 1448996341.7879248,
+  "cell_count": 12182,
+  "interpretation": "Independent source-to-coarse-grid geometry cross-check; uniformity within each 0.001-degree input cell is assumed. Not independent household or motion truth."
+}
