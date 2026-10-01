@@ -1,0 +1,13 @@
+{
+  "source": "manuscript.tex",
+  "expanded_inputs": [
+    "numbers.tex",
+    "round2_numbers.tex",
+    "cross_numbers.tex",
+    "matched_methods.tex",
+    "baseline_table.tex",
+    "cross_results.tex",
+    "matched_results.tex"
+  ],
+  "bibliography": "manuscript.bbl"
+}

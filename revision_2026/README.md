@@ -2,6 +2,8 @@
 
 **Manuscript:** *Quantifying how spatial allocation and sampling alter population-weighted InSAR support summaries* (Scientific Reports revision).
 
+**Version scope:** v0.4.3 updates manuscript/response documents only. The numerical experiments and frozen inputs remain those identified by [v0.4.1](https://github.com/niubisile-wq/openinsar-observability-bias/releases/tag/v0.4.1), commit `5bf98f19abbed981989f9c97ef9b118eea524c5b`. The current [numbered manuscript](manuscript/manuscript_numbered.pdf) supplies every main-text line locator in the [response](manuscript/response.pdf); clean, numbered, marked and singlefile sources contain the same scientific text. Document and location checks are retained in `provenance/final_document_audit.json` and `provenance/reviewer_final_locators.json`.
+
 This directory is the current revision. The older `14_esin_strengthened_v1/` manuscript and Zenodo DOI `10.5281/zenodo.21444768` describe an earlier version. That DOI does **not** archive the new experiments. The updated Zenodo deposit remains pending.
 
 The checkout contains current manuscript/Supplementary Information PDFs and LaTeX, all retained experiment code, frozen analysis inputs, full reference tables including replicate-level results, input provenance, and numerical comparison commands. The supplied arrays are processed analysis inputs. Recomputing from these arrays reproduces the reported statistical analyses; it does not independently reproduce every raw-interferogram processing step or establish external geodetic accuracy.

@@ -1,0 +1,29 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=23mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,xurl,hyperref}
+\hypersetup{hidelinks}
+\setlength{\parindent}{0pt}\setlength{\parskip}{7pt}
+\emergencystretch=2em
+\begin{document}
+\textbf{Revised manuscript submission to Scientific Reports}\\
+Submission ID: \texttt{20e66410-c472-42dc-ab99-957c24a43f96}\\
+To: Dr Osman Orhan, Editorial Board Member
+
+Dear Dr Orhan,
+
+We present our revised manuscript, \emph{Quantifying how spatial allocation and sampling alter population-weighted InSAR support summaries}, for reconsideration. The original title was \emph{Auditing observability bias in InSAR-derived subsidence exposure estimates with a reproducible geospatial workflow}.
+
+The revision focuses on a testable downstream accounting question: how much does spatial aggregation change a population-weighted InSAR support summary when the support field, domain and population total are fixed? Matched-input comparisons quantify the effect; within-cell covariance explains its mechanism; controlled missingness identifies both error directions and cases with small aggregate bias. Crossing GHSL and WorldPop with 28- and 224-pair selections preserves a positive difference across all 16 tested cases while demonstrating strong population-model dependence.
+
+A connected LiCSBAS experiment separates sampled input support from the final quality mask and assesses internal reconstruction using excluded edges. Published Fresno observation polygons provide a second support definition. Added Census-block overlays, vertical-rate transfer and population-grid comparisons further test applicability and quantify important resolution and temporal limitations. The literature discussion recognizes established InSAR quality control and places the workflow alongside existing exposure and population-allocation methods.
+
+We have withdrawn the interpretation of the original 3.77-million figure as a verified count of people exposed to subsidence in unobserved locations. The revised conclusion concerns allocation and aggregation effects; it does not establish deformation in missing locations. The Iran source attribution has also been corrected, and its incomplete analysis is excluded from quantitative applications.
+
+The accompanying files contain the clean editable manuscript, Supplementary Information, separate main figures and a point-by-point response with page and line locations. An optional marked manuscript is explicitly limited to changes from a frozen local revision baseline. The scientific reproduction package and additional official source inputs are publicly available at the fixed GitHub release \href{https://github.com/niubisile-wq/openinsar-observability-bias/releases/tag/v0.4.1}{v0.4.1}. The previous Zenodo DOI covers v0.3.0 only; a revised DOI deposit remains pending.
+
+Sincerely,\\
+Zixuan Liu and Wei Xiong\\
+Corresponding author: Wei Xiong, \href{mailto:xw@mail.hbut.edu.cn}{xw@mail.hbut.edu.cn}\\
+School of Electrical and Electronic Engineering, Hubei University of Technology, Wuhan 430068, China; Department of Computer Science and Engineering, University of South Carolina, Columbia, SC 29201, USA.
+\end{document}

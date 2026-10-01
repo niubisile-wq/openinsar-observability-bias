@@ -1,68 +1,13 @@
-\documentclass[pdflatex,sn-nature]{sn-jnl}
+\documentclass[pdflatex,sn-nature,lineno]{sn-jnl}
 \usepackage{graphicx,booktabs,array,amsmath,amssymb,xurl,placeins}
 \geometry{reset,a4paper,twoside,bindingoffset=6mm,margin=23mm}
 \hypersetup{bookmarksdepth=2}
 \emergencystretch=2em
 \raggedbottom
 \setlength{\bibsep}{0pt}
-
-% Begin included source: numbers.tex
-\newcommand{\PopTwenty}{1.665}
-\newcommand{\BuiltTwenty}{197.5}
-\newcommand{\PopPctTwenty}{7.40}
-\newcommand{\PopThirty}{3.020}
-\newcommand{\BuiltThirty}{325.6}
-\newcommand{\PopPctThirty}{13.42}
-\newcommand{\PopForty}{4.891}
-\newcommand{\BuiltForty}{464.6}
-\newcommand{\PopPctForty}{21.74}
-\newcommand{\PopTotal}{22.501}
-\newcommand{\BuiltTotal}{1253.6}
-\newcommand{\UniformOneMin}{4.763}
-\newcommand{\UniformBiasMin}{57.7}
-\newcommand{\UniformOneMax}{4.770}
-\newcommand{\UniformBiasMax}{57.9}
-\newcommand{\GHSLJointPct}{13.37}
-\newcommand{\GHSLJointCommon}{2.989}
-\newcommand{\WPJointPct}{23.20}
-\newcommand{\WPJointCommon}{5.186}
-\newcommand{\EpochOldPct}{20.86}
-\newcommand{\EpochOldCommon}{4.664}
-\newcommand{\EpochNewPct}{20.28}
-\newcommand{\EpochNewCommon}{4.534}
-\newcommand{\JointExcluded}{142.9}
-\newcommand{\SampleTwentyEight}{3.051}
-\newcommand{\SampleFiftySix}{3.232}
-\newcommand{\SampleOneTwelve}{3.369}
-\newcommand{\SampleTwoTwentyFour}{3.301}
-\newcommand{\DWRTotal}{598098}
-\newcommand{\DWRUnsupported}{1710}
-\newcommand{\DWRSupportPct}{99.71}
-\newcommand{\DWRUniformMin}{9022}
-\newcommand{\DWRUniformMax}{9556}
-
-% End included source: numbers.tex
-
-
-% Begin included source: round2_numbers.tex
-\newcommand{\InteriorPopulationMin}{99.27}
-\newcommand{\InteriorPopulationMax}{99.49}
-\newcommand{\InteriorBiasMin}{58.24}
-\newcommand{\InteriorBiasMax}{58.56}
-\newcommand{\InteriorErrorMin}{98.55}
-\newcommand{\InteriorErrorMax}{98.87}
-
-% End included source: round2_numbers.tex
-
-
-% Begin included source: cross_numbers.tex
-\newcommand{\CrossGHLow}{51.3}
-\newcommand{\CrossGHHigh}{55.6}
-\newcommand{\CrossWPLow}{8.6}
-\newcommand{\CrossWPHigh}{9.1}
-
-% End included source: cross_numbers.tex
-
+\input{numbers}
+\input{round2_numbers}
+\input{cross_numbers}
 \begin{document}
 \title[Spatial allocation and InSAR support]{Quantifying how spatial allocation and sampling alter population-weighted InSAR support summaries}
 \author[1]{\fnm{Zixuan} \sur{Liu}}
@@ -146,16 +91,7 @@ ESA WorldCover 2021 v200 provides native 10-m land classes \citep{worldcover2021
 An OpenAI Codex assistant was used during this revision to assist experimental code development, numerical checks, figure generation and manuscript drafting. Reported numerical outputs were produced by executing the retained scripts against the documented inputs. This assistance does not supply independent observations or physical validation.
 
 \subsection{Matched processing and a second published-support case}
-
-% Begin included source: matched_methods.tex
-We define a separate Bangkok urban--periurban rectangle (100.35--100.65$^\circ$ E, 13.65--14.05$^\circ$ N) before examining processing outcomes. All 437 catalogue pairs with both dates in 2019--2020 and temporal baseline at most 96 days are retrieved and checked. This date graph contains 104 acquisitions and is connected. Native unwrapped phase and byte coherence are aligned by nearest sampling, using each source's actual GDAL transform, onto the first unwrapped raster's approximately $0.001^\circ$ grid. LiCSBAS2 steps 11--16 provide quality rejection, loop closure, small-baseline inversion, velocity spread, multi-index masking and filtering \citep{morishita2020licsbas,licsbas2}. We retain upstream scientific routines and fixed C-band defaults; automatic relaxation of masking thresholds is disabled. Supplementary S7 records the exact version and parameters.
-
-Before reading pixel quality, 44 pair edges are randomly selected for holdout while preserving global acquisition-date connectivity. The other 393 pairs are processed separately through the same workflow. Held-out phase differences are converted to relative line-of-sight (LOS) displacement and referenced to the training solution's reference pixel. Predicted differences come from the unfiltered training cumulative displacements at those two dates. On observations evaluable by all methods, we also compare predictions from the training linear velocity and from zero relative displacement. Missing training dates or invalid held-out phase at the training reference are recorded as exclusions. Predictive strata use training-pair support and the training mask, excluding held-out coherence from their definition. All held-out dates remain represented in training; this tests edge reconstruction rather than forecasting new acquisition dates. Pairs share acquisitions and date-dependent atmospheric phase, so we report descriptive residuals without an independent-replicate confidence interval. No GNSS calibration, vertical decomposition or recovery of permanently absent observations is claimed.
-
-We separately compare legacy 28-pair support and matched-stack support with the full-stack quality mask, reporting pixel- and population-weighted confusion counts, support-bin validity, velocity spread and inversion residuals. Native GHSL counts are transferred by source-area fractions to the processing grid. Mask association is partly built into the algorithm because coherence contributes to its quality criteria; the edge holdout adds a distinct internal predictive check. The legacy comparison additionally differs in acquisition period (2016--2022 versus 2019--2020); the matched input diagnostic provides a within-period comparison. This experiment evaluates a specified LiCSAR/LiCSBAS chain and does not test the validity of the WabInSAR source raster.
-
-% End included source: matched_methods.tex
-
+\input{matched_methods}
 
 For the independent geometry case, we select a fixed Fresno rectangle (119.9--119.7$^\circ$ W, 36.6--36.85$^\circ$ N) before inspecting its support results. The California Department of Water Resources (DWR) 2026Q1 service supplies actual polygons representing its 100-m measurement cells \citep{dwr2026,dwrdocumentation}. We download all 38,738 intersecting cells, verify their geometry, clip them to the AOI and compute their nonduplicated union within native GHSL pixels. We do not assign the full population of a source pixel separately to each measurement point. The same metric scale/origin comparison is repeated in UTM zone 11N, and artificial masking is repeated within the published observed footprint. This case tests transfer of support accounting to a final published observation footprint; its polygon layer alone provides no per-cell velocity or uncertainty. We do not infer motion in its gaps. Its 2015--2026 observation record and 2020 population also have an explicit temporal mismatch.
 
@@ -169,18 +105,7 @@ The fixed Chao Phraya footprint contains \PopTotal{} million GHSL population uni
 \end{figure}
 \begin{table}[htbp]\centering
 \refstepcounter{table}\label{tab:baseline}
-
-% Begin included source: baseline_table.tex
-\begin{tabular}{lrrrr}\toprule
-Support rule & Population & Pop. (\%) & Built surface & Area (\%)\\\midrule
-Valid unwrapped & 0.268 & 1.19 & 31.9 & 17.89 \\
-Joint, $q=0.2$ & 1.665 & 7.40 & 197.5 & 57.44 \\
-Joint, $q=0.3$ & 3.020 & 13.42 & 325.6 & 68.77 \\
-Joint, $q=0.4$ & 4.891 & 21.74 & 464.6 & 76.83 \\
-\bottomrule\end{tabular}
-
-% End included source: baseline_table.tex
-
+\input{baseline_table}
 \end{table}
 
 Unwrapped validity alone and the coherence-screened quantities are substantially different (Table~\ref{tab:baseline}). Raising $q$ from 0.2 to 0.4 changes the mean population deficit from \PopTwenty{} to \PopForty{} million. This range is a definition sensitivity, not a confidence interval. The weighted support curves retain information lost by applying one majority threshold to every coarse cell.
@@ -232,34 +157,10 @@ On pixels jointly valid in the four population/epoch layers, the $q=0.3$ deficit
 \refstepcounter{figure}\label{fig:population}
 \end{figure}
 
-
-% Begin included source: cross_results.tex
-\paragraph{Crossing population model and pair selection.} On the fixed GHSL--WorldPop common domain, both models are normalized to 22.358 million population units. At 1 km, uniform allocation exceeds the native-model deficit by 55.38--55.64\% for GHSL with the legacy 28 pairs and 51.29--51.51\% with the expanded 224 pairs. The corresponding WorldPop differences are 9.03--9.07\% and 8.64--8.68\%. All 16 model--sample--origin combinations have positive differences; normalized by the common total, these span 7.40--7.53 percentage points for GHSL and 2.09--2.13 for WorldPop. The direction therefore persists across these inputs, while its magnitude is strongly population-model dependent. The original approximately 58\% difference is specific to its full-domain GHSL case. Changing 28 to 224 pairs changes selection and composition as well as sample size; the comparison is not an isolated sample-size effect. Supplementary S12 reports every origin and the numerical convergence check.
-
-% End included source: cross_results.tex
-
+\input{cross_results}
 
 \subsection{Matched processing and transfer to actual published support}
-
-% Begin included source: matched_results.tex
-Full-stack quality rejection leaves 431 of 437 pairs for inversion; the training branch retains 382 of 393 inputs. The full quality mask accepts 97.02\% of pixels and 99.71\% of the small area's allocated population. Among pixels with matched-input mean support below 0.2, 83.34\% still pass the fixed multi-index mask; the 0.8--1 group has 99.72\% acceptance. Low coherence-screened support is therefore not equivalent to final processing rejection (Fig.~\ref{fig:matched}). Neither acceptance nor rejection is independent physical truth.
-
-At a legacy-support threshold of 0.5, the low-support/accepted and high-support/rejected categories contain 208,609 and 30,637 population allocation units, respectively. That legacy comparison also changes the acquisition period and sample. The matched-input bins provide the within-period comparison: median bootstrap velocity spread is 1.343 versus 1.185 mm yr$^{-1}$ and median inversion residual is 0.673 versus 0.368 mm for the lowest and highest support groups. These associations describe quality differences rather than a binary validity surrogate.
-
-Of 44 excluded pair edges, 44 meet the recorded prediction/reference conditions. Pooled held-out LOS displacement RMSE is 0.984 mm across evaluable observations. Training-mask accepted and rejected locations give 0.699 and 5.150 mm, respectively; the lowest and highest training-support bins give 2.338 and 0.412 mm. On common evaluable observations, time-series differences, training linear velocity and a zero-displacement baseline give 0.984, 11.751 and 11.784 mm. This edge holdout reconstructs pairs between dates already represented in training; shared date-dependent atmospheric phase can also be reconstructed. These are residuals against excluded interferograms with shared acquisitions, not out-of-time forecasts or external velocity accuracies or evidence about permanently missing motion. Exclusions and per-pair results are retained in Supplementary S7.
-
-We additionally compare the same GHSL population field against two distinct support summaries on this processing grid: mean support across the 437 full-stack input pairs and the final LiCSBAS full-stack quality mask. Direct intersections between the native source cells and 1-km UTM cells show that uniform-area allocation increases the mean deficit by 3.066--3.189 percentage points of the fixed AOI population for the 437-pair support field, but by 0.108--0.117 points for the final quality mask across four grid origins. Their native deficits are 3.4539\% and 0.2944\%, respectively. These support definitions carry different processing information; their contrast is not an error comparison, and neither identifies deformation in invalid pixels. The source-to-grid intersections and numerical checks are reported in Supplementary S13.
-
-We also imposed known masks on actual fitted LOS velocities, but only among pixels already accepted by the final quality mask. For a predeclared $-5$ mm yr$^{-1}$ LOS class, 30\% artificial removal and nominal 1.11-km cells, local observed-population prevalence had mean relative bias of +1.1\% under random removal, +5.2\% under clustered removal, $-30.1\%$ when high-spread pixels were preferentially removed, and +79.1\% when low-spread pixels were removed. Nearest-center sampling was much more biased under random removal (+99.7\%). These conditional errors use known velocities in artificially masked valid pixels and do not estimate motion in the original invalid area (Supplementary S14).
-
-
-\begin{figure}[htbp]\centering
-\includegraphics[width=\linewidth]{figures/F7_matched_processing.pdf}
-\refstepcounter{figure}\label{fig:matched}
-\end{figure}
-
-% End included source: matched_results.tex
-
+\input{matched_results}
 
 In Fresno, the union of DWR observation cells covers 78.49\% of the 495.51-km$^2$ AOI but contains \DWRSupportPct{}\% of its allocated GHSL population. Of \DWRTotal{} population units, \DWRUnsupported{} fall outside the published footprint under the native allocation model. At 1 km, uniform allocation gives \DWRUniformMin{}--\DWRUniformMax{} units outside support. This is a substantial multiplier of a small baseline, but only about 1.2--1.3 percentage points of the AOI population in additional error. Both denominators matter. The larger origin sensitivity of center sampling illustrates a separate grid-placement vulnerability (Fig.~\ref{fig:dwr}). These are observations about coverage geometry and population allocation, not evidence of subsidence in the gaps. Using actual 2020 Census block geometries over the same complete-block domain, the Census-population-weighted mean DWR area-coverage fraction is 99.19\%, compared with 99.74\% under the native GHSL allocation; assigning whole Census block counts to blocks with at least 50\% observed area gives 99.41\%. These are cross-scale support statistics, not velocity classes, and the Census totals differ from GHSL (Supplementary S16). We additionally applied a published median-rate block classification to separate DWR/TRE ALTAMIRA vertical-rate rasters. For the 2015--2021 median of six annual products, valid rates cover blocks containing 95.70\% of complete-block Census population; 65.23\% of that covered population is assigned to blocks with median rates below $-5$ mm yr$^{-1}$. This is a transfer analysis using an interpolated vertical-rate product, not the manuscript's LOS field or an independent validation; annual and cumulative rate estimands yield materially different classes (Supplementary S17). A matched-domain comparison of GHSL and WorldPop 1-km allocations with Census block totals shows that both outperform an area-only allocation baseline, while normalized block-level WAPE remains 57--59\%; this coarse agreement test does not validate within-block population locations (Supplementary S19). A matched 100-m comparison that normalizes GHSL and CA-POP to identical Census block counts changes the outside-footprint allocation by 0.143 percentage points of the common Census total, with mixed tract-level directions; CA-POP uses those same block counts as source data (Supplementary S20). At the coarser 2020 block-group scale, the ACS 2017--2021 survey estimate totals 493,571; Census P1 is 0.36\% lower, while GHSL and WorldPop totals are 10.57\% and 6.03\% higher. This is a survey-based block-group agreement benchmark with unresolved source independence. It does not establish household locations or validate LOS deformation (Supplementary S24).
 
@@ -296,255 +197,7 @@ Public input data are obtained from COMET LiCSAR, GHSL, WorldPop, ESA WorldCover
 \section*{Code Availability}
 The scientific reproduction package is publicly available at the fixed GitHub release \href{https://github.com/niubisile-wq/openinsar-observability-bias/releases/tag/v0.4.1}{v0.4.1}, commit \path{5bf98f19abbed981989f9c97ef9b118eea524c5b}. It contains the experiment code, configurations, input manifests and checksums, processed analysis inputs, full reference outputs, environment records and reviewer reproduction instructions. A companion release asset supplies the complete ACS source files and the official Census source archives used in S20, with file-level checksums. Other provider-controlled original products and the complete interferogram processing stacks are obtained separately through the documented acquisition routes. The earlier DOI \href{https://doi.org/10.5281/zenodo.21444768}{10.5281/zenodo.21444768} archives v0.3.0; a revised DOI deposit remains pending.
 \def\bibfont{\small}
-\begin{thebibliography}{10}
-\expandafter\ifx\csname url\endcsname\relax
-  \def\url#1{\burl{#1}}\fi
-\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
-\providecommand{\bibinfo}[2]{#2}
-\providecommand{\eprint}[2][]{\url{#2}}
-\providecommand{\doi}[1]{\url{https://doi.org/#1}}
-\bibcommenthead
-
-\bibitem{ferretti2001ps}
-\bibinfo{author}{Ferretti, A.}, \bibinfo{author}{Prati, C.} \&
-  \bibinfo{author}{Rocca, F.}
-\newblock \bibinfo{title}{Permanent scatterers in {SAR} interferometry}.
-\newblock \emph{\bibinfo{journal}{IEEE Transactions on Geoscience and Remote
-  Sensing}} \textbf{\bibinfo{volume}{39}}, \bibinfo{pages}{8--21}
-  (\bibinfo{year}{2001}).
-
-\bibitem{berardino2002sbas}
-\bibinfo{author}{Berardino, P.}, \bibinfo{author}{Fornaro, G.},
-  \bibinfo{author}{Lanari, R.} \& \bibinfo{author}{Sansosti, E.}
-\newblock \bibinfo{title}{A new algorithm for surface deformation monitoring
-  based on small baseline differential {SAR} interferograms}.
-\newblock \emph{\bibinfo{journal}{IEEE Transactions on Geoscience and Remote
-  Sensing}} \textbf{\bibinfo{volume}{40}}, \bibinfo{pages}{2375--2383}
-  (\bibinfo{year}{2002}).
-
-\bibitem{ferretti2011squeeSAR}
-\bibinfo{author}{Ferretti, A.} \emph{et~al.}
-\newblock \bibinfo{title}{A new algorithm for processing interferometric
-  data-stacks: {SqueeSAR}}.
-\newblock \emph{\bibinfo{journal}{IEEE Transactions on Geoscience and Remote
-  Sensing}} \textbf{\bibinfo{volume}{49}}, \bibinfo{pages}{3460--3470}
-  (\bibinfo{year}{2011}).
-
-\bibitem{morishita2020licsbas}
-\bibinfo{author}{Morishita, Y.} \emph{et~al.}
-\newblock \bibinfo{title}{{LiCSBAS}: An open-source {InSAR} time series
-  analysis package integrated with the {LiCSAR} automated {Sentinel-1} {InSAR}
-  processor}.
-\newblock \emph{\bibinfo{journal}{Remote Sensing}}
-  \textbf{\bibinfo{volume}{12}}, \bibinfo{pages}{424} (\bibinfo{year}{2020}).
-
-\bibitem{yunjun2019mintpy}
-\bibinfo{author}{Zhang, Y.}, \bibinfo{author}{Fattahi, H.} \&
-  \bibinfo{author}{Amelung, F.}
-\newblock \bibinfo{title}{Small baseline {InSAR} time series analysis:
-  Unwrapping error correction and noise reduction}.
-\newblock \emph{\bibinfo{journal}{Computers \& Geosciences}}
-  \textbf{\bibinfo{volume}{133}}, \bibinfo{pages}{104331}
-  (\bibinfo{year}{2019}).
-
-\bibitem{blackwell2020california}
-\bibinfo{author}{Blackwell, E.}, \bibinfo{author}{Shirzaei, M.},
-  \bibinfo{author}{Ojha, C.} \& \bibinfo{author}{Werth, S.}
-\newblock \bibinfo{title}{Tracking california's sinking coast from space:
-  Implications for relative sea-level rise}.
-\newblock \emph{\bibinfo{journal}{Science Advances}}
-  \textbf{\bibinfo{volume}{6}}, \bibinfo{pages}{eaba4551}
-  (\bibinfo{year}{2020}).
-
-\bibitem{fernandeztorres2024mexico}
-\bibinfo{author}{Fernandez-Torres, E.~A.} \emph{et~al.}
-\newblock \bibinfo{title}{Country-scale assessment of urban areas, population,
-  and households exposed to land subsidence using sentinel-1 insar, and gps
-  time series}.
-\newblock \emph{\bibinfo{journal}{Natural Hazards}}
-  \textbf{\bibinfo{volume}{120}}, \bibinfo{pages}{1577--1601}
-  (\bibinfo{year}{2024}).
-
-\bibitem{ao2024national}
-\bibinfo{author}{Ao, Z.}, \bibinfo{author}{Hu, X.}, \bibinfo{author}{Tao, S.},
-  \bibinfo{author}{Hu, X.} \emph{et~al.}
-\newblock \bibinfo{title}{A national-scale assessment of land subsidence in
-  china's major cities}.
-\newblock \emph{\bibinfo{journal}{Science}}  (\bibinfo{year}{2024}).
-
-\bibitem{ohenhen2025uscities}
-\bibinfo{author}{Ohenhen, L.~O.}, \bibinfo{author}{Zhai, G.},
-  \bibinfo{author}{Lucy, J.} \emph{et~al.}
-\newblock \bibinfo{title}{Land subsidence risk to infrastructure in {US}
-  metropolises}.
-\newblock \emph{\bibinfo{journal}{Nature Cities}} \textbf{\bibinfo{volume}{2}},
-  \bibinfo{pages}{543--554} (\bibinfo{year}{2025}).
-
-\bibitem{xiong2026nationwide}
-\bibinfo{author}{Xiong, Z.} \emph{et~al.}
-\newblock \bibinfo{title}{Nationwide mapping and characterization of land
-  subsidence in the {United States} using {InSAR}}.
-\newblock \emph{\bibinfo{journal}{Remote Sensing of Environment}}
-  \textbf{\bibinfo{volume}{333}}, \bibinfo{pages}{115134}
-  (\bibinfo{year}{2026}).
-
-\bibitem{yang2026buildingrisk}
-\bibinfo{author}{Yang, M.}, \bibinfo{author}{Huang, W.}, \bibinfo{author}{Li,
-  M.} \& \bibinfo{author}{Chang, L.}
-\newblock \bibinfo{title}{From {PS-InSAR} observations to building-level risk:
-  A data-driven framework for urban structural resilience}.
-\newblock \emph{\bibinfo{journal}{Remote Sensing of Environment}}
-  \textbf{\bibinfo{volume}{341}}, \bibinfo{pages}{115454}
-  (\bibinfo{year}{2026}).
-
-\bibitem{oelsmann2026coastal}
-\bibinfo{author}{Oelsmann, J.}, \bibinfo{author}{Nicholls, R.~J.},
-  \bibinfo{author}{Lincke, D.} \emph{et~al.}
-\newblock \bibinfo{title}{Subsidence more than doubles sea-level rise today
-  along densely populated coasts}.
-\newblock \emph{\bibinfo{journal}{Nature Communications}}
-  \textbf{\bibinfo{volume}{17}}, \bibinfo{pages}{4382} (\bibinfo{year}{2026}).
-
-\bibitem{murray2025hawaii}
-\bibinfo{author}{Murray, K.}, \bibinfo{author}{Barbee, M.},
-  \bibinfo{author}{Thompson, P.} \& \bibinfo{author}{Fletcher, C.}
-\newblock \bibinfo{title}{Coastal land subsidence accelerates timelines for
-  future flood exposure in hawai'i}.
-\newblock \emph{\bibinfo{journal}{Communications Earth \& Environment}}
-  \textbf{\bibinfo{volume}{6}}, \bibinfo{pages}{123} (\bibinfo{year}{2025}).
-
-\bibitem{luachapichatikul2020bangkok}
-\bibinfo{author}{Luachapichatikul, S.}
-\newblock \emph{\bibinfo{title}{Measuring Land Subsidence with {PS-InSAR} in
-  {Bangkok} using {Sentinel-1} Time-Series Techniques}}.
-\newblock \bibinfo{type}{Master's thesis}, \bibinfo{school}{Burapha University}
-  (\bibinfo{year}{2020}).
-\newblock \urlprefix\url{https://ir.buu.ac.th/dspace/handle/1513/311}.
-
-\bibitem{pumpuang2024bangkapi}
-\bibinfo{author}{Pumpuang, A.} \& \bibinfo{author}{Aobpaet, A.}
-\newblock \bibinfo{title}{Evolution pattern of land subsidence using {InSAR}
-  time-series analysis in {Bangkapi}, {Bangkok}, {Thailand}}.
-\newblock \emph{\bibinfo{journal}{Journal of Current Science and Technology}}
-  \textbf{\bibinfo{volume}{14}}, \bibinfo{pages}{49} (\bibinfo{year}{2024}).
-\newblock
-  \urlprefix\url{https://ph04.tci-thaijo.org/index.php/JCST/article/view/2549}.
-
-\bibitem{aieorattanawadee2022bangkok}
-\bibinfo{author}{Aieorattanawadee, N.}
-\newblock \emph{\bibinfo{title}{Monitoring land subsidence in {Bangkok} during
-  2018--2022 using time-series {InSAR} analysis with {MintPy}}}.
-\newblock \bibinfo{type}{Master's thesis}, \bibinfo{school}{Chulalongkorn
-  University} (\bibinfo{year}{2022}).
-\newblock \urlprefix\url{https://digital.car.chula.ac.th/chulaetd/6585/}.
-
-\bibitem{eicher2001dasymetric}
-\bibinfo{author}{Eicher, C.~L.} \& \bibinfo{author}{Brewer, C.~A.}
-\newblock \bibinfo{title}{Dasymetric mapping and areal interpolation:
-  Implementation and evaluation}.
-\newblock \emph{\bibinfo{journal}{Cartography and Geographic Information
-  Science}} \textbf{\bibinfo{volume}{28}}, \bibinfo{pages}{125--138}
-  (\bibinfo{year}{2001}).
-
-\bibitem{mennis2003population}
-\bibinfo{author}{Mennis, J.}
-\newblock \bibinfo{title}{Generating surface models of population using
-  dasymetric mapping}.
-\newblock \emph{\bibinfo{journal}{The Professional Geographer}}
-  \textbf{\bibinfo{volume}{55}}, \bibinfo{pages}{31--42}
-  (\bibinfo{year}{2003}).
-
-\bibitem{ohenhen2026deltas}
-\bibinfo{author}{Ohenhen, L.~O.} \emph{et~al.}
-\newblock \bibinfo{title}{Global subsidence of river deltas}.
-\newblock \emph{\bibinfo{journal}{Nature}} \textbf{\bibinfo{volume}{649}},
-  \bibinfo{pages}{894--901} (\bibinfo{year}{2026}).
-
-\bibitem{ohenhen2025deltadata}
-\bibinfo{author}{Ohenhen, L.}
-\newblock \bibinfo{title}{Global subsidence of river deltas}
-  (\bibinfo{year}{2025}).
-\newblock \bibinfo{note}{1-km vertical land motion GeoTIFFs for 40 river
-  deltas}.
-
-\bibitem{licsarproducts}
-\bibinfo{author}{{COMET}}.
-\newblock \bibinfo{title}{{LiCSAR} product details} (\bibinfo{year}{2026}).
-\newblock
-  \urlprefix\url{https://comet.nerc.ac.uk/comet-lics-portal-product-details/}.
-\newblock \bibinfo{note}{Accessed 27 September 2026; product-specific coherence
-  encoding and unwrapped validity}.
-
-\bibitem{pesaresi2024ghsl}
-\bibinfo{author}{Pesaresi, M.} \emph{et~al.}
-\newblock \bibinfo{title}{Advances on the global human settlement layer by
-  joint assessment of earth observation and population survey data}.
-\newblock \emph{\bibinfo{journal}{International Journal of Digital Earth}}
-  \textbf{\bibinfo{volume}{17}}, \bibinfo{pages}{2390454}
-  (\bibinfo{year}{2024}).
-
-\bibitem{worldpop2020}
-\bibinfo{author}{{WorldPop}}.
-\newblock \bibinfo{title}{Thailand 2020 population counts: unconstrained,
-  un-adjusted, 3 arc-second product} (\bibinfo{year}{2020}).
-\newblock \urlprefix\url{https://hub.worldpop.org/geodata/summary?id=29165}.
-\newblock \bibinfo{note}{File tha\_ppp\_2020\_UNadj.tif; accessed 27 September
-  2026}.
-
-\bibitem{worldcover2021}
-\bibinfo{author}{Zanaga, D.}, \bibinfo{author}{Van De~Kerchove, R.},
-  \bibinfo{author}{Daems, D.} \emph{et~al.}
-\newblock \bibinfo{title}{{ESA WorldCover} 10 m 2021 v200}
-  (\bibinfo{year}{2022}).
-
-\bibitem{licsbas2}
-\bibinfo{author}{Morishita, Y.}
-\newblock \bibinfo{title}{{LiCSBAS2}: time-series processing software}
-  (\bibinfo{year}{2026}).
-\newblock \urlprefix\url{https://github.com/yumorishita/LiCSBAS2}.
-\newblock \bibinfo{note}{Commit 2627e50a1c703becd4a0b18754b05c1cf8c564d5; local
-  Windows I/O portability patch documented}.
-
-\bibitem{dwr2026}
-\bibinfo{author}{{California Department of Water Resources}}.
-\newblock \bibinfo{title}{Vertical displacement point data locations, 2026q1:
-  published observation-cell polygons} (\bibinfo{year}{2026}).
-\newblock
-  \urlprefix\url{https://gis.water.ca.gov/arcgis/rest/services/Elevation/Vertical_Displacement_Point_Data_Locations_2026Q1/MapServer}.
-\newblock \bibinfo{note}{Service layer 0, geometry type polygon; accessed 27
-  September 2026}.
-
-\bibitem{dwrdocumentation}
-\bibinfo{author}{{California Department of Water Resources}}.
-\newblock \bibinfo{title}{{SGMA} data viewer documentation: {TRE Altamira
-  InSAR} dataset} (\bibinfo{year}{2026}).
-\newblock
-  \urlprefix\url{https://sgma.water.ca.gov/webgis/config/custom/html/SGMADataViewer/doc/}.
-\newblock \bibinfo{note}{100 m measurement support distinguished from
-  interpolated display rasters; accessed 27 September 2026}.
-
-\bibitem{haghshenas2024iran}
-\bibinfo{author}{Haghshenas~Haghighi, M.} \& \bibinfo{author}{Motagh, M.}
-\newblock \bibinfo{title}{Uncovering the impacts of depleting aquifers: A
-  remote sensing analysis of land subsidence in iran}.
-\newblock \emph{\bibinfo{journal}{Science Advances}}
-  \textbf{\bibinfo{volume}{10}} (\bibinfo{year}{2024}).
-
-\bibitem{payne2025iran}
-\bibinfo{author}{Payne, J.~A.} \emph{et~al.}
-\newblock \bibinfo{title}{Widespread extent of irrecoverable aquifer depletion
-  revealed by country-wide analysis of land surface subsidence hazard in iran}.
-\newblock \emph{\bibinfo{journal}{Journal of Geophysical Research: Solid
-  Earth}} \textbf{\bibinfo{volume}{130}} (\bibinfo{year}{2025}).
-
-\bibitem{payne2024data}
-\bibinfo{author}{Payne, J.}
-\newblock \bibinfo{title}{Accompanying data for paper: Widespread extent of
-  irrecoverable aquifer depletion revealed by country-wide analysis of land
-  surface subsidence hazard in iran} (\bibinfo{year}{2024}).
-
-\end{thebibliography}
-
+\bibliography{references}
 \section*{Author Contributions}
 Z.L.: analysis and manuscript preparation. W.X.: supervision and manuscript revision.
 \section*{Additional Information}

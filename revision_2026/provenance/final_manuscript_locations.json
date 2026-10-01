@@ -1,0 +1,243 @@
+{
+  "main": {
+    "Introduction": {
+      "page": 1,
+      "line": 47,
+      "text": "1 Introduction",
+      "clean_page": 1
+    },
+    "Materials and methods": {
+      "page": 2,
+      "line": 95,
+      "text": "2 Materials and methods",
+      "clean_page": 2
+    },
+    "Separate the geographic domain, support field and allocation model": {
+      "page": 2,
+      "line": 97,
+      "text": "2.1 Separate the geographic domain, support field and allocation model",
+      "clean_page": 2
+    },
+    "Continuous summaries and what they do not estimate": {
+      "page": 3,
+      "line": 131,
+      "text": "2.2 Continuous summaries and what they do not estimate",
+      "clean_page": 3
+    },
+    "Matched-target allocation and grid experiments": {
+      "page": 3,
+      "line": 154,
+      "text": "2.3 Matched-target allocation and grid experiments",
+      "clean_page": 3
+    },
+    "Artificial masking with known reference quantities": {
+      "page": 4,
+      "line": 184,
+      "text": "2.4 Artificial masking with known reference quantities",
+      "clean_page": 4
+    },
+    "Sampling, population products and land cover": {
+      "page": 4,
+      "line": 204,
+      "text": "2.5 Sampling, population products and land cover",
+      "clean_page": 4
+    },
+    "Computational assistance": {
+      "page": 5,
+      "line": 238,
+      "text": "2.6 Computational assistance",
+      "clean_page": 5
+    },
+    "Matched processing and a second published-support case": {
+      "page": 5,
+      "line": 244,
+      "text": "2.7 Matched processing and a second published-support case",
+      "clean_page": 5
+    },
+    "Spatial support and allocation have different weighted distributions": {
+      "page": 5,
+      "line": 288,
+      "text": "3.1 Spatial support and allocation have different weighted distributions",
+      "clean_page": 5
+    },
+    "Coarse uniform allocation changes the target materially": {
+      "page": 6,
+      "line": 339,
+      "text": "3.2 Coarse uniform allocation changes the target materially",
+      "clean_page": 6
+    },
+    "Controlled missingness identifies both useful and failing cases": {
+      "page": 7,
+      "line": 381,
+      "text": "3.3 Controlled missingness identifies both useful and failing cases",
+      "clean_page": 7
+    },
+    "Sampling and population choice remain consequential": {
+      "page": 8,
+      "line": 432,
+      "text": "3.4 Sampling and population choice remain consequential",
+      "clean_page": 8
+    },
+    "Matched processing and transfer to actual published support": {
+      "page": 9,
+      "line": 486,
+      "text": "3.5 Matched processing and transfer to actual published support",
+      "clean_page": 9
+    },
+    "The aggregation effect and its dependence on inputs": {
+      "page": 11,
+      "line": 611,
+      "text": "4.1 The aggregation effect and its dependence on inputs",
+      "clean_page": 11
+    },
+    "Mechanism and choice of allocation method": {
+      "page": 11,
+      "line": 621,
+      "text": "4.2 Mechanism and choice of allocation method",
+      "clean_page": 11
+    },
+    "Applicability and evidence limits": {
+      "page": 11,
+      "line": 638,
+      "text": "4.3 Applicability and evidence limits",
+      "clean_page": 11
+    },
+    "What the additional evidence supports.": {
+      "page": 12,
+      "line": 655,
+      "text": "What the additional evidence supports.",
+      "clean_page": 12
+    },
+    "Earlier estimates and source attribution.": {
+      "page": 12,
+      "line": 664,
+      "text": "Earlier estimates and source attribution.",
+      "clean_page": 12
+    },
+    "Conclusions": {
+      "page": 12,
+      "line": 674,
+      "text": "5 Conclusions",
+      "clean_page": 12
+    },
+    "Data Availability": {
+      "page": 12,
+      "line": 686,
+      "text": "Data Availability",
+      "clean_page": 12
+    },
+    "Code Availability": {
+      "page": 12,
+      "line": 695,
+      "text": "Code Availability",
+      "clean_page": 12
+    },
+    "References": {
+      "page": 12,
+      "line": 706,
+      "text": "References",
+      "clean_page": 12
+    }
+  },
+  "supplementary": {
+    "S1": {
+      "page": 1,
+      "heading": "S1. Frozen domains and source provenance"
+    },
+    "S2": {
+      "page": 1,
+      "heading": "S2. Historical lineage and non-equivalent statistics"
+    },
+    "S3": {
+      "page": 2,
+      "heading": "S3. Geometry, conservation and numerical checks"
+    },
+    "S4": {
+      "page": 3,
+      "heading": "S4. Artificial masking, error denominators and synthetic bounds"
+    },
+    "S5": {
+      "page": 3,
+      "heading": "S5. Expanded sampling and temporal network"
+    },
+    "S6": {
+      "page": 5,
+      "heading": "S6. Population coverage and land-cover interpretation"
+    },
+    "S7": {
+      "page": 6,
+      "heading": "S7. Matched LiCSBAS processing and holdout"
+    },
+    "S8": {
+      "page": 8,
+      "heading": "S8. Downstream exposure examples and the Iran provenance cor-"
+    },
+    "S9": {
+      "page": 10,
+      "heading": "S9. Reproduction and result-to-claim mapping"
+    },
+    "S10": {
+      "page": 10,
+      "heading": "S10. Method choices and comparison scope"
+    },
+    "S11": {
+      "page": 11,
+      "heading": "S11. Boundary sensitivity and internal computational recheck"
+    },
+    "S12": {
+      "page": 13,
+      "heading": "S12. Crossed population-model and pair-selection sensitivity"
+    },
+    "S13": {
+      "page": 14,
+      "heading": "S13. Paired input-support and final-quality-mask allocation"
+    },
+    "S14": {
+      "page": 15,
+      "heading": "S14. Artificial masking of observed LOS classes"
+    },
+    "S15": {
+      "page": 16,
+      "heading": "S15. Covariance identity and scale sensitivity diagnostic"
+    },
+    "S16": {
+      "page": 17,
+      "heading": "S16. Fresno 2020 Census-block support overlay"
+    },
+    "S17": {
+      "page": 18,
+      "heading": "S17. Census-block median vertical-rate classification in Fresno"
+    },
+    "S18": {
+      "page": 20,
+      "heading": "S18. Spatial decomposition of Bangkok support-allocation effects"
+    },
+    "S19": {
+      "page": 21,
+      "heading": "S19. Fresno population-grid comparison with Census block totals"
+    },
+    "S20": {
+      "page": 22,
+      "heading": "S20. Fine-resolution population-allocation sensitivity in Fresno"
+    },
+    "S21": {
+      "page": 23,
+      "heading": "S21. Finite-domain bounds for threshold-class allocation under the"
+    },
+    "S22": {
+      "page": 24,
+      "heading": "S22. Benchmark against census-unit median-rate assignment under"
+    },
+    "S23": {
+      "page": 25,
+      "heading": "S23. A tolerance-based reporting rule for scale-dependent alloca-"
+    },
+    "S24": {
+      "page": 26,
+      "heading": "S24. Fresno population-grid comparison with 2017\u20132021 ACS"
+    }
+  },
+  "numbered_pages": 14,
+  "clean_pages": 14,
+  "supplementary_pages": 28
+}

@@ -19,9 +19,11 @@ For Windows, use the explicit PowerShell commands in the [reproduction guide](re
 
 The [v0.4.1 release](https://github.com/niubisile-wq/openinsar-observability-bias/releases/tag/v0.4.1) also provides a checksum-verified companion archive of the complete upstream ACS source files and the official Census archives used by S20. These files can still be fetched directly with the documented downloader.
 
-Release [v0.4.2](https://github.com/niubisile-wq/openinsar-observability-bias/releases/tag/v0.4.2) updates the point-by-point response with the exact public reproducibility location and clarifies the scope of the older DOI. It makes no changes to the scientific results; v0.4.1 remains the identified scientific reproduction package.
+Release [v0.4.3](https://github.com/niubisile-wq/openinsar-observability-bias/releases/tag/v0.4.3) finalizes the manuscript and response wording, evidence limits, source attribution, actual line references and consistent manuscript variants. It makes no changes to scientific inputs, figures or results; [v0.4.1](https://github.com/niubisile-wq/openinsar-observability-bias/releases/tag/v0.4.1), commit `5bf98f19abbed981989f9c97ef9b118eea524c5b`, remains the fixed scientific reproduction package.
 
 - [Current clean manuscript](revision_2026/manuscript/manuscript.pdf)
+- [Numbered manuscript for response locations](revision_2026/manuscript/manuscript_numbered.pdf)
+- [Manuscript marked against the retained local baseline](revision_2026/manuscript/manuscript_marked_local_baseline.pdf)
 - [Supplementary Information, S1–S24](revision_2026/manuscript/supplementary.pdf)
 - [Point-by-point response](revision_2026/manuscript/response.pdf)
 - [Reviewer-to-experiment map](revision_2026/REVIEWER_MAP.md)

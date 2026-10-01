@@ -1,0 +1,83 @@
+{
+  "pages": {
+    "manuscript": 14,
+    "manuscript_numbered": 14,
+    "manuscript_marked_local_baseline": 14,
+    "response": 8,
+    "cover_letter": 1
+  },
+  "comment_blocks_unchanged": true,
+  "retained_comment_blocks": 8,
+  "numerical_macro_files_unchanged": {
+    "numbers.tex": true,
+    "round2_numbers.tex": true,
+    "cross_numbers.tex": true,
+    "references.bib": true
+  },
+  "figure_files_unchanged": {
+    "F1_chao_spatial.pdf": true,
+    "F2_support_curves.pdf": true,
+    "F3_allocation_scale.pdf": true,
+    "F4_masking.pdf": true,
+    "F5_population_models.pdf": true,
+    "F6_dwr.pdf": true,
+    "F7_matched_processing.pdf": true,
+    "S1_sampling.pdf": true,
+    "S2_network_ranks.pdf": true,
+    "S3_matched_quality.pdf": true,
+    "S4_dwr_masking.pdf": true,
+    "S5_cross_sensitivity.pdf": true
+  },
+  "text_comparison": {
+    "numbered": {
+      "word_sequence_identical_to_clean": true,
+      "text_identical_after_hyphenation_normalization": true,
+      "clean_word_count": 7768,
+      "other_word_count": 7768,
+      "similarity": 1.0
+    },
+    "marked": {
+      "word_sequence_identical_to_clean": true,
+      "text_identical_after_hyphenation_normalization": true,
+      "clean_word_count": 7768,
+      "other_word_count": 7768,
+      "similarity": 1.0
+    },
+    "singlefile": {
+      "word_sequence_identical_to_clean": true,
+      "text_identical_after_hyphenation_normalization": true,
+      "clean_word_count": 7768,
+      "other_word_count": 7768,
+      "similarity": 1.0
+    }
+  },
+  "out_of_page_text_blocks": [],
+  "response_has_no_locator_placeholders": true,
+  "contact_sheets": [
+    "04_Verification/manuscript_contact_01.png",
+    "04_Verification/manuscript_contact_02.png",
+    "04_Verification/manuscript_contact_03.png",
+    "04_Verification/manuscript_numbered_contact_01.png",
+    "04_Verification/manuscript_numbered_contact_02.png",
+    "04_Verification/manuscript_numbered_contact_03.png",
+    "04_Verification/manuscript_marked_local_baseline_contact_01.png",
+    "04_Verification/manuscript_marked_local_baseline_contact_02.png",
+    "04_Verification/manuscript_marked_local_baseline_contact_03.png",
+    "04_Verification/response_contact_01.png",
+    "04_Verification/response_contact_02.png",
+    "04_Verification/cover_letter_contact_01.png"
+  ],
+  "scope": "Writing/locators/resource access update; no scientific data or experiment results changed.",
+  "visual_review": {
+    "completed": true,
+    "method": "Poppler renders; all pages reviewed in contact sheets; changed pages reviewed at full resolution.",
+    "documents": [
+      "manuscript",
+      "manuscript_numbered",
+      "manuscript_marked_local_baseline",
+      "response",
+      "cover_letter"
+    ],
+    "defects_found_after_final_sync": []
+  }
+}

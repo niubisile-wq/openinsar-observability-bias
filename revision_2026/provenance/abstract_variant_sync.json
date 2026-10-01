@@ -1,0 +1,14 @@
+[
+  {
+    "file": "manuscript_marked_local_baseline.tex",
+    "abstract_replaced_with_final_clean_abstract": true,
+    "contained_absolute_primary_shift_before": false,
+    "contained_final_mask_shift_before": false
+  },
+  {
+    "file": "manuscript_singlefile.tex",
+    "abstract_replaced_with_final_clean_abstract": true,
+    "contained_absolute_primary_shift_before": false,
+    "contained_final_mask_shift_before": false
+  }
+]

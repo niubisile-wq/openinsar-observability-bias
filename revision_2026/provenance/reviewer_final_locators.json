@@ -1,0 +1,11 @@
+{
+  "EDITOR": "Main manuscript lines~47--94 (Introduction), 97--153 and 154--183 (estimand and allocation design), 339--380 (matched-input result), and 621--663 (method rationale and evidence limits). Supplementary S7--S15 and S18--S24 supply the additional processing, sampling, method and population checks.",
+  "CODE": "Main manuscript lines~695--704, Code Availability (clean manuscript p.~12); updated cover letter and versioned reviewer guide.",
+  "R1_1": "Main manuscript lines~131--153 (units and estimand), 488--524 (processing and observed-LOS checks), 573--582 (population benchmarks), and 655--663, 664--673 (evidence limits and withdrawal of the earlier interpretation). Supplementary S3--S4, S7, S13--S14, S16--S22 and S24 provide the detailed tables and scope limits.",
+  "R1_2": "Main manuscript lines~97--153 (continuous support and allocation summaries), 204--237 and 432--485 (sampling design and sensitivity); main Fig.~2 and Supplementary S2, S5 and S12.",
+  "R1_3": "Main manuscript lines~204--237, 432--485 and 573--582; Supplementary S6, S12, S19--S20 and S24. The combined evidence limits appear at lines~655--663.",
+  "R1_4": "Main manuscript lines~638--685, Discussion and Conclusions (clean manuscript pp.~11--12); Supplementary S1--S2, S8 and S11 retain units, provenance, lineage and computational checks.",
+  "R2_1": "Main manuscript lines~47--94 (reframed gap and literature), 381--431 (controlled estimator comparisons), and 621--663 (method scope). Supplementary S8, S10 and S22 provide the literature/method comparison and published-rule benchmark.",
+  "R2_2": "Main manuscript lines~154--237 (matched-target choices and tests), 339--380 and 381--431 (allocation and controlled-mask results), 488--524, 573--582, and 621--663 (applicability). Supplementary S3--S4, S10--S15 and S20--S24 contain the full comparisons, bounds and sensitivity tables.",
+  "R2_3": "Main manuscript lines~664--673, Earlier estimates and source attribution (clean manuscript p.~12); Supplementary S1 (p.~1) and S8 (p.~8)."
+}

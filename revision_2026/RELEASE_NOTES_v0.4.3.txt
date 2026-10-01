@@ -1,0 +1,14 @@
+v0.4.3: manuscript and reviewer-response editorial finalization
+
+This release updates writing and submission documents. It does not change the scientific inputs, figures, numerical results or reproduction code. The fixed scientific package remains v0.4.1, commit 5bf98f19abbed981989f9c97ef9b118eea524c5b, including its official-source companion archive.
+
+- R1.1 now leads with withdrawal of the unvalidated exposed-population interpretation, defines the revised allocation estimand, and separates numerical/processing checks from independent physical validation.
+- The Discussion states what controlled masking, internal LiCSBAS reconstruction, the published DWR product, Census/CA-POP comparisons and the ACS survey benchmark each support. No independent GNSS/leveling validation is claimed.
+- R2.3 directly states that the exploratory Iran branch is excluded from quantitative applications and corrects the product attribution. No new/old Iran comparison is asserted.
+- All seven reviewer items, the Editor response and the code-access item identify actual lines in the supplied numbered manuscript. All eight original editor/reviewer comment blocks are retained verbatim.
+- The clean, numbered, marked and regenerated singlefile manuscripts have identical extracted word sequences. The marked/singlefile abstracts now include the two numerical results already present in the clean abstract.
+- Main manuscript, response and cover letter consistently identify public v0.4.1 resources. The previous DOI 10.5281/zenodo.21444768 covers v0.3.0 only; a revised DOI remains pending.
+
+Files: clean/numbered/marked main manuscript (14 pages each), point-by-point response (8 pages), cover letter (1 page), unchanged Supplementary Information (28 pages), editable sources and document/locator audit JSON. Marking is relative to the retained local baseline, as labeled.
+
+Reproduction instructions: revision_2026/README.md. This release does not submit files to the journal and does not establish deformation at unobserved locations.
