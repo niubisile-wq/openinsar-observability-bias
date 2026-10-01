@@ -14,10 +14,10 @@
   "threshold_source": "Ohenhen et al., Nature Cities 2, 543-554 (2025), https://doi.org/10.1038/s44284-025-00240-y",
   "limitations": [
     "DWR rasters are interpolated products from DWR/TRE ALTAMIRA Sentinel-1 observations, not the manuscript original LOS field; this is a transfer benchmark, not independent InSAR validation.",
-    "DWR values are vertical rates (feet/year converted to mm/year), not LOS rates; they share provider lineage with the DWR observation footprint.",
+    "DWR interval displacements are annualized vertical quantities, not LOS; provider lineage is shared with the footprint.",
     "Raster values are sampled only at published DWR 100m observation-cell footprints, then median-aggregated within Census blocks.",
     "Observation-cell locations and annual-rate rasters have slightly different product vintages; this is documented as a cross-product sensitivity, not a pixelwise accuracy assessment.",
-    "The 2015-2021 temporal median summarizes six overlapping annual-rate rasters; the cumulative end-point rate is a different temporal estimand from a fitted linear trend.",
+    "The temporal median uses six consecutive nonoverlapping October-to-October windows; the cumulative endpoint rate is a different estimand.",
     "Census DHC population is differentially private and population source independence is unverified.",
     "A complete Census block with no DWR observation cells is excluded from rate-class population assignment and reported as uncovered."
   ],
@@ -34,5 +34,45 @@
   "DWR_rasterized_support_cell_count": 38738,
   "complete_block_count": 6788,
   "complete_block_population": 523953,
-  "cumulative_rate_duration_years": 5.555213317179682
+  "cumulative_rate_duration_years": 5.555213317179682,
+  "unit_convention": "Raw feet for each documented interval, divided by days/365.2425 before classification; the six-window composite is already annualized.",
+  "input_windows": {
+    "rate_2015_2016.tif": [
+      "2015-10-01",
+      "2016-10-01"
+    ],
+    "annual_oct_2016_2017.tif": [
+      "2016-10-01",
+      "2017-10-01"
+    ],
+    "annual_oct_2017_2018.tif": [
+      "2017-10-01",
+      "2018-10-01"
+    ],
+    "annual_oct_2018_2019.tif": [
+      "2018-10-01",
+      "2019-10-01"
+    ],
+    "annual_oct_2019_2020.tif": [
+      "2019-10-01",
+      "2020-10-01"
+    ],
+    "rate_2020_2021.tif": [
+      "2020-10-01",
+      "2021-10-01"
+    ],
+    "rate_2023_2024.tif": [
+      "2023-10-01",
+      "2024-10-01"
+    ],
+    "rate_2025_2026.tif": [
+      "2025-04-01",
+      "2026-04-01"
+    ],
+    "total_since_20150613_20210101.tif": [
+      "2015-06-13",
+      "2021-01-01"
+    ]
+  },
+  "days_per_year": 365.2425
 }

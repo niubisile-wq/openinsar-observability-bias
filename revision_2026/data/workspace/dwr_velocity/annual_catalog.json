@@ -1,0 +1,6494 @@
+{
+  "objectIdFieldName": "OBJECTID",
+  "fields": [
+    {
+      "name": "OBJECTID",
+      "type": "esriFieldTypeOID",
+      "alias": "OBJECTID",
+      "domain": null
+    },
+    {
+      "name": "Shape",
+      "type": "esriFieldTypeGeometry",
+      "alias": "Shape",
+      "domain": null
+    },
+    {
+      "name": "Name",
+      "type": "esriFieldTypeString",
+      "alias": "Name",
+      "domain": null,
+      "length": 200
+    },
+    {
+      "name": "MinPS",
+      "type": "esriFieldTypeDouble",
+      "alias": "MinPS",
+      "domain": null
+    },
+    {
+      "name": "MaxPS",
+      "type": "esriFieldTypeDouble",
+      "alias": "MaxPS",
+      "domain": null
+    },
+    {
+      "name": "LowPS",
+      "type": "esriFieldTypeDouble",
+      "alias": "LowPS",
+      "domain": null
+    },
+    {
+      "name": "HighPS",
+      "type": "esriFieldTypeDouble",
+      "alias": "HighPS",
+      "domain": null
+    },
+    {
+      "name": "Category",
+      "type": "esriFieldTypeInteger",
+      "alias": "Category",
+      "domain": {
+        "type": "codedValue",
+        "name": "MosaicCatalogItemCategoryDomain",
+        "description": "Catalog item categories.",
+        "codedValues": [
+          {
+            "name": "Unknown",
+            "code": 0
+          },
+          {
+            "name": "Primary",
+            "code": 1
+          },
+          {
+            "name": "Overview",
+            "code": 2
+          },
+          {
+            "name": "Unprocessed Overview",
+            "code": 3
+          },
+          {
+            "name": "Partial Overview",
+            "code": 4
+          },
+          {
+            "name": "Inactive",
+            "code": 5
+          },
+          {
+            "name": "Uploaded",
+            "code": 253
+          },
+          {
+            "name": "Incomplete",
+            "code": 254
+          },
+          {
+            "name": "Custom",
+            "code": 255
+          }
+        ],
+        "mergePolicy": "esriMPTDefaultValue",
+        "splitPolicy": "esriSPTDefaultValue"
+      }
+    },
+    {
+      "name": "Tag",
+      "type": "esriFieldTypeString",
+      "alias": "Tag",
+      "domain": null,
+      "length": 100
+    },
+    {
+      "name": "GroupName",
+      "type": "esriFieldTypeString",
+      "alias": "GroupName",
+      "domain": null,
+      "length": 100
+    },
+    {
+      "name": "ProductName",
+      "type": "esriFieldTypeString",
+      "alias": "ProductName",
+      "domain": null,
+      "length": 100
+    },
+    {
+      "name": "CenterX",
+      "type": "esriFieldTypeDouble",
+      "alias": "CenterX",
+      "domain": null
+    },
+    {
+      "name": "CenterY",
+      "type": "esriFieldTypeDouble",
+      "alias": "CenterY",
+      "domain": null
+    },
+    {
+      "name": "ZOrder",
+      "type": "esriFieldTypeInteger",
+      "alias": "ZOrder",
+      "domain": null
+    },
+    {
+      "name": "Shape_Length",
+      "type": "esriFieldTypeDouble",
+      "alias": "Shape_Length",
+      "domain": null
+    },
+    {
+      "name": "Shape_Area",
+      "type": "esriFieldTypeDouble",
+      "alias": "Shape_Area",
+      "domain": null
+    },
+    {
+      "name": "DateFrom",
+      "type": "esriFieldTypeDate",
+      "alias": "DateFrom",
+      "domain": null,
+      "length": 8
+    },
+    {
+      "name": "DateTo",
+      "type": "esriFieldTypeDate",
+      "alias": "DateTo",
+      "domain": null,
+      "length": 8
+    }
+  ],
+  "geometryType": "esriGeometryPolygon",
+  "spatialReference": {
+    "wkid": 4326,
+    "latestWkid": 4326
+  },
+  "features": [
+    {
+      "attributes": {
+        "OBJECTID": 1,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2020_Annual_Rate_20150101_20160101",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.23594359786069,
+        "ZOrder": null,
+        "Shape_Length": 37.110573730000056,
+        "Shape_Area": 86.00589333791591,
+        "DateFrom": 1420070400000,
+        "DateTo": 1451606400000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 2,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2020_Annual_Rate_20150201_20160201",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.23594359786069,
+        "ZOrder": null,
+        "Shape_Length": 37.110573730000056,
+        "Shape_Area": 86.00589333791591,
+        "DateFrom": 1422748800000,
+        "DateTo": 1454284800000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 3,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2020_Annual_Rate_20150301_20160301",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.23594359786069,
+        "ZOrder": null,
+        "Shape_Length": 37.110573730000056,
+        "Shape_Area": 86.00589333791591,
+        "DateFrom": 1425168000000,
+        "DateTo": 1456790400000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 4,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2020_Annual_Rate_20150401_20160401",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.23594359786069,
+        "ZOrder": null,
+        "Shape_Length": 37.110573730000056,
+        "Shape_Area": 86.00589333791591,
+        "DateFrom": 1427846400000,
+        "DateTo": 1459468800000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 5,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2020_Annual_Rate_20150501_20160501",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.23594359786069,
+        "ZOrder": null,
+        "Shape_Length": 37.110573730000056,
+        "Shape_Area": 86.00589333791591,
+        "DateFrom": 1430438400000,
+        "DateTo": 1462060800000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 6,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2020_Annual_Rate_20150601_20160601",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.23594359786069,
+        "ZOrder": null,
+        "Shape_Length": 37.110573730000056,
+        "Shape_Area": 86.00589333791591,
+        "DateFrom": 1433116800000,
+        "DateTo": 1464739200000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 7,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2020_Annual_Rate_20150701_20160701",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.23594359786069,
+        "ZOrder": null,
+        "Shape_Length": 37.110573730000056,
+        "Shape_Area": 86.00589333791591,
+        "DateFrom": 1435708800000,
+        "DateTo": 1467331200000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 8,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2020_Annual_Rate_20150801_20160801",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.23594359786069,
+        "ZOrder": null,
+        "Shape_Length": 37.110573730000056,
+        "Shape_Area": 86.00589333791591,
+        "DateFrom": 1438387200000,
+        "DateTo": 1470009600000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 9,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2020_Annual_Rate_20150901_20160901",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.23594359786069,
+        "ZOrder": null,
+        "Shape_Length": 37.110573730000056,
+        "Shape_Area": 86.00589333791591,
+        "DateFrom": 1441065600000,
+        "DateTo": 1472688000000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 10,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2020_Annual_Rate_20151001_20161001",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.23594359786069,
+        "ZOrder": null,
+        "Shape_Length": 37.110573730000056,
+        "Shape_Area": 86.00589333791591,
+        "DateFrom": 1443657600000,
+        "DateTo": 1475280000000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 11,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2020_Annual_Rate_20151101_20161101",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.23594359786069,
+        "ZOrder": null,
+        "Shape_Length": 37.110573730000056,
+        "Shape_Area": 86.00589333791591,
+        "DateFrom": 1446336000000,
+        "DateTo": 1477958400000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 12,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2020_Annual_Rate_20151201_20161201",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.23594359786069,
+        "ZOrder": null,
+        "Shape_Length": 37.110573730000056,
+        "Shape_Area": 86.00589333791591,
+        "DateFrom": 1448928000000,
+        "DateTo": 1480550400000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 13,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2020_Annual_Rate_20160101_20170101",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.23594359786069,
+        "ZOrder": null,
+        "Shape_Length": 37.110573730000056,
+        "Shape_Area": 86.00589333791591,
+        "DateFrom": 1451606400000,
+        "DateTo": 1483228800000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 14,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2020_Annual_Rate_20160201_20170201",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.23594359786069,
+        "ZOrder": null,
+        "Shape_Length": 37.110573730000056,
+        "Shape_Area": 86.00589333791591,
+        "DateFrom": 1454284800000,
+        "DateTo": 1485907200000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 15,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2020_Annual_Rate_20160301_20170301",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.23594359786069,
+        "ZOrder": null,
+        "Shape_Length": 37.110573730000056,
+        "Shape_Area": 86.00589333791591,
+        "DateFrom": 1456790400000,
+        "DateTo": 1488326400000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 16,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2020_Annual_Rate_20160401_20170401",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.23594359786069,
+        "ZOrder": null,
+        "Shape_Length": 37.110573730000056,
+        "Shape_Area": 86.00589333791591,
+        "DateFrom": 1459468800000,
+        "DateTo": 1491004800000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 17,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2020_Annual_Rate_20160501_20170501",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.23594359786069,
+        "ZOrder": null,
+        "Shape_Length": 37.110573730000056,
+        "Shape_Area": 86.00589333791591,
+        "DateFrom": 1462060800000,
+        "DateTo": 1493596800000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 18,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2020_Annual_Rate_20160601_20170601",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.23594359786069,
+        "ZOrder": null,
+        "Shape_Length": 37.110573730000056,
+        "Shape_Area": 86.00589333791591,
+        "DateFrom": 1464739200000,
+        "DateTo": 1496275200000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 19,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2020_Annual_Rate_20160701_20170701",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.23594359786069,
+        "ZOrder": null,
+        "Shape_Length": 37.110573730000056,
+        "Shape_Area": 86.00589333791591,
+        "DateFrom": 1467331200000,
+        "DateTo": 1498867200000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 20,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2020_Annual_Rate_20160801_20170801",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.23594359786069,
+        "ZOrder": null,
+        "Shape_Length": 37.110573730000056,
+        "Shape_Area": 86.00589333791591,
+        "DateFrom": 1470009600000,
+        "DateTo": 1501545600000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 21,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2020_Annual_Rate_20160901_20170901",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.23594359786069,
+        "ZOrder": null,
+        "Shape_Length": 37.110573730000056,
+        "Shape_Area": 86.00589333791591,
+        "DateFrom": 1472688000000,
+        "DateTo": 1504224000000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 22,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2020_Annual_Rate_20161001_20171001",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.23594359786069,
+        "ZOrder": null,
+        "Shape_Length": 37.110573730000056,
+        "Shape_Area": 86.00589333791591,
+        "DateFrom": 1475280000000,
+        "DateTo": 1506816000000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 23,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2020_Annual_Rate_20161101_20171101",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.23594359786069,
+        "ZOrder": null,
+        "Shape_Length": 37.110573730000056,
+        "Shape_Area": 86.00589333791591,
+        "DateFrom": 1477958400000,
+        "DateTo": 1509494400000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 24,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2020_Annual_Rate_20161201_20171201",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.23594359786069,
+        "ZOrder": null,
+        "Shape_Length": 37.110573730000056,
+        "Shape_Area": 86.00589333791591,
+        "DateFrom": 1480550400000,
+        "DateTo": 1512086400000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 25,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2020_Annual_Rate_20170101_20180101",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.23594359786069,
+        "ZOrder": null,
+        "Shape_Length": 37.110573730000056,
+        "Shape_Area": 86.00589333791591,
+        "DateFrom": 1483228800000,
+        "DateTo": 1514764800000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 26,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2020_Annual_Rate_20170201_20180201",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.23594359786069,
+        "ZOrder": null,
+        "Shape_Length": 37.110573730000056,
+        "Shape_Area": 86.00589333791591,
+        "DateFrom": 1485907200000,
+        "DateTo": 1517443200000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 27,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2020_Annual_Rate_20170301_20180301",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.23594359786069,
+        "ZOrder": null,
+        "Shape_Length": 37.110573730000056,
+        "Shape_Area": 86.00589333791591,
+        "DateFrom": 1488326400000,
+        "DateTo": 1519862400000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 28,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2020_Annual_Rate_20170401_20180401",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.23594359786069,
+        "ZOrder": null,
+        "Shape_Length": 37.110573730000056,
+        "Shape_Area": 86.00589333791591,
+        "DateFrom": 1491004800000,
+        "DateTo": 1522540800000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 29,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2020_Annual_Rate_20170501_20180501",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.23594359786069,
+        "ZOrder": null,
+        "Shape_Length": 37.110573730000056,
+        "Shape_Area": 86.00589333791591,
+        "DateFrom": 1493596800000,
+        "DateTo": 1525132800000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 30,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2020_Annual_Rate_20170601_20180601",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.23594359786069,
+        "ZOrder": null,
+        "Shape_Length": 37.110573730000056,
+        "Shape_Area": 86.00589333791591,
+        "DateFrom": 1496275200000,
+        "DateTo": 1527811200000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 31,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2020_Annual_Rate_20170701_20180701",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.23594359786069,
+        "ZOrder": null,
+        "Shape_Length": 37.110573730000056,
+        "Shape_Area": 86.00589333791591,
+        "DateFrom": 1498867200000,
+        "DateTo": 1530403200000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 32,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2020_Annual_Rate_20170801_20180801",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.23594359786069,
+        "ZOrder": null,
+        "Shape_Length": 37.110573730000056,
+        "Shape_Area": 86.00589333791591,
+        "DateFrom": 1501545600000,
+        "DateTo": 1533081600000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 33,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2020_Annual_Rate_20170901_20180901",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.23594359786069,
+        "ZOrder": null,
+        "Shape_Length": 37.110573730000056,
+        "Shape_Area": 86.00589333791591,
+        "DateFrom": 1504224000000,
+        "DateTo": 1535760000000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 34,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2020_Annual_Rate_20171001_20181001",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.23594359786069,
+        "ZOrder": null,
+        "Shape_Length": 37.110573730000056,
+        "Shape_Area": 86.00589333791591,
+        "DateFrom": 1506816000000,
+        "DateTo": 1538352000000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 35,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2020_Annual_Rate_20171101_20181101",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.23594359786069,
+        "ZOrder": null,
+        "Shape_Length": 37.110573730000056,
+        "Shape_Area": 86.00589333791591,
+        "DateFrom": 1509494400000,
+        "DateTo": 1541030400000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 36,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2020_Annual_Rate_20171201_20181201",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.23594359786069,
+        "ZOrder": null,
+        "Shape_Length": 37.110573730000056,
+        "Shape_Area": 86.00589333791591,
+        "DateFrom": 1512086400000,
+        "DateTo": 1543622400000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 37,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2020_Annual_Rate_20180101_20190101",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.23594359786069,
+        "ZOrder": null,
+        "Shape_Length": 37.110573730000056,
+        "Shape_Area": 86.00589333791591,
+        "DateFrom": 1514764800000,
+        "DateTo": 1546300800000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 38,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2020_Annual_Rate_20180201_20190201",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.23594359786069,
+        "ZOrder": null,
+        "Shape_Length": 37.110573730000056,
+        "Shape_Area": 86.00589333791591,
+        "DateFrom": 1517443200000,
+        "DateTo": 1548979200000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 39,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2020_Annual_Rate_20180301_20190301",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.23594359786069,
+        "ZOrder": null,
+        "Shape_Length": 37.110573730000056,
+        "Shape_Area": 86.00589333791591,
+        "DateFrom": 1519862400000,
+        "DateTo": 1551398400000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 40,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2020_Annual_Rate_20180401_20190401",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.23594359786069,
+        "ZOrder": null,
+        "Shape_Length": 37.110573730000056,
+        "Shape_Area": 86.00589333791591,
+        "DateFrom": 1522540800000,
+        "DateTo": 1554076800000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 41,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2020_Annual_Rate_20180501_20190501",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.23594359786069,
+        "ZOrder": null,
+        "Shape_Length": 37.110573730000056,
+        "Shape_Area": 86.00589333791591,
+        "DateFrom": 1525132800000,
+        "DateTo": 1556668800000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 42,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2020_Annual_Rate_20180601_20190601",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.23594359786069,
+        "ZOrder": null,
+        "Shape_Length": 37.110573730000056,
+        "Shape_Area": 86.00589333791591,
+        "DateFrom": 1527811200000,
+        "DateTo": 1559347200000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 43,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2020_Annual_Rate_20180701_20190701",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.23594359786069,
+        "ZOrder": null,
+        "Shape_Length": 37.110573730000056,
+        "Shape_Area": 86.00589333791591,
+        "DateFrom": 1530403200000,
+        "DateTo": 1561939200000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 44,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2020_Annual_Rate_20180801_20190801",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.23594359786069,
+        "ZOrder": null,
+        "Shape_Length": 37.110573730000056,
+        "Shape_Area": 86.00589333791591,
+        "DateFrom": 1533081600000,
+        "DateTo": 1564617600000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 45,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2020_Annual_Rate_20180901_20190901",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.23594359786069,
+        "ZOrder": null,
+        "Shape_Length": 37.110573730000056,
+        "Shape_Area": 86.00589333791591,
+        "DateFrom": 1535760000000,
+        "DateTo": 1567296000000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 46,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2020_Annual_Rate_20181001_20191001",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.23594359786069,
+        "ZOrder": null,
+        "Shape_Length": 37.110573730000056,
+        "Shape_Area": 86.00589333791591,
+        "DateFrom": 1538352000000,
+        "DateTo": 1569888000000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 47,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2020_Annual_Rate_20181101_20191101",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.23594359786069,
+        "ZOrder": null,
+        "Shape_Length": 37.110573730000056,
+        "Shape_Area": 86.00589333791591,
+        "DateFrom": 1541030400000,
+        "DateTo": 1572566400000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 48,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2020_Annual_Rate_20181201_20191201",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.23594359786069,
+        "ZOrder": null,
+        "Shape_Length": 37.110573730000056,
+        "Shape_Area": 86.00589333791591,
+        "DateFrom": 1543622400000,
+        "DateTo": 1575158400000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 49,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2020_Annual_Rate_20190101_20200101",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.23594359786069,
+        "ZOrder": null,
+        "Shape_Length": 37.110573730000056,
+        "Shape_Area": 86.00589333791591,
+        "DateFrom": 1546300800000,
+        "DateTo": 1577836800000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 50,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2020_Annual_Rate_20190201_20200201",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.23594359786069,
+        "ZOrder": null,
+        "Shape_Length": 37.110573730000056,
+        "Shape_Area": 86.00589333791591,
+        "DateFrom": 1548979200000,
+        "DateTo": 1580515200000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 51,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2020_Annual_Rate_20190301_20200301",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.23594359786069,
+        "ZOrder": null,
+        "Shape_Length": 37.110573730000056,
+        "Shape_Area": 86.00589333791591,
+        "DateFrom": 1551398400000,
+        "DateTo": 1583020800000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 52,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2020_Annual_Rate_20190401_20200401",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.23594359786069,
+        "ZOrder": null,
+        "Shape_Length": 37.110573730000056,
+        "Shape_Area": 86.00589333791591,
+        "DateFrom": 1554076800000,
+        "DateTo": 1585699200000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 53,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2020_Annual_Rate_20190501_20200501",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.23594359786069,
+        "ZOrder": null,
+        "Shape_Length": 37.110573730000056,
+        "Shape_Area": 86.00589333791591,
+        "DateFrom": 1556668800000,
+        "DateTo": 1588291200000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 54,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2020_Annual_Rate_20190601_20200601",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.23594359786069,
+        "ZOrder": null,
+        "Shape_Length": 37.110573730000056,
+        "Shape_Area": 86.00589333791591,
+        "DateFrom": 1559347200000,
+        "DateTo": 1590969600000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 55,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2020_Annual_Rate_20190701_20200701",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.23594359786069,
+        "ZOrder": null,
+        "Shape_Length": 37.110573730000056,
+        "Shape_Area": 86.00589333791591,
+        "DateFrom": 1561939200000,
+        "DateTo": 1593561600000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 56,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2020_Annual_Rate_20190801_20200801",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.23594359786069,
+        "ZOrder": null,
+        "Shape_Length": 37.110573730000056,
+        "Shape_Area": 86.00589333791591,
+        "DateFrom": 1564617600000,
+        "DateTo": 1596240000000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 57,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2020_Annual_Rate_20190901_20200901",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.23594359786069,
+        "ZOrder": null,
+        "Shape_Length": 37.110573730000056,
+        "Shape_Area": 86.00589333791591,
+        "DateFrom": 1567296000000,
+        "DateTo": 1598918400000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 58,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2020_Annual_Rate_20191001_20201001",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.23594359786069,
+        "ZOrder": null,
+        "Shape_Length": 37.110573730000056,
+        "Shape_Area": 86.00589333791591,
+        "DateFrom": 1569888000000,
+        "DateTo": 1601510400000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.46599758700006
+            ],
+            [
+              -124.42233689199998,
+              32.46599758700006
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 59,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2021_Annual_Rate_20191101_20201101",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971206,
+        "LowPS": 0.0008998200359928016,
+        "HighPS": 0.0035992801439712063,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.16215835490928,
+        "ZOrder": null,
+        "Shape_Length": 37.40571470200007,
+        "Shape_Area": 87.33629953637937,
+        "DateFrom": 1572566400000,
+        "DateTo": 1604188800000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.318427101000054
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.318427101000054
+            ],
+            [
+              -124.42233689199998,
+              32.318427101000054
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 60,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2021_Annual_Rate_20191201_20201201",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971206,
+        "LowPS": 0.0008998200359928016,
+        "HighPS": 0.0035992801439712063,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.16215835490928,
+        "ZOrder": null,
+        "Shape_Length": 37.40571470200007,
+        "Shape_Area": 87.33629953637937,
+        "DateFrom": 1575158400000,
+        "DateTo": 1606780800000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.318427101000054
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.318427101000054
+            ],
+            [
+              -124.42233689199998,
+              32.318427101000054
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 61,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2021_Annual_Rate_20200101_20210101",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971206,
+        "LowPS": 0.0008998200359928016,
+        "HighPS": 0.0035992801439712063,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.16215835490928,
+        "ZOrder": null,
+        "Shape_Length": 37.40571470200007,
+        "Shape_Area": 87.33629953637937,
+        "DateFrom": 1577836800000,
+        "DateTo": 1609459200000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.318427101000054
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.318427101000054
+            ],
+            [
+              -124.42233689199998,
+              32.318427101000054
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 62,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2021_Annual_Rate_20200201_20210201",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971206,
+        "LowPS": 0.0008998200359928016,
+        "HighPS": 0.0035992801439712063,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.16215835490928,
+        "ZOrder": null,
+        "Shape_Length": 37.40571470200007,
+        "Shape_Area": 87.33629953637937,
+        "DateFrom": 1580515200000,
+        "DateTo": 1612137600000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.318427101000054
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.318427101000054
+            ],
+            [
+              -124.42233689199998,
+              32.318427101000054
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 63,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2021_Annual_Rate_20200301_20210301",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971206,
+        "LowPS": 0.0008998200359928016,
+        "HighPS": 0.0035992801439712063,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.16215835490928,
+        "ZOrder": null,
+        "Shape_Length": 37.40571470200007,
+        "Shape_Area": 87.33629953637937,
+        "DateFrom": 1583020800000,
+        "DateTo": 1614556800000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.318427101000054
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.318427101000054
+            ],
+            [
+              -124.42233689199998,
+              32.318427101000054
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 64,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2021_Annual_Rate_20200401_20210401",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971206,
+        "LowPS": 0.0008998200359928016,
+        "HighPS": 0.0035992801439712063,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.16215835490928,
+        "ZOrder": null,
+        "Shape_Length": 37.40571470200007,
+        "Shape_Area": 87.33629953637937,
+        "DateFrom": 1585699200000,
+        "DateTo": 1617235200000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.318427101000054
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.318427101000054
+            ],
+            [
+              -124.42233689199998,
+              32.318427101000054
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 65,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2021_Annual_Rate_20200501_20210501",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971206,
+        "LowPS": 0.0008998200359928016,
+        "HighPS": 0.0035992801439712063,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.16215835490928,
+        "ZOrder": null,
+        "Shape_Length": 37.40571470200007,
+        "Shape_Area": 87.33629953637937,
+        "DateFrom": 1588291200000,
+        "DateTo": 1619827200000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.318427101000054
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.318427101000054
+            ],
+            [
+              -124.42233689199998,
+              32.318427101000054
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 66,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2021_Annual_Rate_20200601_20210601",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971206,
+        "LowPS": 0.0008998200359928016,
+        "HighPS": 0.0035992801439712063,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.16215835490928,
+        "ZOrder": null,
+        "Shape_Length": 37.40571470200007,
+        "Shape_Area": 87.33629953637937,
+        "DateFrom": 1590969600000,
+        "DateTo": 1622505600000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.318427101000054
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.318427101000054
+            ],
+            [
+              -124.42233689199998,
+              32.318427101000054
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 67,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2021_Annual_Rate_20200701_20210701",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971206,
+        "LowPS": 0.0008998200359928016,
+        "HighPS": 0.0035992801439712063,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027115,
+        "CenterY": 37.16215835490928,
+        "ZOrder": null,
+        "Shape_Length": 37.40571470200007,
+        "Shape_Area": 87.33629953637937,
+        "DateFrom": 1593561600000,
+        "DateTo": 1625097600000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.318427101000054
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.318427101000054
+            ],
+            [
+              -124.42233689199998,
+              32.318427101000054
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 68,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2022Q1_Annual_Rate_20200801_20210801",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971205,
+        "LowPS": 0.0008998200359928013,
+        "HighPS": 0.003599280143971205,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027114,
+        "CenterY": 37.161708444891275,
+        "ZOrder": null,
+        "Shape_Length": 37.40751434200013,
+        "Shape_Area": 87.34441176896726,
+        "DateFrom": 1596240000000,
+        "DateTo": 1627776000000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 69,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2022Q1_Annual_Rate_20200901_20210901",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971205,
+        "LowPS": 0.0008998200359928013,
+        "HighPS": 0.003599280143971205,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027114,
+        "CenterY": 37.161708444891275,
+        "ZOrder": null,
+        "Shape_Length": 37.40751434200013,
+        "Shape_Area": 87.34441176896726,
+        "DateFrom": 1598918400000,
+        "DateTo": 1630454400000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 70,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2022Q1_Annual_Rate_20201001_20211001",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971205,
+        "LowPS": 0.0008998200359928013,
+        "HighPS": 0.003599280143971205,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027114,
+        "CenterY": 37.161708444891275,
+        "ZOrder": null,
+        "Shape_Length": 37.40751434200013,
+        "Shape_Area": 87.34441176896726,
+        "DateFrom": 1601510400000,
+        "DateTo": 1633046400000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              42.005889609000064
+            ],
+            [
+              -115.40694204899995,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 71,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate_20210701_20220701",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027114,
+        "CenterY": 37.28633351987628,
+        "ZOrder": null,
+        "Shape_Length": 37.90601464200006,
+        "Shape_Area": 89.59150028589394,
+        "DateFrom": 1625097600000,
+        "DateTo": 1656633600000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 72,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate_20210801_20220801",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027114,
+        "CenterY": 37.28633351987628,
+        "ZOrder": null,
+        "Shape_Length": 37.90601464200006,
+        "Shape_Area": 89.59150028589394,
+        "DateFrom": 1627776000000,
+        "DateTo": 1659312000000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 73,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate_20210901_20220901",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027114,
+        "CenterY": 37.28633351987628,
+        "ZOrder": null,
+        "Shape_Length": 37.90601464200006,
+        "Shape_Area": 89.59150028589394,
+        "DateFrom": 1630454400000,
+        "DateTo": 1661990400000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 74,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate__20201101_20211101",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027114,
+        "CenterY": 37.28633351987628,
+        "ZOrder": null,
+        "Shape_Length": 37.90601464200006,
+        "Shape_Area": 89.59150028589394,
+        "DateFrom": 1604188800000,
+        "DateTo": 1635724800000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 75,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate__20201201_20211201",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027114,
+        "CenterY": 37.28633351987628,
+        "ZOrder": null,
+        "Shape_Length": 37.90601464200006,
+        "Shape_Area": 89.59150028589394,
+        "DateFrom": 1606780800000,
+        "DateTo": 1638316800000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 76,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate__20210101_20220101",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027114,
+        "CenterY": 37.28633351987628,
+        "ZOrder": null,
+        "Shape_Length": 37.90601464200006,
+        "Shape_Area": 89.59150028589394,
+        "DateFrom": 1609459200000,
+        "DateTo": 1640995200000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 77,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate__20210201_20220201",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027114,
+        "CenterY": 37.28633351987628,
+        "ZOrder": null,
+        "Shape_Length": 37.90601464200006,
+        "Shape_Area": 89.59150028589394,
+        "DateFrom": 1612137600000,
+        "DateTo": 1643673600000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 78,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate__20210301_20220301",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027114,
+        "CenterY": 37.28633351987628,
+        "ZOrder": null,
+        "Shape_Length": 37.90601464200006,
+        "Shape_Area": 89.59150028589394,
+        "DateFrom": 1614556800000,
+        "DateTo": 1646092800000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 79,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate__20210401_20220401",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027114,
+        "CenterY": 37.28633351987628,
+        "ZOrder": null,
+        "Shape_Length": 37.90601464200006,
+        "Shape_Area": 89.59150028589394,
+        "DateFrom": 1617235200000,
+        "DateTo": 1648771200000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 80,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate__20210501_20220501",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027114,
+        "CenterY": 37.28633351987628,
+        "ZOrder": null,
+        "Shape_Length": 37.90601464200006,
+        "Shape_Area": 89.59150028589394,
+        "DateFrom": 1619827200000,
+        "DateTo": 1651363200000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 81,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate__20210601_20220601",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027114,
+        "CenterY": 37.28633351987628,
+        "ZOrder": null,
+        "Shape_Length": 37.90601464200006,
+        "Shape_Area": 89.59150028589394,
+        "DateFrom": 1622505600000,
+        "DateTo": 1654041600000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 82,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate_20211001_20221001",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027114,
+        "CenterY": 37.28633351987628,
+        "ZOrder": null,
+        "Shape_Length": 37.90601464200006,
+        "Shape_Area": 89.59150028589394,
+        "DateFrom": 1633046400000,
+        "DateTo": 1664582400000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 83,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate_20211101_20221101",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027114,
+        "CenterY": 37.28633351987628,
+        "ZOrder": null,
+        "Shape_Length": 37.90601464200006,
+        "Shape_Area": 89.59150028589394,
+        "DateFrom": 1635724800000,
+        "DateTo": 1667260800000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 84,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate_20211201_20221201",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027114,
+        "CenterY": 37.28633351987628,
+        "ZOrder": null,
+        "Shape_Length": 37.90601464200006,
+        "Shape_Area": 89.59150028589394,
+        "DateFrom": 1638316800000,
+        "DateTo": 1669852800000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 85,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate_20220101_20230101",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027114,
+        "CenterY": 37.28633351987628,
+        "ZOrder": null,
+        "Shape_Length": 37.90601464200006,
+        "Shape_Area": 89.59150028589394,
+        "DateFrom": 1640995200000,
+        "DateTo": 1672531200000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 86,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate_20220201_20230201",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027114,
+        "CenterY": 37.28633351987628,
+        "ZOrder": null,
+        "Shape_Length": 37.90601464200006,
+        "Shape_Area": 89.59150028589394,
+        "DateFrom": 1643673600000,
+        "DateTo": 1675209600000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 87,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate_20220301_20230301",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027114,
+        "CenterY": 37.28633351987628,
+        "ZOrder": null,
+        "Shape_Length": 37.90601464200006,
+        "Shape_Area": 89.59150028589394,
+        "DateFrom": 1646092800000,
+        "DateTo": 1677628800000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 88,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate_20220401_20230401",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027114,
+        "CenterY": 37.28633351987628,
+        "ZOrder": null,
+        "Shape_Length": 37.90601464200006,
+        "Shape_Area": 89.59150028589394,
+        "DateFrom": 1648771200000,
+        "DateTo": 1680307200000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 89,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate_20220501_20230501",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027114,
+        "CenterY": 37.28633351987628,
+        "ZOrder": null,
+        "Shape_Length": 37.90601464200006,
+        "Shape_Area": 89.59150028589394,
+        "DateFrom": 1651363200000,
+        "DateTo": 1682899200000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 90,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate_20220601_20230601",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027114,
+        "CenterY": 37.28633351987628,
+        "ZOrder": null,
+        "Shape_Length": 37.90601464200006,
+        "Shape_Area": 89.59150028589394,
+        "DateFrom": 1654041600000,
+        "DateTo": 1685577600000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 91,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate_20220701_20230701",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027114,
+        "CenterY": 37.28633351987628,
+        "ZOrder": null,
+        "Shape_Length": 37.90601464200006,
+        "Shape_Area": 89.59150028589394,
+        "DateFrom": 1656633600000,
+        "DateTo": 1688169600000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 92,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate_20220801_20230801",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027114,
+        "CenterY": 37.28633351987628,
+        "ZOrder": null,
+        "Shape_Length": 37.90601464200006,
+        "Shape_Area": 89.59150028589394,
+        "DateFrom": 1659312000000,
+        "DateTo": 1690848000000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 93,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate_20220901_20230901",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027114,
+        "CenterY": 37.28633351987628,
+        "ZOrder": null,
+        "Shape_Length": 37.90601464200006,
+        "Shape_Area": 89.59150028589394,
+        "DateFrom": 1661990400000,
+        "DateTo": 1693526400000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 94,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate_20221001_20231001",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027114,
+        "CenterY": 37.28633351987628,
+        "ZOrder": null,
+        "Shape_Length": 37.90601464200006,
+        "Shape_Area": 89.59150028589394,
+        "DateFrom": 1664582400000,
+        "DateTo": 1696118400000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 95,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate_20221101_20231101",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027114,
+        "CenterY": 37.28633351987628,
+        "ZOrder": null,
+        "Shape_Length": 37.90601464200006,
+        "Shape_Area": 89.59150028589394,
+        "DateFrom": 1667260800000,
+        "DateTo": 1698796800000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 96,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate_20221201_20231201",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027114,
+        "CenterY": 37.28633351987628,
+        "ZOrder": null,
+        "Shape_Length": 37.90601464200006,
+        "Shape_Area": 89.59150028589394,
+        "DateFrom": 1669852800000,
+        "DateTo": 1701388800000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 97,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate_20230101_20240101",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027114,
+        "CenterY": 37.28633351987628,
+        "ZOrder": null,
+        "Shape_Length": 37.90601464200006,
+        "Shape_Area": 89.59150028589394,
+        "DateFrom": 1672531200000,
+        "DateTo": 1704067200000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 98,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate_20230201_20240201",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027114,
+        "CenterY": 37.28633351987628,
+        "ZOrder": null,
+        "Shape_Length": 37.90601464200006,
+        "Shape_Area": 89.59150028589394,
+        "DateFrom": 1675209600000,
+        "DateTo": 1706745600000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 99,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate_20230301_20240301",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027114,
+        "CenterY": 37.28633351987628,
+        "ZOrder": null,
+        "Shape_Length": 37.90601464200006,
+        "Shape_Area": 89.59150028589394,
+        "DateFrom": 1677628800000,
+        "DateTo": 1709251200000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 100,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate_20230401_20240401",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027114,
+        "CenterY": 37.28633351987628,
+        "ZOrder": null,
+        "Shape_Length": 37.90601464200006,
+        "Shape_Area": 89.59150028589394,
+        "DateFrom": 1680307200000,
+        "DateTo": 1711929600000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 101,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate_20230501_20240501",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027114,
+        "CenterY": 37.28633351987628,
+        "ZOrder": null,
+        "Shape_Length": 37.90601464200006,
+        "Shape_Area": 89.59150028589394,
+        "DateFrom": 1682899200000,
+        "DateTo": 1714521600000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 102,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate_20230601_20240601",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027114,
+        "CenterY": 37.28633351987628,
+        "ZOrder": null,
+        "Shape_Length": 37.90601464200006,
+        "Shape_Area": 89.59150028589394,
+        "DateFrom": 1685577600000,
+        "DateTo": 1717200000000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 103,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate_20230701_20240701",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027114,
+        "CenterY": 37.28633351987628,
+        "ZOrder": null,
+        "Shape_Length": 37.90601464200006,
+        "Shape_Area": 89.59150028589394,
+        "DateFrom": 1688169600000,
+        "DateTo": 1719792000000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 104,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate_20230801_20240801",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027114,
+        "CenterY": 37.28633351987628,
+        "ZOrder": null,
+        "Shape_Length": 37.90601464200006,
+        "Shape_Area": 89.59150028589394,
+        "DateFrom": 1690848000000,
+        "DateTo": 1722470400000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 105,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate_20230901_20240901",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027114,
+        "CenterY": 37.28633351987628,
+        "ZOrder": null,
+        "Shape_Length": 37.90601464200006,
+        "Shape_Area": 89.59150028589394,
+        "DateFrom": 1693526400000,
+        "DateTo": 1725148800000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 106,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate_20231001_20241001",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027114,
+        "CenterY": 37.28633351987628,
+        "ZOrder": null,
+        "Shape_Length": 37.90601464200006,
+        "Shape_Area": 89.59150028589394,
+        "DateFrom": 1696118400000,
+        "DateTo": 1727740800000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 107,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate_20231101_20241101",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027114,
+        "CenterY": 37.28633351987628,
+        "ZOrder": null,
+        "Shape_Length": 37.90601464200006,
+        "Shape_Area": 89.59150028589394,
+        "DateFrom": 1698796800000,
+        "DateTo": 1730419200000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 108,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate_20231201_20241201",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027114,
+        "CenterY": 37.28633351987628,
+        "ZOrder": null,
+        "Shape_Length": 37.90601464200006,
+        "Shape_Area": 89.59150028589394,
+        "DateFrom": 1701388800000,
+        "DateTo": 1733011200000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 109,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate_20240101_20250101",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027114,
+        "CenterY": 37.28633351987628,
+        "ZOrder": null,
+        "Shape_Length": 37.90601464200006,
+        "Shape_Area": 89.59150028589394,
+        "DateFrom": 1704067200000,
+        "DateTo": 1735689600000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 110,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate_20240201_20250201",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027114,
+        "CenterY": 37.28633351987628,
+        "ZOrder": null,
+        "Shape_Length": 37.90601464200006,
+        "Shape_Area": 89.59150028589394,
+        "DateFrom": 1706745600000,
+        "DateTo": 1738368000000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 111,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate_20240301_20250301",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027114,
+        "CenterY": 37.28633351987628,
+        "ZOrder": null,
+        "Shape_Length": 37.90601464200006,
+        "Shape_Area": 89.59150028589394,
+        "DateFrom": 1709251200000,
+        "DateTo": 1740787200000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 112,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate_20240401_20250401",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027114,
+        "CenterY": 37.28633351987628,
+        "ZOrder": null,
+        "Shape_Length": 37.90601464200006,
+        "Shape_Area": 89.59150028589394,
+        "DateFrom": 1711929600000,
+        "DateTo": 1743465600000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 113,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate_20240501_20250501",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027114,
+        "CenterY": 37.28633351987628,
+        "ZOrder": null,
+        "Shape_Length": 37.90601464200006,
+        "Shape_Area": 89.59150028589394,
+        "DateFrom": 1714521600000,
+        "DateTo": 1746057600000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 114,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate_20240601_20250601",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027114,
+        "CenterY": 37.28633351987628,
+        "ZOrder": null,
+        "Shape_Length": 37.90601464200006,
+        "Shape_Area": 89.59150028589394,
+        "DateFrom": 1717200000000,
+        "DateTo": 1748736000000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 115,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate_20240701_20250701",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027114,
+        "CenterY": 37.28633351987628,
+        "ZOrder": null,
+        "Shape_Length": 37.90601464200006,
+        "Shape_Area": 89.59150028589394,
+        "DateFrom": 1719792000000,
+        "DateTo": 1751328000000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 116,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate_20240801_20250801",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027114,
+        "CenterY": 37.28633351987628,
+        "ZOrder": null,
+        "Shape_Length": 37.90601464200006,
+        "Shape_Area": 89.59150028589394,
+        "DateFrom": 1722470400000,
+        "DateTo": 1754006400000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 117,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate_20240901_20250901",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027114,
+        "CenterY": 37.28633351987628,
+        "ZOrder": null,
+        "Shape_Length": 37.90601464200006,
+        "Shape_Area": 89.59150028589394,
+        "DateFrom": 1725148800000,
+        "DateTo": 1756684800000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 118,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate_20241001_20251001",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947027114,
+        "CenterY": 37.28633351987628,
+        "ZOrder": null,
+        "Shape_Length": 37.90601464200006,
+        "Shape_Area": 89.59150028589394,
+        "DateFrom": 1727740800000,
+        "DateTo": 1759276800000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 124,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate_20241101_20251101",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947049996,
+        "CenterY": 37.28633352000003,
+        "ZOrder": null,
+        "Shape_Length": 37.90601464200006,
+        "Shape_Area": 89.59150028589394,
+        "DateFrom": 1730419200000,
+        "DateTo": 1761955200000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 125,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate_20241201_20251201",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947049996,
+        "CenterY": 37.28633352000003,
+        "ZOrder": null,
+        "Shape_Length": 37.90601464200006,
+        "Shape_Area": 89.59150028589394,
+        "DateFrom": 1733011200000,
+        "DateTo": 1764547200000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 126,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate_20250101_20260101",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947049996,
+        "CenterY": 37.28633352000003,
+        "ZOrder": null,
+        "Shape_Length": 37.90601464200006,
+        "Shape_Area": 89.59150028589394,
+        "DateFrom": 1735689600000,
+        "DateTo": 1767225600000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 127,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate_20250201_20260201",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947049996,
+        "CenterY": 37.28633352000003,
+        "ZOrder": null,
+        "Shape_Length": 37.90601464200006,
+        "Shape_Area": 89.59150028589394,
+        "DateFrom": 1738368000000,
+        "DateTo": 1769904000000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 128,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate_20250301_20260301",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947049996,
+        "CenterY": 37.28633352000003,
+        "ZOrder": null,
+        "Shape_Length": 37.90601464200006,
+        "Shape_Area": 89.59150028589394,
+        "DateFrom": 1740787200000,
+        "DateTo": 1772323200000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 129,
+        "Name": "Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate_20250401_20260401",
+        "MinPS": 0,
+        "MaxPS": 0.03599280143971207,
+        "LowPS": 0.0008998200359928017,
+        "HighPS": 0.0035992801439712068,
+        "Category": 1,
+        "Tag": "Dataset",
+        "GroupName": "",
+        "ProductName": "",
+        "CenterX": -119.91463947049996,
+        "CenterY": 37.28633352000003,
+        "ZOrder": null,
+        "Shape_Length": 37.90601464200006,
+        "Shape_Area": 89.59150028589394,
+        "DateFrom": 1743465600000,
+        "DateTo": 1775001600000
+      },
+      "geometry": {
+        "rings": [
+          [
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              42.25513975900003
+            ],
+            [
+              -115.40694204899995,
+              32.317527281000025
+            ],
+            [
+              -124.42233689199998,
+              32.317527281000025
+            ]
+          ]
+        ],
+        "spatialReference": {
+          "wkid": 4326,
+          "latestWkid": 4326
+        }
+      }
+    }
+  ]
+}

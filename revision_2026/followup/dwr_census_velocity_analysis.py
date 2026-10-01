@@ -4,6 +4,7 @@ import json, csv
 import numpy as np
 import rasterio
 from rasterio.features import rasterize
+from dwr_units import feet_to_feet_per_year,duration_years,WINDOWS,DAYS_PER_YEAR
 
 BASE = Path(os.environ.get('INSAR_FOLLOWUP_ROOT', Path(__file__).resolve().parent))
 PROJ = Path(os.environ['INSAR_STRENGTHENING_ROOT'])
@@ -19,7 +20,7 @@ PERIODS = {
     '2015-10 to 2021-10 temporal median of annual rates': ('rate', BASE / 'dwr_velocity' / 'rate_median_2015_2021.tif'),
     '2015-06 to 2021-01 cumulative average rate': ('cumulative', BASE / 'dwr_velocity' / 'total_since_20150613_20210101.tif'),
 }
-YEARS_2015_2021 = 2029.0 / 365.2425
+YEARS_2015_2021 = duration_years('total_since_20150613_20210101.tif')
 THRESHOLDS = [-10.0, -5.0, -3.0, 0.0]  # mm yr-1; classes follow Ohenhen et al. 2025
 
 def read_blocks():
@@ -76,10 +77,7 @@ def main():
             arr = ds.read(1).astype('float64')
             nodata = ds.nodata if ds.nodata is not None else -9999
             valid_arr = np.isfinite(arr) & (arr != nodata)
-            if kind == 'cumulative':
-                rate_ft_yr = arr / YEARS_2015_2021
-            else:
-                rate_ft_yr = arr
+            rate_ft_yr = feet_to_feet_per_year(arr,path.name)
             valid = support & valid_arr & (block_id > 0)
             r,c = np.where(valid); bidx = block_id[r,c]-1
             mm = rate_ft_yr[r,c] * 304.8  # DWR raw values are feet; converted to mm/year.
@@ -103,6 +101,11 @@ def main():
         with (OUT/name).open('w',newline='',encoding='utf-8-sig') as f:
             w=csv.DictWriter(f,fieldnames=list(rows[0]));w.writeheader();w.writerows(rows)
     metadata={'DWR_service':'DWR TRE ALTAMIRA annual rate and cumulative vertical displacement ImageServer, raw GeoTIFF export','raster_grid':'native grid alignment: 177 x 279, EPSG:4326, 0.0011335841623633 degree x 0.0008998200359928 degree; nearest-neighbor export snapped to service pixel boundaries with adjustAspectRatio=false','DWR_support_geometry':'38,738 DWR 100 m observation-cell polygons from project external/dwr/roi_features.json, rasterized with pixel-centre inclusion; exact validation gives 38,738 polygons to 38,738 raster cells','population':'2020 Census DHC P1 total (P0010001), Census block GEOID prefix 06019; 6,788 complete blocks','estimand':'median DWR vertical displacement rate across valid published DWR observation-cell centers assigned to each Census block; whole block population is assigned to this median-rate class','classification_mm_yr':{'VLM >= 0':'not subsiding','-3 <= VLM < 0':'0 to -3','-5 <= VLM < -3':'-3 to -5','-10 <= VLM < -5':'-5 to -10','VLM < -10':'below -10'},'threshold_source':'Ohenhen et al., Nature Cities 2, 543-554 (2025), https://doi.org/10.1038/s44284-025-00240-y','limitations':['DWR rasters are interpolated products from DWR/TRE ALTAMIRA Sentinel-1 observations, not the manuscript original LOS field; this is a transfer benchmark, not independent InSAR validation.','DWR values are vertical rates (feet/year converted to mm/year), not LOS rates; they share provider lineage with the DWR observation footprint.','Raster values are sampled only at published DWR 100m observation-cell footprints, then median-aggregated within Census blocks.','Observation-cell locations and annual-rate rasters have slightly different product vintages; this is documented as a cross-product sensitivity, not a pixelwise accuracy assessment.','The 2015-2021 temporal median summarizes six overlapping annual-rate rasters; the cumulative end-point rate is a different temporal estimand from a fitted linear trend.','Census DHC population is differentially private and population source independence is unverified.','A complete Census block with no DWR observation cells is excluded from rate-class population assignment and reported as uncovered.'],'periods':list(PERIODS.keys()),'raster_pixel_count':int(shape[0]*shape[1]),'DWR_cell_feature_count':len(dwr),'DWR_rasterized_support_cell_count':int(support.sum()),'complete_block_count':len(blocks),'complete_block_population':int(pop.sum()),'cumulative_rate_duration_years':YEARS_2015_2021}
+    metadata['unit_convention']='Raw feet for each documented interval, divided by days/365.2425 before classification; the six-window composite is already annualized.'
+    metadata['input_windows']=WINDOWS
+    metadata['days_per_year']=DAYS_PER_YEAR
+    metadata['limitations'][1]='DWR interval displacements are annualized vertical quantities, not LOS; provider lineage is shared with the footprint.'
+    metadata['limitations'][4]='The temporal median uses six consecutive nonoverlapping October-to-October windows; the cumulative endpoint rate is a different estimand.'
     (OUT/'method.json').write_text(json.dumps(metadata,indent=2),encoding='utf-8')
     print(json.dumps(summaries,indent=2))
 

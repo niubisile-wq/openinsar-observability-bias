@@ -1,0 +1,118 @@
+{
+  "used_keys": [
+    "acs2021summary",
+    "acs2021vre",
+    "aieorattanawadee2022bangkok",
+    "ao2024national",
+    "berardino2002sbas",
+    "blackwell2020california",
+    "depsky2022capop",
+    "dwr2026",
+    "dwrdocumentation",
+    "eicher2001dasymetric",
+    "fernandeztorres2024mexico",
+    "ferretti2001ps",
+    "ferretti2011squeeSAR",
+    "fresno2026landuse",
+    "ghslpopr2023a",
+    "haghshenas2024iran",
+    "jica2024thailandcors",
+    "keerinart2020sbkk",
+    "licsarproducts",
+    "licsbas2",
+    "luachapichatikul2020bangkok",
+    "mennis2003population",
+    "moran1950notes",
+    "morishita2020licsbas",
+    "murray2025hawaii",
+    "ngl2026holdings",
+    "oelsmann2026coastal",
+    "ohenhen2025deltadata",
+    "ohenhen2025uscities",
+    "ohenhen2026deltas",
+    "payne2024data",
+    "payne2025iran",
+    "pesaresi2024ghsl",
+    "pumpuang2024bangkapi",
+    "sangha2026california",
+    "sangha2026data",
+    "tiger2020blockgroups",
+    "worldcover2021",
+    "worldpop2020",
+    "worldpopusa2020",
+    "xiong2026nationwide",
+    "yang2026buildingrisk",
+    "yunjun2019mintpy"
+  ],
+  "metadata_fetched": 24,
+  "added_fields": [
+    [
+      "ao2024national",
+      "volume",
+      "384"
+    ],
+    [
+      "ao2024national",
+      "number",
+      "6693"
+    ],
+    [
+      "ao2024national",
+      "pages",
+      "301--306"
+    ],
+    [
+      "haghshenas2024iran",
+      "number",
+      "19"
+    ],
+    [
+      "haghshenas2024iran",
+      "pages",
+      "eadk3039"
+    ],
+    [
+      "ohenhen2026deltas",
+      "number",
+      "8098"
+    ],
+    [
+      "payne2025iran",
+      "number",
+      "9"
+    ],
+    [
+      "payne2025iran",
+      "pages",
+      "e2024JB030367"
+    ],
+    [
+      "ohenhen2025uscities",
+      "number",
+      "6"
+    ],
+    [
+      "murray2025hawaii",
+      "number",
+      "1"
+    ]
+  ],
+  "fetch_errors": {
+    "xiong2026nationwide": {
+      "error": "429 Client Error: Too Many Requests for url: https://api.crossref.org/works/10.1016/j.rse.2025.115134",
+      "DOI": "10.1016/j.rse.2025.115134"
+    },
+    "oelsmann2026coastal": {
+      "error": "429 Client Error: Too Many Requests for url: https://api.crossref.org/works/10.1038/s41467-026-72293-z",
+      "DOI": "10.1038/s41467-026-72293-z"
+    },
+    "morishita2020licsbas": {
+      "error": "429 Client Error: Too Many Requests for url: https://api.crossref.org/works/10.3390/rs12030424",
+      "DOI": "10.3390/rs12030424"
+    },
+    "fernandeztorres2024mexico": {
+      "error": "429 Client Error: Too Many Requests for url: https://api.crossref.org/works/10.1007/s11069-023-06259-5",
+      "DOI": "10.1007/s11069-023-06259-5"
+    }
+  }
+}

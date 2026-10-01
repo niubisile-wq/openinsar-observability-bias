@@ -3,6 +3,7 @@ from pathlib import Path
 import hashlib, json
 import numpy as np
 import rasterio
+from dwr_units import feet_to_feet_per_year,WINDOWS,DAYS_PER_YEAR
 
 BASE = Path(os.environ.get('INSAR_FOLLOWUP_ROOT', Path(__file__).resolve().parent)) / 'dwr_velocity'
 inputs = [
@@ -28,7 +29,7 @@ for path in inputs:
         arr[~np.isfinite(arr) | (arr == nodata)] = np.nan
         # The 2015-01 to 2016-01 service was inspected and is zero-filled in Fresno;
         # it is not used. This composite uses six October-to-October annual products.
-        arrays.append(arr)
+        arrays.append(feet_to_feet_per_year(arr,path.name))
 stack = np.stack(arrays)
 complete = np.isfinite(stack).all(axis=0)
 out = np.full(shape, -9999, dtype='float32')
@@ -48,7 +49,9 @@ metadata = {
     'median_rate_mm_per_year': float(np.median(out[complete]) * 304.8),
     'input_sha256': {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in inputs},
     'output_sha256': hashlib.sha256(target.read_bytes()).hexdigest(),
-    'algorithm': 'NoData-aware pixelwise median; only pixels valid in all six annual rate rasters retained.',
+    'algorithm': 'Annualize each raw interval displacement using its exact day count, then take the pixelwise median; all six windows required.',
+    'annualization_days_per_year': DAYS_PER_YEAR,
+    'input_windows': {p.name:WINDOWS[p.name] for p in inputs},
 }
 (BASE / 'rate_median_2015_2021_method.json').write_text(json.dumps(metadata, indent=2), encoding='utf-8')
 print(json.dumps(metadata, indent=2))

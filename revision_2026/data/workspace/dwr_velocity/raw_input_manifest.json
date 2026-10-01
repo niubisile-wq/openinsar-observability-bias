@@ -1,0 +1,515 @@
+[
+  {
+    "file": "rate_2015_2016.tif",
+    "sha256": "7f4e323d976359a504cfe338e6fa3a5a91e15cba4e9f58521b07bbdd4c72635a",
+    "source_service": "https://gis.water.ca.gov/arcgisimg/rest/services/SAR/Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate_Mosaic/ImageServer",
+    "source_item": {
+      "OBJECTID": 10,
+      "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2020_Annual_Rate_20151001_20161001",
+      "MinPS": 0,
+      "MaxPS": 0.03599280143971207,
+      "LowPS": 0.0008998200359928017,
+      "HighPS": 0.0035992801439712068,
+      "Category": 1,
+      "Tag": "Dataset",
+      "GroupName": "",
+      "ProductName": "",
+      "CenterX": -119.91463947027115,
+      "CenterY": 37.23594359786069,
+      "ZOrder": null,
+      "Shape_Length": 37.110573730000056,
+      "Shape_Area": 86.00589333791591,
+      "DateFrom": 1443657600000,
+      "DateTo": 1475280000000
+    },
+    "request": {
+      "f": "image",
+      "bbox": "-119.90046966824156,36.59977083241381,-119.6998252715033,36.85082062245584",
+      "bboxSR": 4326,
+      "imageSR": 4326,
+      "size": "177,279",
+      "format": "tiff",
+      "pixelType": "F32",
+      "noData": "-9999",
+      "interpolation": "RSP_NearestNeighbor",
+      "adjustAspectRatio": "false",
+      "renderingRule": "{\"rasterFunction\": \"None\"}",
+      "mosaicRule": "{\"mosaicMethod\": \"esriMosaicLockRaster\", \"lockRasterIds\": [10], \"mosaicOperation\": \"MT_FIRST\"}"
+    },
+    "raster": {
+      "shape": [
+        279,
+        177
+      ],
+      "transform": [
+        0.0011335841623630236,
+        0.0,
+        -119.90046966824156,
+        0.0,
+        -0.0008998200359929458,
+        36.85082062245584
+      ],
+      "valid_cells": 49210,
+      "minimum_feet": -0.10826035588979721,
+      "maximum_feet": -0.0059367576614022255
+    },
+    "interval_years": 1.0020739645577939,
+    "conversion": "mm/year = raw feet * 304.8 / ((DateTo-DateFrom in days)/365.2425)"
+  },
+  {
+    "file": "annual_oct_2016_2017.tif",
+    "sha256": "3345bdc55d5429ef6ee8543c2c821d845444c063f404125aea4ef47cd640cb97",
+    "source_service": "https://gis.water.ca.gov/arcgisimg/rest/services/SAR/Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate_Mosaic/ImageServer",
+    "source_item": {
+      "OBJECTID": 22,
+      "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2020_Annual_Rate_20161001_20171001",
+      "MinPS": 0,
+      "MaxPS": 0.03599280143971207,
+      "LowPS": 0.0008998200359928017,
+      "HighPS": 0.0035992801439712068,
+      "Category": 1,
+      "Tag": "Dataset",
+      "GroupName": "",
+      "ProductName": "",
+      "CenterX": -119.91463947027115,
+      "CenterY": 37.23594359786069,
+      "ZOrder": null,
+      "Shape_Length": 37.110573730000056,
+      "Shape_Area": 86.00589333791591,
+      "DateFrom": 1475280000000,
+      "DateTo": 1506816000000
+    },
+    "request": {
+      "f": "image",
+      "bbox": "-119.90046966824156,36.59977083241381,-119.6998252715033,36.85082062245584",
+      "bboxSR": 4326,
+      "imageSR": 4326,
+      "size": "177,279",
+      "format": "tiff",
+      "pixelType": "F32",
+      "noData": "-9999",
+      "interpolation": "RSP_NearestNeighbor",
+      "adjustAspectRatio": "false",
+      "renderingRule": "{\"rasterFunction\": \"None\"}",
+      "mosaicRule": "{\"mosaicMethod\": \"esriMosaicLockRaster\", \"lockRasterIds\": [22], \"mosaicOperation\": \"MT_FIRST\"}"
+    },
+    "raster": {
+      "shape": [
+        279,
+        177
+      ],
+      "transform": [
+        0.0011335841623630236,
+        0.0,
+        -119.90046966824156,
+        0.0,
+        -0.0008998200359929458,
+        36.85082062245584
+      ],
+      "valid_cells": 49210,
+      "minimum_feet": -0.09045739471912384,
+      "maximum_feet": -0.010104651562869549
+    },
+    "interval_years": 0.9993360575508052,
+    "conversion": "mm/year = raw feet * 304.8 / ((DateTo-DateFrom in days)/365.2425)"
+  },
+  {
+    "file": "annual_oct_2017_2018.tif",
+    "sha256": "b2808116c8480b1db554709ee4c606eea19636836b5bf7e0f1f0edfed35fc6b4",
+    "source_service": "https://gis.water.ca.gov/arcgisimg/rest/services/SAR/Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate_Mosaic/ImageServer",
+    "source_item": {
+      "OBJECTID": 34,
+      "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2020_Annual_Rate_20171001_20181001",
+      "MinPS": 0,
+      "MaxPS": 0.03599280143971207,
+      "LowPS": 0.0008998200359928017,
+      "HighPS": 0.0035992801439712068,
+      "Category": 1,
+      "Tag": "Dataset",
+      "GroupName": "",
+      "ProductName": "",
+      "CenterX": -119.91463947027115,
+      "CenterY": 37.23594359786069,
+      "ZOrder": null,
+      "Shape_Length": 37.110573730000056,
+      "Shape_Area": 86.00589333791591,
+      "DateFrom": 1506816000000,
+      "DateTo": 1538352000000
+    },
+    "request": {
+      "f": "image",
+      "bbox": "-119.90046966824156,36.59977083241381,-119.6998252715033,36.85082062245584",
+      "bboxSR": 4326,
+      "imageSR": 4326,
+      "size": "177,279",
+      "format": "tiff",
+      "pixelType": "F32",
+      "noData": "-9999",
+      "interpolation": "RSP_NearestNeighbor",
+      "adjustAspectRatio": "false",
+      "renderingRule": "{\"rasterFunction\": \"None\"}",
+      "mosaicRule": "{\"mosaicMethod\": \"esriMosaicLockRaster\", \"lockRasterIds\": [34], \"mosaicOperation\": \"MT_FIRST\"}"
+    },
+    "raster": {
+      "shape": [
+        279,
+        177
+      ],
+      "transform": [
+        0.0011335841623630236,
+        0.0,
+        -119.90046966824156,
+        0.0,
+        -0.0008998200359929458,
+        36.85082062245584
+      ],
+      "valid_cells": 49207,
+      "minimum_feet": -0.08987049758434296,
+      "maximum_feet": -0.004293146543204784
+    },
+    "interval_years": 0.9993360575508052,
+    "conversion": "mm/year = raw feet * 304.8 / ((DateTo-DateFrom in days)/365.2425)"
+  },
+  {
+    "file": "annual_oct_2018_2019.tif",
+    "sha256": "97712842ffa48bc44ae6d78abfd527bb4743cca260b7c3db09510faed669b879",
+    "source_service": "https://gis.water.ca.gov/arcgisimg/rest/services/SAR/Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate_Mosaic/ImageServer",
+    "source_item": {
+      "OBJECTID": 46,
+      "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2020_Annual_Rate_20181001_20191001",
+      "MinPS": 0,
+      "MaxPS": 0.03599280143971207,
+      "LowPS": 0.0008998200359928017,
+      "HighPS": 0.0035992801439712068,
+      "Category": 1,
+      "Tag": "Dataset",
+      "GroupName": "",
+      "ProductName": "",
+      "CenterX": -119.91463947027115,
+      "CenterY": 37.23594359786069,
+      "ZOrder": null,
+      "Shape_Length": 37.110573730000056,
+      "Shape_Area": 86.00589333791591,
+      "DateFrom": 1538352000000,
+      "DateTo": 1569888000000
+    },
+    "request": {
+      "f": "image",
+      "bbox": "-119.90046966824156,36.59977083241381,-119.6998252715033,36.85082062245584",
+      "bboxSR": 4326,
+      "imageSR": 4326,
+      "size": "177,279",
+      "format": "tiff",
+      "pixelType": "F32",
+      "noData": "-9999",
+      "interpolation": "RSP_NearestNeighbor",
+      "adjustAspectRatio": "false",
+      "renderingRule": "{\"rasterFunction\": \"None\"}",
+      "mosaicRule": "{\"mosaicMethod\": \"esriMosaicLockRaster\", \"lockRasterIds\": [46], \"mosaicOperation\": \"MT_FIRST\"}"
+    },
+    "raster": {
+      "shape": [
+        279,
+        177
+      ],
+      "transform": [
+        0.0011335841623630236,
+        0.0,
+        -119.90046966824156,
+        0.0,
+        -0.0008998200359929458,
+        36.85082062245584
+      ],
+      "valid_cells": 48789,
+      "minimum_feet": -0.0754724070429802,
+      "maximum_feet": -0.0005391746526584029
+    },
+    "interval_years": 0.9993360575508052,
+    "conversion": "mm/year = raw feet * 304.8 / ((DateTo-DateFrom in days)/365.2425)"
+  },
+  {
+    "file": "annual_oct_2019_2020.tif",
+    "sha256": "a00172a4c2fff8914f5b768f66bb466e761d17dd51270c4bcab42b7a7d9b0fc6",
+    "source_service": "https://gis.water.ca.gov/arcgisimg/rest/services/SAR/Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate_Mosaic/ImageServer",
+    "source_item": {
+      "OBJECTID": 58,
+      "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2020_Annual_Rate_20191001_20201001",
+      "MinPS": 0,
+      "MaxPS": 0.03599280143971207,
+      "LowPS": 0.0008998200359928017,
+      "HighPS": 0.0035992801439712068,
+      "Category": 1,
+      "Tag": "Dataset",
+      "GroupName": "",
+      "ProductName": "",
+      "CenterX": -119.91463947027115,
+      "CenterY": 37.23594359786069,
+      "ZOrder": null,
+      "Shape_Length": 37.110573730000056,
+      "Shape_Area": 86.00589333791591,
+      "DateFrom": 1569888000000,
+      "DateTo": 1601510400000
+    },
+    "request": {
+      "f": "image",
+      "bbox": "-119.90046966824156,36.59977083241381,-119.6998252715033,36.85082062245584",
+      "bboxSR": 4326,
+      "imageSR": 4326,
+      "size": "177,279",
+      "format": "tiff",
+      "pixelType": "F32",
+      "noData": "-9999",
+      "interpolation": "RSP_NearestNeighbor",
+      "adjustAspectRatio": "false",
+      "renderingRule": "{\"rasterFunction\": \"None\"}",
+      "mosaicRule": "{\"mosaicMethod\": \"esriMosaicLockRaster\", \"lockRasterIds\": [58], \"mosaicOperation\": \"MT_FIRST\"}"
+    },
+    "raster": {
+      "shape": [
+        279,
+        177
+      ],
+      "transform": [
+        0.0011335841623630236,
+        0.0,
+        -119.90046966824156,
+        0.0,
+        -0.0008998200359929458,
+        36.85082062245584
+      ],
+      "valid_cells": 48789,
+      "minimum_feet": -0.04736235365271568,
+      "maximum_feet": 0.021166689693927765
+    },
+    "interval_years": 1.0020739645577939,
+    "conversion": "mm/year = raw feet * 304.8 / ((DateTo-DateFrom in days)/365.2425)"
+  },
+  {
+    "file": "rate_2020_2021.tif",
+    "sha256": "01ff9e15a505920f8d9684829d4d530f6f97dbd783dd810d36b485ff2ac98f70",
+    "source_service": "https://gis.water.ca.gov/arcgisimg/rest/services/SAR/Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate_Mosaic/ImageServer",
+    "source_item": {
+      "OBJECTID": 70,
+      "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2022Q1_Annual_Rate_20201001_20211001",
+      "MinPS": 0,
+      "MaxPS": 0.03599280143971205,
+      "LowPS": 0.0008998200359928013,
+      "HighPS": 0.003599280143971205,
+      "Category": 1,
+      "Tag": "Dataset",
+      "GroupName": "",
+      "ProductName": "",
+      "CenterX": -119.91463947027114,
+      "CenterY": 37.161708444891275,
+      "ZOrder": null,
+      "Shape_Length": 37.40751434200013,
+      "Shape_Area": 87.34441176896726,
+      "DateFrom": 1601510400000,
+      "DateTo": 1633046400000
+    },
+    "request": {
+      "f": "image",
+      "bbox": "-119.90046966824156,36.59977083241381,-119.6998252715033,36.85082062245584",
+      "bboxSR": 4326,
+      "imageSR": 4326,
+      "size": "177,279",
+      "format": "tiff",
+      "pixelType": "F32",
+      "noData": "-9999",
+      "interpolation": "RSP_NearestNeighbor",
+      "adjustAspectRatio": "false",
+      "renderingRule": "{\"rasterFunction\": \"None\"}",
+      "mosaicRule": "{\"mosaicMethod\": \"esriMosaicLockRaster\", \"lockRasterIds\": [70], \"mosaicOperation\": \"MT_FIRST\"}"
+    },
+    "raster": {
+      "shape": [
+        279,
+        177
+      ],
+      "transform": [
+        0.0011335841623630236,
+        0.0,
+        -119.90046966824156,
+        0.0,
+        -0.0008998200359929458,
+        36.85082062245584
+      ],
+      "valid_cells": 48587,
+      "minimum_feet": -0.04324432089924812,
+      "maximum_feet": 0.041941042989492416
+    },
+    "interval_years": 0.9993360575508052,
+    "conversion": "mm/year = raw feet * 304.8 / ((DateTo-DateFrom in days)/365.2425)"
+  },
+  {
+    "file": "rate_2023_2024.tif",
+    "sha256": "f01f0f23526b2bbcd6a9f8cedf71625fd9775f852c93114254dbb3c7df75db40",
+    "source_service": "https://gis.water.ca.gov/arcgisimg/rest/services/SAR/Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate_Mosaic/ImageServer",
+    "source_item": {
+      "OBJECTID": 106,
+      "Name": "Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate_20231001_20241001",
+      "MinPS": 0,
+      "MaxPS": 0.03599280143971207,
+      "LowPS": 0.0008998200359928017,
+      "HighPS": 0.0035992801439712068,
+      "Category": 1,
+      "Tag": "Dataset",
+      "GroupName": "",
+      "ProductName": "",
+      "CenterX": -119.91463947027114,
+      "CenterY": 37.28633351987628,
+      "ZOrder": null,
+      "Shape_Length": 37.90601464200006,
+      "Shape_Area": 89.59150028589394,
+      "DateFrom": 1696118400000,
+      "DateTo": 1727740800000
+    },
+    "request": {
+      "f": "image",
+      "bbox": "-119.90046966824156,36.59977083241381,-119.6998252715033,36.85082062245584",
+      "bboxSR": 4326,
+      "imageSR": 4326,
+      "size": "177,279",
+      "format": "tiff",
+      "pixelType": "F32",
+      "noData": "-9999",
+      "interpolation": "RSP_NearestNeighbor",
+      "adjustAspectRatio": "false",
+      "renderingRule": "{\"rasterFunction\": \"None\"}",
+      "mosaicRule": "{\"mosaicMethod\": \"esriMosaicLockRaster\", \"lockRasterIds\": [106], \"mosaicOperation\": \"MT_FIRST\"}"
+    },
+    "raster": {
+      "shape": [
+        279,
+        177
+      ],
+      "transform": [
+        0.0011335841623630236,
+        0.0,
+        -119.90046966824156,
+        0.0,
+        -0.0008998200359929458,
+        36.85082062245584
+      ],
+      "valid_cells": 48448,
+      "minimum_feet": -0.05857345089316368,
+      "maximum_feet": 0.005562792997807264
+    },
+    "interval_years": 1.0020739645577939,
+    "conversion": "mm/year = raw feet * 304.8 / ((DateTo-DateFrom in days)/365.2425)"
+  },
+  {
+    "file": "rate_2025_2026.tif",
+    "sha256": "64e20012c8be29dfb03007b2e64d0fd746705c59034489018629ff1de98faffb",
+    "source_service": "https://gis.water.ca.gov/arcgisimg/rest/services/SAR/Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate_Mosaic/ImageServer",
+    "source_item": {
+      "OBJECTID": 129,
+      "Name": "Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate_20250401_20260401",
+      "MinPS": 0,
+      "MaxPS": 0.03599280143971207,
+      "LowPS": 0.0008998200359928017,
+      "HighPS": 0.0035992801439712068,
+      "Category": 1,
+      "Tag": "Dataset",
+      "GroupName": "",
+      "ProductName": "",
+      "CenterX": -119.91463947049996,
+      "CenterY": 37.28633352000003,
+      "ZOrder": null,
+      "Shape_Length": 37.90601464200006,
+      "Shape_Area": 89.59150028589394,
+      "DateFrom": 1743465600000,
+      "DateTo": 1775001600000
+    },
+    "request": {
+      "f": "image",
+      "bbox": "-119.90046966824156,36.59977083241381,-119.6998252715033,36.85082062245584",
+      "bboxSR": 4326,
+      "imageSR": 4326,
+      "size": "177,279",
+      "format": "tiff",
+      "pixelType": "F32",
+      "noData": "-9999",
+      "interpolation": "RSP_NearestNeighbor",
+      "adjustAspectRatio": "false",
+      "renderingRule": "{\"rasterFunction\": \"None\"}",
+      "mosaicRule": "{\"mosaicMethod\": \"esriMosaicLockRaster\", \"lockRasterIds\": [129], \"mosaicOperation\": \"MT_FIRST\"}"
+    },
+    "raster": {
+      "shape": [
+        279,
+        177
+      ],
+      "transform": [
+        0.0011335841623630236,
+        0.0,
+        -119.90046966824156,
+        0.0,
+        -0.0008998200359929458,
+        36.85082062245584
+      ],
+      "valid_cells": 49380,
+      "minimum_feet": -0.07956691086292267,
+      "maximum_feet": -0.014155184850096703
+    },
+    "interval_years": 0.9993360575508052,
+    "conversion": "mm/year = raw feet * 304.8 / ((DateTo-DateFrom in days)/365.2425)"
+  },
+  {
+    "file": "total_since_20150613_20210101.tif",
+    "sha256": "9edb7d6edad0cc1049c50c46d0c81d68d50d7507d2e400d23f4b6c3252c5b3ec",
+    "source_service": "https://gis.water.ca.gov/arcgisimg/rest/services/SAR/Vertical_Displacement_TRE_ALTAMIRA_Total_Since_20150613_Mosaic/ImageServer",
+    "source_item": {
+      "OBJECTID": 67,
+      "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2021_Total_Since_20150613_20210101",
+      "MinPS": 0,
+      "MaxPS": 0.01079784043191362,
+      "LowPS": 0.0008998200359928016,
+      "HighPS": 0.0035992801439712063,
+      "Category": 1,
+      "Tag": "Dataset",
+      "GroupName": "",
+      "ProductName": "",
+      "CenterX": -119.91463947027115,
+      "CenterY": 37.16215835490928,
+      "ZOrder": null,
+      "DateFrom": 1434153600000,
+      "DateTo": 1609459200000,
+      "Shape_Length": 37.40571470200007,
+      "Shape_Area": 87.33629953637937
+    },
+    "request": {
+      "f": "image",
+      "bbox": "-119.90046966824156,36.59977083241381,-119.6998252715033,36.85082062245584",
+      "bboxSR": 4326,
+      "imageSR": 4326,
+      "size": "177,279",
+      "format": "tiff",
+      "pixelType": "F32",
+      "noData": "-9999",
+      "interpolation": "RSP_NearestNeighbor",
+      "adjustAspectRatio": "false",
+      "renderingRule": "{\"rasterFunction\": \"None\"}",
+      "mosaicRule": "{\"mosaicMethod\": \"esriMosaicLockRaster\", \"lockRasterIds\": [67], \"mosaicOperation\": \"MT_FIRST\"}"
+    },
+    "raster": {
+      "shape": [
+        279,
+        177
+      ],
+      "transform": [
+        0.0011335841623630236,
+        0.0,
+        -119.90046966824156,
+        0.0,
+        -0.0008998200359929458,
+        36.85082062245584
+      ],
+      "valid_cells": 48587,
+      "minimum_feet": -0.44105270504951477,
+      "maximum_feet": -0.019003717228770256
+    },
+    "interval_years": 5.555213317179682,
+    "conversion": "mm/year = raw feet * 304.8 / ((DateTo-DateFrom in days)/365.2425)"
+  }
+]

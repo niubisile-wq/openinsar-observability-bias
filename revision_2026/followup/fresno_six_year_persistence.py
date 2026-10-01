@@ -4,6 +4,7 @@ import json, hashlib
 import numpy as np, pandas as pd, rasterio
 from rasterio.features import rasterize
 from rasterio.transform import Affine
+from dwr_units import feet_to_feet_per_year,WINDOWS,DAYS_PER_YEAR
 base=Path(os.environ.get('INSAR_FOLLOWUP_ROOT', Path(__file__).resolve().parent))
 proj=Path(os.environ['INSAR_STRENGTHENING_ROOT'])
 files=list((base/'census_blocks'/'fresno_roi').glob('*.geojson'))
@@ -28,7 +29,7 @@ for label,name in periods:
  with rasterio.open(base/'dwr_velocity'/name) as ds:
   assert ds.transform==trans and (ds.height,ds.width)==shape and ds.crs==crs
   a=ds.read(1).astype(float); valid=support & np.isfinite(a)&(a!=-9999)&(bids>0)
-  idx=np.where(valid); bidx=bids[idx]-1; v=a[idx]*304.8
+  idx=np.where(valid); bidx=bids[idx]-1; v=feet_to_feet_per_year(a[idx],name)*304.8
   grouped=[[] for _ in blocks]
   for i,x in zip(bidx,v):grouped[int(i)].append(float(x))
   med=np.array([np.median(x) if x else np.nan for x in grouped]); nobs=np.array([len(x) for x in grouped])
@@ -56,6 +57,8 @@ pd.DataFrame(rows2).to_csv(base/'census_block_velocity_analysis'/'fresno_six_yea
 classes.to_csv(base/'census_block_velocity_analysis'/'fresno_six_annual_block_classifications.csv')
 df.to_csv(base/'census_block_velocity_analysis'/'fresno_six_annual_block_medians.csv',index=False)
 summary={'blocks_total':len(blocks),'blocks_valid_in_all_six_annual_windows':len(common),'population_2020_in_all_six_valid_blocks':int(N),'population_share_of_all_complete_blocks_pct':float(N/sum(int(x['properties']['P0010001'] or 0) for x in blocks)*100),'population_share_with_all_six_classes_identical_pct':float(classes.loc[classes.same_class_all_six,'population'].sum()/N*100),'population_share_all_six_annual_medians_below_minus5_pct':float(classes.loc[classes.years_below_minus5.eq(6),'population'].sum()/N*100),'population_share_never_below_minus5_pct':float(classes.loc[classes.years_below_minus5.eq(0),'population'].sum()/N*100),'population_share_crossing_minus5_at_least_once_pct':float(classes.loc[classes.years_below_minus5.between(1,5),'population'].sum()/N*100),'annual_windows':[x[0] for x in periods],'rate_class_thresholds_mm_yr':class_order,'support_cells':len(geom),'DWR_geojson_sha256':hashlib.sha256((proj/'external'/'dwr'/'roi_features.json').read_bytes()).hexdigest(),'DWR_vertical_rates_sha256':{name:hashlib.sha256((base/'dwr_velocity'/name).read_bytes()).hexdigest() for _,name in periods},'limitations':['Only blocks with valid DWR cells in all six annual windows are included.','Annual-window block medians are classified using fixed 2020 Census counts.','This describes temporal variability in a product, not independent validation or persistent hazard.','DWR rate cells are interpolated vertical products, not manuscript LOS.']}
+summary['input_windows']={name:WINDOWS[name] for _,name in periods}
+summary['annualization_days_per_year']=DAYS_PER_YEAR
 (base/'census_block_velocity_analysis'/'fresno_six_year_stability_method.json').write_text(json.dumps(summary,indent=2),encoding='utf-8')
 print(json.dumps(summary,indent=2));print(pd.DataFrame(rows2).to_string(index=False));print('\nmedian class by annual window population shares')
 for p,_ in periods:

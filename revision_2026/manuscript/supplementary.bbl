@@ -10,7 +10,7 @@
 \bibitem{blackwell2020california}
 \bibinfo{author}{Blackwell, E.}, \bibinfo{author}{Shirzaei, M.},
   \bibinfo{author}{Ojha, C.} \& \bibinfo{author}{Werth, S.}
-\newblock \bibinfo{title}{Tracking california's sinking coast from space:
+\newblock \bibinfo{title}{Tracking {California}'s sinking coast from space:
   Implications for relative sea-level rise}.
 \newblock \emph{\bibinfo{journal}{Science Advances}}
   \textbf{\bibinfo{volume}{6}}, \bibinfo{pages}{eaba4551}
@@ -19,8 +19,8 @@
 \bibitem{fernandeztorres2024mexico}
 \bibinfo{author}{Fernandez-Torres, E.~A.} \emph{et~al.}
 \newblock \bibinfo{title}{Country-scale assessment of urban areas, population,
-  and households exposed to land subsidence using sentinel-1 insar, and gps
-  time series}.
+  and households exposed to land subsidence using {Sentinel-1} {InSAR}, and
+  {GPS} time series}.
 \newblock \emph{\bibinfo{journal}{Natural Hazards}}
   \textbf{\bibinfo{volume}{120}}, \bibinfo{pages}{1577--1601}
   (\bibinfo{year}{2024}).
@@ -29,8 +29,9 @@
 \bibinfo{author}{Ao, Z.}, \bibinfo{author}{Hu, X.}, \bibinfo{author}{Tao, S.},
   \bibinfo{author}{Hu, X.} \emph{et~al.}
 \newblock \bibinfo{title}{A national-scale assessment of land subsidence in
-  china's major cities}.
-\newblock \emph{\bibinfo{journal}{Science}}  (\bibinfo{year}{2024}).
+  {China}'s major cities}.
+\newblock \emph{\bibinfo{journal}{Science}} \textbf{\bibinfo{volume}{384}},
+  \bibinfo{pages}{301--306} (\bibinfo{year}{2024}).
 
 \bibitem{ohenhen2025uscities}
 \bibinfo{author}{Ohenhen, L.~O.}, \bibinfo{author}{Zhai, G.},
@@ -44,7 +45,7 @@
 \bibinfo{author}{Murray, K.}, \bibinfo{author}{Barbee, M.},
   \bibinfo{author}{Thompson, P.} \& \bibinfo{author}{Fletcher, C.}
 \newblock \bibinfo{title}{Coastal land subsidence accelerates timelines for
-  future flood exposure in hawai'i}.
+  future flood exposure in {Hawai}'i}.
 \newblock \emph{\bibinfo{journal}{Communications Earth \& Environment}}
   \textbf{\bibinfo{volume}{6}}, \bibinfo{pages}{123} (\bibinfo{year}{2025}).
 
@@ -77,7 +78,7 @@
 \bibinfo{author}{Keerinart, C.}, \bibinfo{author}{Phumpuang, A.},
   \bibinfo{author}{Ladavadee, A.}, \bibinfo{author}{Supavetch, S.} \&
   \bibinfo{author}{Aobpaet, A.}
-\newblock \bibinfo{title}{Subsidence rate analyzing of bangkok soil profile
+\newblock \bibinfo{title}{Subsidence rate analyzing of {Bangkok} soil profile
   with {InSAR} data}.
 \newblock \bibinfo{howpublished}{The 25th National Convention on Civil
   Engineering, GTE44-1--GTE44-6, Chonburi, Thailand} (\bibinfo{year}{2020}).
@@ -87,22 +88,27 @@
 \bibitem{haghshenas2024iran}
 \bibinfo{author}{Haghshenas~Haghighi, M.} \& \bibinfo{author}{Motagh, M.}
 \newblock \bibinfo{title}{Uncovering the impacts of depleting aquifers: A
-  remote sensing analysis of land subsidence in iran}.
+  remote sensing analysis of land subsidence in {Iran}}.
 \newblock \emph{\bibinfo{journal}{Science Advances}}
-  \textbf{\bibinfo{volume}{10}} (\bibinfo{year}{2024}).
+  \textbf{\bibinfo{volume}{10}}, \bibinfo{pages}{eadk3039}
+  (\bibinfo{year}{2024}).
 
 \bibitem{payne2025iran}
 \bibinfo{author}{Payne, J.~A.} \emph{et~al.}
 \newblock \bibinfo{title}{Widespread extent of irrecoverable aquifer depletion
-  revealed by country-wide analysis of land surface subsidence hazard in iran}.
+  revealed by country-wide analysis of land surface subsidence hazard in
+  {Iran}}.
 \newblock \emph{\bibinfo{journal}{Journal of Geophysical Research: Solid
-  Earth}} \textbf{\bibinfo{volume}{130}} (\bibinfo{year}{2025}).
+  Earth}} \textbf{\bibinfo{volume}{130}}, \bibinfo{pages}{e2024JB030367}
+  (\bibinfo{year}{2025}).
 
 \bibitem{payne2024data}
 \bibinfo{author}{Payne, J.}
 \newblock \bibinfo{title}{Accompanying data for paper: Widespread extent of
   irrecoverable aquifer depletion revealed by country-wide analysis of land
-  surface subsidence hazard in iran} (\bibinfo{year}{2024}).
+  surface subsidence hazard in {Iran}}.
+\newblock \bibinfo{howpublished}{\url{https://doi.org/10.5281/zenodo.13754200}}
+  (\bibinfo{year}{2024}).
 
 \bibitem{morishita2020licsbas}
 \bibinfo{author}{Morishita, Y.} \emph{et~al.}
@@ -114,7 +120,7 @@
 
 \bibitem{jica2024thailandcors}
 \bibinfo{author}{{Japan International Cooperation Agency}}.
-\newblock \bibinfo{title}{The kingdom of thailand: Project for capacity
+\newblock \bibinfo{title}{The kingdom of {Thailand}: Project for capacity
   development and promotion of utilization of national {CORS} data center,
   project completion report (2nd and 3rd terms)}.
 \newblock \bibinfo{howpublished}{Japan International Cooperation Agency report}
@@ -140,13 +146,80 @@
   (\bibinfo{year}{2003}).
 
 \bibitem{yunjun2019mintpy}
-\bibinfo{author}{Zhang, Y.}, \bibinfo{author}{Fattahi, H.} \&
+\bibinfo{author}{Yunjun, Z.}, \bibinfo{author}{Fattahi, H.} \&
   \bibinfo{author}{Amelung, F.}
 \newblock \bibinfo{title}{Small baseline {InSAR} time series analysis:
   Unwrapping error correction and noise reduction}.
 \newblock \emph{\bibinfo{journal}{Computers \& Geosciences}}
   \textbf{\bibinfo{volume}{133}}, \bibinfo{pages}{104331}
   (\bibinfo{year}{2019}).
+
+\bibitem{ghslpopr2023a}
+\bibinfo{author}{Schiavina, M.}, \bibinfo{author}{Freire, S.},
+  \bibinfo{author}{Carioli, A.} \& \bibinfo{author}{MacManus, K.}
+\newblock \bibinfo{title}{{GHS-POP R2023A}: {GHS} population grid multitemporal
+  (1975--2030)}.
+\newblock
+  \bibinfo{howpublished}{\url{https://doi.org/10.2905/2FF68A52-5B5B-4A22-8F40-C41DA8332CFE}}
+  (\bibinfo{year}{2023}).
+\newblock
+  \urlprefix\url{https://human-settlement.emergency.copernicus.eu/ghs_pop2023.php}.
+\newblock \bibinfo{note}{Dataset DOI:
+  10.2905/2FF68A52-5B5B-4A22-8F40-C41DA8332CFE}.
+
+\bibitem{worldpopusa2020}
+\bibinfo{author}{{WorldPop and Center for International Earth Science
+  Information Network (CIESIN), Columbia University}}.
+\newblock \bibinfo{title}{Global high resolution population denominators
+  project: {United States} 2020 {UN-adjusted} 1-km population grid}.
+\newblock \bibinfo{howpublished}{\url{https://doi.org/10.5258/SOTON/WP00671}}
+  (\bibinfo{year}{2018}).
+\newblock \urlprefix\url{https://hub.worldpop.org/geodata/summary?id=34816}.
+\newblock \bibinfo{note}{Dataset DOI: 10.5258/SOTON/WP00671; production date
+  2020-06-22}.
+
+\bibitem{moran1950notes}
+\bibinfo{author}{Moran, P. A.~P.}
+\newblock \bibinfo{title}{Notes on continuous stochastic phenomena}.
+\newblock \emph{\bibinfo{journal}{Biometrika}} \textbf{\bibinfo{volume}{37}},
+  \bibinfo{pages}{17--23} (\bibinfo{year}{1950}).
+
+\bibitem{depsky2022capop}
+\bibinfo{author}{Depsky, N.~J.}, \bibinfo{author}{Cushing, L.} \&
+  \bibinfo{author}{Morello-Frosch, R.}
+\newblock \bibinfo{title}{High-resolution gridded estimates of population
+  sociodemographics from the 2020 census in {California}}.
+\newblock \emph{\bibinfo{journal}{PLOS ONE}} \textbf{\bibinfo{volume}{17}},
+  \bibinfo{pages}{e0270746} (\bibinfo{year}{2022}).
+
+\bibitem{acs2021summary}
+\bibinfo{author}{{U.S. Census Bureau}}.
+\newblock \bibinfo{title}{2021 american community survey 5-year summary file}
+  (\bibinfo{year}{2021}).
+\newblock
+  \urlprefix\url{https://www.census.gov/programs-surveys/acs/data/summary-file/sequence-based/2021.html}.
+
+\bibitem{tiger2020blockgroups}
+\bibinfo{author}{{U.S. Census Bureau}}.
+\newblock \bibinfo{title}{2020 {TIGER}/line shapefiles: Block groups}
+  (\bibinfo{year}{2020}).
+\newblock \urlprefix\url{https://www2.census.gov/geo/tiger/TIGER2020/BG/}.
+
+\bibitem{acs2021vre}
+\bibinfo{author}{{U.S. Census Bureau}}.
+\newblock \bibinfo{title}{2017--2021 {ACS} variance replicate estimate tables
+  documentation} (\bibinfo{year}{2022}).
+\newblock
+  \urlprefix\url{https://www2.census.gov/programs-surveys/acs/replicate_estimates/2021/documentation/5-year/2017-2021_Variance_Replicate_Table_Documentation.pdf}.
+
+\bibitem{fresno2026landuse}
+\bibinfo{author}{{City of Fresno}}.
+\newblock \bibinfo{title}{Public existing land use {GIS} layer}
+  (\bibinfo{year}{2026}).
+\newblock
+  \urlprefix\url{https://services2.arcgis.com/WkBUojyNPhsWOk1W/arcgis/rest/services/Existing_Land_Use/FeatureServer/19}.
+\newblock \bibinfo{note}{Hosted FeatureServer layer 19; ObjectID, ELU, ELUText
+  and LayerRefreshDate; accessed 1 October 2026}.
 
 \bibitem{dwr2026}
 \bibinfo{author}{{California Department of Water Resources}}.
@@ -166,65 +239,12 @@
 \newblock \bibinfo{note}{100 m measurement support distinguished from
   interpolated display rasters; accessed 27 September 2026}.
 
-\bibitem{ghslpopr2023a}
-\bibinfo{author}{Schiavina, M.}, \bibinfo{author}{Freire, S.},
-  \bibinfo{author}{Carioli, A.} \& \bibinfo{author}{MacManus, K.}
-\newblock \bibinfo{title}{{GHS-POP R2023A}: {GHS} population grid multitemporal
-  (1975--2030)} (\bibinfo{year}{2023}).
-\newblock
-  \urlprefix\url{https://human-settlement.emergency.copernicus.eu/ghs_pop2023.php}.
-\newblock \bibinfo{note}{Dataset DOI:
-  10.2905/2FF68A52-5B5B-4A22-8F40-C41DA8332CFE}.
-
-\bibitem{worldpopusa2020}
-\bibinfo{author}{{WorldPop and Center for International Earth Science
-  Information Network (CIESIN), Columbia University}}.
-\newblock \bibinfo{title}{Global high resolution population denominators
-  project: {United States} 2020 {UN-adjusted} 1-km population grid}
-  (\bibinfo{year}{2018}).
-\newblock \urlprefix\url{https://hub.worldpop.org/geodata/summary?id=34816}.
-\newblock \bibinfo{note}{Dataset DOI: 10.5258/SOTON/WP00671; production date
-  2020-06-22}.
-
-\bibitem{moran1950notes}
-\bibinfo{author}{Moran, P. A.~P.}
-\newblock \bibinfo{title}{Notes on continuous stochastic phenomena}.
-\newblock \emph{\bibinfo{journal}{Biometrika}} \textbf{\bibinfo{volume}{37}},
-  \bibinfo{pages}{17--23} (\bibinfo{year}{1950}).
-
-\bibitem{depsky2022capop}
-\bibinfo{author}{Depsky, N.~J.}, \bibinfo{author}{Cushing, L.} \&
-  \bibinfo{author}{Morello-Frosch, R.}
-\newblock \bibinfo{title}{High-resolution gridded estimates of population
-  sociodemographics from the 2020 census in california}.
-\newblock \emph{\bibinfo{journal}{PLOS ONE}} \textbf{\bibinfo{volume}{17}},
-  \bibinfo{pages}{e0270746} (\bibinfo{year}{2022}).
-
-\bibitem{acs2021summary}
-\bibinfo{author}{{U.S. Census Bureau}}.
-\newblock \bibinfo{title}{2021 american community survey 5-year summary file}
-  (\bibinfo{year}{2021}).
-\newblock
-  \urlprefix\url{https://www.census.gov/programs-surveys/acs/data/summary-file/sequence-based/2021.html}.
-
-\bibitem{tiger2020blockgroups}
-\bibinfo{author}{{U.S. Census Bureau}}.
-\newblock \bibinfo{title}{2020 tiger/line shapefiles: Block groups}
-  (\bibinfo{year}{2020}).
-\newblock \urlprefix\url{https://www2.census.gov/geo/tiger/TIGER2020/BG/}.
-
-\bibitem{acs2021vre}
-\bibinfo{author}{{U.S. Census Bureau}}.
-\newblock \bibinfo{title}{2017--2021 acs variance replicate estimate tables
-  documentation} (\bibinfo{year}{2022}).
-\newblock
-  \urlprefix\url{https://www2.census.gov/programs-surveys/acs/replicate_estimates/2021/documentation/5-year/2017-2021_Variance_Replicate_Table_Documentation.pdf}.
-
 \bibitem{sangha2026california}
 \bibinfo{author}{Sangha, S.~S.}, \bibinfo{author}{Funning, G.~J.},
   \bibinfo{author}{Govorcin, M.} \& \bibinfo{author}{Bekaert, D. P.~S.}
-\newblock \bibinfo{title}{A statewide insar velocity map for california
-  produced by a comprehensive large scale analysis of aria standard products}.
+\newblock \bibinfo{title}{A statewide {InSAR} velocity map for {California}
+  produced by a comprehensive large scale analysis of {ARIA} standard
+  products}.
 \newblock \emph{\bibinfo{journal}{Earth and Space Science}}
   \textbf{\bibinfo{volume}{13}}, \bibinfo{pages}{e2026EA005214}
   (\bibinfo{year}{2026}).
@@ -233,21 +253,14 @@
 \bibinfo{author}{Sangha, S.}, \bibinfo{author}{Funning, G.},
   \bibinfo{author}{Govorcin, M.} \& \bibinfo{author}{Bekaert, D.}
 \newblock \bibinfo{title}{Data and software for sangha et al., 2026: A
-  statewide insar velocity map for california} (\bibinfo{year}{2026}).
-\newblock \bibinfo{note}{Fixed April 2026 archived version; CC BY 4.0}.
-
-\bibitem{fresno2026landuse}
-\bibinfo{author}{{City of Fresno}}.
-\newblock \bibinfo{title}{Public existing land use gis layer}
+  statewide {InSAR} velocity map for {California}}.
+\newblock \bibinfo{howpublished}{\url{https://doi.org/10.5281/zenodo.19493073}}
   (\bibinfo{year}{2026}).
-\newblock
-  \urlprefix\url{https://services2.arcgis.com/WkBUojyNPhsWOk1W/arcgis/rest/services/Existing_Land_Use/FeatureServer/19}.
-\newblock \bibinfo{note}{Hosted FeatureServer layer 19; ObjectID, ELU, ELUText
-  and LayerRefreshDate; accessed 1 October 2026}.
+\newblock \bibinfo{note}{Fixed April 2026 archived version; CC BY 4.0}.
 
 \bibitem{ngl2026holdings}
 \bibinfo{author}{{Nevada Geodetic Laboratory}}.
-\newblock \bibinfo{title}{Gnss station data holdings and coordinate metadata}
+\newblock \bibinfo{title}{{GNSS} station data holdings and coordinate metadata}
   (\bibinfo{year}{2026}).
 \newblock
   \urlprefix\url{https://geodesy.unr.edu/NGLStationPages/DataHoldings.txt}.

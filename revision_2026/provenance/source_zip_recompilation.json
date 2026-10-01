@@ -1,0 +1,16 @@
+[
+  {
+    "archive": "Manuscript_LaTeX_Source.zip",
+    "sha256": "6ce45906a7ca737e7f3208b208bdf5f0baf33d69c5d305a4632aa72c076eed67",
+    "pages": 15,
+    "text_identical": true,
+    "all_page_pixels_identical_at_72dpi": true
+  },
+  {
+    "archive": "Supplementary_LaTeX_Source.zip",
+    "sha256": "7fc873df3ae57e14793f83de2a9c87a2c40eca055d4789fbb75eb0f3037e403a",
+    "pages": 31,
+    "text_identical": true,
+    "all_page_pixels_identical_at_72dpi": true
+  }
+]

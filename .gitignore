@@ -26,6 +26,7 @@ _tmp*
 !revision_2026/figures/additional/*.pdf
 !revision_2026/data/workspace/inputs/fresno_population/*.tif
 !revision_2026/data/workspace/inputs/fresno_population/*.zip
+!revision_2026/data/workspace/dwr_velocity/*.tif
 !revision_2026/reference_outputs/followup/fresno_population_allocation/support_share_comparison.pdf
 !revision_2026/reference_outputs/followup/fresno_population_allocation/support_share_comparison.png
 .venv*/

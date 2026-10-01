@@ -9,7 +9,7 @@ python revision_2026/reproduce.py additional --workspace reproduction_output
 
 This executes every calculation and compares **all 21 new CSV tables**, including replicate, block, tile and station tables, against the archived results. Numerical tolerances are the same as the established reviewer comparator (tightened to 1e-9 absolute for proportions). It is not a checksum-only test.
 
-Individual modes: `additional-real-blocks` (S25), `additional-dependence` (S26), `additional-quality` (S27), `additional-regions` (S28), `additional-residential` (S29), `additional-gnss` (S30). `standard` also includes these six modes. The existing `quick` suite retains S21-S24. Windows and Linux CI execute both suites.
+Individual modes: `additional-real-blocks` (S15), `additional-dependence` (S20), `additional-quality` (S21), `additional-regions` (S29), `additional-residential` (S27), `additional-gnss` (S30). `standard` also includes these six modes. The existing `quick` suite retains S9, S13, S14, S26. Windows and Linux CI execute both suites.
 
 To regenerate the scientific figures after a rerun:
 
@@ -23,11 +23,11 @@ The `provenance_scripts/` folder retains acquisition and preprocessing scripts a
 
 Interpret the added evidence at its actual level:
 
-* S25 masks known published rates on actual irregular Census blocks. Undefined blocks are retained. Small conditional errors do not identify motion in missing blocks.
-* S26 tests training-only spatial recalibration and deletion of shared acquisition dates. It does not refit velocities after every date deletion or assume independent pairs.
-* S27 uses training-only quality filters and all 44 excluded-edge residuals. Residual millimeters are internal displacement errors, not mm/year external velocity accuracy.
-* S28 retains all 96 designs across two fixed regions; their small effects limit transfer of the primary magnitude. Published averaged coherence differs from pair-level support.
-* S29 uses independent municipal land-use eligibility, not household counts. The initial 90% coverage diagnostic fails: the joint domain covers 89.13-89.22% of complete Census population. Unmapped classification and non-2020 vintage remain explicit.
+* S15 masks known published rates on actual irregular Census blocks. Undefined blocks are retained. Small conditional errors do not identify motion in missing blocks.
+* S20 tests training-only spatial recalibration and deletion of shared acquisition dates. It does not refit velocities after every date deletion or assume independent pairs.
+* S21 uses training-only quality filters and all 44 excluded-edge residuals. Residual millimeters are internal displacement errors, not mm/year external velocity accuracy.
+* S29 retains all 96 designs across two fixed regions; their small effects limit transfer of the primary magnitude. Published averaged coherence differs from pair-level support.
+* S27 uses independent municipal land-use eligibility, not household counts. The initial 90% coverage diagnostic fails: the joint domain covers 89.13-89.22% of complete Census population. Unmapped classification and non-2020 vintage remain explicit.
 * S30 compares archived independent GNSS observations with a published external LOS field. Reference/control sites are excluded from validation; exact native source windows reproduce all three sampling radii. The archived GNSS fits are linear, while InSAR includes seasonal/step terms. Large residuals and the lack of improvement in Davis-Sacramento are retained. These data do not validate the Bangkok inversion or true missing pixels.
 
 Sangha et al. (2026): DOI [10.1029/2026EA005214](https://doi.org/10.1029/2026EA005214), archived data [10.5281/zenodo.19493073](https://doi.org/10.5281/zenodo.19493073), CC BY 4.0. The April archived data version is fixed; dates come from completed notebook outputs and the publication, with stale configuration dates preserved as conflicting metadata. NGL source coordinates: `https://geodesy.unr.edu/NGLStationPages/DataHoldings.txt`. Municipal source: City of Fresno, public Existing Land Use FeatureServer layer 19. Archived MintPy implementation excerpts retain the accompanying GPL license, not the repository's code license.

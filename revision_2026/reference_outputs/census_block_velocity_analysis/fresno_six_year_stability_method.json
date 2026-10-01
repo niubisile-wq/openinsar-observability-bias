@@ -5,8 +5,8 @@
   "population_share_of_all_complete_blocks_pct": 95.697705710245,
   "population_share_with_all_six_classes_identical_pct": 0.0,
   "population_share_all_six_annual_medians_below_minus5_pct": 0.09513153879751342,
-  "population_share_never_below_minus5_pct": 4.8399416845661545,
-  "population_share_crossing_minus5_at_least_once_pct": 95.06492677663633,
+  "population_share_never_below_minus5_pct": 4.825183332635303,
+  "population_share_crossing_minus5_at_least_once_pct": 95.07968512856718,
   "annual_windows": [
     "2015-10_2016-10",
     "2016-10_2017-10",
@@ -25,17 +25,44 @@
   "support_cells": 38738,
   "DWR_geojson_sha256": "215ed93da5657cc111bd0c841162fa4643e8bb4ac577f137db472bc092f45a6d",
   "DWR_vertical_rates_sha256": {
-    "rate_2015_2016.tif": "7c68479fd85512d5fee91d59c4ee499e96a7c5784e722c8a03846c6695e1dd41",
-    "annual_oct_2016_2017.tif": "cafdd39ae220bb53f16ed59c03fc0c944483c147e3953eb7100ebb4efef17a80",
-    "annual_oct_2017_2018.tif": "b6fd897e4934c4c89b0a1856f1bedaf9f49f80a6e008def9b5583ef5b1bb7b72",
-    "annual_oct_2018_2019.tif": "82aed74ac62c8faa29931237f2631ef0a22df815617abbf1da15b58283a3f348",
-    "annual_oct_2019_2020.tif": "3f9f117718479d805d0ab5ac87387593b0b87441257e752547a1152bc6f800ff",
-    "rate_2020_2021.tif": "a7be736854c46fd3ade6fee0ab36fc6d837e70cb836f864a1d9a9857f554565b"
+    "rate_2015_2016.tif": "7f4e323d976359a504cfe338e6fa3a5a91e15cba4e9f58521b07bbdd4c72635a",
+    "annual_oct_2016_2017.tif": "3345bdc55d5429ef6ee8543c2c821d845444c063f404125aea4ef47cd640cb97",
+    "annual_oct_2017_2018.tif": "b2808116c8480b1db554709ee4c606eea19636836b5bf7e0f1f0edfed35fc6b4",
+    "annual_oct_2018_2019.tif": "97712842ffa48bc44ae6d78abfd527bb4743cca260b7c3db09510faed669b879",
+    "annual_oct_2019_2020.tif": "a00172a4c2fff8914f5b768f66bb466e761d17dd51270c4bcab42b7a7d9b0fc6",
+    "rate_2020_2021.tif": "01ff9e15a505920f8d9684829d4d530f6f97dbd783dd810d36b485ff2ac98f70"
   },
   "limitations": [
     "Only blocks with valid DWR cells in all six annual windows are included.",
     "Annual-window block medians are classified using fixed 2020 Census counts.",
     "This describes temporal variability in a product, not independent validation or persistent hazard.",
     "DWR rate cells are interpolated vertical products, not manuscript LOS."
-  ]
+  ],
+  "input_windows": {
+    "rate_2015_2016.tif": [
+      "2015-10-01",
+      "2016-10-01"
+    ],
+    "annual_oct_2016_2017.tif": [
+      "2016-10-01",
+      "2017-10-01"
+    ],
+    "annual_oct_2017_2018.tif": [
+      "2017-10-01",
+      "2018-10-01"
+    ],
+    "annual_oct_2018_2019.tif": [
+      "2018-10-01",
+      "2019-10-01"
+    ],
+    "annual_oct_2019_2020.tif": [
+      "2019-10-01",
+      "2020-10-01"
+    ],
+    "rate_2020_2021.tif": [
+      "2020-10-01",
+      "2021-10-01"
+    ]
+  },
+  "annualization_days_per_year": 365.2425
 }

@@ -1,14 +1,13 @@
 \documentclass[10pt,a4paper]{article}
 \usepackage[margin=22mm]{geometry}
-\usepackage{graphicx,booktabs,longtable,array,amsmath,amssymb,xurl,hyperref}
+\usepackage{graphicx,booktabs,longtable,array,amsmath,amssymb,xurl,hyperref,placeins}
 \usepackage[numbers,sort&compress]{natbib}
 \providecommand{\bibcommenthead}{}
 \hypersetup{hidelinks}
 \renewcommand{\thetable}{S\arabic{table}}
 \renewcommand{\thefigure}{S\arabic{figure}}
 \emergencystretch=2em
-
-% begin numbers.tex
+\setcounter{topnumber}{5}\setcounter{totalnumber}{8}\renewcommand{\topfraction}{.9}\renewcommand{\textfraction}{.08}\renewcommand{\floatpagefraction}{.7}
 \newcommand{\PopTwenty}{1.665}
 \newcommand{\BuiltTwenty}{197.5}
 \newcommand{\PopPctTwenty}{7.40}
@@ -43,10 +42,6 @@
 \newcommand{\DWRUniformMin}{9022}
 \newcommand{\DWRUniformMax}{9556}
 
-% end numbers.tex
-
-
-% begin round2_numbers.tex
 \newcommand{\InteriorPopulationMin}{99.27}
 \newcommand{\InteriorPopulationMax}{99.49}
 \newcommand{\InteriorBiasMin}{58.24}
@@ -54,15 +49,33 @@
 \newcommand{\InteriorErrorMin}{98.55}
 \newcommand{\InteriorErrorMax}{98.87}
 
-% end round2_numbers.tex
-
 \title{Supplementary Information\\Quantifying how spatial allocation and sampling alter population-weighted InSAR support summaries}
 \author{Zixuan Liu and Wei Xiong}
 \date{}
 \begin{document}\maketitle
+\section*{Reader's guide and experiment definitions}
+The evidence is grouped into six parts: A, domains and provenance; B, allocation mechanism and numerical checks; C, missingness and availability; D, sampling and processing; E, population benchmarks; F, transfer. The section index below gives the location of each part. All model allocations are distinguished from enumerated residents. A support deficit is not a deformation class.
+
+\small\setlength{\tabcolsep}{4pt}
+\begin{longtable}{p{.16\linewidth}p{.25\linewidth}p{.27\linewidth}p{.24\linewidth}}
+\toprule Design/domain and period & Population and normalization & Support/target & Denominator and role\\\midrule\endhead
+Chao Phraya finite source footprint; 2016--2022 pairs & GHSL 2020 native allocation; crossed WorldPop uses common coverage and GHSL total & Mean area--pair unwrapped/coherence support; allocated support deficit & Fixed 22.501-million GHSL allocation; crossed analyses have their own documented common total. Mechanism and input sensitivity.\\
+Bangkok artificial-mask rectangle; fixed model snapshots & GHSL population/built surface; same coarse totals for all rules & Removed model allocation and constructed threshold classes & Original test-domain total; also known removed allocation for relative error. Controlled estimation.\\
+Bangkok LiCSBAS rectangle; 2019--2020 & GHSL on the processing grid; originally final-valid population 11.281 million for LOS masking & 437-pair input support, final binary mask, or hidden fitted-LOS class; these are separate targets & Full rectangle for quality/bounds; common-computable originally valid allocation for conditional mask error.\\
+Fresno rectangle and complete blocks; 2020 population & GHSL native for footprint; Census uniform or within-block GHSL/CA-POP normalization for block tests & DWR published observation-cell union, without inferring rates in gaps & Rectangle or explicitly retained complete-block total; no interchangeable denominators.\\
+Fresno irregular-block masking; 2020-10-01--2021-10-01 & 523,953 Census residents; 23 lack usable GHSL weight; 523,930 normalized units & Hidden fine-pixel class under random/contiguous masks; adapted whole-unit median rule & 522,596.78 units in known-rate footprint; 1,333.22 outside it. Common-computable denominator for error; full known domain for unestimated share/bounds.\\
+Fresno ACS/residential benchmarks; ACS 2017--2021, Census 2020, municipal vintage in S27 & ACS point/MOE and 1-km grid totals; held-out calibration uses training groups only. Residential rules normalize within eligible blocks & Administrative total/allocation agreement; eligibility-constrained support sensitivity & 319 complete groups, ACS total 493,571. Residential joint domain: 466,999 or 467,490 Census units.\\
+Fresno DWR rate transfer; exact intervals in S28 & Fixed 2020 Census block counts assigned to each block's median annualized vertical class & Whole-block median-rate assignment; distinct from hidden fine-pixel class prediction & 501,411 residents in common rate-covered blocks, from 523,953 in all complete blocks. Temporal sensitivity.\\
+Los Angeles and Davis--Sacramento; archived ARIA track periods in S29/S30 & GHSL allocation; fixed regional totals. GNSS stations have separate metrics & Finite nonzero LOS plus coherence screening; external LOS agreement under two frames & Regional total for allocation; disjoint validation stations for GNSS. Transfer magnitude and limits.\\\bottomrule
+\end{longtable}\addtocounter{table}{-1}\normalsize\setlength{\tabcolsep}{6pt}
+``Native'' means retaining the declared population model on its analysis grid. In controlled-mask comparisons, ``prevalence'' is an estimator based on retained allocation, not a universally accurate native method. ``Allocation discrepancy'' compares fixed models/rules; ``estimation error'' uses known artificially hidden values; ``internal displacement residual'' compares excluded interferograms; ``external LOS agreement'' compares the independent GNSS observations with the archived external product. Percentage points (pp) always refer to the stated denominator.
+
+
+\section*{Part A: Domains, provenance and published practice}
 \section*{S1. Frozen domains and source provenance}
 The authoritative experiment configuration is \texttt{config.json}. The primary domain consists of GHSL 3-arc-second pixels whose centers fall in the frozen finite footprint of the archived Chao Phraya VLM cells. Pixel rows in experiment NPZ files increase from south to north; GDAL raster rows and LiCSBAS binary files increase from north to south. Scripts explicitly convert between these conventions. No velocity-unit assumption enters the primary domain.
 
+% ORIGINAL_TABLE_1
 \begin{longtable}{p{.23\linewidth}p{.31\linewidth}p{.38\linewidth}}
 \caption{Main input products and the information they provide.}\\
 \toprule Product & Version/selection & Role and interpretation\\\midrule\endfirsthead
@@ -78,16 +91,16 @@ DWR & Vertical Displacement Point Data Locations 2026Q1, layer 0 & Despite the s
 
 Source file URLs, hashes, geometries and download records are retained under \texttt{external/}, \texttt{results/fine/} and \texttt{results/lineage/}. The DWR fixed rectangle is selected before support results are computed. Its 38,738 polygons have 38,738 unique source codes. Their clipped-area sum and union agree to about $7\times10^{-5}$ m$^2$ (floating-point roundoff), confirming that repeated source cells do not inflate assigned population. The union area is 388.905 km$^2$ within a 495.510-km$^2$ domain.
 
+
 \section*{S2. Historical lineage and non-equivalent statistics}
 The submission-ready and staged submission-ready cell tables have the same SHA-256, \path{96ea01a6233315e8c37f06c55a5f0dac3656ae70239fded6b90aa68a63982a8a}. Both reproduce 12,589 selected legacy cells, population 3,772,492.0508 and built surface 404.772254 km$^2$. The alternate closure branch has hash \path{a17161efe405c98d01a221a549ee9e33a8cc3950a290d36c9a1f0b71ced68429} and yields zero cells under the same tabulated selection rule. This conflict is not evidence that the submitted arithmetic is unreproducible.
 
 The legacy total sums whole-cell population selected by a center-majority rule. Point registration, unwrapped validity, support-statistic choice and population allocation change different parts of that calculation; they are not additive corrections to a validated physical exposure count. The revised mean area--pair deficit uses an explicitly different estimand.
 
 The following factorial comparison holds archived cell centers and exposure weights fixed. The ``raw byte'' cutoff of 0.3 is intentionally retained only to diagnose incorrect encoding. GDAL point registration and added unwrapped validity are changed independently. These conditional legacy results must not be substituted for primary geographic-domain means.
+% ORIGINAL_TABLE_2
 \begin{table}[htbp]\centering\small
 \caption{Binary center-majority lineage audit under the inherited strong screen. Population is in millions of full-cell allocation units.}
-
-% begin lineage_table.tex
 \begin{tabular}{lllrr}\toprule
 Coherence encoding & Registration & Joint validity & Selected cells & Population\\\midrule
 Raw byte (incorrect) & Legacy tiepoint & No & 0 & 0.000000 \\
@@ -100,128 +113,16 @@ Byte / 255 & GDAL point & No & 12,582 & 3.756674 \\
 Byte / 255 & GDAL point & Yes & 12,607 & 3.797393 \\
 \bottomrule\end{tabular}
 
-% end lineage_table.tex
-
 \end{table}
 
 The full CSV additionally reports continuous center-frequency deficits for each combination and both domains. A center-majority rule, mean within-pixel area--pair support, and the fraction of area reaching a specified pass-count threshold are different statistics. For example, spatially uniform frequency 0.5 and a half-area split between frequencies 0 and 1 have the same mean, but different fractions meeting a frequency threshold of 0.5. Threshold distributions in this study refer to mean support at the GHSL grid, not an unobserved infinitely fine persistence distribution.
 
 The VLM file has SHA-256 \path{5393e5c865c5105705b4b0e915f9133591816933965c88b67dfd273db6f2603d}. It contains no explicit stored-velocity unit tag. In the 18,077 frozen cells, directly applying a numerical cutoff of $-5$ to raw values selects no cells; applying it after the inherited multiplication by ten selects 17,808. This sensitivity explains why the primary experiments use a geographic domain. We neither establish that the conversion is wrong nor use agreement with an expected subsidence magnitude as proof that it is correct. The newer version 18093069 of the source repository contains random-forest code; it does not supply an explicit replacement unit record for this GeoTIFF.
 
-\section*{S3. Geometry, conservation and numerical checks}
-Coherence and unwrapped validity are intersected on the union of their actual raster boundaries before integration. A disjoint-mask analytical test confirms that their intersection is zero even if both separately averaged masks are one-half. Further tests cover extensive mass splitting, partial target coverage, half-pixel offsets, valid zero coherence and spherical area conservation.
 
-All 512 production scale/origin/exposure/domain/method combinations preserve the native reference and the appropriate extensive total within the stated numerical tolerance. In the baseline summaries, the largest relative error in $S_E+U_E=T_E$ is $1.99\times10^{-15}$. The largest absolute covariance-identity residual is $5.96\times10^{-8}$ in the corresponding exposure units. Positive-, negative- and zero-covariance analytical examples verify the sign convention independently of the raster implementation. The exact empirical weighted-distribution integral matches the direct population deficit at printed precision.
-
-The UTM transfer uses GDAL sum resampling of extensive first and cross moments. It is an approximate nonlinear reprojection; it is not described as exact spherical polygon reprojection. Production 50-m transfers close their totals within $10^{-8}$ relative tolerance. Recomputing from native inputs at 25 m produces measured relative total drifts of $-1.66\times10^{-5}$ for area, $-2.06\times10^{-5}$ for supported area, $-4.11\times10^{-6}$ for population and $-3.28\times10^{-6}$ for supported population. These diagnostic fields are not renormalized. Their maximum combined effect on the 1-km uniform population estimate is $2.40\times10^{-6}$ of the AOI population, or 0.00024 percentage points. The diagnostic drift is reported separately from the production conservation result.
-
-These checks verify implementation identities and numerical stability. They do not establish population accuracy, velocity accuracy or independence of model inputs. The machine-readable records are \path{results/numerical_checks.json}, \path{results/allocation/conservation.csv} and \path{integration_convergence.csv}.
-
-\section*{S4. Artificial masking, error denominators and synthetic bounds}
-Each region has 21,600 method/scale/origin outputs: four missingness mechanisms, three removal fractions, 100 repetitions, three coarse sizes, two origins and three allocation rules. The same mask is used for all methods within a repetition. Gaussian smoothing generates spatial masks; density-associated scores combine standardized log density with a spatial term. The fixed seed is 20260927. Removal fractions refer to available fine pixels, while the realized removed area fraction is saved separately. In Fresno the controlled reference domain is the original published observed footprint, including its fractional intersections with GHSL pixels.
-
-\begin{table}[htbp]\centering\small
-\caption{Bangkok masking at 30\% removal, 10-pixel cells and zero origin. Error is relative to known removed allocation. Ranges are conditional mask percentiles.}
-
-% begin masking_table.tex
-\begin{tabular}{llrr}\toprule
-Mechanism & Method & Mean error (\%) & 2.5th--97.5th (\%)\\\midrule
-density negative & area uniform & 120.35 & [105.55, 134.61] \\
-density negative & building weighted & 19.60 & [17.46, 22.28] \\
-density negative & cell center & 102.97 & [86.96, 121.20] \\
-density positive & area uniform & -14.17 & [-15.15, -13.03] \\
-density positive & building weighted & -4.99 & [-5.52, -4.47] \\
-density positive & cell center & -11.64 & [-13.98, -9.39] \\
-random & area uniform & 0.04 & [-0.40, 0.44] \\
-random & building weighted & 0.03 & [-0.24, 0.27] \\
-random & cell center & 0.08 & [-9.19, 8.76] \\
-spatial & area uniform & 0.01 & [-0.82, 0.81] \\
-spatial & building weighted & 0.01 & [-0.50, 0.50] \\
-spatial & cell center & 0.01 & [-3.60, 3.12] \\
-\bottomrule\end{tabular}
-
-% end masking_table.tex
-
-\end{table}
-
-When the removed population is small, relative errors can be large: low-density-associated removal at 10\% of pixels is such a case. Main-text Fig.~4 instead normalizes by the entire test-domain population, so a large ratio is not mistaken for a large fraction of all residents. Raw reference totals, estimates, signed errors, cell RMSE and absolute cell-error totals remain available for every scenario. Building-weighted improvement is conditional on GHSL's shared built-environment information and should not be generalized to independently observed household locations.
-
-The synthetic hazard fields are experiment definitions, not inferred or measured deformation. With threshold membership $h_p\in\{0,1\}$ and introduced missingness $m_p$, the omitted threshold allocation $\sum_p E_p h_p m_p$ lies between zero and $\sum_p E_p m_p$. Adding observed threshold allocation gives the identification interval in the main text. All synthetic checks satisfy that deterministic bound. No probability coverage or external geodetic validation is claimed. Complete outputs are under \texttt{results/masking/} and \texttt{results/dwr/masking/}.
-
-The Fresno repeat shows the same sign reversal with different magnitudes (Fig.~S4). At 30\% removal, 10-pixel cells and zero origin, uniform-area mean error is $-16.14$ percentage points of the observed-footprint population for high-density-associated removal and $+7.28$ points for low-density-associated removal. The corresponding built-weighted errors are $-10.61$ and $+4.23$ points. Uniform-area mean errors for random and unrelated spatial masks are $-0.021$ and $-0.0025$ points. Relative-to-removed-population errors can be very large in sparsely populated masks; both denominators are retained, and the figure uses the whole observed-footprint total. These results support a conditional allocation mechanism, not a universally successful correction.
-
-\section*{S5. Expanded sampling and temporal network}
-The catalogue snapshot contains 1,603 pairs with both dates in 2016--2022. The 224-pair pool comprises eight randomly ranked pairs from each of 28 year--quarter strata, alternating short ($\leq24$ days) and long baselines as availability permits. An amendment swapped adjacent ranks in even quarters before support outcomes were extracted. Both the original rank plan and amended plan are retained. This improved baseline balance but did not force equal counts where long-baseline availability was limited.
-
-\begin{table}[htbp]\centering
-\caption{Nested pool composition and population deficit at $q=0.3$.}
-\begin{tabular}{rrrr}\toprule
-Pairs & Short baseline & Long baseline & Deficit (millions)\\\midrule
-28 & 16 & 12 & \SampleTwentyEight{}\\
-56 & 30 & 26 & \SampleFiftySix{}\\
-112 & 60 & 52 & \SampleOneTwelve{}\\
-224 & 120 & 104 & \SampleTwoTwentyFour{}\\\bottomrule
-\end{tabular}
-\end{table}
-
-The equal-pair mean describes this sample design, not a catalogue-frequency-weighted population parameter. Start-date season does not contain the full seasonal history of a long-baseline pair. The additional repeated samples draw 1, 2, 4 or 8 pairs per year--quarter without replacement from the fixed eight-pair stratum; their conditional distributions characterize design sensitivity. A 224-pair draw contains the entire fixed pool, so its variation is zero by construction, not proof of zero uncertainty. Shared acquisitions and atmospheric signals mean that individual pairs are not independent replicates of physical accuracy.
-
-\begin{figure}[htbp]\centering
-\includegraphics[width=\linewidth]{figures/S1_sampling.pdf}
-\caption{Conditional sampling variation, leave-one-year-out sensitivity and support distributions from nested samples. Bands in the first panel are the central 95\% of introduced draws from the fixed pool; they are not confidence intervals for a complete time-series product.}\end{figure}
-
-\begin{table}[htbp]\centering
-\caption{Date-graph diagnostics; these do not establish pixel-level connectivity.}
-\begin{tabular}{lrrrr}\toprule
-Graph & Pairs & Dates & Components & Independent cycles\\\midrule
-Legacy sample & 28 & 54 & 26 & 0\\
-Expanded pool & 224 & 225 & 29 & 28\\
-Catalogue 2016--2022 & 1603 & 288 & 1 & 1316\\\bottomrule
-\end{tabular}
-\end{table}
-
-Native pixels are aggregated by center into fixed $0.05^\circ$ longitude--latitude blocks anchored at integer multiples of $0.05^\circ$. All blocks are retained in the CSV; rank comparisons use the 539 blocks with at least 1,000 GHSL population units and 5 km$^2$ inside the domain. Relative to the 224-pair pool, the nested 28-, 56- and 112-pair deficit-amount rank correlations are 0.9940, 0.9992 and 0.9994. Their top-decile Jaccard overlaps are 0.8000, 0.8621 and 0.9286. Deficit-share correlations exceed 0.9991. Thus similar overall ranks can coexist with changed totals and changed membership near a selection boundary. These comparisons describe sampling stability; they do not validate measurement priorities or make the 224-pair pool a true target. Spatial blocks are not treated as independent accuracy replicates.
-
-\begin{figure}[htbp]\centering
-\includegraphics[width=\linewidth]{figures/S2_network_ranks.pdf}
-\caption{Actual acquisition-date graphs, temporal-baseline composition and descriptive block-rank sensitivity. Each arc joins the two dates of an input pair; graph connectivity is reported in Table~S5. The matched graph precedes quality rejection. The rank panel uses a restricted vertical range to show small differences; all comparisons use the same 539 eligible blocks and the fixed 224-pair pool as comparator.}\end{figure}
-
-\section*{S6. Population coverage and land-cover interpretation}
-The main population-model comparison restricts to fine pixels covered to within $10^{-5}$ by all four compared model/epoch rasters. The common domain contains 1,754,190 fine pixels and excludes \JointExcluded{} thousand GHSL population units relative to the primary footprint. Outputs on each product's own valid coverage are retained alongside common-coverage outputs. NoData is not silently converted into a zero population for comparative denominators.
-
-Normalization multiplies each population model by the same target total divided by its own common-domain total. Its weighted support share is consequently unchanged; this isolates spatial distribution from differences in population totals. The common-total q0.3 results are \GHSLJointCommon{} million for native GHSL and \WPJointCommon{} million for WorldPop. Neither establishes demographic truth. A difference between 2015 and 2020 GHSL at fixed 30 arcsec is an epoch/model sensitivity; comparing native 3-arcsecond 2020 to coarse 2015 alone would confound epoch and resolution.
-
-All 11 ESA WorldCover class codes are processed by native fractional intersection. Their fractions sum to one inside the primary domain within $2\times10^{-5}$. Reported nonzero classes include built-up, tree cover, cropland, grassland, bare/sparse vegetation, permanent water, wetland, shrubland and mangroves. GHSL allocations within a mixed cover pixel remain uniform at the subpixel level. Classification uncertainty, mixed pixels and the 2021 epoch are not converted into a probabilistic population uncertainty estimate.
-
-\section*{S7. Matched LiCSBAS processing and holdout}
-
-% begin matched_supplement.tex
-The upstream LiCSBAS2 commit is \path{2627e50a1c703becd4a0b18754b05c1cf8c564d5}. Both branches complete steps 11--16 without changes to tracked scientific source. A documented Windows I/O wrapper substitutes a native parameter reader for external grep and copies browse PNGs instead of creating symlinks. Its optional GDAL import only affects unused GeoTIFF helper functions. Input preparation uses Rasterio independently. All processing is serial with a fixed NumPy seed; package versions and the exact wrapper diff are retained.
-
-The canonical processing raster has 301 columns and 401 rows, with actual affine transform recorded in \path{results/timeseries/geometry.json}; its pixel spacing is approximately 108 by 111 m at this latitude. The input frame is 062D\_07629\_131313. Global input connectivity is a selection requirement, not a guarantee of pixel-level connectivity. Of 437 full-stack inputs, 431 survive pair-level checks; of 393 training inputs, 382 survive. Both original holdout membership and rejected-pair lists are saved. Held-out phase/coherence is never used by the training workflow.
-
-Step 11 uses the upstream mean-coherence threshold 0.05 and unwrapped-coverage threshold 0.3. Step 12 uses a loop threshold of 1.5 rad. Step 13 uses least squares with regularization parameter 0.0001 and requires more than 104 valid interferograms for inversion. Step 14 retains the upstream 100 bootstrap draws and spatiotemporal-consistency calculation. Bootstrap velocity spread is a processing diagnostic, not a calibrated uncertainty interval for physical velocity.
-
-Step 15 uses fixed C-band defaults with automatic threshold relaxation disabled: mean coherence at least 0.05, at least 156 valid interferograms, velocity spread at most 100 mm yr$^{-1}$, maximum connected duration at least one year, at most 10 temporal gaps, spatiotemporal inconsistency at most 5 mm, at most 50 interferograms without a loop, at most 5 loop errors and inversion residual RMS at most 2 mm. The combined mask therefore contains information beyond the $q=0.3$ input diagnostic. It also shares coherence information with that diagnostic. Rates in the saved mask logs use the upstream finite/non-reference denominator; reported domain fractions count all 120,701 processing cells and explicitly include the finite reference pixel.
-
-Step 16 applies the upstream 2-km spatial and 21-day temporal filter, without detrending, DEM-error fitting or height-linear correction. Both filtered products are retained, but the held-out prediction is deliberately evaluated from \texttt{cum.h5}, the unfiltered training inversion. Thus prediction does not introduce a filtering-dependent smoothing comparison. No atmospheric correction or external GNSS datum is added. LOS displacement is relative and positive toward the satellite under the coefficient $-c/(4\pi f)$, with $f=5.405$ GHz; it is not converted to vertical motion.
-
-For a held-out pair $(a,b)$, predicted displacement is the difference between training cumulative displacements at $b$ and $a$. Observed phase is converted to millimeters after subtracting its mean at the training reference area, \texttt{141:142/218:219}. The reference is selected entirely from training data. Held-out pairs missing a required training date or finite/nonzero phase at that reference are excluded explicitly. There are 44 evaluated and 0 excluded pairs. No spatial offset is fitted to minimize held-out errors. Prediction locations must have finite predicted displacement and valid nonzero held-out phase; low-coherence observed held-out values are not selectively discarded. Consequently these residuals include errors in the held-out observations as well as training predictions. Evaluability does not establish permanent-gap validity.
-
-All-prediction pooled RMSE is 0.984 mm, versus 0.699/5.150 mm inside/outside the training quality mask. Training-only support bins range from 2.338 mm in the lowest group to 0.412 mm in the highest group. This comparison uses no held-out coherence in its strata. We additionally compare three predictions on identical evaluable observations: cumulative time-series differences, training HDF5 linear velocity multiplied by the pair interval in years (365.25 days), and zero relative displacement. Their pooled RMSE values are 0.984, 11.751 and 11.784 mm. The velocity baseline uses the same final training reference as the cumulative series. Neither baseline uses held-out measurements for fitting. All held-out acquisition dates remain represented in training: this tests edge reconstruction, not prediction at unseen dates. Reconstructed date-dependent atmospheric phase can contribute to the difference from a linear or zero-displacement baseline, so the improvement does not establish deformation accuracy. Shared dates and atmospheric components limit independence, so spatial-pixel sample sizes and pair counts are descriptive denominators, not effective independent sample sizes. Five support thresholds (0.2, 0.3, 0.5, 0.7, 0.8), all four confusion categories, population/area weights, support-bin counts and quality medians are saved rather than selecting only one favorable threshold.
-
-Evidence files are \path{support_finalmask_confusion.csv}, \path{support_quality_bins.csv}, \path{heldout_pairs.csv}, \path{heldout_support_bins.csv}, \path{heldout_prediction_comparison.csv}, \path{descriptive_correlations.csv} and \path{audit.json} within \path{results/timeseries/}. The audit verifies all twelve stage completions, absence of held-out edges from training input directories, population conservation in confusion tables, pooled residual reconstruction and independent recomputation of selected pair residuals. It verifies implementation and design, not external physical accuracy.
-
-\begin{figure}[htbp]\centering
-\includegraphics[width=\linewidth]{figures/S3_matched_quality.pdf}
-\caption{Actual same-chain quality fields in the Bangkok processing rectangle. Panel a shows the unfiltered fitted LOS velocity only where the full quality mask passes. Other panels retain finite quality diagnostics and held-out RMSE. Symmetric velocity limits and the upper limits of other color scales use their 98th percentiles for readability; values outside those limits are clipped in color only and retained in the data. No map supplies independent GNSS accuracy or motion in unobserved locations.}\end{figure}
-
-% end matched_supplement.tex
-
-
-\clearpage
-\section*{S8. Downstream exposure examples and the Iran provenance correction}
-\footnotesize
+\section*{S3. Downstream exposure examples and the Iran provenance correction}
+\small
+% ORIGINAL_TABLE_6
 \begin{longtable}{p{.24\linewidth}p{.38\linewidth}p{.3\linewidth}}
 \caption{Targeted examples of downstream exposure practice and the scope supported by each study.}\\
 \toprule Source & Reported measurement and population-transfer choices & Permitted interpretation for the present review\\\midrule\endfirsthead
@@ -241,7 +142,7 @@ LiCSBAS \citep{morishita2020licsbas} & Unwrapped-data checks, loop closure, inve
 \end{longtable}
 \normalsize
 
-\paragraph{Published local validation context.} Local validation practice is also relevant. A 2016--2019 Bangkok thesis compared descending Sentinel-1 PS rates with four deep leveling benchmarks. The reported vertical-leveling/descending-LOS relative-rate pairs were -3.32/-4.28, -7.08/-6.49, -2.62/-3.93 and -1.84/-0.88 mm yr$^{-1}$; the PS-to-benchmark offsets were 15.32, 196.59, 120.34 and 34.89 m, and the leveling-fit $R^2$ values were 0.82, 0.94, 0.86 and 0.10, respectively \citep{luachapichatikul2020bangkok}. The first three rate differences were 0.59--1.31 mm yr$^{-1}$, but the quantities are different motion components, the spatial offsets reach about 197 m, and only four pairs were reported. We treat this as evidence of local validation practice, not like-for-like validation of our products. A separate Bang Kapi study compared a five-month 2019--2020 InSAR time series with RTSD SBKK CORS, reporting $r=0.88$ and RMSE 3.98 mm, but used an average within 100 m because no InSAR observation was available at the station itself \citep{pumpuang2024bangkapi}. An earlier analysis of the same SBKK station used 23 weekly RINEX solutions from October 2019 to March 2020 and reported a vertical ellipsoidal-height rate of 13.308 mm yr$^{-1}$; its authors noted concurrent construction and pile driving at the station building, so the measured motion may include local site or structure effects \citep{keerinart2020sbkk}. A 2018--2022 Bangkok time-series thesis also compared ascending and descending results with seven CORS stations, reporting agreement at four and two stations, respectively \citep{aieorattanawadee2022bangkok}. These examples establish that independent geodetic checks are used in the region, while their small station counts, spatial offsets, site conditions or interval-specific targets limit transfer to our study. The published abstracts and summaries do not provide complete machine-readable, time-tagged station observations and processing metadata needed for our own matched reanalysis.
+The Bangkok examples in Table~S3 document local geodetic validation practice. Their published summaries do not provide the complete station series and processing metadata required for an independent matched reanalysis of our stack.
 
 \paragraph{SBKK support check in the separate LiCSAR stack.} The published RTSD coordinate for SBKK (13.792944$^\circ$ N, 100.596494$^\circ$ E) lies inside the matched LiCSAR subregion \citep{jica2024thailandcors}. At this coordinate, the nearest LiCSAR grid-cell center is 44.8 m away and passes the final LiCSBAS mask. Two pixel centers lie within a 100-m radius, and both pass the mask; their median velocity is 2.314 mm yr$^{-1}$ in LOS. This is a product-specific support audit, not GNSS validation. It differs from the cited PS-InSAR study because the sensor product and processing chain differ. We do not compare the LOS rate directly with the published SBKK ellipsoidal-height rate: the motion components and reference frames differ, and the SBKK paper reports construction and pile driving during the GNSS interval. The acquisition-level series and calculation are retained in \path{results/gnss_feasibility/SBKK_100m_LiCSAR.csv}, \path{results/gnss_feasibility/SBKK_support_summary.json} and \path{audit_sbkk_support.py}.
 
@@ -249,7 +150,21 @@ The archived Iran rate and mask match the official Zenodo 10815578 files by MD5 
 
 The evidence examples were selected for direct relevance, not through a systematic search designed to estimate prevalence. They document that population exposure is reported at different spatial units and that some studies explicitly discuss support limitations. They do not demonstrate widespread downstream misuse, nor does silence about a denominator prove that an author omitted quality control. The Iran parser demonstration is not restored as an independently validated exposure comparison. Older EGMS point-based sums are also not restored: counting an entire population pixel once for every point violates the required nonduplicated area accounting, and an LOS component cannot be relabeled vertical without a geometric decomposition.
 
-\section*{S9. Reproduction and result-to-claim mapping}
+
+
+
+\section*{Part B: Allocation mechanism, numerical checks and reporting scale}
+\section*{S4. Geometry, conservation and numerical checks}
+Coherence and unwrapped validity are intersected on the union of their actual raster boundaries before integration. A disjoint-mask analytical test confirms that their intersection is zero even if both separately averaged masks are one-half. Further tests cover extensive mass splitting, partial target coverage, half-pixel offsets, valid zero coherence and spherical area conservation.
+
+All 512 production scale/origin/exposure/domain/method combinations preserve the native reference and the appropriate extensive total within the stated numerical tolerance. In the baseline summaries, the largest relative error in $S_E+U_E=T_E$ is $1.99\times10^{-15}$. The largest absolute covariance-identity residual is $5.96\times10^{-8}$ in the corresponding exposure units. Positive-, negative- and zero-covariance analytical examples verify the sign convention independently of the raster implementation. The exact empirical weighted-distribution integral matches the direct population deficit at printed precision.
+
+The UTM transfer uses GDAL sum resampling of extensive first and cross moments. It is an approximate nonlinear reprojection; it is not described as exact spherical polygon reprojection. Production 50-m transfers close their totals within $10^{-8}$ relative tolerance. Recomputing from native inputs at 25 m produces measured relative total drifts of $-1.66\times10^{-5}$ for area, $-2.06\times10^{-5}$ for supported area, $-4.11\times10^{-6}$ for population and $-3.28\times10^{-6}$ for supported population. These diagnostic fields are not renormalized. Their maximum combined effect on the 1-km uniform population estimate is $2.40\times10^{-6}$ of the AOI population, or 0.00024 percentage points. The diagnostic drift is reported separately from the production conservation result.
+
+These checks verify implementation identities and numerical stability. They do not establish population accuracy, velocity accuracy or independence of model inputs. The machine-readable records are \path{results/numerical_checks.json}, \path{results/allocation/conservation.csv} and \path{integration_convergence.csv}.
+
+
+\section*{S5. Reproduction and result-to-claim mapping}
 The experiment directory separates source manifests, configuration, computed results, figures and manuscript sources. \texttt{paper/number\_ledger.json} records generated numerical macros and their source CSVs. The numerical checks verify geometry and accounting; the real-data comparisons and controlled masking address scientific sensitivity under their stated assumptions. No result validates unobserved subsidence simply because an implementation check passes.
 
 \begin{tabular}{p{.22\linewidth}p{.69\linewidth}}\toprule
@@ -264,11 +179,11 @@ Second-region geometry & \texttt{results/dwr/}; actual polygon-union audit and r
 Matched processing & \texttt{results/timeseries/}; stage logs, configuration and holdout records\\
 Published benchmark context & \texttt{results/literature/bangkok\_leveling\_pairs.csv} and source audit JSON; source thesis linked in the bibliography.\\\bottomrule
 \end{tabular}
-\begin{figure}[htbp]\centering
-\includegraphics[width=\linewidth]{figures/S4_dwr_masking.pdf}
-\caption{Controlled masking within the original Fresno observation footprint. ``Dense'' and ``sparse'' indicate preferential removal from higher- and lower-density fine locations. Identical masks are supplied to all three methods. Symbols and bars summarize 100 repetitions by their means and central 95\% mask ranges, conditional on the fixed GHSL reference. The denominator is population originally allocated inside the published footprint; the figure does not evaluate motion outside that footprint.}\end{figure}
 
-\section*{S10. Method choices and comparison scope}
+
+
+\section*{S6. Method choices and comparison scope}
+% ORIGINAL_TABLE_7
 \begin{longtable}{p{.19\linewidth}p{.34\linewidth}p{.38\linewidth}}
 \caption{Relationship to existing methods and the evidence supplied by this study.}\\
 \toprule Approach & Required information and interpretation & Evaluation here\\\midrule\endfirsthead
@@ -284,13 +199,13 @@ Imputation or additional sensors & An explicit deformation model or additional i
 
 Uniform allocation is adequate for the chosen model target when within-cell population--support covariance is negligible at the required reporting scale. Native allocation retains that covariance when fine input information is available. These are conditional choices; a method that retains inaccurate fine population structure is not thereby demographically validated. Complete-case summaries remain valid for their explicitly observed domain. The contribution here is the matched-input evaluation and quantified applicability, rather than the invention of areal interpolation or an accounting identity.
 
-\section*{S11. Boundary sensitivity and internal computational recheck}
+
+\section*{S7. Boundary sensitivity and internal computational recheck}
 For the primary $q=0.3$ population field, an additional implementation constructs the geographic domain from the union of native GHSL mask pixels. Edges are densified at native-pixel spacing before transformation to UTM. Coarse squares fully covered by this boundary form the complete-interior subset; all remaining included squares form the partial-boundary subset. Different origins produce different interior subsets, so each row uses its own population and reference deficit. The main full-domain estimator is unchanged. The metric moments were freshly reprojected and reaggregated with independently constructed interval weights; all 32 primary method/scale/origin estimates agree with the retained table within $10^{-4}$ population units.
 
+% ORIGINAL_TABLE_8
 \begin{table}[htbp]\centering\small
 \caption{One-kilometre uniform allocation after excluding boundary-crossing squares. Deficits are in million mean population-allocation units. Relative difference uses the interior reference; population share uses the original whole-domain total.}
-
-% begin round2_boundary_table.tex
 \begin{tabular}{rrrrrr}\toprule
 Origin shift (m) & Cells & Pop. share (\%) & Native & Uniform & Difference (\%)\\\midrule
 (0, 0) & 14,120 & 99.49 & 2.960 & 4.685 & 58.29\\
@@ -298,8 +213,6 @@ Origin shift (m) & Cells & Pop. share (\%) & Native & Uniform & Difference (\%)\
 (0, 500) & 14,123 & 99.41 & 2.955 & 4.685 & 58.56\\
 (500, 500) & 14,111 & 99.27 & 2.944 & 4.664 & 58.46\\
 \bottomrule\end{tabular}
-
-% end round2_boundary_table.tex
 
 \end{table}
 
@@ -314,13 +227,298 @@ Each region's complete 21,600-row controlled-mask factorial was checked for cove
 For Fresno, an independent global union of the original polygon rings differs from the stored covered-area sum by 0.0019 m$^2$ over approximately 388.9 km$^2$; 128 deterministic random pixel intersections agree within $2.34\times10^{-11}$ in support fraction. All 1,260 distinct original radar rasters referenced by the legacy, expanded and matched manifests match their recorded checksums after relocation. The manifests retain their original paths as provenance; an explicit resolver rebases known roots and rejects missing or ambiguous inputs. These are internal implementation checks with defined scope; they do not provide independent physical or demographic validation.
 
 
-\clearpage
-% begin cross_supplement.tex
-\section*{S12. Crossed population-model and pair-selection sensitivity}
-The common domain contains 1,754,190 native GHSL pixels and 22,357,666.843 GHSL population units; 142,949.221 GHSL units from the full primary footprint are excluded. It intersects the primary footprint with full coverage of GHSL 2020 and WorldPop 2020 only; the four-layer epoch comparison in S6 uses a separately defined intersection. Each model is normalized to the GHSL total in this two-model domain before any support calculation. We cross these two allocations with the original 28-pair and expanded 224-pair mean joint support fields, at $q=0.3$. Neither population product is treated as demographic truth.
+
+\section*{S8. Covariance identity and scale sensitivity diagnostic}
+Define the normalized deficit $D=U/T$, where $U$ is deficit allocation and $T$ the fixed total allocation. The expressions below are dimensionless shares; multiplying by 100 gives percentage points, not absolute population units.
+
+For a reporting square containing fine pixels $i$, let $A_i$ be pixel area, $s_i\in[0,1]$ the observed-support fraction and $\rho_i=p_i/A_i$ the native population density. With the same total population and geographic square held fixed, the difference between the area-uniform and native-population support deficits is
+\begin{equation}
+D_{\mathrm{uniform}}-D_{\mathrm{native}}
+=\frac{\operatorname{Cov}_{A}(\rho,s)}{\bar{\rho}_{A}},
+\end{equation}
+where area-weighted moments are calculated over the square and $\bar{\rho}_{A}=\sum_i A_i\rho_i/\sum_i A_i$. The absolute difference is bounded by $\sigma_{\rho,A}\sigma_{s,A}/\bar{\rho}_{A}$ by Cauchy--Schwarz. This identity describes the accounting mechanism; it is not an empirical uncertainty interval.
+
+We checked this identity on a fixed common domain of 120,175 pixels, crossing the GHSL and common-total-normalized WorldPop surfaces with the 437-pair mean input-support field and the final full-stack quality mask. Projected pixel centers were assigned to 250-, 500-, 1,000- and 2,000-m squares at four grid origins. The resulting scale/origin ranges are:
+
+% ORIGINAL_TABLE_12
+\begin{table}[htbp]\centering\small
+\caption{Uniform-minus-native deficit and Cauchy--Schwarz upper bound across projected square sizes and grid origins. Values are percentage points. Pixel-center grouping is a sensitivity diagnostic and differs from the direct polygon-intersection integration used for the primary 1-km result.}
+\begin{tabular}{llrr}\toprule
+Support field & Population surface & Difference range & Bound range \\
+\midrule
+437-pair mean & GHSL & 0.550--4.670 & 1.076--9.599 \\
+437-pair mean & WorldPop, normalized & 0.164--2.376 & 0.429--5.320 \\
+Final quality mask & GHSL & 0.012--0.241 & 0.088--1.967 \\
+Final quality mask & WorldPop, normalized & 0.010--0.197 & 0.054--1.200 \\
+\bottomrule\end{tabular}
+\end{table}
+
+The covariance identity residual is at most $1.22\times10^{-15}$ percentage points across all 64 model--support--scale--origin combinations, and no observed absolute difference exceeds its corresponding bound. These numerical checks confirm implementation consistency only. The grouped-square differences are not pooled with the primary exact-geometry estimate; their spread across scales and origins is design sensitivity, not a confidence interval. WorldPop is a model-sensitivity comparison, not independent demographic truth, and the two products may share census inputs. Input checksums, full scenario definitions, local effects and machine-readable results are retained with the analysis outputs.
+
+
+
+\section*{S9. A tolerance-based reporting rule for scale-dependent allocation error}
+
+The bound requires the declared fine-scale population and support inputs, or externally justified bounds on their within-cell variation. Coarse population totals alone cannot supply it. For a reporting application with a prespecified acceptable aggregate error $\epsilon$, the analytic Cauchy--Schwarz upper bound can be compared with $\epsilon$ for each population model, scale and grid origin. A bound at or below $\epsilon$ certifies that the allocation discrepancy cannot exceed that tolerance under the stated inputs. A bound above $\epsilon$ is inconclusive; it does not demonstrate that the observed error is unacceptable. The tolerances below (0.5, 1 and 2 percentage points of total allocation) are illustrative choices, not published standards, safety levels or policy thresholds.
+
+At 250 m, all four origins for both GHSL and CA-POP have bounds below 1 pp (maximum 0.58 and 0.88 pp, respectively). At 500 m, none of the eight model-origin combinations meets 1 pp; at 2 pp, all four GHSL origins pass and no CA-POP origin passes. At 1 km and 2 km, neither model meets 2 pp for every origin. The bounds rise with scale, while local L1 error and net error can differ substantially and top-decile spatial overlap declines. Thus a small net aggregate difference alone need not preserve local ranking. The detailed 24 model-scale-tolerance summaries and source 32-row audit are in \texttt{reporting\_tolerance/tolerance\_summary.csv} and \texttt{scale\_method\_sensitivity.csv}; these are deterministic finite-domain diagnostics, not sampling uncertainty.
+
+
+
+
+
+
+\section*{S10. Spatial decomposition of Bangkok support-allocation effects}
+
+To show whether the AOI-wide allocation effect hides local reversals or changes in low-support labels, we grouped the matched Bangkok processing grid into projected 1-km and 5-km squares aligned to integer-kilometre coordinates in UTM Zone 47N. Within each square, the native estimate weights the pixel support by the GHSL allocation; the area-uniform estimate applies the square's area-weighted support fraction to the same square population total. The reported difference is uniform minus native missing-support population, divided by the fixed AOI allocation total. Pixel-center grouping is used here as a local diagnostic and is kept separate from the source-cell-intersection primary estimates.
+
+At 1 km, the difference is 3.194 percentage points for the mean support across 437 input pairs and 0.103 points for the final quality mask. At 5 km it is 6.580 and 0.389 points, respectively, illustrating scale dependence. The 5-km tile contributions for the final mask include both signs and cancel 13.2\% of their summed absolute effect; at 1 km the cancellation fraction is 39.8\%. For a descriptive 50\% support cutoff, native-population and area-uniform unit labels differ in 150 1-km units containing 139,903 GHSL allocation units for the mean input-support field, and in 17 units containing 2,229 allocation units for the final mask. These are units whose labels disagree, not a net change in population assigned to the low-support category. The 50\% cutoff is neither a hazard threshold nor a universal operational rule.
+
+% ORIGINAL_TABLE_18
+\begin{table}[htbp]\centering\scriptsize
+\caption{Local decomposition of support-allocation effects in the fixed Bangkok AOI. Deficits are percentages of the common GHSL allocation total; signed differences are percentage points. Sign-cancellation fraction is calculated across all reporting squares at the listed scale. Discordant population is allocation mass in squares whose native and area-uniform support fractions fall on opposite sides of 50\%.}
+\begin{tabular}{llrrrrr}\toprule
+Support field & Scale & Native deficit & Uniform deficit & Difference & Sign cancellation & \shortstack{Discordant units /\\GHSL units}\\
+ & (km) & (\%) & (\%) & (pp) & (\%) & (count / allocation)\\\midrule
+437-pair mean & 1 & 3.454 & 6.648 & 3.194 & 1.9 & 150 / 139,903\\
+437-pair mean & 5 & 3.454 & 10.034 & 6.580 & 0.0 & 12 / 123,735\\
+Final quality mask & 1 & 0.294 & 0.398 & 0.103 & 39.8 & 17 / 2,229\\
+Final quality mask & 5 & 0.294 & 0.684 & 0.389 & 13.2 & 0 / 0\\
+\bottomrule\end{tabular}
+\end{table}
+
+The final-mask effect at the primary 1-km scale is small, and the number of threshold-discordant allocation units is also small. The larger mean-input-support effect should not be interpreted as final-product failure: the two support fields summarize different stages of the processing chain. This is a finite-domain spatial and scale decomposition, not spatial cross-validation, a confidence interval, external accuracy, or evidence of motion at invalid locations. Machine-readable tile-level results, input checksums and a reproducible script are retained in the analysis bundle.
+
+
+
+
+
+\section*{Part C: Missingness, estimator availability and class bounds}
+\section*{S11. Artificial masking, error denominators and synthetic bounds}
+Each region has 21,600 method/scale/origin outputs: four missingness mechanisms, three removal fractions, 100 repetitions, three coarse sizes, two origins and three allocation rules. The same mask is used for all methods within a repetition. Gaussian smoothing generates spatial masks; density-associated scores combine standardized log density with a spatial term. The fixed seed is 20260927. Removal fractions refer to available fine pixels, while the realized removed area fraction is saved separately. In Fresno the controlled reference domain is the original published observed footprint, including its fractional intersections with GHSL pixels.
+
+% ORIGINAL_TABLE_3
+\begin{table}[htbp]\centering\small
+\caption{Bangkok masking at 30\% removal, 10-pixel cells and zero origin. Error is relative to known removed allocation. Ranges are conditional mask percentiles.}
+\begin{tabular}{llrr}\toprule
+Mechanism & Method & Mean error (\%) & 2.5th--97.5th (\%)\\\midrule
+density negative & area uniform & 120.35 & [105.55, 134.61] \\
+density negative & building weighted & 19.60 & [17.46, 22.28] \\
+density negative & cell center & 102.97 & [86.96, 121.20] \\
+density positive & area uniform & -14.17 & [-15.15, -13.03] \\
+density positive & building weighted & -4.99 & [-5.52, -4.47] \\
+density positive & cell center & -11.64 & [-13.98, -9.39] \\
+random & area uniform & 0.04 & [-0.40, 0.44] \\
+random & building weighted & 0.03 & [-0.24, 0.27] \\
+random & cell center & 0.08 & [-9.19, 8.76] \\
+spatial & area uniform & 0.01 & [-0.82, 0.81] \\
+spatial & building weighted & 0.01 & [-0.50, 0.50] \\
+spatial & cell center & 0.01 & [-3.60, 3.12] \\
+\bottomrule\end{tabular}
+
+\end{table}
+
+When the removed population is small, relative errors can be large: low-density-associated removal at 10\% of pixels is such a case. Main-text Fig.~4 instead normalizes by the entire test-domain population, so a large ratio is not mistaken for a large fraction of all residents. Raw reference totals, estimates, signed errors, cell RMSE and absolute cell-error totals remain available for every scenario. Building-weighted improvement is conditional on GHSL's shared built-environment information and should not be generalized to independently observed household locations.
+
+The synthetic hazard fields are experiment definitions, not inferred or measured deformation. With threshold membership $h_p\in\{0,1\}$ and introduced missingness $m_p$, the omitted threshold allocation $\sum_p E_p h_p m_p$ lies between zero and $\sum_p E_p m_p$. Adding observed threshold allocation gives the identification interval in the main text. All synthetic checks satisfy that deterministic bound. No probability coverage or external geodetic validation is claimed. Complete outputs are under \texttt{results/masking/} and \texttt{results/dwr/masking/}.
+
+The Fresno repeat shows the same sign reversal with different magnitudes (Fig.~S1). At 30\% removal, 10-pixel cells and zero origin, uniform-area mean error is $-16.14$ percentage points of the observed-footprint population for high-density-associated removal and $+7.28$ points for low-density-associated removal. The corresponding built-weighted errors are $-10.61$ and $+4.23$ points. Uniform-area mean errors for random and unrelated spatial masks are $-0.021$ and $-0.0025$ points. Relative-to-removed-population errors can be very large in sparsely populated masks; both denominators are retained, and the figure uses the whole observed-footprint total. These results support a conditional allocation mechanism, not a universally successful correction.
+
+
+% ORIGINAL_FIGURE_4
+\begin{figure}[htbp]\centering
+\includegraphics[width=\linewidth]{figures/S4_dwr_masking.pdf}
+\caption{Controlled masking within the original Fresno observation footprint. ``Dense'' and ``sparse'' indicate preferential removal from higher- and lower-density fine locations. Identical masks are supplied to all three methods. Symbols and bars summarize 100 repetitions by their means and central 95\% mask ranges, conditional on the fixed GHSL reference. The denominator is population originally allocated inside the published footprint; the figure does not evaluate motion outside that footprint.}\end{figure}
+
+\section*{S12. Artificial masking of observed LOS classes}
+The reference is the unfiltered fitted line-of-sight (LOS) velocity from the full LiCSBAS branch, positive toward the satellite, restricted to its final validity mask. It contains 117,103 of 120,701 grid cells and 11.281 million GHSL allocation units. Population-weighted shares at or below $-2$, $-5$ and $-10$ mm yr$^{-1}$ are 2.474\%, 0.2805\% and 0.0223\%, respectively. These are relative LOS classes, not vertical-settlement or hazard thresholds.
+
+For each of 100 seeded repetitions, we remove 10\% or 30\% of valid cells using random, spatially clustered, high-velocity-spread or low-velocity-spread scores. Quality-associated scores include a seeded random perturbation. We use 5-, 10- and 20-source-pixel square units (about 0.55, 1.11 and 2.22 km), four zero/half-cell origins and partial edge units. Each estimator predicts only the class allocation in the artificially hidden part of a unit. Its reference is the sum of the original fine-pixel class allocation there. The observed-population prevalence rule requires positive retained population. The center rule uses the nearest retained pixel; ties are averaged. It requires at least one retained pixel. A unit with no hidden allocation has the known hidden target zero; otherwise a rule without its required information remains undefined.
+
+Errors are calculated on units for which every compared rule is defined. The common-domain denominator is their originally valid population allocation, including retained and artificially hidden portions. We also preserve each method's own computable domain and unestimated allocation, normalized by the original full-domain total. Omitting undefined units from a conditional error calculation does not recover their class. Whole-domain bounds add all hidden allocation to the observed class allocation for the upper endpoint; they include hidden cells even where an estimator supplies a prediction.
+
+% ORIGINAL_TABLE_11
+\begin{table}[htbp]\centering\small
+\caption{Hidden-class estimation at 30\% removal, 10-pixel units and $v_{LOS}\leq-5$ mm yr$^{-1}$. Reference and signed bias are means in GHSL allocation units on the common-computable domain. Mean relative bias is the mean of case-specific ratios, not the ratio of the two mean columns. The final column counts cases with a positive reference denominator. Availability and conditional signed/L1 errors are given in Table~S11 for the overlapping design.}
+\begin{tabular}{llrrrr}\toprule
+Removal & Rule & Mean reference & Mean bias & Mean relative (\%) & Defined ratios\\\midrule
+Random & Prevalence & 9,514 & +91 & +1.1 & 400/400 \\
+Random & Center class & 9,514 & +9,455 & +99.7 & 400/400 \\
+Spatial clusters & Prevalence & 5,695 & +3,999 & +74.7 & 400/400 \\
+Spatial clusters & Center class & 5,695 & +7,970 & +146.3 & 400/400 \\
+High spread & Prevalence & 3,475 & +8,164 & +234.7 & 400/400 \\
+High spread & Center class & 3,475 & +11,090 & +319.6 & 400/400 \\
+Low spread & Prevalence & 509 & +1,945 & +378.7 & 400/400 \\
+Low spread & Center class & 509 & +2,420 & +518.6 & 400/400 \\
+\bottomrule\end{tabular}\end{table}
+
+For case $r$, the relative bias is $100(\widehat H_r-H_r)/H_r$; cases with $H_r=0$ are undefined for that ratio and are counted separately. The archive preserves both mean-of-ratios and the raw quantities needed to form a ratio-of-means. Percentile ranges elsewhere summarize seeded masks and origins; they are design sensitivities, not confidence intervals. The common-domain prevalence bias is positive under high-spread removal after unavailable units are excluded. Thus the earlier interpretation of a negative bias from zero-filled unavailable units is not retained. Neither prevalence nor a center class reliably recovers allocation under structured missingness. Velocity spread is a processing diagnostic, not a calibrated uncertainty interval.
+
+The complete 57,600-row factorial and grouped summaries are in \path{actual_los_masking/}. S14 adds the median-class rule to the overlapping 1.11-km design. All these tests condition on the population model, originally valid domain and observed LOS values. Original invalid pixels supply no hidden reference.
+
+
+
+
+\section*{S13. Finite-domain bounds for threshold-class allocation under the actual final mask}
+
+We quantified what can and cannot be identified for the actual LiCSBAS full-stack final quality mask on the fixed 2020 GHSL allocation domain. Let $T$ denote total allocated population units in the domain, $U$ the allocated units in pixels unsupported by the final mask, and $E_c$ the observed allocation in LOS class $c$ among supported pixels. Without assumptions about the unsupported pixels' LOS class, the finite-domain class share lies in $[E_c/T,\min(T,E_c+U)/T]$. This is a worst-case accounting interval, not a confidence interval and not a statement that deformation occurs in unsupported pixels.
+
+% ORIGINAL_TABLE_20
+\begin{table}[htbp]\centering\small
+\caption{Finite-domain allocation bounds for LOS threshold classes under the actual LiCSBAS final mask. Values are model allocation units and percentage points, not enumerated residents.}
+\begin{tabular}{rrrr}\toprule
+LOS threshold & Observed class units & Identified share interval (\%) & Width (pp) \\\midrule
+$\leq-2$ mm yr$^{-1}$ & 279,088 & [2.4666, 2.7610] & 0.2944 \\
+$\leq-5$ mm yr$^{-1}$ & 31,644 & [0.2797, 0.5741] & 0.2944 \\
+$\leq-10$ mm yr$^{-1}$ & 2,516 & [0.0222, 0.3167] & 0.2944 \\
+\bottomrule\end{tabular}
+\end{table}
+
+The interval width is set by the unsupported allocation share (0.2944 percentage points) for all three nested classes. The upper endpoint assigns every unsupported unit to the threshold class, so it is deliberately conservative. It bounds population allocation only; the actual LOS and physical motion in unsupported locations remain unknown. Results were calculated by \texttt{partial\_identification.py} from the retained full-quality raster and are in \texttt{partial\_identification/bounds.csv}.
+
+
+
+\section*{S14. Median-class assignment and hidden fine-pixel class allocation}
+We add the observed unit-median rate rule to the 30\%-removal, 10-pixel, $-5$ mm yr$^{-1}$ design in S12. There are 100 masks for each of four mechanisms and four fixed origins. A median-class indicator is multiplied by the hidden population allocation, and compared with the hidden fine-pixel class total. This adapts the classification step of published Census-block median-rate workflows; it does not reproduce their distinct target of assigning the entire block population to its median class. The two targets can differ even without missingness (the unmasked irregular-block comparison in S15 quantifies that difference).
+
+Prevalence requires positive observed population; median and center classification require an observed pixel. Undefined predictions remain undefined. All three errors use the same intersection of computable units in each case, with their full originally valid allocation as denominator. Unit-level absolute errors are summed before normalization to give local L1. The unestimated share has the original full-domain denominator. These quantities answer different questions and are reported together.
+
+% ORIGINAL_TABLE_21
+\begin{table}[htbp]\centering\small
+\caption{Estimator availability and hidden-class error over 400 mask--origin cases per mechanism. Unestimated allocation is a percentage of the original domain. Signed error, its 2.5th/97.5th percentiles and local L1 are percentage points of the common-computable domain. Separate lower/upper columns avoid ambiguous interval punctuation.}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{llrrrrr}\toprule
+Removal & Rule & Unestimated (\%) & Mean signed & Lower & Upper & Mean L1\\\midrule
+Random & Prevalence & 0.0000 & +0.0008 & -0.0074 & +0.0106 & 0.0392 \\
+Random & Median class & 0.0000 & +0.0190 & +0.0007 & +0.0399 & 0.1039 \\
+Random & Center class & 0.0000 & +0.0838 & +0.0544 & +0.1176 & 0.1479 \\
+Spatial clusters & Prevalence & 11.3467 & +0.0400 & -0.0014 & +0.1153 & 0.0900 \\
+Spatial clusters & Median class & 11.3417 & +0.0579 & +0.0012 & +0.1499 & 0.1182 \\
+Spatial clusters & Center class & 11.3417 & +0.0797 & +0.0122 & +0.1762 & 0.1321 \\
+High spread & Prevalence & 18.1625 & +0.0884 & +0.0354 & +0.1574 & 0.1071 \\
+High spread & Median class & 18.1612 & +0.1034 & +0.0527 & +0.2016 & 0.1271 \\
+High spread & Center class & 18.1612 & +0.1202 & +0.0564 & +0.2174 & 0.1424 \\
+Low spread & Prevalence & 28.6576 & +0.0242 & +0.0067 & +0.0503 & 0.0309 \\
+Low spread & Median class & 28.6573 & +0.0109 & -0.0004 & +0.0287 & 0.0202 \\
+Low spread & Center class & 28.6573 & +0.0301 & +0.0105 & +0.0741 & 0.0366 \\
+\bottomrule\end{tabular}\end{table}
+
+The prevalence rule has smaller mean local L1 than the median rule under random, clustered and high-spread removal; the median rule has smaller L1 under low-spread removal. The same ordering holds for absolute mean signed error here, but net error alone is not a measure of local accuracy. Under high-spread removal, all three common-domain mean signed errors are positive. The original-domain mean unestimated share rises from less than 0.0001\% for random removal to 11.34--11.35\% for clusters, 18.16\% for high spread and 28.66\% for low spread. Conditional errors cannot characterize these unavailable units.
+
+Mean whole-domain bound widths are 30.003, 30.204, 24.122 and 34.904 percentage points for random, clustered, high-spread and low-spread removal. The widths depend on all hidden population, not only undefined predictions. The full 4,800-row table, method-specific denominators and bounds are in \path{published_method_benchmark/}. These artificial-mask results do not identify physical motion in genuinely unsupported locations.
+
+
+
+\section*{S15. Actual irregular Census blocks and contiguous missingness}
+The reference domain contains 6,787 complete official 2020 Census blocks with P1 population 523,953. Blocks with no positive GHSL allocation weight contain 23 Census residents and cannot be normalized. Excluding those units leaves 523,930 normalized Census allocation units. Within each retained complete block, GHSL weights are normalized before selecting the known-rate footprint. This avoids forcing every Census allocation unit into observed locations. The known-rate footprint retains 522,596.78 allocation units, 38,569 published DWR cells and 65,108 exact block--cell intersections. The accounting is therefore $523{,}953=23+522{,}596.78+1{,}333.22$. Originally missing rates and the 1,333.22 units outside the known-rate footprint remain outside the controlled reference. The 23-person exclusion differs from the 45-person exclusion in S25 because that analysis uses a different raster grid/crop and common-support requirement; both are reported with their own denominator.
+
+The selected DWR mosaic item is the annual interval 1 October 2020--1 October 2021, distinct from the older multi-year footprint. We retrieve raw floating-point values with no palette/rendering transformation and convert the provider's feet to millimeters, divided by the exact interval duration in years. Rates are constant within published cells. Official NAD83 Census geometry and source-cell corners are projected to EPSG:3310 before exact intersections. Maximum polygon relative area-closure error is $2.31\times10^{-10}$; the conservative GHSL transfer has relative mass drift 0.000233, after which complete-block normalization fixes the Census total. The DWR footprint and rate layers share provider lineage; these are conditional method experiments, not independent geodetic truth.
+
+With seed 20261001, each of 30 repetitions defines a random cell ordering and distances to one or four random spatial centers. The latter generate large contiguous holes on the irregular valid footprint. The same ordering nests 10, 30 and 50\% removals. The three thresholds are $-3$, $-5$ and $-10$ mm yr$^{-1}$. All 2,430 method--mask--threshold rows and nine unmasked baseline rows are retained.
+
+Native observed-population prevalence extrapolates its measured class fraction to the block's originally known allocation. Area prevalence uses the observed area fraction. The unit-median rule classifies a whole block using the median of retained published-rate cells whose centers fall inside that block. The median rule is undefined when a block contains no retained pixel center, even if a retained cell intersects the block. No retained population/area leaves the corresponding prevalence undefined. Undefined units are not assigned zero. In the unmasked baseline, the median rule already has 412 undefined blocks representing 4.386\% of known-footprint allocation. At $-5$ mm yr$^{-1}$, the native known class share is only 0.1308\%. On the unmasked common-computable domain, median-class assignment has local L1 discrepancy 0.01167 pp, compared with zero for native prevalence by construction (area prevalence: 0.00561 pp). This baseline measures the difference between a whole-unit median-class rule and the fine-pixel class-allocation target; a lower discrepancy against the latter does not validate household locations or establish universal superiority over the published workflow.
+
+We report both method-specific availability and signed/local-L1 errors on the intersection of computable blocks. Each repetition additionally retains method-specific conditional error and its exact denominator. On the entire originally known domain, class allocation is bounded by retained class mass and retained class mass plus all hidden allocation. Every known reference lies inside this accounting interval. Its width is hidden population allocation, not the removed pixel fraction, and is independent of the estimator. The numerical bound check is deterministic, not a confidence interval.
+% ORIGINAL_TABLE_23
+\begin{table}[htbp]\centering\small
+\caption{Thirty-percent removal at the $-5$ mm yr$^{-1}$ cutoff: means over 30 fixed-mask repetitions. Unestimated share uses the known-footprint denominator; local L1 uses common-computable allocation. Bound width uses the whole known domain.}
+\begin{tabular}{llrrr}\toprule
+Mask & Method & Unestimated (\%) & Local L1 (pp) & Bound width (pp) \\\midrule
+Random & Native prevalence & 0.20 & 0.00296 & 30.02 \\
+Random & Area prevalence & 0.20 & 0.00608 & 30.02 \\
+Random & Unit median & 9.41 & 0.01345 & 30.02 \\
+One hole & Native prevalence & 23.01 & 0.00055 & 24.02 \\
+One hole & Area prevalence & 23.01 & 0.00575 & 24.02 \\
+One hole & Unit median & 26.80 & 0.01129 & 24.02 \\
+Four holes & Native prevalence & 28.64 & 0.00197 & 30.97 \\
+Four holes & Area prevalence & 28.64 & 0.00702 & 30.97 \\
+Four holes & Unit median & 32.61 & 0.01332 & 30.97 \\
+\bottomrule\end{tabular}
+\end{table}
+% ORIGINAL_FIGURE_6
+\begin{figure}[htbp]\centering
+\includegraphics[width=\linewidth]{figures/additional_S25_real_blocks.pdf}
+\caption{Availability and conditional estimation error on actual irregular Census blocks. Bars are repetition means for 30\% removal and the $-5$ mm yr$^{-1}$ cutoff. Each estimator uses identical missingness; the right panel omits noncomputable blocks by definition. Small local error must therefore be read alongside the left-panel allocation in blocks for which the estimator is undefined. Full 10/30/50\% and threshold results are supplied in the CSV archive.}\label{fig:addreal}
+\end{figure}
+
+At 30\% removal, native prevalence's unestimated allocation ranges from 0.064--0.307\% for random pixels, 3.73--44.98\% for one hole and 14.82--47.99\% for four holes. Mean class bounds are [0.0903,30.1064], [0.0859,24.1010] and [0.0977,31.0655]\%, respectively. Neither low conditional L1 error nor random-mask performance supports assigning a class to entire genuinely missing blocks. Full replicates, per-method denominators, bounds and source hashes are in \path{additional/real_block_masking/}.
+
+
+
+
+\section*{Part D: Sampling dependence and processing quality}
+\section*{S16. Expanded sampling and temporal network}
+The catalogue snapshot contains 1,603 pairs with both dates in 2016--2022. The 224-pair pool comprises eight randomly ranked pairs from each of 28 year--quarter strata, alternating short ($\leq24$ days) and long baselines as availability permits. An amendment swapped adjacent ranks in even quarters before support outcomes were extracted. Both the original rank plan and amended plan are retained. This improved baseline balance but did not force equal counts where long-baseline availability was limited.
+
+% ORIGINAL_TABLE_4
+\begin{table}[htbp]\centering
+\caption{Nested pool composition and population deficit at $q=0.3$.}
+\begin{tabular}{rrrr}\toprule
+Pairs & Short baseline & Long baseline & Deficit (millions)\\\midrule
+28 & 16 & 12 & \SampleTwentyEight{}\\
+56 & 30 & 26 & \SampleFiftySix{}\\
+112 & 60 & 52 & \SampleOneTwelve{}\\
+224 & 120 & 104 & \SampleTwoTwentyFour{}\\\bottomrule
+\end{tabular}
+\end{table}
+
+The equal-pair mean describes this sample design, not a catalogue-frequency-weighted population parameter. Start-date season does not contain the full seasonal history of a long-baseline pair. The additional repeated samples draw 1, 2, 4 or 8 pairs per year--quarter without replacement from the fixed eight-pair stratum; their conditional distributions characterize design sensitivity. A 224-pair draw contains the entire fixed pool, so its variation is zero by construction, not proof of zero uncertainty. Shared acquisitions and atmospheric signals mean that individual pairs are not independent replicates of physical accuracy.
+
+% ORIGINAL_FIGURE_1
+\begin{figure}[htbp]\centering
+\includegraphics[width=\linewidth]{figures/S1_sampling.pdf}
+\caption{Conditional sampling variation, leave-one-year-out sensitivity and support distributions from nested samples. Bands in the first panel are the central 95\% of introduced draws from the fixed pool; they are not confidence intervals for a complete time-series product.}\end{figure}
+
+% ORIGINAL_TABLE_5
+\begin{table}[htbp]\centering
+\caption{Date-graph diagnostics; these do not establish pixel-level connectivity.}
+\begin{tabular}{lrrrr}\toprule
+Graph & Pairs & Dates & Components & Independent cycles\\\midrule
+Legacy sample & 28 & 54 & 26 & 0\\
+Expanded pool & 224 & 225 & 29 & 28\\
+Catalogue 2016--2022 & 1603 & 288 & 1 & 1316\\\bottomrule
+\end{tabular}
+\end{table}
+
+Native pixels are aggregated by center into fixed $0.05^\circ$ longitude--latitude blocks anchored at integer multiples of $0.05^\circ$. All blocks are retained in the CSV; rank comparisons use the 539 blocks with at least 1,000 GHSL population units and 5 km$^2$ inside the domain. Relative to the 224-pair pool, the nested 28-, 56- and 112-pair deficit-amount rank correlations are 0.9940, 0.9992 and 0.9994. Their top-decile Jaccard overlaps are 0.8000, 0.8621 and 0.9286. Deficit-share correlations exceed 0.9991. Thus similar overall ranks can coexist with changed totals and changed membership near a selection boundary. These comparisons describe sampling stability; they do not validate measurement priorities or make the 224-pair pool a true target. Spatial blocks are not treated as independent accuracy replicates.
+
+% ORIGINAL_FIGURE_2
+\begin{figure}[htbp]\centering
+\includegraphics[width=\linewidth]{figures/S2_network_ranks.pdf}
+\caption{Actual acquisition-date graphs, temporal-baseline composition and descriptive block-rank sensitivity. Each arc joins the two dates of an input pair; graph connectivity is reported in Table~S14. The matched graph precedes quality rejection. The rank panel uses a restricted vertical range to show small differences; all comparisons use the same 539 eligible blocks and the fixed 224-pair pool as comparator.}\end{figure}
+
+
+\section*{S17. Matched LiCSBAS processing and holdout}
+The upstream LiCSBAS2 commit is \path{2627e50a1c703becd4a0b18754b05c1cf8c564d5}. Both branches complete steps 11--16 without changes to tracked scientific source. A documented Windows I/O wrapper substitutes a native parameter reader for external grep and copies browse PNGs instead of creating symlinks. Its optional GDAL import only affects unused GeoTIFF helper functions. Input preparation uses Rasterio independently. All processing is serial with a fixed NumPy seed; package versions and the exact wrapper diff are retained.
+
+The canonical processing raster has 301 columns and 401 rows, with actual affine transform recorded in \path{results/timeseries/geometry.json}; its pixel spacing is approximately 108 by 111 m at this latitude. The input frame is 062D\_07629\_131313. Global input connectivity is a selection requirement, not a guarantee of pixel-level connectivity. Of 437 full-stack inputs, 431 survive pair-level checks; of 393 training inputs, 382 survive. Both original holdout membership and rejected-pair lists are saved. Held-out phase/coherence is never used by the training workflow.
+
+Step 11 uses the upstream mean-coherence threshold 0.05 and unwrapped-coverage threshold 0.3. Step 12 uses a loop threshold of 1.5 rad. Step 13 uses least squares with regularization parameter 0.0001 and requires more than 104 valid interferograms for inversion. Step 14 retains the upstream 100 bootstrap draws and spatiotemporal-consistency calculation. Bootstrap velocity spread is a processing diagnostic, not a calibrated uncertainty interval for physical velocity.
+
+Step 15 uses fixed C-band defaults with automatic threshold relaxation disabled: mean coherence at least 0.05, at least 156 valid interferograms, velocity spread at most 100 mm yr$^{-1}$, maximum connected duration at least one year, at most 10 temporal gaps, spatiotemporal inconsistency at most 5 mm, at most 50 interferograms without a loop, at most 5 loop errors and inversion residual RMS at most 2 mm. The combined mask therefore contains information beyond the $q=0.3$ input diagnostic. It also shares coherence information with that diagnostic. Rates in the saved mask logs use the upstream finite/non-reference denominator; reported domain fractions count all 120,701 processing cells and explicitly include the finite reference pixel.
+
+Step 16 applies the upstream 2-km spatial and 21-day temporal filter, without detrending, DEM-error fitting or height-linear correction. Both filtered products are retained, but the held-out prediction is deliberately evaluated from \texttt{cum.h5}, the unfiltered training inversion. Thus prediction does not introduce a filtering-dependent smoothing comparison. No atmospheric correction or external GNSS datum is added. LOS displacement is relative and positive toward the satellite under the coefficient $-c/(4\pi f)$, with $f=5.405$ GHz; it is not converted to vertical motion.
+
+For a held-out pair $(a,b)$, predicted displacement is the difference between training cumulative displacements at $b$ and $a$. Observed phase is converted to millimeters after subtracting its mean at the training reference area, \texttt{141:142/218:219}. The reference is selected entirely from training data. Held-out pairs missing a required training date or finite/nonzero phase at that reference are excluded explicitly. There are 44 evaluated and 0 excluded pairs. No spatial offset is fitted to minimize held-out errors. Prediction locations must have finite predicted displacement and valid nonzero held-out phase; low-coherence observed held-out values are not selectively discarded. Consequently these residuals include errors in the held-out observations as well as training predictions. Evaluability does not establish permanent-gap validity.
+
+All-prediction pooled RMSE is 0.984 mm, versus 0.699/5.150 mm inside/outside the training quality mask. Training-only support bins range from 2.338 mm in the lowest group to 0.412 mm in the highest group. This comparison uses no held-out coherence in its strata. We additionally compare three predictions on identical evaluable observations: cumulative time-series differences, training HDF5 linear velocity multiplied by the pair interval in years (365.25 days), and zero relative displacement. Their pooled RMSE values are 0.984, 11.751 and 11.784 mm. The velocity baseline uses the same final training reference as the cumulative series. Neither baseline uses held-out measurements for fitting. All held-out acquisition dates remain represented in training: this tests edge reconstruction, not prediction at unseen dates. Reconstructed date-dependent atmospheric phase can contribute to the difference from a linear or zero-displacement baseline, so the improvement does not establish deformation accuracy. Shared dates and atmospheric components limit independence, so spatial-pixel sample sizes and pair counts are descriptive denominators, not effective independent sample sizes. Five support thresholds (0.2, 0.3, 0.5, 0.7, 0.8), all four confusion categories, population/area weights, support-bin counts and quality medians are saved rather than selecting only one favorable threshold.
+
+Evidence files are \path{support_finalmask_confusion.csv}, \path{support_quality_bins.csv}, \path{heldout_pairs.csv}, \path{heldout_support_bins.csv}, \path{heldout_prediction_comparison.csv}, \path{descriptive_correlations.csv} and \path{audit.json} within \path{results/timeseries/}. The audit verifies all twelve stage completions, absence of held-out edges from training input directories, population conservation in confusion tables, pooled residual reconstruction and independent recomputation of selected pair residuals. It verifies implementation and design, not external physical accuracy.
+
+% ORIGINAL_FIGURE_3
+\begin{figure}[htbp]\centering
+\includegraphics[width=\linewidth]{figures/S3_matched_quality.pdf}
+\caption{Actual same-chain quality fields in the Bangkok processing rectangle. Panel a shows the unfiltered fitted LOS velocity only where the full quality mask passes. Other panels retain finite quality diagnostics and held-out RMSE. Symmetric velocity limits and the upper limits of other color scales use their 98th percentiles for readability; values outside those limits are clipped in color only and retained in the data. No map supplies independent GNSS accuracy or motion in unobserved locations.}\end{figure}
+
+
+
+
+\section*{S18. Crossed population-model and pair-selection sensitivity}
+The common domain contains 1,754,190 native GHSL pixels and 22,357,666.843 GHSL population units; 142,949.221 GHSL units from the full primary footprint are excluded. It intersects the primary footprint with full coverage of GHSL 2020 and WorldPop 2020 only; the four-layer epoch comparison in S22 uses a separately defined intersection. Each model is normalized to the GHSL total in this two-model domain before any support calculation. We cross these two allocations with the original 28-pair and expanded 224-pair mean joint support fields, at $q=0.3$. Neither population product is treated as demographic truth.
 
 All comparisons use 1-km cells in UTM zone 47N and offsets $(0,0)$, $(500,0)$, $(0,500)$ and $(500,500)$ m. Within each combination, native-model and uniform allocations have identical cell population totals and the same included-domain area. We project extensive area, supported area, population and supported population separately onto a 50-m integration grid. The population--support product is formed before projection. Retaining partial cells avoids full-cell extrapolation outside the domain.
 
+% ORIGINAL_TABLE_9
 \begin{table}[htbp]\centering\footnotesize
 \caption{Crossed population-model and pair-selection comparison at 1 km and $q=0.3$. Both models use the same domain and total. Deficits and differences are in millions of allocation units (M). Ranges span four grid origins; they are not confidence intervals. $\Delta=U_{\rm uniform}-U_{\rm native}$, and pp denotes percentage points of the common total.}\label{tab:cross}
 \setlength{\tabcolsep}{3.5pt}
@@ -336,21 +534,20 @@ Production first and cross moments conserve source totals to relative tolerance 
 
 All 16 production rows have positive uniform-minus-native differences. GHSL gives a larger effect than WorldPop under both pair selections. The result supports a persistent direction for these selected inputs, while showing that a single percentage cannot represent population-model sensitivity. Because pair number and pair composition change together, no causal effect of sample size is inferred. The four origins are deterministic sensitivity cases, not independent replicates.
 
+% ORIGINAL_FIGURE_5
 \begin{figure}[htbp]\centering\includegraphics[width=\linewidth]{figures/S5_cross_sensitivity.pdf}
 \caption{Crossed aggregation sensitivity. Dots show four grid origins and horizontal lines span them. Left: difference relative to the native-model deficit. Right: the same difference as percentage points of the common population total. Colors identify population model; the 28 and 224 labels identify distinct pair selections.}\label{fig:cross}
 \end{figure}
 
 Complete 16-row results, the 25-m comparison, conservation ledger and input SHA-256 values are retained in \path{results/cross_sensitivity/}. The analysis and figure can be regenerated with \path{experiment_cross_sensitivity.py} and \path{make_cross_sensitivity_paper.py}.
 
-% end cross_supplement.tex
 
-\clearpage
-% begin paired_support_supplement.tex
-\section*{S13. Paired input-support and final-quality-mask allocation}
+\section*{S19. Paired input-support and final-quality-mask allocation}
 We compared two separate support quantities on the same 401-by-301 LiCSBAS grid and the same fixed GHSL population field: (i) the mean coherence-and-unwrapped support across all 437 input pairs, and (ii) the final full-stack LiCSBAS quality mask. The first is a per-pixel input-pair support fraction; the second is a binary product-level quality decision. They are not interchangeable measurements. For each field we retained population, spherical pixel area, area-times-support and population-times-support separately. We compared native-cell deficits with uniform redistribution within 1-km UTM cells at four zero/half-cell origins.
 
 The direct-geometry audit independently intersected each coarse UTM cell with the original 0.001-degree source cells in longitude-radians/sine-latitude equal-area coordinates. Inverse-projected cell boundaries were densified at 24 segments per edge. This is independent of GDAL raster reprojection and preserves partial edge cells. Uniform-within-source-pixel population and support are assumed during the subpixel intersection. Across all four origins, population mass drift was below $2\times10^{-9}$ allocation units and spherical-area drift was below $10^{-6}$ m$^2$ at printed precision. The direct integration agrees with the refined 25-m raster calculation to the reported 0.01-percentage-point gate.
 
+% ORIGINAL_TABLE_10
 \begin{table}[htbp]\centering\scriptsize
 \caption{One-kilometre allocation effects from direct source-cell intersections. Differences are signed percentage points of the fixed AOI population; positive values indicate a larger deficit under uniform-area allocation than under native population allocation.}
 \begin{tabular}{p{2.5cm}p{2.2cm}p{3.8cm}p{4.0cm}}\toprule
@@ -362,70 +559,80 @@ Final full-stack quality mask & 0.2944 & +0.1077 to +0.1170 & Product-level acce
 
 Both definitions retain an allocation effect after coarse aggregation, but the magnitude differs by more than an order of magnitude. This difference is expected because a 437-pair mean support fraction and a final multi-index mask encode different processing information. It is not an error comparison between them, and neither establishes deformation or resident counts in invalid locations. All origin-specific cell intersections and checksums are retained in \path{direct_geometry_audit/} and \path{paired_support_pilot/}.
 
-% end paired_support_supplement.tex
 
-\clearpage
-% begin actual_los_supplement.tex
-\section*{S14. Artificial masking of observed LOS classes}
-We used the unfiltered fitted LOS velocity from the full LiCSBAS branch, positive toward the satellite, only inside the final full-stack validity mask. The observed-domain reference contains 117,103 of 120,701 grid cells and 11.281 million GHSL allocation units. Population-weighted shares at or below $-2$, $-5$ and $-10$ mm yr$^{-1}$ are 2.474\%, 0.2805\% and 0.0223\%, respectively. These are relative LOS classes and are not vertical-settlement or hazard thresholds.
+\section*{S20. Buffered spatial recalibration and shared-acquisition influence}
+This exploratory analysis checks how conclusions change when calibration and dependence are treated more strictly. It does not retrain GHSL or WorldPop, validate individual households or supply a probability interval for unknown interferograms.
 
-For each of 100 seeded repetitions, we artificially removed 10\% or 30\% of otherwise valid cells under four mechanisms: random, spatially clustered, preferentially high velocity spread, and preferentially low velocity spread. The latter two scores include a small seeded spatial perturbation so that replicates vary while remaining associated with the quality diagnostic. We estimated the threshold-class population among artificially masked cells from the within-block observed-population prevalence and from the nearest observed pixel to each block center. Nominal cell sizes were 5, 10 and 20 source pixels (about 0.55, 1.11 and 2.22 km); four zero/half-cell origins retain partial raster-edge blocks. The known hidden class population is calculated directly from the observed LOS values before artificial masking. Every comparison therefore has a defined conditional reference.
-
-\begin{table}[htbp]\centering\scriptsize
-\caption{Observed LOS population-class masking, 30\% removed cells, nominal 1.11-km blocks, threshold $v_{LOS}\leq-5$ mm yr$^{-1}$. Estimates and biases are GHSL model allocation units, not verified person counts. Bias ranges are the 2.5th--97.5th percentiles across seeded masks and the four grid origins; they are design-sensitivity ranges, not confidence intervals.}
-\begin{tabular}{llrrrr}\toprule
-Removal pattern & Estimator & Known hidden class & Mean bias & Relative bias (\%) & Bias range\\\midrule
-Random & Local observed prevalence & 9,514 & 91 & 1 & $[-835,1194]$\\
-Random & Nearest observed centre pixel & 9,514 & 9,455 & 100 & $[6,139,13,265]$\\
-Spatial clusters & Local observed prevalence & 9,542 & 153 & 5 & $[-5,596,7,924]$\\
-Spatial clusters & Nearest observed centre pixel & 9,542 & 4,368 & 52 & $[-2,803,15,074]$\\
-High-spread selection & Local observed prevalence & 16,657 & $-5,018$ & $-30$ & $[-9,879,1,332]$\\
-High-spread selection & Nearest observed centre pixel & 16,657 & $-1,952$ & $-12$ & $[-8,068,6,793]$\\
-Low-spread selection & Local observed prevalence & 1,375 & 1,079 & 79 & $[-453,3,357]$\\
-Low-spread selection & Nearest observed centre pixel & 1,375 & 1,566 & 114 & $[-77,4,924]$\\\bottomrule
-\end{tabular}
-\end{table}
-
-The local prevalence estimator is close to aggregate reference under random masking, while center sampling overestimates the $-5$ mm yr$^{-1}$ class in that case. Under quality-selective removal the local estimator has a negative or positive bias depending on which velocity-spread tail is removed; spatial clustering also broadens the conditional range. Velocity spread is a processing diagnostic, not a calibrated uncertainty interval. Across all three predeclared LOS thresholds and all scales, neither estimator is uniformly accurate across mechanisms. The complete factorial is retained in \path{actual_los_masking/replicates.csv}, with grouped summaries in \path{actual_los_masking/summary.csv}.
-
-This experiment is closer to the observed product than synthetic two-valued fields, but remains conditional on a fixed population model, the final valid domain and known observed velocities. Original invalid pixels are excluded before artificial masking. It does not validate motion or exposure in permanently unobserved locations.
-
-% end actual_los_supplement.tex
-
-
-\clearpage
-\section*{S15. Covariance identity and scale sensitivity diagnostic}
-
-For a reporting square containing fine pixels $i$, let $A_i$ be pixel area, $s_i\in[0,1]$ the observed-support fraction and $\rho_i=p_i/A_i$ the native population density. With the same total population and geographic square held fixed, the difference between the area-uniform and native-population support deficits is
-\begin{equation}
-D_{\mathrm{uniform}}-D_{\mathrm{native}}
-=\frac{\operatorname{Cov}_{A}(\rho,s)}{\bar{\rho}_{A}},
-\end{equation}
-where area-weighted moments are calculated over the square and $\bar{\rho}_{A}=\sum_i A_i\rho_i/\sum_i A_i$. The absolute difference is bounded by $\sigma_{\rho,A}\sigma_{s,A}/\bar{\rho}_{A}$ by Cauchy--Schwarz. This identity describes the accounting mechanism; it is not an empirical uncertainty interval.
-
-We checked this identity on a fixed common domain of 120,175 pixels, crossing the GHSL and common-total-normalized WorldPop surfaces with the 437-pair mean input-support field and the final full-stack quality mask. Projected pixel centres were assigned to 250-, 500-, 1,000- and 2,000-m squares at four grid origins. The resulting scale/origin ranges are:
-
+For the same 319 complete Fresno block groups as S26, projected polygon-centroid ranks define five west--east or south--north spatial bands. One band is held out at a time. At 0 m, all other groups train the total multiplier. At 1 or 3 km, training polygons touching or within that distance of the held-out polygon union are excluded. Every retained training set has at least 30 groups, and every held-out group is predicted exactly once per design. Calibration factors use training ACS totals only. Model values and geometry remain fixed. We retain 90 fold--model records, every group assignment and 18 full-domain held-out summaries. The 80 ACS variance replicates quantify the survey component of signed fold-total error, conditional on the fixed population grids; they are not population-model error or evidence of source independence.
+% ORIGINAL_TABLE_24
 \begin{table}[htbp]\centering\small
-\caption{Uniform-minus-native deficit and Cauchy--Schwarz upper bound across projected square sizes and grid origins. Values are percentage points. Pixel-centre grouping is a sensitivity diagnostic and differs from the direct polygon-intersection integration used for the primary 1-km result.}
-\begin{tabular}{llrr}\toprule
-Support field & Population surface & Difference range & Bound range \\
-\midrule
-437-pair mean & GHSL & 0.550--4.670 & 1.076--9.599 \\
-437-pair mean & WorldPop, normalized & 0.164--2.376 & 0.429--5.320 \\
-Final quality mask & GHSL & 0.012--0.241 & 0.088--1.967 \\
-Final quality mask & WorldPop, normalized & 0.010--0.197 & 0.054--1.200 \\
+\caption{Spatial recalibration against ACS. Ranges span two spatial axes and three buffers, not independent replicates or confidence intervals.}
+\begin{tabular}{lrrrr}\toprule
+Released grid & Raw WAPE (\%) & In-sample (\%) & Held-out WAPE (\%) & Held-out total error (\%) \\\midrule
+GHSL & 34.89 & 33.16 & 33.24--33.85 & -0.03--+3.64 \\
+WorldPop & 33.22 & 32.29 & 32.34--32.98 & -0.04--+3.78 \\
+Census\_2020\_P1 & 19.93 & 19.93 & 19.94--20.07 & -0.27--+0.58 \\
 \bottomrule\end{tabular}
 \end{table}
 
-The covariance identity residual is at most $1.22\times10^{-15}$ percentage points across all 64 model--support--scale--origin combinations, and no observed absolute difference exceeds its corresponding bound. These numerical checks confirm implementation consistency only. The grouped-square differences are not pooled with the primary exact-geometry estimate; their spread across scales and origins is design sensitivity, not a confidence interval. WorldPop is a model-sensitivity comparison, not independent demographic truth, and the two products may share census inputs. Input checksums, full scenario definitions, local effects and machine-readable results are retained with the analysis outputs.
+The in-sample total match cannot be interpreted as out-of-area validation. Held-out GHSL and WorldPop WAPE remains above 32\%, and the 3-km west--east design has signed total errors of +3.64 and +3.78\%, respectively, compared with +1.39 and +1.43\% for the south--north design. Calibration is imperfectly transferable even within this one domain.
 
-\clearpage
-\section*{S16. Fresno 2020 Census-block support overlay}
+For sampling, each of the 225 dates in the 224-pair pool is deleted with all incident edges, not one edge at a time. We recompute summaries under equal-pair weights and under equal weights for the retained 28 year--quarter strata. All strata survive each deletion. The maximum deletion removes seven pairs. The retained graph has 28--34 components, compared with 29 at baseline, and remains separate from the connected 437-pair processing stack. For $q=0.3$ population weighting, the equal-quarter change spans $-0.3856$ to $+0.1647$ pp. Full results cover four support definitions and three allocation weightings (2,700 date--support--weight rows).
+
+This is a delete-date influence diagnostic for fixed observed support values. It neither re-solves the velocity inversion nor treats the disconnected support pool as a processing network. Because shared reference, atmospheric structure and acquisition effects remain dependent, we do not form an iid jackknife confidence interval. Source hashes and graph/stratum checks accompany the fold and deletion tables in \path{additional/spatial_acquisition/}.
+% ORIGINAL_FIGURE_7
+\begin{figure}[htbp]\centering
+\includegraphics[width=\linewidth]{figures/additional_S26_dependence.pdf}
+\caption{Spatially held-out recalibration and shared-date influence. Left: training-only calibration under two five-band partitions and three exclusion buffers. Right: population-weighted $q=0.3$ equal-quarter change after deleting every edge incident to one date. Each point is a dependent sensitivity case; no confidence interval or velocity re-inversion is implied.}\label{fig:adddependence}
+\end{figure}
+
+
+\section*{S21. Training-only quality rules and coverage--residual curves}
+We freeze 18 rules before reading their coverage/error curve: finite training velocity; the original training mask; training mean-coherence cutoffs 0.05/0.2/0.3/0.4/0.5/0.6/0.7; training residual RMS limits 0.5/1/1.5/2 mm; and training velocity-standard-deviation limits 0.5/1/2/5/100 mm yr$^{-1}$. Every metric and the reference region are obtained from training pairs only. Rules are post-filters on one fixed training inversion, not repeated inversion fits. No rule is chosen to minimize held-out error.
+
+All 44 excluded unwrapped edges are reconstructed from the retained training time series using their actual dates, the training reference region and the Sentinel-1 phase-to-LOS coefficient. Training and excluded edge sets are disjoint; acquisition dates need not be. Raw recomputation reproduces the frozen S17 finite-velocity pool to a maximum pixel-RMSE difference of $1.69\times10^{-7}$ mm. Each quality rule reports accepted full-domain area/population coverage, evaluable accepted coverage, allocation lacking an excluded-edge residual, pooled pixel--edge RMSE, population-weighted pooled RMSE, pixel median/P95 and per-edge ranges. Accepted and evaluable population coverage coincide here; that equality is checked rather than assumed.
+% ORIGINAL_TABLE_25
+\begin{table}[htbp]\centering\small
+\caption{Selected training-only rules. Coverage denominator is the complete matched ROI. Residual units are LOS displacement millimeters; velocity-standard-deviation cutoffs are mm yr$^{-1}$. All 18 rules and all 44 edge rows per rule remain in the archive.}
+\begin{tabular}{lrrrr}\toprule
+Rule & Population (\%) & Area (\%) & Pooled RMSE (mm) & Population RMSE (mm) \\\midrule
+Finite velocity & 100.00 & 99.99 & 0.984 & 0.359 \\
+Training mask & 99.86 & 97.49 & 0.699 & 0.350 \\
+$q\geq0.2$ & 99.40 & 87.62 & 0.491 & 0.344 \\
+$q\geq0.3$ & 98.27 & 80.49 & 0.429 & 0.340 \\
+$q\geq0.4$ & 95.34 & 71.69 & 0.388 & 0.336 \\
+$q\geq0.7$ & 41.04 & 23.65 & 0.331 & 0.317 \\
+$\sigma_v\leq0.5$ & 4.17 & 4.11 & 0.317 & 0.288 \\
+$\sigma_v\leq1$ & 31.16 & 25.55 & 0.377 & 0.360 \\
+\bottomrule\end{tabular}
+\end{table}
+% ORIGINAL_FIGURE_8
+\begin{figure}[htbp]\centering
+\includegraphics[width=\linewidth]{figures/additional_S27_quality_curve.pdf}
+\caption{Coverage--residual curve under training-only coherence filtering. Points use the original training mask plus the stated coherence rule; finite velocity and default training-mask baselines are also shown. The right panel weights residual observations by population allocation. Connections guide the eye and do not imply independent points or optimization.}\label{fig:addquality}
+\end{figure}
+
+Tightening coherence improves internal residuals here while reducing accepted allocation. Other training metrics need not order the population-weighted error monotonically: the 0.5 and 1 mm yr$^{-1}$ velocity-standard-deviation filters give population-weighted RMSE 0.288 and 0.360 mm while admitting 4.17 and 31.16\% of population allocation. Both filter outcomes are retained. Shared acquisitions, reference and atmospheric signals prevent interpreting these residuals as external velocity accuracy. Invalid or unobserved locations are not validated by a filter. Full source provenance, 18-rule summary and 792 rule--edge rows are in \path{additional/training_quality/}.
+
+
+
+
+\section*{Part E: Population models, administrative benchmarks and residential eligibility}
+\section*{S22. Population coverage and land-cover interpretation}
+The main population-model comparison restricts to fine pixels covered to within $10^{-5}$ by all four compared model/epoch rasters. The common domain contains 1,754,190 fine pixels and excludes \JointExcluded{} thousand GHSL population units relative to the primary footprint. Outputs on each product's own valid coverage are retained alongside common-coverage outputs. NoData is not silently converted into a zero population for comparative denominators.
+
+Normalization multiplies each population model by the same target total divided by its own common-domain total. Its weighted support share is consequently unchanged; this isolates spatial distribution from differences in population totals. The common-total q0.3 results are \GHSLJointCommon{} million for native GHSL and \WPJointCommon{} million for WorldPop. Neither establishes demographic truth. A difference between 2015 and 2020 GHSL at fixed 30 arcsec is an epoch/model sensitivity; comparing native 3-arcsecond 2020 to coarse 2015 alone would confound epoch and resolution.
+
+All 11 ESA WorldCover class codes are processed by native fractional intersection. Their fractions sum to one inside the primary domain within $2\times10^{-5}$. Reported nonzero classes include built-up, tree cover, cropland, grassland, bare/sparse vegetation, permanent water, wetland, shrubland and mangroves. GHSL allocations within a mixed cover pixel remain uniform at the subpixel level. Classification uncertainty, mixed pixels and the 2021 epoch are not converted into a probabilistic population uncertainty estimate.
+
+
+\section*{S23. Fresno 2020 Census-block support overlay}
 
 We intersected 2020 Census demographic and housing characteristics block polygons and total-population counts (field P0010001) with the fixed Fresno region of interest used in the DWR analysis. The block service identifies the U.S. Census Bureau DHC tables and TIGER geodatabase as its sources, reports the 2020 vintage, and notes differential-privacy protection of Census counts. We queried 6,999 unique Fresno County block GEOIDs intersecting the ROI; 6,788 complete blocks lie wholly inside its boundary and contain 523,953 Census population, 96.44\% of the population in all intersecting queried blocks. The complete-block restriction avoids assigning an entire block population to a partial ROI intersection.
 
 The DWR layer supplies 38,738 published observation polygons, not velocity estimates. We rasterized complete block polygons and the DWR polygon union at fivefold and tenfold supersampling of the 3-arc-second GHSL grid and weighted subpixels by spherical area. For each complete block, the area-uniform Census estimator assigns its population count in proportion to the fraction of block area inside the union of DWR observation polygons. The block-median-observability estimator classifies a block as observed when at least half of its area is covered, then assigns the whole block population to that category. A separate 90\% area-coverage threshold is reported as a sensitivity. These are block-level support statistics, not median-velocity classes.
 
+% ORIGINAL_TABLE_13
 \begin{table}[htbp]\centering\small
 \caption{Fresno Census-block support estimates. All rates refer to published observation-footprint coverage, not deformation velocity. The complete-block population is 523,953 in both rasterization runs.}
 \begin{tabular}{lrr}\toprule
@@ -441,109 +648,19 @@ GHSL minus Census-uniform support share (percentage points) & 0.553 & 0.547 \\
 \bottomrule\end{tabular}
 \end{table}
 
-At tenfold resolution, 6,784 of 6,788 blocks receive rasterized area; the four blocks without rasterized subpixels have zero Census population. The median ratio of rasterized block area to Census ALAND+AWATER is 0.9999. The fivefold-to-tenfold change is at most 0.042 percentage points across the reported support shares. The native GHSL allocation total in these same complete blocks is 587,868, 12.20\% above the 523,953 Census count. Accordingly, the 0.55-point support-share contrast combines differences in population totals and spatial allocation; it is not a calibrated error estimate or independent population validation.
+At tenfold resolution, 6,784 of 6,788 blocks receive rasterized area; the four blocks without rasterized subpixels have zero Census population. The median ratio of rasterized block area to Census ALAND+AWATER is 0.9999. The fivefold-to-tenfold change is at most 0.042 percentage points across the reported support shares. The native GHSL allocation total in these same complete blocks is 587,868, 12.20\% above the 523,953 Census count. The 0.55-point support-share contrast reflects relative spatial weighting and the within-block allocation assumptions. Multiplying every population weight by the same constant leaves a normalized support share unchanged, so the 12.20\% total difference does not itself explain this contrast. The total difference and support-share difference are separate diagnostics, neither a calibrated error estimate nor independent population validation.
 
-This support overlay by itself does not reproduce published Census-block median-rate classification: the DWR polygon layer contains no velocities. We therefore added a separate DWR/TRE ALTAMIRA vertical-rate raster analysis in S17. Census and GHSL counts may share source inputs; the Census counts are differentially private. The DWR observation polygons span 2015--2026 whereas the population epoch is 2020. Neither analysis imputes deformation outside the footprint or validates hazard exposure. The service responses, rasterization script, per-block tables, grid-resolution checks and SHA-256 values are retained in the analysis bundle.
+This support overlay by itself does not reproduce published Census-block median-rate classification: the DWR polygon layer contains no velocities. We therefore added a separate DWR/TRE ALTAMIRA vertical-rate raster analysis in S28. Census and GHSL counts may share source inputs; the Census counts are differentially private. The DWR observation polygons span 2015--2026 whereas the population epoch is 2020. Neither analysis imputes deformation outside the footprint or validates hazard exposure. The service responses, rasterization script, per-block tables, grid-resolution checks and SHA-256 values are retained in the analysis bundle.
 
-\clearpage
-\section*{S17. Census-block median vertical-rate classification in Fresno}
 
-To compare with published block-median exposure workflows, we obtained raw floating-point annual-rate and cumulative vertical-displacement rasters from the California DWR TRE ALTAMIRA ImageServer. DWR documents the annual layers as Sentinel-1-derived vertical displacement rates, with an approximately 100-m pixel size and values in feet per year; the public raster products are interpolated from point measurements \citep{dwr2026,dwrdocumentation}. The six annual rate layers from October 2015--October 2016 through October 2020--October 2021 were exported at their native EPSG:4326 grid size with nearest-neighbour sampling and aspect-ratio adjustment disabled. We built a pixelwise temporal median, retaining only cells valid in all six layers. The temporal-median vertical rate at each DWR cell was then sampled within the published 100-m observation-cell polygons and assigned to Census blocks by polygon membership. The 38,738 observation polygons map exactly to 38,738 native-grid cells in the snapped export. Census-block population is assigned to the median rate within each block, following the transfer step used by Ohenhen et al. \citep{ohenhen2025uscities}. Rates were converted from feet per year to millimetres per year by multiplying by 304.8.
 
-For the six-window temporal median, 6,129 complete Census blocks have valid cells and contain 501,411 people, 95.70\% of the 523,953 residents in all 6,788 complete blocks. Blocks with no valid cell are left unclassified rather than assigned to a rate class. The thresholds are VLM $\geq 0$, $-3\leq$ VLM $<0$, $-5\leq$ VLM $<-3$, $-10\leq$ VLM $<-5$, and VLM $<-10$ mm yr$^{-1}$, matching the categories in the published comparator. Table~S14 reports class-specific populations for the temporal-median and endpoint-rate estimates; Table~S15 summarizes annual-rate sensitivity.
+\section*{S24. Fresno population-grid comparison with Census block totals}
 
-\begin{table}[htbp]\centering\small
-\caption{Fresno 2020 Census population assigned to DWR vertical-rate classes using the median rate in each block. The temporal median uses six October-to-October windows in 2015--2021; the endpoint rate annualizes cumulative displacement from June 2015 to January 2021. Each covers blocks containing 501,411 people.}
-\begin{tabular}{p{.28\linewidth}p{.38\linewidth}rr}\toprule
-Temporal estimator & Median-rate class (mm yr$^{-1}$) & Population & Share (\%) \\\midrule
-2015--2021 temporal median & VLM $\geq0$ & 0 & 0.00 \\
-2015--2021 temporal median & $-3\leq$ VLM $<0$ & 42 & 0.01 \\
-2015--2021 temporal median & $-5\leq$ VLM $<-3$ & 174,288 & 34.76 \\
-2015--2021 temporal median & $-10\leq$ VLM $<-5$ & 312,467 & 62.32 \\
-2015--2021 temporal median & VLM $<-10$ & 14,614 & 2.91 \\
-Endpoint rate & VLM $\geq0$ & 0 & 0.00 \\
-Endpoint rate & $-3\leq$ VLM $<0$ & 197,045 & 39.30 \\
-Endpoint rate & $-5\leq$ VLM $<-3$ & 208,738 & 41.63 \\
-Endpoint rate & $-10\leq$ VLM $<-5$ & 90,844 & 18.12 \\
-Endpoint rate & VLM $<-10$ & 4,784 & 0.95 \\
-\bottomrule\end{tabular}
-\end{table}
+We assessed the coarse spatial allocation of two public 2020 population grids by transferring their 1-km cell counts to the same 6,788 complete 2020 Census blocks used in S23, S28 (523,953 Census residents; 458.669 km$^2$ of block land area). GHSL E2020 R2023A at 1 km is provided in the Mollweide equal-area projection. The WorldPop USA 2020 1-km surface is provided at 30-arcsecond geographic resolution; its cell boundaries were densified before reprojection to Mollweide. For both products, each source-cell count was allocated to blocks in proportion to polygon-intersection area. This assumes uniform population within each source cell. We compare each model's raw total with Census counts and also normalize model predictions to the common Census total to isolate relative allocation shape. A baseline distributes the Census total among blocks in proportion to Census land area.
 
-\begin{table}[htbp]\centering\small
-\caption{Annual-rate temporal sensitivity. Population percentages refer to Census residents in rate-covered blocks and are assigned by the median annual rate in each block.}
-\begin{tabular}{lrrrr}\toprule
-Annual window & Median DWR rate (mm yr$^{-1}$) & Coverage (\%) & VLM $<0$ (\%) & VLM $<-5$ (\%) \\\midrule
-2015--2016 & $-6.05$ & 95.70 & 100.00 & 70.05 \\
-2020--2021 & 7.27 & 95.70 & 0.81 & 0.17 \\
-2023--2024 & $-2.67$ & 95.70 & 92.18 & 22.94 \\
-2025--2026 & $-9.18$ & 95.70 & 100.00 & 99.86 \\
-\bottomrule\end{tabular}
-\end{table}
+Both gridded products have substantially lower normalized block-total error than the area-uniform baseline (Table S20). WorldPop is modestly closer on these block-level metrics, but both retain large errors. The results show that the grids carry useful broad-scale allocation information while leaving substantial uncertainty at sub-kilometre and within-block scales. This is a coarse model-agreement benchmark, not independent validation of household locations: Census counts are differentially private; GHSL input metadata describes census-derived population inputs; and exact source overlap between the Census target and the two product vintages has not been resolved. The normalized comparisons are calibrated to the Census total by construction and must not be interpreted as validation of absolute population totals, fine-scale residence locations, or exposed-person counts. The official products are \href{https://human-settlement.emergency.copernicus.eu/ghs_pop2023.php}{GHSL R2023A} and \href{https://hub.worldpop.org/geodata/summary?id=34816}{WorldPop USA 2020 1-km}; the exact dataset records are cited in the References \citep{ghslpopr2023a,worldpopusa2020}.
 
-For the 2015--2021 temporal-median surface, 65.23\% of the rate-covered population falls in blocks with median vertical rates below $-5$ mm yr$^{-1}$. Allocating each block population uniformly among its valid DWR cells instead of assigning all residents to the within-block median changes any class share by at most 0.15 percentage points in this period. The annual snapshots vary markedly; for example, the median rate among DWR cells changes from $+7.27$ mm yr$^{-1}$ in 2020--2021 to $-9.18$ mm yr$^{-1}$ in 2025--2026. The cumulative endpoint mean rate from June 2015 to January 2021 also gives a different block-class distribution from the six-window temporal median. This illustrates temporal-estimand sensitivity and cautions against treating one annual product as a multi-year trend.
-
-To make temporal sensitivity explicit at the block level, we cross-tabulated the median-rate class from the 2015--2021 six-window surface against the 2025--2026 single-year surface using only the same 6,129 blocks with valid rates in both products. We hold the 2020 Census population fixed in both columns to isolate reclassification; the later column is therefore not a contemporaneous 2025--2026 exposure estimate. Of the 501,411 residents in these common blocks, the share assigned to rates below $-5$ mm yr$^{-1}$ rises from 65.23\% to 99.87\%, and 60.88\% of residents change at least one class. This is a temporal-product sensitivity, not evidence that long-term hazard changed by that amount: the comparison is between a six-year median and one annual estimate. Table~S16 reports the full population transition matrix.
-
-\begin{table}[htbp]\centering\small
-\caption{Fixed 2020 Census population (people) cross-classified by each block's median DWR vertical rate in 2015--2021 and 2025--2026. Only the 6,129 blocks with valid observations in both periods are included (501,411 residents). The 2025--2026 values are a single-year sensitivity, not a long-term rate or contemporaneous population exposure.}
-\begin{tabular}{lrrrrr}\toprule
-\shortstack{2015--2021 class\\(mm yr$^{-1}$)} & \multicolumn{5}{c}{2025--2026 class (mm yr$^{-1}$)} \\
- & $\geq0$ & $[-3,0)$ & $[-5,-3)$ & $[-10,-5)$ & $<-10$ \\
-\midrule
-$\geq0$ & 0 & 0 & 0 & 0 & 0 \\
-$[-3,0)$ & 0 & 0 & 0 & 42 & 0 \\
-$[-5,-3)$ & 0 & 0 & 668 & 172,826 & 794 \\
-$[-10,-5)$ & 0 & 0 & 0 & 180,893 & 131,574 \\
-$<-10$ & 0 & 0 & 0 & 0 & 14,614 \\
-\bottomrule\end{tabular}
-\end{table}
-
-We further tested persistence across the six consecutive October-to-October annual products used in the 2015--2021 temporal median. For each year, we first calculated the median valid vertical rate within each Census block; we then counted how many of the six yearly block medians were below $-5$ mm yr$^{-1}$. Among the same 6,129 blocks with valid rates in every window (501,411 residents using fixed 2020 counts), 95.06\% of residents are in blocks that cross this threshold in one to five windows, and 0.10\% are in blocks below the threshold in all six. Thus 95.16\% cross the threshold in at least one window, while 4.84\% are never below it. This confirms that single-window classifications are temporally variable in the DWR product; it does not establish which annual rate is correct or imply persistent long-term hazard. Table~S17 gives the population distribution by number of years below the threshold.
-
-\begin{table}[htbp]\centering\small
-\caption{Persistence of the block-median $-5$ mm yr$^{-1}$ threshold across six consecutive annual DWR products from October 2015 to October 2021. Population uses fixed 2020 Census counts. The denominator is the 6,129 complete blocks with valid DWR cells in every annual window (501,411 residents).}
-\begin{tabular}{rrrr}\toprule
-Years below $-5$ & Blocks & 2020 Census population & Common population (\%) \\\midrule
-0 & 364 & 24,268 & 4.84 \\
-1 & 521 & 36,867 & 7.35 \\
-2 & 864 & 60,973 & 12.16 \\
-3 & 1,337 & 114,969 & 22.93 \\
-4 & 1,874 & 167,416 & 33.39 \\
-5 & 1,155 & 96,441 & 19.23 \\
-6 & 14 & 477 & 0.10 \\\bottomrule
-\end{tabular}
-\end{table}
-
-This transfer test uses an interpolated DWR/TRE ALTAMIRA vertical-rate raster, not our original LOS velocities, and shares provider lineage with the footprint product. It is not independent InSAR validation and cannot validate motion beyond the measured footprint; DWR vintage differences and Census differential privacy also limit interpretation. Scripts, cropped rasters, per-block data and checksums are in the analysis bundle.
-
-\clearpage
-\section*{S18. Spatial decomposition of Bangkok support-allocation effects}
-
-To show whether the AOI-wide allocation effect hides local reversals or changes in low-support labels, we grouped the matched Bangkok processing grid into projected 1-km and 5-km squares aligned to integer-kilometre coordinates in UTM Zone 47N. Within each square, the native estimate weights the pixel support by the GHSL allocation; the area-uniform estimate applies the square's area-weighted support fraction to the same square population total. The reported difference is uniform minus native missing-support population, divided by the fixed AOI allocation total. Pixel-centre grouping is used here as a local diagnostic and is kept separate from the source-cell-intersection primary estimates.
-
-At 1 km, the difference is 3.194 percentage points for the mean support across 437 input pairs and 0.103 points for the final quality mask. At 5 km it is 6.580 and 0.389 points, respectively, illustrating scale dependence. The 5-km tile contributions for the final mask include both signs and cancel 13.2\% of their summed absolute effect; at 1 km the cancellation fraction is 39.8\%. For a descriptive 50\% support cutoff, native-population and area-uniform unit labels differ in 150 1-km units containing 139,903 GHSL allocation units for the mean input-support field, and in 17 units containing 2,229 allocation units for the final mask. These are units whose labels disagree, not a net change in population assigned to the low-support category. The 50\% cutoff is neither a hazard threshold nor a universal operational rule.
-
-\begin{table}[htbp]\centering\scriptsize
-\caption{Local decomposition of support-allocation effects in the fixed Bangkok AOI. Deficits are percentages of the common GHSL allocation total; signed differences are percentage points. Sign-cancellation fraction is calculated across all reporting squares at the listed scale. Discordant population is allocation mass in squares whose native and area-uniform support fractions fall on opposite sides of 50\%.}
-\begin{tabular}{llrrrrr}\toprule
-Support field & Scale & Native deficit & Uniform deficit & Difference & Sign cancellation & \shortstack{Discordant units /\\GHSL units}\\
- & (km) & (\%) & (\%) & (pp) & (\%) & (count / allocation)\\\midrule
-437-pair mean & 1 & 3.454 & 6.648 & 3.194 & 1.9 & 150 / 139,903\\
-437-pair mean & 5 & 3.454 & 10.034 & 6.580 & 0.0 & 12 / 123,735\\
-Final quality mask & 1 & 0.294 & 0.398 & 0.103 & 39.8 & 17 / 2,229\\
-Final quality mask & 5 & 0.294 & 0.684 & 0.389 & 13.2 & 0 / 0\\
-\bottomrule\end{tabular}
-\end{table}
-
-The final-mask effect at the primary 1-km scale is small, and the number of threshold-discordant allocation units is also small. The larger mean-input-support effect should not be interpreted as final-product failure: the two support fields summarize different stages of the processing chain. This is a finite-domain spatial and scale decomposition, not spatial cross-validation, a confidence interval, external accuracy, or evidence of motion at invalid locations. Machine-readable tile-level results, input checksums and a reproducible script are retained in the analysis bundle.
-
-\clearpage
-\section*{S19. Fresno population-grid comparison with Census block totals}
-
-We assessed the coarse spatial allocation of two public 2020 population grids by transferring their 1-km cell counts to the same 6,788 complete 2020 Census blocks used in S16--S17 (523,953 Census residents; 458.669 km$^2$ of block land area). GHSL E2020 R2023A at 1 km is provided in the Mollweide equal-area projection. The WorldPop USA 2020 1-km surface is provided at 30-arcsecond geographic resolution; its cell boundaries were densified before reprojection to Mollweide. For both products, each source-cell count was allocated to blocks in proportion to polygon-intersection area. This assumes uniform population within each source cell. We compare each model's raw total with Census counts and also normalize model predictions to the common Census total to isolate relative allocation shape. A baseline distributes the Census total among blocks in proportion to Census land area.
-
-Both gridded products have substantially lower normalized block-total error than the area-uniform baseline (Table S19). WorldPop is modestly closer on these block-level metrics, but both retain large errors. The results show that the grids carry useful broad-scale allocation information while leaving substantial uncertainty at sub-kilometre and within-block scales. This is a coarse model-agreement benchmark, not independent validation of household locations: Census counts are differentially private; GHSL input metadata describes census-derived population inputs; and exact source overlap between the Census target and the two product vintages has not been resolved. The normalized comparisons are calibrated to the Census total by construction and must not be interpreted as validation of absolute population totals, fine-scale residence locations, or exposed-person counts. The official products are \href{https://human-settlement.emergency.copernicus.eu/ghs_pop2023.php}{GHSL R2023A} and \href{https://hub.worldpop.org/geodata/summary?id=34816}{WorldPop USA 2020 1-km}; the exact dataset records are cited in the References \citep{ghslpopr2023a,worldpopusa2020}.
-
+% ORIGINAL_TABLE_19
 \begin{table}[htbp]\centering\small
 \caption{Fresno Census-block comparison of two 1-km population grids and an area-only allocation baseline. Census totals are 523,953 across 6,788 complete blocks. WAPE is the sum of absolute block-level errors divided by the Census total; normalized models are rescaled to the Census total.}
 \begin{tabular}{lrrrrr}\toprule
@@ -560,12 +677,13 @@ Uniform over Census block land area & 523,953 & 0.00$^*$ & 120.88 & 0.047 & 0.30
 Source-cell counts, derived per-block predictions, software script, source checksums and transfer method are retained in the analysis bundle. This benchmark complements the allocation-sensitivity experiments but does not establish which gridded product is correct at household scale.
 
 
-\clearpage
-\section*{S20. Fine-resolution population-allocation sensitivity in Fresno}
 
-We compared two 100-m population allocation surfaces against identical 2020 Census block totals and the same DWR observation-support field. Census P1 block counts were joined to 2020 TIGER/Line block geometries for Fresno County. The fixed ROI contains 6,787 fully enclosed blocks and 523,953 residents. The one-block difference from S16--S19 reflects a different Census-block geometry source; the 6,788-block S16--S19 benchmark reports the same 523,953-person complete-block total. We first exclude 1,071 zero-population blocks, leaving 5,716 positive-population blocks. Three additional blocks with 45 residents have no GHSL raster mass; we omit them from all methods to define a common domain of 5,713 blocks and 523,908 residents (99.991\% of the complete-block total). Both gridded allocation models are normalized within each block to its Census total. The area-uniform comparator distributes each block total uniformly over its land area. The outcome is the population allocation falling outside the DWR polygon-union support after conservative reprojection of the DWR area and supported-area fields to the 100-m CA-POP grid.
 
-The support deficit is 4,417.5 units (0.843\% of the common Census total) for area-uniform allocation, 2,016.3 (0.385\%) for within-block-normalized GHSL, and 1,268.4 (0.242\%) for within-block-normalized CA-POP. Thus the alternative 100-m model changes the deficit by $-747.9$ units, or $-0.143$ percentage points of the common population, relative to normalized GHSL. The direction is consistent at the countywide aggregate but not in every tract: CA-POP yields a higher deficit in 19 of 125 tracts and a lower deficit in 48; the remaining tracts have effectively equal totals. No tract-level significance or random-sample inference is implied. Block-level spatial dependence was summarized with global Moran's $I$ and binary queen-contiguity weights (shared edges or vertices) on per-block unsupported fractions. Across the 5,713 common blocks, the unsupported-fraction fields have $I=0.860$ for GHSL and $I=0.657$ for CA-POP; the CA-POP-minus-GHSL difference field has $I=0.399$ across 17,083 undirected neighbor pairs (12 isolates) \citep{moran1950notes}. This is a descriptive statistic for the fixed Fresno domain; we report no permutation $p$-value, spatial-sampling confidence interval or cross-region inference.
+\section*{S25. Fine-resolution population-allocation sensitivity in Fresno}
+
+We compared two 100-m population allocation surfaces against identical 2020 Census block totals and the same DWR observation-support field. Census P1 block counts were joined to 2020 TIGER/Line block geometries for Fresno County. The fixed ROI contains 6,787 fully enclosed blocks and 523,953 residents. The one-block difference from S10, S23--S24, S28 reflects a different Census-block geometry source; the 6,788-block S10, S23--S24, S28 benchmark reports the same 523,953-person complete-block total. We first exclude 1,071 zero-population blocks, leaving 5,716 positive-population blocks. Three additional blocks with 45 residents have no GHSL raster mass; we omit them from all methods to define a common domain of 5,713 blocks and 523,908 residents (99.991\% of the complete-block total). Both gridded allocation models are normalized within each block to its Census total. The area-uniform comparator distributes each block total uniformly over its land area. The outcome is the population allocation falling outside the DWR polygon-union support after conservative reprojection of the DWR area and supported-area fields to the 100-m CA-POP grid.
+
+The support deficit is 4,417.5 units (0.843\% of the common Census total) for area-uniform allocation, 2,016.3 (0.385\%) for within-block-normalized GHSL, and 1,268.4 (0.242\%) for within-block-normalized CA-POP. Thus the alternative 100-m model changes the deficit by $-747.9$ units, or $-0.143$ percentage points of the common population, relative to normalized GHSL. The direction is consistent at the aggregate over the complete-block study domain but not in every tract: CA-POP yields a higher deficit in 19 of 125 tracts and a lower deficit in 48; the remaining tracts have effectively equal totals. No tract-level significance or random-sample inference is implied. Block-level spatial dependence was summarized with global Moran's $I$ and binary queen-contiguity weights (shared edges or vertices) on per-block unsupported fractions. Across the 5,713 common blocks, the unsupported-fraction fields have $I=0.860$ for GHSL and $I=0.657$ for CA-POP; the CA-POP-minus-GHSL difference field has $I=0.399$ across 17,083 undirected neighbor pairs (12 isolates) \citep{moran1950notes}. This is a descriptive statistic for the fixed Fresno domain; we report no permutation $p$-value, spatial-sampling confidence interval or cross-region inference.
 
 CA-POP was produced by dasymetrically allocating 2020 Census block counts using residential parcels and building footprints \citep{depsky2022capop}. Because this input uses the same Census block totals as the target, this is a conditional within-block allocation-model sensitivity analysis, not independent validation of population locations. The sub-block distribution cannot be verified from the block totals. All methods conserve the common block total by construction. Census P1 and TIGER/Line 2020 inputs, the CA-POP total-population raster, input hashes, source URLs and code are listed in the accompanying analysis record. GHSL mass and land area are conserved to relative numerical errors of $0$ and $2.4\times10^{-16}$, respectively, during reprojection.
 
@@ -573,59 +691,15 @@ We also repeated center-sampling and uniform-versus-native comparisons on 250-, 
 
 
 
-\clearpage
-\section*{S21. Finite-domain bounds for threshold-class allocation under the actual final mask}
-
-We quantified what can and cannot be identified for the actual LiCSBAS full-stack final quality mask on the fixed 2020 GHSL allocation domain. Let $T$ denote total allocated population units in the domain, $U$ the allocated units in pixels unsupported by the final mask, and $E_c$ the observed allocation in LOS class $c$ among supported pixels. Without assumptions about the unsupported pixels' LOS class, the finite-domain class share lies in $[E_c/T,\min(T,E_c+U)/T]$. This is a worst-case accounting interval, not a confidence interval and not a statement that deformation occurs in unsupported pixels.
-
-\begin{table}[htbp]\centering\small
-\caption{Finite-domain allocation bounds for LOS threshold classes under the actual LiCSBAS final mask. Values are model allocation units and percentage points, not enumerated residents.}
-\begin{tabular}{rrrr}\toprule
-LOS threshold & Observed class units & Identified share interval (\%) & Width (pp) \\\midrule
-$\leq-2$ mm yr$^{-1}$ & 279,088 & [2.4666, 2.7610] & 0.2944 \\
-$\leq-5$ mm yr$^{-1}$ & 31,644 & [0.2797, 0.5741] & 0.2944 \\
-$\leq-10$ mm yr$^{-1}$ & 2,516 & [0.0222, 0.3167] & 0.2944 \\
-\bottomrule\end{tabular}
-\end{table}
-
-The interval width is set by the unsupported allocation share (0.2944 percentage points) for all three nested classes. The upper endpoint assigns every unsupported unit to the threshold class, so it is deliberately conservative. It bounds population allocation only; the actual LOS and physical motion in unsupported locations remain unknown. Results were calculated by \texttt{partial\_identification.py} from the retained full-quality raster and are in \texttt{partial\_identification/bounds.csv}.
-
-\clearpage
-\section*{S22. Benchmark against census-unit median-rate assignment under controlled missingness}
-
-We compared three estimators of the population assigned to LOS $\leq-5$ mm yr$^{-1}$: the census-like unit's median rate among observed pixels (an adaptation of published census-block median-rate assignment), within-unit population-weighted prevalence among observed pixels, and the observed pixel nearest the unit centre. We used actual fitted LOS values in the original final-valid domain, square census-like units, four predeclared origins, 100 seeded mask replicates per origin and mechanism, and 30\% pixel removal. The known full-data allocation supplies the artificial benchmark. Mechanisms are random, spatially clustered, preferential removal of high within-unit velocity-spread pixels, and preferential removal of low-spread pixels. Numbers below are mean signed error in percentage points of the fixed-domain model population; ranges are the 2.5th--97.5th percentiles across masks and origins, and are design-sensitivity ranges rather than confidence intervals.
-
-\begin{table}[htbp]\centering\small
-\caption{Controlled-mask signed error by estimator and mechanism (percentage points of the whole fixed-domain population; means and 2.5th--97.5th percentile ranges over 400 mask-origin cases per row).}
-\setlength{\tabcolsep}{3pt}
-\begin{tabular}{lrrr}\toprule
-Mask mechanism & Unit median-rate & Within-unit prevalence & Centre pixel \\\midrule
-Random & +0.0190 [+0.0007, +0.0399] & +0.0008 [-0.0074, +0.0106] & +0.0838 [+0.0544, +0.1176] \\
-Spatial cluster & +0.0194 [-0.0387, +0.1083] & +0.0014 [-0.0496, +0.0702] & +0.0387 [-0.0249, +0.1336] \\
-High-spread pixels removed & -0.0310 [-0.0747, +0.0514] & -0.0445 [-0.0876, +0.0118] & -0.0173 [-0.0715, +0.0602] \\
-Low-spread pixels removed & +0.0002 [-0.0088, +0.0126] & +0.0096 [-0.0040, +0.0298] & +0.0139 [-0.0007, +0.0436] \\
-\bottomrule\end{tabular}
-\end{table}
-
-There is no uniformly best estimator across mechanisms. Unit-median assignment is close to the target for the low-spread-removal design, but is more biased than within-unit prevalence for random and clustered removal. Under high-spread removal, all methods underestimate the known class allocation. As a consistency check, the pooled centre-sampling result under random masks reproduces the earlier S14 result (about +100\% relative bias for that selected class). This benchmark is conditional on an artificially masked, originally valid LOS field and the chosen allocation model; it does not validate estimators in genuinely unsupported areas or establish physical hazard there. Full replicates and code are retained in \texttt{published\_method\_benchmark/}.
-
-\clearpage
-\section*{S23. A tolerance-based reporting rule for scale-dependent allocation error}
-
-For a reporting application with a prespecified acceptable aggregate error $\epsilon$, the analytic Cauchy--Schwarz upper bound can be compared with $\epsilon$ for each population model, scale and grid origin. A bound at or below $\epsilon$ certifies that the allocation discrepancy cannot exceed that tolerance under the stated inputs. A bound above $\epsilon$ is inconclusive; it does not demonstrate that the observed error is unacceptable. The tolerances below (0.5, 1 and 2 percentage points of total allocation) are illustrative choices, not published standards, safety levels or policy thresholds.
-
-At 250 m, all four origins for both GHSL and CA-POP have bounds below 1 pp (maximum 0.58 and 0.88 pp, respectively). At 500 m, none of the eight model-origin combinations meets 1 pp; at 2 pp, all four GHSL origins pass and no CA-POP origin passes. At 1 km and 2 km, neither model meets 2 pp for every origin. The bounds rise with scale, while local L1 error and net error can differ substantially and top-decile spatial overlap declines. Thus a small net aggregate difference alone need not preserve local ranking. The detailed 24 model-scale-tolerance summaries and source 32-row audit are in \texttt{reporting\_tolerance/tolerance\_summary.csv} and \texttt{scale\_method\_sensitivity.csv}; these are deterministic finite-domain diagnostics, not sampling uncertainty.
 
 
-
-
-\clearpage
-\section*{S24. Fresno population-grid comparison with 2017--2021 ACS block-group estimates}
+\section*{S26. Fresno population-grid comparison with 2017--2021 ACS block-group estimates}
 
 We compared the 2020 GHSL and WorldPop 1-km population-count surfaces with the U.S. Census Bureau's 2017--2021 American Community Survey (ACS) 5-year total-population estimates (Table B01003) on 2020 block-group boundaries \citep{acs2021summary,tiger2020blockgroups}. We selected the 319 2020 block groups whose complete geometry lies within the same predeclared Fresno rectangle used for the observation-footprint analysis. The ACS total across these nonoverlapping groups is 493,571, with an exact aggregated 90\% margin of error (MOE) of 4,371 calculated from the 80 ACS variance-replicate estimates \citep{acs2021vre}. The 2020 decennial Census P1 block counts aggregated to these same groups sum to 491,790, a difference of $-0.36\%$ from the ACS point estimate and within its aggregate MOE.
 
-To allocate raster counts to block groups, we intersected source pixels with the block-group polygons in an equal-area projection, assuming a uniform population distribution inside each 1-km source pixel. The raster totals are 545,747 for GHSL and 523,349 for WorldPop, respectively $+10.57\%$ and $+6.03\%$ relative to the ACS point estimate. Rank correlation and block-group mean absolute error (MAE) also show substantial local disagreement (Table~S22). Rescaling each raster total to the ACS aggregate reduces MAE only to 513 for GHSL and 500 for WorldPop, in model allocation units. This normalization is calibration to the survey total and is reported only to separate aggregate-total differences from within-domain allocation differences.
+To allocate raster counts to block groups, we intersected source pixels with the block-group polygons in an equal-area projection, assuming a uniform population distribution inside each 1-km source pixel. The raster totals are 545,747 for GHSL and 523,349 for WorldPop, respectively $+10.57\%$ and $+6.03\%$ relative to the ACS point estimate. Rank correlation and block-group mean absolute error (MAE) also show substantial local disagreement (Table~S21). Rescaling each raster total to the ACS aggregate reduces MAE only to 513 for GHSL and 500 for WorldPop, in model allocation units. This normalization is calibration to the survey total and is reported only to separate aggregate-total differences from within-domain allocation differences.
 
+% ORIGINAL_TABLE_22
 \begin{table}[htbp]\centering\small
 \caption{Population-grid counts compared with ACS 2017--2021 block-group estimates for 319 complete Fresno block groups.}
 \begin{tabular}{lrrrr}\toprule
@@ -636,124 +710,20 @@ WorldPop 2020, 1 km UN-adjusted & 523,349 & $+6.03$ & 0.565 & 514 \\
 \bottomrule\end{tabular}
 \end{table}
 
-The table is an external survey benchmark, not ground truth for household locations. Block groups are much larger than the source raster pixels, and an areal overlay cannot assess within-block-group placement. ACS is a survey estimate rather than an error-free count; the estimate covers 2017--2021, whereas the grids and decennial Census are 2020. We do not know whether the population-model source information is independent of ACS. The comparison therefore documents agreement and disagreement at one coarser reporting level and one Fresno domain; it does not independently validate fine-scale population allocation in the Chao Phraya study or deformation in InSAR-unsupported areas. Per-group estimates, MOEs, raster overlays, the variance-replicate aggregation and input checksums are retained in \texttt{acs\_population\_benchmark/}.
+The table is an external survey benchmark, not ground truth for household locations. The 319 block groups have median area 0.642 km$^2$ (range 0.104--28.366 km$^2$); 256 (80.25\%) are smaller than 1 km$^2$. They are therefore not uniformly coarser than the nominal 1-km source cells. Allocations to small groups depend directly on the assumed within-source-pixel uniformity, and the overlay cannot validate subpixel or household placement. ACS is a survey estimate rather than an error-free count; the estimate covers 2017--2021, whereas the grids and decennial Census are 2020. We do not know whether the population-model source information is independent of ACS. The comparison therefore documents agreement and disagreement at one administrative reporting level and one Fresno domain; it does not independently validate fine-scale population allocation in the Chao Phraya study or deformation in InSAR-unsupported areas. Per-group estimates, MOEs, raster overlays, the variance-replicate aggregation and input checksums are retained in \texttt{acs\_population\_benchmark/}.
 
 
 
-% begin additional_supplement.tex
-\clearpage
-\section*{S25. Actual irregular Census blocks and contiguous missingness}
-The reference domain contains 6,787 complete official 2020 Census blocks with P1 population 523,953. Within each complete block, GHSL weights are normalized before selecting the known-rate footprint. This avoids forcing every Census allocation unit into observed locations. The known-rate footprint retains 522,596.78 allocation units, 38,569 published DWR cells and 65,108 exact block--cell intersections. Originally missing rates and 1,333.22 allocation units outside this footprint remain outside the controlled reference; they are never assigned known hidden values.
 
-The selected DWR mosaic item is the annual interval 1 October 2020--1 October 2021, distinct from the older multi-year footprint. We retrieve raw floating-point values with no palette/rendering transformation and convert the provider's feet to millimeters, divided by the exact interval duration in years. Rates are constant within published cells. Official NAD83 Census geometry and source-cell corners are projected to EPSG:3310 before exact intersections. Maximum polygon relative area-closure error is $2.31\times10^{-10}$; the conservative GHSL transfer has relative mass drift 0.000233, after which complete-block normalization fixes the Census total. The DWR footprint and rate layers share provider lineage; these are conditional method experiments, not independent geodetic truth.
-
-With seed 20261001, each of 30 repetitions defines a random cell ordering and distances to one or four random spatial centres. The latter generate large contiguous holes on the irregular valid footprint. The same ordering nests 10, 30 and 50\% removals. The three thresholds are $-3$, $-5$ and $-10$ mm yr$^{-1}$. All 2,430 method--mask--threshold rows and nine unmasked baseline rows are retained.
-
-Native observed-population prevalence extrapolates its measured class fraction to the block's originally known allocation. Area prevalence uses the observed area fraction. The unit-median rule classifies a whole block using the median of retained published-rate cells whose centres fall inside that block. No retained centre leaves the median rule undefined, even if a cell intersects the block. No retained population/area leaves the corresponding prevalence undefined. Undefined units are not assigned zero. In the unmasked baseline, the median rule already has 412 undefined blocks representing 4.386\% of known-footprint allocation. At $-5$ mm yr$^{-1}$, the native known class share is only 0.1308\%, so small errors must also be interpreted against this rare reference class.
-
-We report both method-specific availability and signed/local-L1 errors on the intersection of computable blocks. Each repetition additionally retains method-specific conditional error and its exact denominator. On the entire originally known domain, class allocation is bounded by retained class mass and retained class mass plus all hidden allocation. Every known reference lies inside this accounting interval. Its width is hidden population allocation, not the removed pixel fraction, and is independent of the estimator. The numerical bound check is deterministic, not a confidence interval.
-\begin{table}[htbp]\centering\small
-\caption{Thirty-percent removal at the $-5$ mm yr$^{-1}$ cutoff: means over 30 fixed-mask repetitions. Unestimated share uses the known-footprint denominator; local L1 uses common-computable allocation. Bound width uses the whole known domain.}
-\begin{tabular}{llrrr}\toprule
-Mask & Method & Unestimated (\%) & Local L1 (pp) & Bound width (pp) \\\midrule
-Random & Native prevalence & 0.20 & 0.00296 & 30.02 \\
-Random & Area prevalence & 0.20 & 0.00608 & 30.02 \\
-Random & Unit median & 9.41 & 0.01345 & 30.02 \\
-One hole & Native prevalence & 23.01 & 0.00055 & 24.02 \\
-One hole & Area prevalence & 23.01 & 0.00575 & 24.02 \\
-One hole & Unit median & 26.80 & 0.01129 & 24.02 \\
-Four holes & Native prevalence & 28.64 & 0.00197 & 30.97 \\
-Four holes & Area prevalence & 28.64 & 0.00702 & 30.97 \\
-Four holes & Unit median & 32.61 & 0.01332 & 30.97 \\
-\bottomrule\end{tabular}
-\end{table}
-\begin{figure}[htbp]\centering
-\includegraphics[width=\linewidth]{figures/additional_S25_real_blocks.pdf}
-\caption{Availability and conditional estimation error on actual irregular Census blocks. Bars are repetition means for 30\% removal and the $-5$ mm yr$^{-1}$ cutoff. Each estimator uses identical missingness; the right panel omits noncomputable blocks by definition. Small local error must therefore be read alongside the left-panel unidentified mass. Full 10/30/50\% and threshold results are supplied in the CSV archive.}\label{fig:addreal}
-\end{figure}
-
-At 30\% removal, native prevalence's unestimated allocation ranges from 0.064--0.307\% for random pixels, 3.73--44.98\% for one hole and 14.82--47.99\% for four holes. Mean class bounds are [0.0903,30.1064], [0.0859,24.1010] and [0.0977,31.0655]\%, respectively. Neither low conditional L1 error nor random-mask performance supports assigning a class to entire genuinely missing blocks. Full replicates, per-method denominators, bounds and source hashes are in \path{additional/real_block_masking/}.
-\clearpage
-\section*{S26. Buffered spatial recalibration and shared-acquisition influence}
-This exploratory analysis checks how conclusions change when calibration and dependence are treated more strictly. It does not retrain GHSL or WorldPop, validate individual households or supply a probability interval for unknown interferograms.
-
-For the same 319 complete Fresno block groups as S24, projected polygon-centroid ranks define five west--east or south--north spatial bands. One band is held out at a time. At 0 m, all other groups train the total multiplier. At 1 or 3 km, training polygons touching or within that distance of the held-out polygon union are excluded. Every retained training set has at least 30 groups, and every held-out group is predicted exactly once per design. Calibration factors use training ACS totals only. Model values and geometry remain fixed. We retain 90 fold--model records, every group assignment and 18 full-domain held-out summaries. The 80 ACS variance replicates quantify the survey component of signed fold-total error, conditional on the fixed population grids; they are not population-model error or evidence of source independence.
-\begin{table}[htbp]\centering\small
-\caption{Spatial recalibration against ACS. Ranges span two spatial axes and three buffers, not independent replicates or confidence intervals.}
-\begin{tabular}{lrrrr}\toprule
-Released grid & Raw WAPE (\%) & In-sample (\%) & Held-out WAPE (\%) & Held-out total error (\%) \\\midrule
-GHSL & 34.89 & 33.16 & 33.24--33.85 & -0.03--+3.64 \\
-WorldPop & 33.22 & 32.29 & 32.34--32.98 & -0.04--+3.78 \\
-Census\_2020\_P1 & 19.93 & 19.93 & 19.94--20.07 & -0.27--+0.58 \\
-\bottomrule\end{tabular}
-\end{table}
-
-The in-sample total match cannot be interpreted as out-of-area validation. Held-out GHSL and WorldPop WAPE remains above 32\%, and the 3-km west--east design has signed total errors of +3.64 and +3.78\%, respectively, compared with +1.39 and +1.43\% for the south--north design. Calibration is imperfectly transferable even within this one domain.
-
-For sampling, each of the 225 dates in the 224-pair pool is deleted with all incident edges, not one edge at a time. We recompute summaries under equal-pair weights and under equal weights for the retained 28 year--quarter strata. All strata survive each deletion. The maximum deletion removes seven pairs. The retained graph has 28--34 components, compared with 29 at baseline, and remains separate from the connected 437-pair processing stack. For $q=0.3$ population weighting, the equal-quarter change spans $-0.3856$ to $+0.1647$ pp. Full results cover four support definitions and three allocation weightings (2,700 date--support--weight rows).
-
-This is a delete-date influence diagnostic for fixed observed support values. It neither re-solves the velocity inversion nor treats the disconnected support pool as a processing network. Because shared reference, atmospheric structure and acquisition effects remain dependent, we do not form an iid jackknife confidence interval. Source hashes and graph/stratum checks accompany the fold and deletion tables in \path{additional/spatial_acquisition/}.
-\begin{figure}[htbp]\centering
-\includegraphics[width=\linewidth]{figures/additional_S26_dependence.pdf}
-\caption{Spatially held-out recalibration and shared-date influence. Left: training-only calibration under two five-band partitions and three exclusion buffers. Right: population-weighted $q=0.3$ equal-quarter change after deleting every edge incident to one date. Each point is a dependent sensitivity case; no confidence interval or velocity re-inversion is implied.}\label{fig:adddependence}
-\end{figure}
-\clearpage
-\section*{S27. Training-only quality rules and coverage--residual curves}
-We freeze 18 rules before reading their coverage/error curve: finite training velocity; the original training mask; training mean-coherence cutoffs 0.05/0.2/0.3/0.4/0.5/0.6/0.7; training residual RMS limits 0.5/1/1.5/2 mm; and training velocity-standard-deviation limits 0.5/1/2/5/100 mm yr$^{-1}$. Every metric and the reference region are obtained from training pairs only. Rules are post-filters on one fixed training inversion, not repeated inversion fits. No rule is chosen to minimize held-out error.
-
-All 44 excluded unwrapped edges are reconstructed from the retained training time series using their actual dates, the training reference region and the Sentinel-1 phase-to-LOS coefficient. Training and excluded edge sets are disjoint; acquisition dates need not be. Raw recomputation reproduces the frozen S7 finite-velocity pool to a maximum pixel-RMSE difference of $1.69\times10^{-7}$ mm. Each quality rule reports accepted full-domain area/population coverage, evaluable accepted coverage, allocation lacking an excluded-edge residual, pooled pixel--edge RMSE, population-weighted pooled RMSE, pixel median/P95 and per-edge ranges. Accepted and evaluable population coverage coincide here; that equality is checked rather than assumed.
-\begin{table}[htbp]\centering\small
-\caption{Selected training-only rules. Coverage denominator is the complete matched ROI. Residual units are LOS displacement millimeters; velocity-standard-deviation cutoffs are mm yr$^{-1}$. All 18 rules and all 44 edge rows per rule remain in the archive.}
-\begin{tabular}{lrrrr}\toprule
-Rule & Population (\%) & Area (\%) & Pooled RMSE (mm) & Population RMSE (mm) \\\midrule
-Finite velocity & 100.00 & 99.99 & 0.984 & 0.359 \\
-Training mask & 99.86 & 97.49 & 0.699 & 0.350 \\
-$q\geq0.2$ & 99.40 & 87.62 & 0.491 & 0.344 \\
-$q\geq0.3$ & 98.27 & 80.49 & 0.429 & 0.340 \\
-$q\geq0.4$ & 95.34 & 71.69 & 0.388 & 0.336 \\
-$q\geq0.7$ & 41.04 & 23.65 & 0.331 & 0.317 \\
-$\sigma_v\leq0.5$ & 4.17 & 4.11 & 0.317 & 0.288 \\
-$\sigma_v\leq1$ & 31.16 & 25.55 & 0.377 & 0.360 \\
-\bottomrule\end{tabular}
-\end{table}
-\begin{figure}[htbp]\centering
-\includegraphics[width=\linewidth]{figures/additional_S27_quality_curve.pdf}
-\caption{Coverage--residual curve under training-only coherence filtering. Points use the original training mask plus the stated coherence rule; finite velocity and default training-mask baselines are also shown. The right panel weights residual observations by population allocation. Connections guide the eye and do not imply independent points or optimization.}\label{fig:addquality}
-\end{figure}
-
-Tightening coherence improves internal residuals here while reducing accepted allocation. Other training metrics need not order the population-weighted error monotonically: the 0.5 and 1 mm yr$^{-1}$ velocity-standard-deviation filters give population-weighted RMSE 0.288 and 0.360 mm while admitting 4.17 and 31.16\% of population allocation. Both filter outcomes are retained. Shared acquisitions, reference and atmospheric signals prevent interpreting these residuals as external velocity accuracy. Invalid or unobserved locations are not validated by a filter. Full source provenance, 18-rule summary and 792 rule--edge rows are in \path{additional/training_quality/}.
-\clearpage
-\section*{S28. Two fixed additional regions using archived ARIA products}
-The new-region protocol is fixed before their allocation outcomes: Los Angeles [$-118.4$,$-118.1$]$^\circ$ E by [33.85,34.10]$^\circ$ N and Davis--Sacramento [$-121.9$,$-121.6$]$^\circ$ E by [38.4,38.7]$^\circ$ N. We use GHSL R2023A 2020 population at 3 arcsec and the April 2026 archived ARIA California products of Sangha et al.\ \citep{sangha2026california,sangha2026data}. Los Angeles uses ascending track A064 (reference P597); Davis--Sacramento uses A137 (P266). Completed notebook outputs and the published track table document periods 14 February 2016--13 May 2022 and 3 March 2017--29 August 2023. Some archived A137 run notes/configurations give older dates; that conflicting metadata is preserved rather than silently treated as authoritative. The GeoTIFF tags alone do not certify a temporal model.
-
-Support here means finite, nonzero published LOS velocity together with mean spatial coherence at least 0.2, 0.3 or 0.4. The zero exclusion follows the provider notebook. This differs from individual-pair unwrapped/coherence support and from a final LiCSBAS mask; identical cutoff values do not make these support definitions equivalent. No physical rate threshold is used for the population-support comparison.
-
-We intersect the published raster support with GHSL source pixels and the fixed rectangles using spherical latitude/longitude area fractions, preserving extensive counts. Integration produces a support fraction for each clipped native GHSL cell; that fraction is held constant within that cell for subsequent reporting-grid comparisons. Thus the larger-scale exact partition applies to this declared piecewise-constant integrated field, not to a household-level support map. The fixed totals are 3,638,746.86 allocation units for Los Angeles and 167,055.45 for Davis--Sacramento. Every 250/500/1,000/2,000-m grid and zero/half-cell origin conserves that total. Signed allocation differences, local L1, Cauchy bounds and top-decile allocation-deficit overlap are retained for all 96 designs. Bounds are checked per reporting cell; relative closure tolerances are below $10^{-9}$. Ranking overlap is not a measurement-priority or physical-risk validation.
-\begin{table}[htbp]\centering\small
-\caption{Uniform-minus-native allocation differences (pp of fixed population total) across all four scales and four origins per cutoff. Small and identical-threshold cases remain in the results.}
-\begin{tabular}{lrrr}\toprule
-Region & Coherence cutoff & Minimum (pp) & Maximum (pp) \\\midrule
-Los Angeles & 0.2 & 0.0255 & 0.1567 \\
-Los Angeles & 0.3 & 0.0255 & 0.1567 \\
-Los Angeles & 0.4 & 0.0257 & 0.1859 \\
-Davis--Sacramento & 0.2 & 0.0511 & 0.3723 \\
-Davis--Sacramento & 0.3 & 0.0511 & 0.3723 \\
-Davis--Sacramento & 0.4 & 0.0511 & 0.3723 \\
-\bottomrule\end{tabular}
-\end{table}
-\begin{figure}[htbp]\centering
-\includegraphics[width=\linewidth]{figures/additional_S28_new_regions.pdf}
-\caption{Allocation effects in the two fixed additional regions. Lines are means across four origins; bands span those origins and are not confidence intervals. Cutoffs 0.3 and 0.4 coincide in Davis--Sacramento and partly overlap in Los Angeles. These much smaller effects prevent generalizing the primary-case magnitude.}\label{fig:addregions}
-\end{figure}
-\clearpage
-\section*{S29. Municipal residential eligibility as a distinct ancillary reference}
+\section*{S27. Municipal residential eligibility as a distinct ancillary reference}
 The public City of Fresno Existing Land Use layer (hosted FeatureServer layer 19) supplies a classification source distinct from the satellite built-surface layer \citep{fresno2026landuse}. We obtain all 123,493 features intersecting the fixed rectangle, check unique ObjectIDs and retain only ObjectID, ELU, ELUText and LayerRefreshDate. No owner or address fields are collected. Strict residential codes are rl/rml/rm/rmh/rh/rr/rmht/run; the broader rule additionally admits raur/rmx/cmx/cce mixed-use or agricultural-residential classes. Both semantic rules are frozen before the allocation comparison. Unclassified and unmapped locations remain unknown; they are not assigned nonresidential status. The source metadata and refresh dates do not establish a 2020 land-use vintage.
 
-Within complete Census blocks and the common projected 100-m population grid of S20, we intersect municipal geometry with each block--cell piece in EPSG:3310. Seventeen invalid polygons are repaired using make\_valid; overlapping class fragments are unioned before measuring area, separately for mapped, strict and broader eligibility. All 88,865 pieces satisfy nested eligibility fractions and the [0,1] bounds. Population remains uniform within its source cell. DWR footprint fraction is also the spatially averaged value in each projected 100-m cell; no house-level radar support is inferred.
+Within complete Census blocks and the common projected 100-m population grid of S25, we intersect municipal geometry with each block--cell piece in EPSG:3310. Seventeen invalid polygons are repaired using make\_valid; overlapping class fragments are unioned before measuring area, separately for mapped, strict and broader eligibility. All 88,865 pieces satisfy nested eligibility fractions and the [0,1] bounds. Population remains uniform within its source cell. DWR footprint fraction is also the spatially averaged value in each projected 100-m cell; no house-level radar support is inferred.
 
 We first diagnose where the unrestricted block-normalized population falls: residential eligibility, mapped other land use, or unmapped classification. Strict residential eligibility contains 85.22\% of mapped GHSL allocation and 89.30\% of mapped CA-POP allocation, but unmapped classification represents 32.22 and 31.26\% of their complete denominators. The broader definition gives 85.29 and 89.38\% within mapped allocation. These agreement fractions are not independent resident counts. Other land-use allocation may reflect mixed use, group quarters, source-cell mixing, classification error or vintage mismatch; it is not automatically false population.
 
-For allocation sensitivity, each rule is normalized to the same complete-block Census count before support summaries are formed. Area-uniform, GHSL, CA-POP, municipal residential-area uniform and GHSL/CA-POP restricted to eligibility are compared on a joint domain where all six have a positive denominator. The strict domain retains 4,879 blocks and 466,999 Census allocation units (89.13\% of the complete total); the broader domain retains 4,885 blocks and 467,490 units (89.22\%). Both fail the initial 90\% diagnostic coverage gate. We retain that failure explicitly and report the limited common-domain diagnostic, rather than extrapolating it to full Fresno. Excluded masses are 56,954 and 56,463, respectively.
+For allocation sensitivity, each rule is normalized to the same complete-block Census count before support summaries are formed. Area-uniform, GHSL, CA-POP, municipal residential-area uniform and GHSL/CA-POP restricted to eligibility are compared on a joint domain where all six have a positive denominator. The strict domain retains 4,879 blocks and 466,999 Census allocation units (89.13\% of the complete total); the broader domain retains 4,885 blocks and 467,490 units (89.22\%). Both fall below the exploratory 90\% diagnostic coverage gate. This rule was introduced in the residential-analysis script before its output was examined; it was not in protocol v1 and is not an external reporting standard. It limits the reporting domain, rather than testing statistical significance. The protocol-deviation record retains that provenance. We retain that failure explicitly and report the limited common-domain diagnostic, rather than extrapolating it to full Fresno. Excluded masses are 56,954 and 56,463, respectively.
+% ORIGINAL_TABLE_27
 \begin{table}[htbp]\centering\small
 \caption{Support deficit on the joint common Census-allocation domain. Each row conserves the same block total within each definition; the strict and broader domains differ and cover only 89.13--89.22\% of the complete population.}
 \begin{tabular}{lrr}\toprule
@@ -766,21 +736,130 @@ GHSL restricted & 0.05076 & 0.05071 \\
 CA-POP restricted & 0.04136 & 0.04132 \\
 \bottomrule\end{tabular}
 \end{table}
+% ORIGINAL_FIGURE_10
 \begin{figure}[htbp]\centering
 \includegraphics[width=\linewidth]{figures/additional_S29_residential.pdf}
-\caption{Municipal land-use eligibility and allocation sensitivity. Left: all complete allocation units partitioned into residential, mapped other use and unmapped classification. Right: six rules on their restricted common domain. The unmapped category and failed initial 90\% diagnostic gate are retained; neither a residential restriction nor a smaller deficit establishes improved household truth.}\label{fig:addresidential}
+\caption{Municipal land-use eligibility and allocation sensitivity. Left: all complete allocation units partitioned into residential, mapped other use and unmapped classification. Right: six rules on their restricted common domain. The unmapped category and coverage below the exploratory 90\% diagnostic gate are retained; neither a residential restriction nor a smaller deficit establishes improved household truth.}\label{fig:addresidential}
 \end{figure}
 
 The added reference strengthens source diversity at the eligibility level only. It does not establish independence of Census-based population counts, remove the CA-POP/GHSL allocation assumptions or validate deformation in gaps. All feature metadata, category choices, geometry diagnostics, per-block allocations and source hashes are archived in \path{additional/residential_allocation/} and the selected-source companion.
-\clearpage
+
+
+
+
+\section*{Part F: Vertical-rate and regional transfer}
+\section*{S28. Census-block median vertical-rate classification in Fresno}
+
+To compare with published block-median exposure workflows, we obtained raw floating-point annual-rate and cumulative vertical-displacement rasters from the California DWR TRE ALTAMIRA ImageServer. Although the service is named ``Annual Rate Mosaic, its metadata describe pixel values as vertical displacement in feet over the specified interval. We use its full start/end dates and annualize each raw displacement as $v=304.8d_{ft}/(\Delta t_{days}/365.2425)$ mm yr$^{-1}$ before classification or temporal aggregation. The public approximately 100-m rasters are interpolated from point measurements \citep{dwr2026,dwrdocumentation}. The six annual rate layers from October 2015--October 2016 through October 2020--October 2021 were exported at their native EPSG:4326 grid size with nearest-neighbor sampling and aspect-ratio adjustment disabled. We built a pixelwise temporal median, retaining only cells valid in all six layers. The temporal-median vertical rate at each DWR cell was then sampled within the published 100-m observation-cell polygons and assigned to Census blocks by polygon membership. The 38,738 observation polygons map exactly to 38,738 native-grid cells in the snapped export. Census-block population is assigned to the median rate within each block, following the transfer step used by Ohenhen et al. \citep{ohenhen2025uscities}. The same convention is used for the cumulative endpoint interval (2015-06-13--2021-01-01) and the irregular-block experiment in S15. The source-window manifest records each service OBJECTID, exact date interval, export request and SHA-256; the six October-to-October windows are consecutive and nonoverlapping. April-to-April results are a distinct seasonal-window sensitivity.
+
+For the six-window temporal median, 6,129 complete Census blocks have valid cells and contain 501,411 people, 95.70\% of the 523,953 residents in all 6,788 complete blocks. Blocks with no valid cell are left unclassified rather than assigned to a rate class. The thresholds are VLM $\geq 0$, $-3\leq$ VLM $<0$, $-5\leq$ VLM $<-3$, $-10\leq$ VLM $<-5$, and VLM $<-10$ mm yr$^{-1}$, matching the categories in the published comparator. Table~S23 reports class-specific populations for the temporal-median and endpoint-rate estimates; Table~S24 summarizes annual-rate sensitivity.
+
+% ORIGINAL_TABLE_14
+\begin{table}[htbp]\centering\small
+\caption{Fresno 2020 Census population assigned to DWR vertical-rate classes using the median rate in each block. The temporal median uses six October-to-October windows in 2015--2021; the endpoint rate annualizes cumulative displacement from June 2015 to January 2021. Each covers blocks containing 501,411 people.}
+\begin{tabular}{p{.28\linewidth}p{.38\linewidth}rr}\toprule
+Temporal estimator & Median-rate class (mm yr$^{-1}$) & Population & Share (\%) \\\midrule
+Six-window median & $\geq0$ & 0 & 0.00 \\
+Six-window median & $[-3,0)$ & 42 & 0.01 \\
+Six-window median & $[-5,-3)$ & 175,524 & 35.01 \\
+Six-window median & $[-10,-5)$ & 311,231 & 62.07 \\
+Six-window median & $<-10$ & 14,614 & 2.91 \\
+Cumulative endpoint & $\geq0$ & 0 & 0.00 \\
+Cumulative endpoint & $[-3,0)$ & 197,045 & 39.30 \\
+Cumulative endpoint & $[-5,-3)$ & 208,738 & 41.63 \\
+Cumulative endpoint & $[-10,-5)$ & 90,844 & 18.12 \\
+Cumulative endpoint & $<-10$ & 4,784 & 0.95 \\
+\bottomrule\end{tabular}
+\end{table}
+
+% ORIGINAL_TABLE_15
+\begin{table}[htbp]\centering\small
+\caption{Annual-rate temporal sensitivity. Population percentages refer to Census residents in rate-covered blocks and are assigned by the median annual rate in each block.}
+\begin{tabular}{lrrrr}\toprule
+Exact interval & \shortstack{Median rate\\(mm yr$^{-1}$)} & \shortstack{Coverage\\(\%)} & \shortstack{VLM $<0$\\(\%)} & \shortstack{VLM $<-5$\\(\%)} \\\midrule
+2015-10-01--2016-10-01 & -6.04 & 95.70 & 100.00 & 69.88 \\
+2020-10-01--2021-10-01 & +7.27 & 95.70 & 0.81 & 0.17 \\
+2023-10-01--2024-10-01 & -2.66 & 95.70 & 92.18 & 22.92 \\
+2025-04-01--2026-04-01 & -9.19 & 95.70 & 100.00 & 99.87 \\
+\bottomrule\end{tabular}
+\end{table}
+
+For the 2015--2021 temporal-median surface, 64.99\% of the rate-covered population falls in blocks with median vertical rates below $-5$ mm yr$^{-1}$. Allocating each block population uniformly among its valid DWR cells instead of assigning all residents to the within-block median changes any class share by at most 0.03 percentage points in this period. The annual snapshots vary markedly; for example, the median rate among DWR cells changes from $+7.27$ mm yr$^{-1}$ in 2020--2021 to $-9.19$ mm yr$^{-1}$ in 2025--2026. The cumulative endpoint mean rate from June 2015 to January 2021 also gives a different block-class distribution from the six-window temporal median. This illustrates temporal-estimand sensitivity and cautions against treating one annual product as a multi-year trend.
+
+To make temporal sensitivity explicit at the block level, we cross-tabulated the median-rate class from the 2015--2021 six-window surface against the 2025--2026 single-year surface using only the same 6,129 blocks with valid rates in both products. We hold the 2020 Census population fixed in both columns to isolate reclassification; the later column is therefore not a contemporaneous 2025--2026 exposure estimate. Of the 501,411 residents in these common blocks, the share assigned to rates below $-5$ mm yr$^{-1}$ rises from 64.99\% to 99.87\%, and 61.22\% of residents change at least one class. This is a temporal-product sensitivity, not evidence that long-term hazard changed by that amount: the comparison is between a six-year median and one annual estimate. Table~S25 reports the full population transition matrix.
+
+% ORIGINAL_TABLE_16
+\begin{table}[htbp]\centering\small
+\caption{Fixed 2020 Census population (people) cross-classified by each block's median DWR vertical rate in 2015--2021 and 2025--2026. Only the 6,129 blocks with valid observations in both periods are included (501,411 residents). The 2025--2026 values are a single-year sensitivity, not a long-term rate or contemporaneous population exposure.}
+\begin{tabular}{lrrrrr}\toprule
+\shortstack{2015--2021 class\\(mm yr$^{-1}$)} & \multicolumn{5}{c}{2025--2026 class (mm yr$^{-1}$)} \\
+ & $\geq0$ & $[-3,0)$ & $[-5,-3)$ & $[-10,-5)$ & $<-10$ \\
+\midrule
+$\geq0$ & 0 & 0 & 0 & 0 & 0 \\
+$[-3,0)$ & 0 & 0 & 0 & 42 & 0 \\
+$[-5,-3)$ & 0 & 0 & 668 & 174,062 & 794 \\
+$[-10,-5)$ & 0 & 0 & 0 & 179,154 & 132,077 \\
+$<-10$ & 0 & 0 & 0 & 0 & 14,614 \\
+\bottomrule\end{tabular}
+\end{table}
+
+We further tested persistence across the six consecutive October-to-October annual products used in the 2015--2021 temporal median. For each year, we first calculated the median valid vertical rate within each Census block; we then counted how many of the six yearly block medians were below $-5$ mm yr$^{-1}$. Among the same 6,129 blocks with valid rates in every window (501,411 residents using fixed 2020 counts), 95.08\% of residents are in blocks that cross this threshold in one to five windows, and 0.10\% are in blocks below the threshold in all six. Thus 95.17\% cross the threshold in at least one window, while 4.83\% are never below it. This confirms that single-window classifications are temporally variable in the DWR product; it does not establish which annual rate is correct or imply persistent long-term hazard. Table~S26 gives the population distribution by number of years below the threshold.
+
+% ORIGINAL_TABLE_17
+\begin{table}[htbp]\centering\small
+\caption{Persistence of the block-median $-5$ mm yr$^{-1}$ threshold across six consecutive annual DWR products from October 2015 to October 2021. Population uses fixed 2020 Census counts. The denominator is the 6,129 complete blocks with valid DWR cells in every annual window (501,411 residents).}
+\begin{tabular}{rrrr}\toprule
+Years below $-5$ & Blocks & 2020 Census population & Common population (\%) \\\midrule
+0 & 361 & 24,194 & 4.83 \\
+1 & 516 & 36,688 & 7.32 \\
+2 & 877 & 61,336 & 12.23 \\
+3 & 1,335 & 115,001 & 22.94 \\
+4 & 1,874 & 167,391 & 33.38 \\
+5 & 1,152 & 96,324 & 19.21 \\
+6 & 14 & 477 & 0.10 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+This transfer test uses an interpolated DWR/TRE ALTAMIRA vertical-rate raster, not our original LOS velocities, and shares provider lineage with the footprint product. It is not independent InSAR validation and cannot validate motion beyond the measured footprint; DWR vintage differences and Census differential privacy also limit interpretation. Scripts, cropped rasters, per-block data and checksums are in the analysis bundle.
+
+
+
+\section*{S29. Two fixed additional regions using archived ARIA products}
+The new-region protocol is fixed before their allocation outcomes: Los Angeles [$-118.4$,$-118.1$]$^\circ$ E by [33.85,34.10]$^\circ$ N and Davis--Sacramento [$-121.9$,$-121.6$]$^\circ$ E by [38.4,38.7]$^\circ$ N. We use GHSL R2023A 2020 population at 3 arcsec and the April 2026 archived ARIA California products of Sangha et al.\ \citep{sangha2026california,sangha2026data}. Los Angeles uses ascending track A064 (reference P597); Davis--Sacramento uses A137 (P266). Completed notebook outputs and the published track table document periods 14 February 2016--13 May 2022 and 3 March 2017--29 August 2023. Some archived A137 run notes/configurations give older dates; that conflicting metadata is preserved rather than silently treated as authoritative. The GeoTIFF tags alone do not certify a temporal model.
+
+Support here means finite, nonzero published LOS velocity together with mean spatial coherence at least 0.2, 0.3 or 0.4. The zero exclusion follows the provider notebook. This differs from individual-pair unwrapped/coherence support and from a final LiCSBAS mask; identical cutoff values do not make these support definitions equivalent. No physical rate threshold is used for the population-support comparison.
+
+We intersect the published raster support with GHSL source pixels and the fixed rectangles using spherical latitude/longitude area fractions, preserving extensive counts. Integration produces a support fraction for each clipped native GHSL cell; that fraction is held constant within that cell for subsequent reporting-grid comparisons. Thus the larger-scale exact partition applies to this declared piecewise-constant integrated field, not to a household-level support map. The fixed totals are 3,638,746.86 allocation units for Los Angeles and 167,055.45 for Davis--Sacramento. Every 250/500/1,000/2,000-m grid and zero/half-cell origin conserves that total. Signed allocation differences, local L1, Cauchy bounds and top-decile allocation-deficit overlap are retained for all 96 designs. Bounds are checked per reporting cell; relative closure tolerances are below $10^{-9}$. Ranking overlap is not a measurement-priority or physical-risk validation.
+% ORIGINAL_TABLE_26
+\begin{table}[htbp]\centering\small
+\caption{Uniform-minus-native allocation differences (pp of fixed population total) across all four scales and four origins per cutoff. Small and identical-threshold cases remain in the results.}
+\begin{tabular}{lrrr}\toprule
+Region & Coherence cutoff & Minimum (pp) & Maximum (pp) \\\midrule
+Los Angeles & 0.2 & 0.0255 & 0.1567 \\
+Los Angeles & 0.3 & 0.0255 & 0.1567 \\
+Los Angeles & 0.4 & 0.0257 & 0.1859 \\
+Davis--Sacramento & 0.2 & 0.0511 & 0.3723 \\
+Davis--Sacramento & 0.3 & 0.0511 & 0.3723 \\
+Davis--Sacramento & 0.4 & 0.0511 & 0.3723 \\
+\bottomrule\end{tabular}
+\end{table}
+% ORIGINAL_FIGURE_9
+\begin{figure}[htbp]\centering
+\includegraphics[width=\linewidth]{figures/additional_S28_new_regions.pdf}
+\caption{Allocation effects in the two fixed additional regions. Lines are means across four origins; bands span those origins and are not confidence intervals. Cutoffs 0.3 and 0.4 coincide in Davis--Sacramento and partly overlap in Los Angeles. These much smaller effects prevent generalizing the primary-case magnitude.}\label{fig:addregions}
+\end{figure}
+
+
 \section*{S30. Archived independent GNSS transfer with disjoint frame controls}
 We use independent NGL GNSS observations already projected into the LOS geometry and track periods in the completed Sangha et al.\ notebooks \citep{sangha2026california,sangha2026data}. Their station screening is retained, including the provider completeness and residual-scatter criteria; no station is selected using our comparison residual. Notebook cell 38 reports 411 A064 and 341 A137 LOS rates, explicitly converted from m yr$^{-1}$ to mm yr$^{-1}$. We join station names to the public NGL coordinate metadata downloaded on 1 October 2026 \citep{ngl2026holdings}. The fixed rectangles contain 12 and five eligible archived stations. The provider reference P597/P266 lies outside the respective rectangle but is retained as a frame control.
 
-Before reading residuals, station coordinates alone select the eligible site closest to each rectangle's centre as an alternative local control: MHMS and UCD1. Provider reference and local-control stations are excluded from every validation metric, including metrics using the other control. Thus the same 11 Los Angeles and four Davis--Sacramento validation stations are compared under both frames. For each control $r$, both products use the relative quantity $v_i-v_r$; no regression or spatial ramp is fitted to validation stations. The nearest-centre choice is an exploratory local-frame sensitivity, not an externally validated optimal reference.
+Before reading residuals, station coordinates alone select the eligible site closest to each rectangle's center as an alternative local control: MHMS and UCD1. Provider reference and local-control stations are excluded from every validation metric, including metrics using the other control. Thus the same 11 Los Angeles and four Davis--Sacramento validation stations are compared under both frames. For each control $r$, both products use the relative quantity $v_i-v_r$; no regression or spatial ramp is fitted to validation stations. The nearest-center choice is an exploratory local-frame sensitivity, not an externally validated optimal reference.
 
-Native samples use the containing cell, calculated with floor through rasterio.index, not rounded pixel-corner indices. Sensitivities use the median within one- and three-pixel-radius windows. Published zero exclusions are preserved except at the provider reference itself. All 19 selected site windows are losslessly archived as 7-by-7 float32 source capsules, together with the complete source-raster hashes, row/column indices and centre coordinates; the full GeoTIFFs are also supplied in the source companion. Reproduction from capsules gives the same station and summary tables as the complete rasters. Maximum station-to-containing-pixel-centre offsets are 57.96 and 40.10 m. All sites and every unavailable sample are recorded; none is removed for a large residual.
+Native samples use the containing cell, calculated with floor through rasterio.index, not rounded pixel-corner indices. Sensitivities use the median within one- and three-pixel-radius windows. Published zero exclusions are preserved except at the provider reference itself. All 19 selected site windows are losslessly archived as 7-by-7 float32 source capsules, together with the complete source-raster hashes, row/column indices and center coordinates; the full GeoTIFFs are also supplied in the source companion. Reproduction from capsules gives the same station and summary tables as the complete rasters. Maximum station-to-containing-pixel-center offsets are 57.96 and 40.10 m. All sites and every unavailable sample are recorded; none is removed for a large residual.
 
 The exact archived MintPy implementation confirms that get\_los\_obs with an omitted model argument invokes a polynomial degree-1 fit, without periodic or earthquake-step terms. The published InSAR trend uses additional seasonal/step terms. Although periods and spatial frames follow the completed notebooks, the temporal models are therefore not identical. The April data release also retains conflicting older A137 configuration dates. These are source-version and trend-comparison limitations, not presumed corrections. We have not newly refitted raw daily GNSS or silently resolved the conflicts using the best-looking residual.
+% ORIGINAL_TABLE_28
 \begin{table}[htbp]\centering\small
 \caption{Relative LOS comparison with archived independent GNSS observations. Bias is at the containing native pixel; RMSE columns give pixel radii 0, 1 and 3. All units are mm yr$^{-1}$. Controls are excluded from every metric.}
 \begin{tabular}{llrrrrr}\toprule
@@ -791,274 +870,19 @@ Davis--Sacramento & P266 & 4 & +6.68 & 8.94 & 9.08 & 8.98 \\
 Davis--Sacramento & UCD1 & 4 & +9.07 & 10.85 & 11.16 & 11.21 \\
 \bottomrule\end{tabular}
 \end{table}
+% ORIGINAL_FIGURE_11
 \begin{figure}[htbp]\centering
 \includegraphics[width=\linewidth]{figures/additional_S30_GNSS.pdf}
-\caption{External LOS/GNSS consistency under two disjoint frame controls and three sampling radii. The same validation sites are used within each region. Los Angeles improves under the local frame, while Davis--Sacramento does not. The entire result is retained; the favorable Los Angeles value cannot be generalized to the second region or to Bangkok.}\label{fig:addgnss}
+\caption{External LOS/GNSS consistency under two disjoint frame controls and three sampling radii. The same validation sites are used within each region. Re-referencing lowers the Los Angeles comparison RMSE but increases it in Davis--Sacramento. The entire result is retained; the favorable Los Angeles value cannot be generalized to the second region or to Bangkok.}\label{fig:addgnss}
 \end{figure}
 
 FGNW and FGSW are within 100 m and are assigned one collocation cluster. Los Angeles therefore has 11 validation stations but ten descriptive clusters; Davis--Sacramento has four and four. At radius 0 with local controls, cluster-median RMSE is 1.20 and 10.85 mm yr$^{-1}$. Shared frame-control error, nearby monuments and spatial signals prevent treating station errors as independent trials; no iid confidence interval is reported. Radar scattering targets and GNSS monuments may also measure different local motion.
 
 This comparison introduces independent observations for an archived external California LOS product and tests sensitivity to spatial reference. It does not independently validate our Bangkok inversion, household placement, support masks or genuinely missing rates. The large Davis--Sacramento discrepancies and temporal-model conflicts remain unresolved evidence limits, so we do not call the exercise a successful physical validation. Station-level estimates, all frame/radius summaries, exclusions, collocation assignments, source notebooks and implementation excerpts are retained in \path{additional/gnss_transfer/} and the source companion.
 
-% end additional_supplement.tex
 
 
-\clearpage\small\setlength{\bibsep}{0pt}\bibliographystyle{sn-nature}\begin{thebibliography}{10}
-\expandafter\ifx\csname url\endcsname\relax
-  \def\url#1{\burl{#1}}\fi
-\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
-\providecommand{\bibinfo}[2]{#2}
-\providecommand{\eprint}[2][]{\url{#2}}
-\providecommand{\doi}[1]{\url{https://doi.org/#1}}
-\bibcommenthead
 
-\bibitem{blackwell2020california}
-\bibinfo{author}{Blackwell, E.}, \bibinfo{author}{Shirzaei, M.},
-  \bibinfo{author}{Ojha, C.} \& \bibinfo{author}{Werth, S.}
-\newblock \bibinfo{title}{Tracking california's sinking coast from space:
-  Implications for relative sea-level rise}.
-\newblock \emph{\bibinfo{journal}{Science Advances}}
-  \textbf{\bibinfo{volume}{6}}, \bibinfo{pages}{eaba4551}
-  (\bibinfo{year}{2020}).
-
-\bibitem{fernandeztorres2024mexico}
-\bibinfo{author}{Fernandez-Torres, E.~A.} \emph{et~al.}
-\newblock \bibinfo{title}{Country-scale assessment of urban areas, population,
-  and households exposed to land subsidence using sentinel-1 insar, and gps
-  time series}.
-\newblock \emph{\bibinfo{journal}{Natural Hazards}}
-  \textbf{\bibinfo{volume}{120}}, \bibinfo{pages}{1577--1601}
-  (\bibinfo{year}{2024}).
-
-\bibitem{ao2024national}
-\bibinfo{author}{Ao, Z.}, \bibinfo{author}{Hu, X.}, \bibinfo{author}{Tao, S.},
-  \bibinfo{author}{Hu, X.} \emph{et~al.}
-\newblock \bibinfo{title}{A national-scale assessment of land subsidence in
-  china's major cities}.
-\newblock \emph{\bibinfo{journal}{Science}}  (\bibinfo{year}{2024}).
-
-\bibitem{ohenhen2025uscities}
-\bibinfo{author}{Ohenhen, L.~O.}, \bibinfo{author}{Zhai, G.},
-  \bibinfo{author}{Lucy, J.} \emph{et~al.}
-\newblock \bibinfo{title}{Land subsidence risk to infrastructure in {US}
-  metropolises}.
-\newblock \emph{\bibinfo{journal}{Nature Cities}} \textbf{\bibinfo{volume}{2}},
-  \bibinfo{pages}{543--554} (\bibinfo{year}{2025}).
-
-\bibitem{murray2025hawaii}
-\bibinfo{author}{Murray, K.}, \bibinfo{author}{Barbee, M.},
-  \bibinfo{author}{Thompson, P.} \& \bibinfo{author}{Fletcher, C.}
-\newblock \bibinfo{title}{Coastal land subsidence accelerates timelines for
-  future flood exposure in hawai'i}.
-\newblock \emph{\bibinfo{journal}{Communications Earth \& Environment}}
-  \textbf{\bibinfo{volume}{6}}, \bibinfo{pages}{123} (\bibinfo{year}{2025}).
-
-\bibitem{aieorattanawadee2022bangkok}
-\bibinfo{author}{Aieorattanawadee, N.}
-\newblock \emph{\bibinfo{title}{Monitoring land subsidence in {Bangkok} during
-  2018--2022 using time-series {InSAR} analysis with {MintPy}}}.
-\newblock \bibinfo{type}{Master's thesis}, \bibinfo{school}{Chulalongkorn
-  University} (\bibinfo{year}{2022}).
-\newblock \urlprefix\url{https://digital.car.chula.ac.th/chulaetd/6585/}.
-
-\bibitem{luachapichatikul2020bangkok}
-\bibinfo{author}{Luachapichatikul, S.}
-\newblock \emph{\bibinfo{title}{Measuring Land Subsidence with {PS-InSAR} in
-  {Bangkok} using {Sentinel-1} Time-Series Techniques}}.
-\newblock \bibinfo{type}{Master's thesis}, \bibinfo{school}{Burapha University}
-  (\bibinfo{year}{2020}).
-\newblock \urlprefix\url{https://ir.buu.ac.th/dspace/handle/1513/311}.
-
-\bibitem{pumpuang2024bangkapi}
-\bibinfo{author}{Pumpuang, A.} \& \bibinfo{author}{Aobpaet, A.}
-\newblock \bibinfo{title}{Evolution pattern of land subsidence using {InSAR}
-  time-series analysis in {Bangkapi}, {Bangkok}, {Thailand}}.
-\newblock \emph{\bibinfo{journal}{Journal of Current Science and Technology}}
-  \textbf{\bibinfo{volume}{14}}, \bibinfo{pages}{49} (\bibinfo{year}{2024}).
-\newblock
-  \urlprefix\url{https://ph04.tci-thaijo.org/index.php/JCST/article/view/2549}.
-
-\bibitem{keerinart2020sbkk}
-\bibinfo{author}{Keerinart, C.}, \bibinfo{author}{Phumpuang, A.},
-  \bibinfo{author}{Ladavadee, A.}, \bibinfo{author}{Supavetch, S.} \&
-  \bibinfo{author}{Aobpaet, A.}
-\newblock \bibinfo{title}{Subsidence rate analyzing of bangkok soil profile
-  with {InSAR} data}.
-\newblock \bibinfo{howpublished}{The 25th National Convention on Civil
-  Engineering, GTE44-1--GTE44-6, Chonburi, Thailand} (\bibinfo{year}{2020}).
-\newblock
-  \urlprefix\url{https://www.conference.thaince.org/index.php/ncce25/article/download/670/265/}.
-
-\bibitem{haghshenas2024iran}
-\bibinfo{author}{Haghshenas~Haghighi, M.} \& \bibinfo{author}{Motagh, M.}
-\newblock \bibinfo{title}{Uncovering the impacts of depleting aquifers: A
-  remote sensing analysis of land subsidence in iran}.
-\newblock \emph{\bibinfo{journal}{Science Advances}}
-  \textbf{\bibinfo{volume}{10}} (\bibinfo{year}{2024}).
-
-\bibitem{payne2025iran}
-\bibinfo{author}{Payne, J.~A.} \emph{et~al.}
-\newblock \bibinfo{title}{Widespread extent of irrecoverable aquifer depletion
-  revealed by country-wide analysis of land surface subsidence hazard in iran}.
-\newblock \emph{\bibinfo{journal}{Journal of Geophysical Research: Solid
-  Earth}} \textbf{\bibinfo{volume}{130}} (\bibinfo{year}{2025}).
-
-\bibitem{payne2024data}
-\bibinfo{author}{Payne, J.}
-\newblock \bibinfo{title}{Accompanying data for paper: Widespread extent of
-  irrecoverable aquifer depletion revealed by country-wide analysis of land
-  surface subsidence hazard in iran} (\bibinfo{year}{2024}).
-
-\bibitem{morishita2020licsbas}
-\bibinfo{author}{Morishita, Y.} \emph{et~al.}
-\newblock \bibinfo{title}{{LiCSBAS}: An open-source {InSAR} time series
-  analysis package integrated with the {LiCSAR} automated {Sentinel-1} {InSAR}
-  processor}.
-\newblock \emph{\bibinfo{journal}{Remote Sensing}}
-  \textbf{\bibinfo{volume}{12}}, \bibinfo{pages}{424} (\bibinfo{year}{2020}).
-
-\bibitem{jica2024thailandcors}
-\bibinfo{author}{{Japan International Cooperation Agency}}.
-\newblock \bibinfo{title}{The kingdom of thailand: Project for capacity
-  development and promotion of utilization of national {CORS} data center,
-  project completion report (2nd and 3rd terms)}.
-\newblock \bibinfo{howpublished}{Japan International Cooperation Agency report}
-  (\bibinfo{year}{2024}).
-\newblock
-  \urlprefix\url{https://openjicareport.jica.go.jp/pdf/12386280_01.pdf}.
-\newblock \bibinfo{note}{SBKK station coordinate in Table 5}.
-
-\bibitem{eicher2001dasymetric}
-\bibinfo{author}{Eicher, C.~L.} \& \bibinfo{author}{Brewer, C.~A.}
-\newblock \bibinfo{title}{Dasymetric mapping and areal interpolation:
-  Implementation and evaluation}.
-\newblock \emph{\bibinfo{journal}{Cartography and Geographic Information
-  Science}} \textbf{\bibinfo{volume}{28}}, \bibinfo{pages}{125--138}
-  (\bibinfo{year}{2001}).
-
-\bibitem{mennis2003population}
-\bibinfo{author}{Mennis, J.}
-\newblock \bibinfo{title}{Generating surface models of population using
-  dasymetric mapping}.
-\newblock \emph{\bibinfo{journal}{The Professional Geographer}}
-  \textbf{\bibinfo{volume}{55}}, \bibinfo{pages}{31--42}
-  (\bibinfo{year}{2003}).
-
-\bibitem{yunjun2019mintpy}
-\bibinfo{author}{Zhang, Y.}, \bibinfo{author}{Fattahi, H.} \&
-  \bibinfo{author}{Amelung, F.}
-\newblock \bibinfo{title}{Small baseline {InSAR} time series analysis:
-  Unwrapping error correction and noise reduction}.
-\newblock \emph{\bibinfo{journal}{Computers \& Geosciences}}
-  \textbf{\bibinfo{volume}{133}}, \bibinfo{pages}{104331}
-  (\bibinfo{year}{2019}).
-
-\bibitem{dwr2026}
-\bibinfo{author}{{California Department of Water Resources}}.
-\newblock \bibinfo{title}{Vertical displacement point data locations, 2026q1:
-  published observation-cell polygons} (\bibinfo{year}{2026}).
-\newblock
-  \urlprefix\url{https://gis.water.ca.gov/arcgis/rest/services/Elevation/Vertical_Displacement_Point_Data_Locations_2026Q1/MapServer}.
-\newblock \bibinfo{note}{Service layer 0, geometry type polygon; accessed 27
-  September 2026}.
-
-\bibitem{dwrdocumentation}
-\bibinfo{author}{{California Department of Water Resources}}.
-\newblock \bibinfo{title}{{SGMA} data viewer documentation: {TRE Altamira
-  InSAR} dataset} (\bibinfo{year}{2026}).
-\newblock
-  \urlprefix\url{https://sgma.water.ca.gov/webgis/config/custom/html/SGMADataViewer/doc/}.
-\newblock \bibinfo{note}{100 m measurement support distinguished from
-  interpolated display rasters; accessed 27 September 2026}.
-
-\bibitem{ghslpopr2023a}
-\bibinfo{author}{Schiavina, M.}, \bibinfo{author}{Freire, S.},
-  \bibinfo{author}{Carioli, A.} \& \bibinfo{author}{MacManus, K.}
-\newblock \bibinfo{title}{{GHS-POP R2023A}: {GHS} population grid multitemporal
-  (1975--2030)} (\bibinfo{year}{2023}).
-\newblock
-  \urlprefix\url{https://human-settlement.emergency.copernicus.eu/ghs_pop2023.php}.
-\newblock \bibinfo{note}{Dataset DOI:
-  10.2905/2FF68A52-5B5B-4A22-8F40-C41DA8332CFE}.
-
-\bibitem{worldpopusa2020}
-\bibinfo{author}{{WorldPop and Center for International Earth Science
-  Information Network (CIESIN), Columbia University}}.
-\newblock \bibinfo{title}{Global high resolution population denominators
-  project: {United States} 2020 {UN-adjusted} 1-km population grid}
-  (\bibinfo{year}{2018}).
-\newblock \urlprefix\url{https://hub.worldpop.org/geodata/summary?id=34816}.
-\newblock \bibinfo{note}{Dataset DOI: 10.5258/SOTON/WP00671; production date
-  2020-06-22}.
-
-\bibitem{moran1950notes}
-\bibinfo{author}{Moran, P. A.~P.}
-\newblock \bibinfo{title}{Notes on continuous stochastic phenomena}.
-\newblock \emph{\bibinfo{journal}{Biometrika}} \textbf{\bibinfo{volume}{37}},
-  \bibinfo{pages}{17--23} (\bibinfo{year}{1950}).
-
-\bibitem{depsky2022capop}
-\bibinfo{author}{Depsky, N.~J.}, \bibinfo{author}{Cushing, L.} \&
-  \bibinfo{author}{Morello-Frosch, R.}
-\newblock \bibinfo{title}{High-resolution gridded estimates of population
-  sociodemographics from the 2020 census in california}.
-\newblock \emph{\bibinfo{journal}{PLOS ONE}} \textbf{\bibinfo{volume}{17}},
-  \bibinfo{pages}{e0270746} (\bibinfo{year}{2022}).
-
-\bibitem{acs2021summary}
-\bibinfo{author}{{U.S. Census Bureau}}.
-\newblock \bibinfo{title}{2021 american community survey 5-year summary file}
-  (\bibinfo{year}{2021}).
-\newblock
-  \urlprefix\url{https://www.census.gov/programs-surveys/acs/data/summary-file/sequence-based/2021.html}.
-
-\bibitem{tiger2020blockgroups}
-\bibinfo{author}{{U.S. Census Bureau}}.
-\newblock \bibinfo{title}{2020 tiger/line shapefiles: Block groups}
-  (\bibinfo{year}{2020}).
-\newblock \urlprefix\url{https://www2.census.gov/geo/tiger/TIGER2020/BG/}.
-
-\bibitem{acs2021vre}
-\bibinfo{author}{{U.S. Census Bureau}}.
-\newblock \bibinfo{title}{2017--2021 acs variance replicate estimate tables
-  documentation} (\bibinfo{year}{2022}).
-\newblock
-  \urlprefix\url{https://www2.census.gov/programs-surveys/acs/replicate_estimates/2021/documentation/5-year/2017-2021_Variance_Replicate_Table_Documentation.pdf}.
-
-\bibitem{sangha2026california}
-\bibinfo{author}{Sangha, S.~S.}, \bibinfo{author}{Funning, G.~J.},
-  \bibinfo{author}{Govorcin, M.} \& \bibinfo{author}{Bekaert, D. P.~S.}
-\newblock \bibinfo{title}{A statewide insar velocity map for california
-  produced by a comprehensive large scale analysis of aria standard products}.
-\newblock \emph{\bibinfo{journal}{Earth and Space Science}}
-  \textbf{\bibinfo{volume}{13}}, \bibinfo{pages}{e2026EA005214}
-  (\bibinfo{year}{2026}).
-
-\bibitem{sangha2026data}
-\bibinfo{author}{Sangha, S.}, \bibinfo{author}{Funning, G.},
-  \bibinfo{author}{Govorcin, M.} \& \bibinfo{author}{Bekaert, D.}
-\newblock \bibinfo{title}{Data and software for sangha et al., 2026: A
-  statewide insar velocity map for california} (\bibinfo{year}{2026}).
-\newblock \bibinfo{note}{Fixed April 2026 archived version; CC BY 4.0}.
-
-\bibitem{fresno2026landuse}
-\bibinfo{author}{{City of Fresno}}.
-\newblock \bibinfo{title}{Public existing land use gis layer}
-  (\bibinfo{year}{2026}).
-\newblock
-  \urlprefix\url{https://services2.arcgis.com/WkBUojyNPhsWOk1W/arcgis/rest/services/Existing_Land_Use/FeatureServer/19}.
-\newblock \bibinfo{note}{Hosted FeatureServer layer 19; ObjectID, ELU, ELUText
-  and LayerRefreshDate; accessed 1 October 2026}.
-
-\bibitem{ngl2026holdings}
-\bibinfo{author}{{Nevada Geodetic Laboratory}}.
-\newblock \bibinfo{title}{Gnss station data holdings and coordinate metadata}
-  (\bibinfo{year}{2026}).
-\newblock
-  \urlprefix\url{https://geodesy.unr.edu/NGLStationPages/DataHoldings.txt}.
-\newblock \bibinfo{note}{University of Nevada, Reno; accessed 1 October 2026}.
-
-\end{thebibliography}
-
+\small\setlength{\bibsep}{0pt}\bibliographystyle{sn-nature}\bibliography{references}
 \end{document}
 

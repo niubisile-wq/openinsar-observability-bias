@@ -12,7 +12,7 @@
   \bibinfo{author}{Rocca, F.}
 \newblock \bibinfo{title}{Permanent scatterers in {SAR} interferometry}.
 \newblock \emph{\bibinfo{journal}{IEEE Transactions on Geoscience and Remote
-  Sensing}} \textbf{\bibinfo{volume}{39}}, \bibinfo{pages}{8--21}
+  Sensing}} \textbf{\bibinfo{volume}{39}}, \bibinfo{pages}{8--20}
   (\bibinfo{year}{2001}).
 
 \bibitem{berardino2002sbas}
@@ -41,7 +41,7 @@
   \textbf{\bibinfo{volume}{12}}, \bibinfo{pages}{424} (\bibinfo{year}{2020}).
 
 \bibitem{yunjun2019mintpy}
-\bibinfo{author}{Zhang, Y.}, \bibinfo{author}{Fattahi, H.} \&
+\bibinfo{author}{Yunjun, Z.}, \bibinfo{author}{Fattahi, H.} \&
   \bibinfo{author}{Amelung, F.}
 \newblock \bibinfo{title}{Small baseline {InSAR} time series analysis:
   Unwrapping error correction and noise reduction}.
@@ -52,7 +52,7 @@
 \bibitem{blackwell2020california}
 \bibinfo{author}{Blackwell, E.}, \bibinfo{author}{Shirzaei, M.},
   \bibinfo{author}{Ojha, C.} \& \bibinfo{author}{Werth, S.}
-\newblock \bibinfo{title}{Tracking california's sinking coast from space:
+\newblock \bibinfo{title}{Tracking {California}'s sinking coast from space:
   Implications for relative sea-level rise}.
 \newblock \emph{\bibinfo{journal}{Science Advances}}
   \textbf{\bibinfo{volume}{6}}, \bibinfo{pages}{eaba4551}
@@ -61,8 +61,8 @@
 \bibitem{fernandeztorres2024mexico}
 \bibinfo{author}{Fernandez-Torres, E.~A.} \emph{et~al.}
 \newblock \bibinfo{title}{Country-scale assessment of urban areas, population,
-  and households exposed to land subsidence using sentinel-1 insar, and gps
-  time series}.
+  and households exposed to land subsidence using {Sentinel-1} {InSAR}, and
+  {GPS} time series}.
 \newblock \emph{\bibinfo{journal}{Natural Hazards}}
   \textbf{\bibinfo{volume}{120}}, \bibinfo{pages}{1577--1601}
   (\bibinfo{year}{2024}).
@@ -71,8 +71,9 @@
 \bibinfo{author}{Ao, Z.}, \bibinfo{author}{Hu, X.}, \bibinfo{author}{Tao, S.},
   \bibinfo{author}{Hu, X.} \emph{et~al.}
 \newblock \bibinfo{title}{A national-scale assessment of land subsidence in
-  china's major cities}.
-\newblock \emph{\bibinfo{journal}{Science}}  (\bibinfo{year}{2024}).
+  {China}'s major cities}.
+\newblock \emph{\bibinfo{journal}{Science}} \textbf{\bibinfo{volume}{384}},
+  \bibinfo{pages}{301--306} (\bibinfo{year}{2024}).
 
 \bibitem{ohenhen2025uscities}
 \bibinfo{author}{Ohenhen, L.~O.}, \bibinfo{author}{Zhai, G.},
@@ -111,7 +112,7 @@
 \bibinfo{author}{Murray, K.}, \bibinfo{author}{Barbee, M.},
   \bibinfo{author}{Thompson, P.} \& \bibinfo{author}{Fletcher, C.}
 \newblock \bibinfo{title}{Coastal land subsidence accelerates timelines for
-  future flood exposure in hawai'i}.
+  future flood exposure in {Hawai}'i}.
 \newblock \emph{\bibinfo{journal}{Communications Earth \& Environment}}
   \textbf{\bibinfo{volume}{6}}, \bibinfo{pages}{123} (\bibinfo{year}{2025}).
 
@@ -164,7 +165,8 @@
 
 \bibitem{ohenhen2025deltadata}
 \bibinfo{author}{Ohenhen, L.}
-\newblock \bibinfo{title}{Global subsidence of river deltas}
+\newblock \bibinfo{title}{Global subsidence of river deltas}.
+\newblock \bibinfo{howpublished}{\url{https://doi.org/10.5281/zenodo.18092985}}
   (\bibinfo{year}{2025}).
 \newblock \bibinfo{note}{1-km vertical land motion GeoTIFFs for 40 river
   deltas}.
@@ -187,8 +189,8 @@
 
 \bibitem{worldpop2020}
 \bibinfo{author}{{WorldPop}}.
-\newblock \bibinfo{title}{Thailand 2020 population counts: unconstrained,
-  un-adjusted, 3 arc-second product} (\bibinfo{year}{2020}).
+\newblock \bibinfo{title}{{Thailand} 2020 population counts: unconstrained,
+  {UN}-adjusted, 3 arc-second product} (\bibinfo{year}{2020}).
 \newblock \urlprefix\url{https://hub.worldpop.org/geodata/summary?id=29165}.
 \newblock \bibinfo{note}{File tha\_ppp\_2020\_UNadj.tif; accessed 27 September
   2026}.
@@ -196,7 +198,8 @@
 \bibitem{worldcover2021}
 \bibinfo{author}{Zanaga, D.}, \bibinfo{author}{Van De~Kerchove, R.},
   \bibinfo{author}{Daems, D.} \emph{et~al.}
-\newblock \bibinfo{title}{{ESA WorldCover} 10 m 2021 v200}
+\newblock \bibinfo{title}{{ESA WorldCover} 10 m 2021 v200}.
+\newblock \bibinfo{howpublished}{\url{https://doi.org/10.5281/zenodo.7254221}}
   (\bibinfo{year}{2022}).
 
 \bibitem{licsbas2}
@@ -228,8 +231,9 @@
 \bibitem{sangha2026california}
 \bibinfo{author}{Sangha, S.~S.}, \bibinfo{author}{Funning, G.~J.},
   \bibinfo{author}{Govorcin, M.} \& \bibinfo{author}{Bekaert, D. P.~S.}
-\newblock \bibinfo{title}{A statewide insar velocity map for california
-  produced by a comprehensive large scale analysis of aria standard products}.
+\newblock \bibinfo{title}{A statewide {InSAR} velocity map for {California}
+  produced by a comprehensive large scale analysis of {ARIA} standard
+  products}.
 \newblock \emph{\bibinfo{journal}{Earth and Space Science}}
   \textbf{\bibinfo{volume}{13}}, \bibinfo{pages}{e2026EA005214}
   (\bibinfo{year}{2026}).
@@ -238,12 +242,14 @@
 \bibinfo{author}{Sangha, S.}, \bibinfo{author}{Funning, G.},
   \bibinfo{author}{Govorcin, M.} \& \bibinfo{author}{Bekaert, D.}
 \newblock \bibinfo{title}{Data and software for sangha et al., 2026: A
-  statewide insar velocity map for california} (\bibinfo{year}{2026}).
+  statewide {InSAR} velocity map for {California}}.
+\newblock \bibinfo{howpublished}{\url{https://doi.org/10.5281/zenodo.19493073}}
+  (\bibinfo{year}{2026}).
 \newblock \bibinfo{note}{Fixed April 2026 archived version; CC BY 4.0}.
 
 \bibitem{fresno2026landuse}
 \bibinfo{author}{{City of Fresno}}.
-\newblock \bibinfo{title}{Public existing land use gis layer}
+\newblock \bibinfo{title}{Public existing land use {GIS} layer}
   (\bibinfo{year}{2026}).
 \newblock
   \urlprefix\url{https://services2.arcgis.com/WkBUojyNPhsWOk1W/arcgis/rest/services/Existing_Land_Use/FeatureServer/19}.
@@ -253,21 +259,26 @@
 \bibitem{haghshenas2024iran}
 \bibinfo{author}{Haghshenas~Haghighi, M.} \& \bibinfo{author}{Motagh, M.}
 \newblock \bibinfo{title}{Uncovering the impacts of depleting aquifers: A
-  remote sensing analysis of land subsidence in iran}.
+  remote sensing analysis of land subsidence in {Iran}}.
 \newblock \emph{\bibinfo{journal}{Science Advances}}
-  \textbf{\bibinfo{volume}{10}} (\bibinfo{year}{2024}).
+  \textbf{\bibinfo{volume}{10}}, \bibinfo{pages}{eadk3039}
+  (\bibinfo{year}{2024}).
 
 \bibitem{payne2025iran}
 \bibinfo{author}{Payne, J.~A.} \emph{et~al.}
 \newblock \bibinfo{title}{Widespread extent of irrecoverable aquifer depletion
-  revealed by country-wide analysis of land surface subsidence hazard in iran}.
+  revealed by country-wide analysis of land surface subsidence hazard in
+  {Iran}}.
 \newblock \emph{\bibinfo{journal}{Journal of Geophysical Research: Solid
-  Earth}} \textbf{\bibinfo{volume}{130}} (\bibinfo{year}{2025}).
+  Earth}} \textbf{\bibinfo{volume}{130}}, \bibinfo{pages}{e2024JB030367}
+  (\bibinfo{year}{2025}).
 
 \bibitem{payne2024data}
 \bibinfo{author}{Payne, J.}
 \newblock \bibinfo{title}{Accompanying data for paper: Widespread extent of
   irrecoverable aquifer depletion revealed by country-wide analysis of land
-  surface subsidence hazard in iran} (\bibinfo{year}{2024}).
+  surface subsidence hazard in {Iran}}.
+\newblock \bibinfo{howpublished}{\url{https://doi.org/10.5281/zenodo.13754200}}
+  (\bibinfo{year}{2024}).
 
 \end{thebibliography}

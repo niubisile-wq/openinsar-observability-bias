@@ -22,30 +22,22 @@
   "moe_aggregation": "Exact SDR variance replicate aggregation: sum each of 80 B01003 block-group replicate estimates over the selected disjoint block groups; variance=(4/80)*sum((replicate_sum-point_estimate_sum)^2); 90% MOE=1.645*sqrt(variance).",
   "raster_overlay": "Source raster population counts allocated to block-group polygons by exact intersection area fraction, assuming uniform population within each 1-km source pixel. GHSL ESRI:54009; WorldPop EPSG:4326 cell edges densified before equal-area projection.",
   "temporal_note": "ACS 2017-2021 five-year estimates overlap 2020 but are a period estimate; GHSL/WorldPop are 2020 surfaces and Census P1 is the 2020 decennial count.",
+  "block_group_area_km2": {
+    "projection": "EPSG:3310 California Albers",
+    "median": 0.6424730440822567,
+    "minimum": 0.10360933344770477,
+    "maximum": 28.365871936392256,
+    "below_1_km2": 256,
+    "total": 344.68779690449435
+  },
   "limitations": [
-    "Block groups are much coarser than the raster and cannot validate within-block-group placement.",
+    "Block groups are not uniformly coarser than the source pixels; most selected groups have area below 1 km2. Areal interpolation inherits within-source-pixel uniformity and cannot validate subpixel or household placement.",
     "ACS is a survey estimate with MOE, not a gold standard; 2020 Census and ACS estimates have different error structures.",
     "Source lineage independence between GHSL/WorldPop and ACS is not established.",
     "The selected complete block groups form a subset of the Fresno rectangle, not the full city/county.",
     "Within-pixel area allocation is an explicit modeling assumption."
   ],
   "inputs": {
-    "lookup.xlsx": {
-      "bytes": 846790,
-      "sha256": "a204c19546966667fa05c560adc6be93411d569214567790af17f0efc8a1f5bc"
-    },
-    "mini_geo.xlsx": {
-      "bytes": 21166174,
-      "sha256": "11f3a072e3902e2f43cc9fd9b59e96d68e5f507fc8cae102e41734de6c576f44"
-    },
-    "ca_seq0002.zip": {
-      "bytes": 4886309,
-      "sha256": "cd724ee6cdb16278b0e7b957dbc69cef15898ac58405ccf198052c3ab8689766"
-    },
-    "tl_2020_06_bg.zip": {
-      "bytes": 51862487,
-      "sha256": "4f26c1828b2039ab7a9e9046b0ab65786c0882e1243f71e074246812312d615c"
-    },
     "ghsl_2020_1km_fresno_tile.zip": {
       "bytes": 2588274,
       "sha256": "b9ee3a07a9b042aea86c1d07f1d14a3815c8a546fe60e135568ce3b25dc21c72"
@@ -54,13 +46,17 @@
       "bytes": 51821771,
       "sha256": "0b75ab7c839bfa81439fafa204f0fba930f15467993c574694be98831fcafb94"
     },
-    "replicate_bg_B01003_06.csv.zip": {
-      "bytes": 4454495,
-      "sha256": "ae1c68c7680fbbbb319b9112fa1e5226db816b16945ebc49bea71000d4a6c333"
+    "fresno_acs_values.json": {
+      "bytes": 450161,
+      "sha256": "459e6f6f94dea6586808d70e48aad9880e92dd1fb2f5bb25d79b769bab810e66"
     },
-    "replicate_table_list.csv": {
-      "bytes": 8231,
-      "sha256": "772eedce826cdb60de3db4cc9ed4337ffb21cd08aa1c736d303f6eb1c72118d4"
+    "fresno_block_groups.geojson": {
+      "bytes": 4235982,
+      "sha256": "21aee6c390408a1e6dadb0919a301fcad351569d049c5bb29fc31a90b8d404a0"
+    },
+    "PROVENANCE.json": {
+      "bytes": 2331,
+      "sha256": "765649b0f3ed553f55ae932c6868a92f799d03cf6038221b3a168000234856a5"
     }
   }
 }

@@ -1,0 +1,31 @@
+﻿old_section,new_section,part,title
+S1,S1,A,Frozen domains and source provenance
+S2,S2,A,Historical lineage and non-equivalent statistics
+S8,S3,A,Downstream exposure examples and the Iran provenance correction
+S3,S4,B,"Geometry, conservation and numerical checks"
+S9,S5,B,Reproduction and result-to-claim mapping
+S10,S6,B,Method choices and comparison scope
+S11,S7,B,Boundary sensitivity and internal computational recheck
+S15,S8,B,Covariance identity and scale sensitivity diagnostic
+S23,S9,B,A tolerance-based reporting rule for scale-dependent allocation error
+S18,S10,B,Spatial decomposition of Bangkok support-allocation effects
+S4,S11,C,"Artificial masking, error denominators and synthetic bounds"
+S14,S12,C,Artificial masking of observed LOS classes
+S21,S13,C,Finite-domain bounds for threshold-class allocation under the actual final mask
+S22,S14,C,Median-class assignment and hidden fine-pixel class allocation
+S25,S15,C,Actual irregular Census blocks and contiguous missingness
+S5,S16,D,Expanded sampling and temporal network
+S7,S17,D,Matched LiCSBAS processing and holdout
+S12,S18,D,Crossed population-model and pair-selection sensitivity
+S13,S19,D,Paired input-support and final-quality-mask allocation
+S26,S20,D,Buffered spatial recalibration and shared-acquisition influence
+S27,S21,D,Training-only quality rules and coverage--residual curves
+S6,S22,E,Population coverage and land-cover interpretation
+S16,S23,E,Fresno 2020 Census-block support overlay
+S19,S24,E,Fresno population-grid comparison with Census block totals
+S20,S25,E,Fine-resolution population-allocation sensitivity in Fresno
+S24,S26,E,Fresno population-grid comparison with 2017--2021 ACS block-group estimates
+S29,S27,E,Municipal residential eligibility as a distinct ancillary reference
+S17,S28,F,Census-block median vertical-rate classification in Fresno
+S28,S29,F,Two fixed additional regions using archived ARIA products
+S30,S30,F,Archived independent GNSS transfer with disjoint frame controls

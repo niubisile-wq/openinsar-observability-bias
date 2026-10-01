@@ -1,0 +1,18 @@
+{
+  "actual_los_masking": {
+    "rows": 57600,
+    "all_mass_balance_L1_and_bound_checks": "PASS",
+    "undefined_cases": 47598
+  },
+  "published_method_benchmark": {
+    "rows": 4800,
+    "all_mass_balance_L1_and_bound_checks": "PASS",
+    "undefined_cases": 3881
+  },
+  "S14_S22_overlap": "8 independently scheduled groups agree in all five metrics",
+  "DWR_provider_windows": {
+    "legacy_reproduction": "PASS",
+    "max_absolute_difference_vs_v051": 0.0,
+    "interpretation": "Frozen old summary reproduced before changing conversion; reported changes are from annualization."
+  }
+}

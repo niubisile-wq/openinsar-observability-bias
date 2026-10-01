@@ -52,9 +52,10 @@ ADDITIONAL = {
 }
 QUICK = ['partial-identification', 'published-method-benchmark',
          'reporting-tolerance', 'acs-population-benchmark']
+DWR_RATE_SUITE = ['annual-median', 'census-rates', 'temporal', 'persistence']
 STANDARD = [*QUICK, 'dwr-allocation', 'population-analysis', 'sampling-analysis', 'sampling-spatial',
             'paired', 'direct-geometry', 'observed-los-masking',
-            'synthetic-masking', 'dwr-masking', 'allocation', 'cross-sensitivity', 'followup', 'spatial', 'population-benchmark', *ADDITIONAL]
+            'synthetic-masking', 'dwr-masking', 'allocation', 'cross-sensitivity', 'followup', 'spatial', 'population-benchmark', *DWR_RATE_SUITE, *ADDITIONAL]
 
 
 def sha256(path):
@@ -144,7 +145,7 @@ def compare(workspace, modes=None):
 
 
 def main():
-    choices = ['check-code', 'prepare', 'quick', 'standard', 'additional', 'compare', 'fetch-inputs',
+    choices = ['check-code', 'prepare', 'quick', 'standard', 'additional', 'dwr-rate-suite', 'compare', 'fetch-inputs',
                *CORE, *FOLLOWUP, *PAIRED, *ADDITIONAL]
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('mode', choices=choices)
@@ -171,9 +172,9 @@ def main():
         strengthening, analysis = prepare(workspace)
         print(json.dumps({'strengthening': str(strengthening), 'analysis': str(analysis)}))
         return
-    modes = QUICK if args.mode == 'quick' else STANDARD if args.mode == 'standard' else list(ADDITIONAL) if args.mode == 'additional' else [args.mode]
+    modes = QUICK if args.mode == 'quick' else STANDARD if args.mode == 'standard' else DWR_RATE_SUITE if args.mode == 'dwr-rate-suite' else list(ADDITIONAL) if args.mode == 'additional' else [args.mode]
     timings = [run_mode(mode, workspace, args.strengthening_root) for mode in modes]
-    if args.mode in {'annual-median','persistence'}:
+    if args.mode == 'annual-median':
         report={'status':'GENERATED','mode':args.mode,'timings':timings,
                 'scope':'Optional upstream-processing step. No frozen output comparator is configured for this mode; inspect its documented method and outputs.'}
         print(json.dumps(report),flush=True)

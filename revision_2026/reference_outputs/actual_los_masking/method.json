@@ -1,9 +1,7 @@
 {
-  "source": "strengthening_inputs/results/timeseries/matched_quality.npz",
   "source_sha256": "58211202a7c7bec7e82a810a2f01a44d6b288c1a4c2097de92b49f49a4f243a1",
   "seed": 20260930,
   "replicates": 100,
-  "actual_los_velocity_convention": "LiCSBAS: positive toward satellite; negative away; relative LOS mm/yr",
   "thresholds_mm_yr": [
     -2.0,
     -5.0,
@@ -13,21 +11,18 @@
     0.1,
     0.3
   ],
-  "mechanisms": [
-    "random",
-    "spatial_cluster",
-    "high_velocity_spread",
-    "low_velocity_spread"
-  ],
   "block_sizes_pixels": [
     5,
     10,
     20
   ],
-  "origins": "four zero/half-block offsets in each axis; partial raster-edge blocks retained",
-  "valid_domain": "Final full-valid mask only; artificial masking imposed only on otherwise valid pixels",
-  "spread_definition": "LiCSBAS bootstrap velocity spread diagnostic; not calibrated physical uncertainty",
-  "estimand": "Population-weighted pixels with observed LOS <= threshold, artificially hidden inside originally valid domain",
-  "interpretation": "Conditional, semisynthetic test of estimating LOS-class population within the observed-valid domain. Not vertical velocity, hazard, a household count, or validation of genuinely unobserved pixels.",
-  "known_limitation": "The original validity mask and LOS estimates may share processing dependencies; this experiment does not infer values in invalid pixels."
+  "row_count": 57600,
+  "estimand": "Hidden LOS-class allocation inside an artificially masked originally valid domain.",
+  "undefined_rule": "No retained population for prevalence or no retained pixel for centre: undefined, never zero-imputed.",
+  "common_domain": "Both estimators computable; errors normalized to originally valid population in those units.",
+  "unestimated_denominator": "Total allocation in the original final-valid domain.",
+  "relative_error": "Mean of per-case relative errors; zero reference cases undefined and explicitly counted.",
+  "bounds": "Retained full-domain class allocation to retained class allocation plus all hidden allocation.",
+  "change_from_v051": "Removes zero fallback in empty units; masks, seed, rates and original valid domain unchanged.",
+  "limits": "Conditional allocation benchmark, not physical accuracy or evidence in genuinely missing locations."
 }

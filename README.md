@@ -17,9 +17,9 @@ python -m venv .venv
 
 For Windows, use the explicit PowerShell commands in the [reproduction guide](revision_2026/README.md#start-here).
 
-The [v0.4.1 release](https://github.com/niubisile-wq/openinsar-observability-bias/releases/tag/v0.4.1) also provides a checksum-verified companion archive of the complete upstream ACS source files and the official Census archives used by S20. These files can still be fetched directly with the documented downloader.
+The [v0.4.1 release](https://github.com/niubisile-wq/openinsar-observability-bias/releases/tag/v0.4.1) also provides a checksum-verified companion archive of the complete upstream ACS source files and the official Census archives used by current SI S25 (historical S20). These files can still be fetched directly with the documented downloader.
 
-Release [v0.5.1](https://github.com/niubisile-wq/openinsar-observability-bias/releases/tag/v0.5.1) integrates six new experiments, figures, Supplementary S25-S30 and regenerated response locators. Its document asset includes six final PDFs and two self-contained source archives verified by independent recompilation. Science is fixed at [v0.5.0](https://github.com/niubisile-wq/openinsar-observability-bias/releases/tag/v0.5.0), commit `f70124f1cdc11e43848ce97c01f49fad6f7efb62`; this includes 21 new numerical output comparisons, bundled portable inputs and 44.7-MB/586.3-MB companion assets. The earlier S1-S24 baseline and complete ACS/Census source asset remain available at v0.4.1.
+Release **[v0.6.0](https://github.com/niubisile-wq/openinsar-observability-bias/releases/tag/v0.6.0)** corrects missing-unit estimation and DWR annualization, adds complete raw cropped DWR windows and class tables, and delivers the reorganized manuscript/SI and reviewer responses. Corrected error, availability and bounds are reported together. The 15 affected tables have been rerun from a fresh workspace. See the [correction record](revision_2026/REVIEW_CORRECTIONS_v0.6.0.txt) and [old/new SI crosswalk](revision_2026/provenance/section_crosswalk.csv). Earlier releases remain historical and are superseded where stated.
 
 - [Current clean manuscript](revision_2026/manuscript/manuscript.pdf)
 - [Numbered manuscript for response locations](revision_2026/manuscript/manuscript_numbered.pdf)
@@ -30,7 +30,7 @@ Release [v0.5.1](https://github.com/niubisile-wq/openinsar-observability-bias/re
 - [Scientific reference outputs](revision_2026/reference_outputs/)
 - [Frozen analysis inputs and provenance](revision_2026/data/)
 
-The quick route reruns S21–S24 and checks scientific results against frozen tables. `python revision_2026/reproduce.py additional` reruns all six S25-S30 analyses and checks every new table, including block, replicate, tile and station rows. The standard suite combines old and new analyses from processed inputs. Windows/Linux CI executes the quick and additional suites. The retained raw-processing code, pinned LiCSBAS commit and acquisition manifests document the separate upstream-data route.
+The quick route reruns the bounds, masking benchmark, tolerance and ACS analyses and checks scientific results against frozen tables. `python revision_2026/reproduce.py additional` reruns all six added analyses and checks every new table, including block, replicate, tile and station rows. The standard suite combines old and new analyses from processed inputs. Windows/Linux CI executes the quick, DWR-rate, full LOS-masking and additional suites. The retained raw-processing code, pinned LiCSBAS commit and acquisition manifests document the separate upstream-data route.
 
 ## Version history and DOI
 

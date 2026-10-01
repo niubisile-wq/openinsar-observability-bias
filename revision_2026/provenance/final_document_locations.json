@@ -1,0 +1,692 @@
+{
+  "main": {
+    "1": {
+      "page": 1,
+      "title": "Introduction"
+    },
+    "2": {
+      "page": 2,
+      "title": "Materials and methods"
+    },
+    "2.1": {
+      "page": 2,
+      "title": "Separate the geographic domain, support field and allocation model"
+    },
+    "2.2": {
+      "page": 3,
+      "title": "Continuous summaries and what they do not estimate"
+    },
+    "0": {
+      "page": 3,
+      "title": "FE(t) dt = UE"
+    },
+    "2.3": {
+      "page": 3,
+      "title": "Matched-target allocation and grid experiments"
+    },
+    "2.4": {
+      "page": 4,
+      "title": "Artificial masking with known reference quantities"
+    },
+    "2.5": {
+      "page": 4,
+      "title": "Sampling, population products and land cover"
+    },
+    "2.6": {
+      "page": 4,
+      "title": "Matched processing and a second published-support case"
+    },
+    "2.7": {
+      "page": 5,
+      "title": "Population agreement and external transfer designs"
+    },
+    "2.8": {
+      "page": 6,
+      "title": "Computational assistance"
+    },
+    "3": {
+      "page": 6,
+      "title": "Results"
+    },
+    "3.1": {
+      "page": 6,
+      "title": "Spatial support and allocation have different weighted distributions"
+    },
+    "325.6": {
+      "page": 6,
+      "title": "km2 of built surface. Population is concentrated in relatively well-supported portions of the"
+    },
+    "100.0": {
+      "page": 6,
+      "title": "100.5"
+    },
+    "101.0": {
+      "page": 6,
+      "title": "Longitude (degrees)"
+    },
+    "13.5": {
+      "page": 6,
+      "title": "14.0"
+    },
+    "14.5": {
+      "page": 6,
+      "title": "Latitude (degrees)"
+    },
+    "104": {
+      "page": 6,
+      "title": "Population per native pixel"
+    },
+    "0.268": {
+      "page": 6,
+      "title": "1.19"
+    },
+    "31.9": {
+      "page": 6,
+      "title": "17.89"
+    },
+    "1.665": {
+      "page": 6,
+      "title": "7.40"
+    },
+    "197.5": {
+      "page": 6,
+      "title": "57.44"
+    },
+    "3.020": {
+      "page": 6,
+      "title": "13.42"
+    },
+    "4.891": {
+      "page": 6,
+      "title": "21.74"
+    },
+    "464.6": {
+      "page": 6,
+      "title": "76.83"
+    },
+    "3.2": {
+      "page": 6,
+      "title": "Coarse uniform allocation increases the estimated support deficit"
+    },
+    "0.20": {
+      "page": 7,
+      "title": "0.25"
+    },
+    "0.30": {
+      "page": 7,
+      "title": "0.35"
+    },
+    "0.40": {
+      "page": 7,
+      "title": "Coherence cutoff"
+    },
+    "1000": {
+      "page": 7,
+      "title": "2000"
+    },
+    "12": {
+      "page": 7,
+      "title": "Signed error (% of AOI total)"
+    },
+    "10.0": {
+      "page": 7,
+      "title": "12.5"
+    },
+    "15.0": {
+      "page": 7,
+      "title": "Signed error (% of AOI total)"
+    },
+    "1.0": {
+      "page": 7,
+      "title": "Cell mean area-pair support"
+    },
+    "0.8": {
+      "page": 7,
+      "title": "Error / cell population"
+    },
+    "102": {
+      "page": 7,
+      "title": "Cells per hexagon"
+    },
+    "3.3": {
+      "page": 8,
+      "title": "Sampling and population choice remain consequential"
+    },
+    "3.301": {
+      "page": 8,
+      "title": "million, respectively (Supplementary Fig. S3). The nested 28-pair subset is selected from the"
+    },
+    "0.9994": {
+      "page": 8,
+      "title": "with the 224-pair comparator. Top-decile overlaps nevertheless change (Supplementary"
+    },
+    "2.989": {
+      "page": 8,
+      "title": "versus 5.186 million mean deficit units, so total-population differences do not explain the"
+    },
+    "30": {
+      "page": 8,
+      "title": "Mean deficit (% of model total)"
+    },
+    "2015": {
+      "page": 8,
+      "title": "2020"
+    },
+    "80": {
+      "page": 8,
+      "title": "Mean weighted deficit (%)"
+    },
+    "3.4": {
+      "page": 9,
+      "title": "Controlled missingness identifies both useful and failing cases"
+    },
+    "3.5": {
+      "page": 9,
+      "title": "Input support, final quality and internal residuals"
+    },
+    "0.336": {
+      "page": 10,
+      "title": "mm. At 0.7, only 41.04% remains. All 18 rules are retained, including nonmonotonic error under"
+    },
+    "3.6": {
+      "page": 10,
+      "title": "Transfer across support definitions and regions"
+    },
+    "100.45": {
+      "page": 11,
+      "title": "100.60"
+    },
+    "13.7": {
+      "page": 11,
+      "title": "13.8"
+    },
+    "13.9": {
+      "page": 11,
+      "title": "14.0"
+    },
+    "36.60": {
+      "page": 11,
+      "title": "36.65"
+    },
+    "36.70": {
+      "page": 11,
+      "title": "36.75"
+    },
+    "36.80": {
+      "page": 11,
+      "title": "36.85"
+    },
+    "7": {
+      "page": 11,
+      "title": "Signed error (% of AOI population)"
+    },
+    "0.186": {
+      "page": 12,
+      "title": "pp in Los Angeles and 0.051\u20130.372 pp in Davis\u2013Sacramento. The positive direction transfers, but"
+    },
+    "4": {
+      "page": 12,
+      "title": "Discussion"
+    },
+    "4.1": {
+      "page": 12,
+      "title": "The aggregation effect and its dependence on inputs"
+    },
+    "4.2": {
+      "page": 12,
+      "title": "Mechanism and choice of allocation method"
+    },
+    "4.3": {
+      "page": 12,
+      "title": "Applicability and evidence limits"
+    },
+    "5": {
+      "page": 13,
+      "title": "Conclusions"
+    },
+    "27": {
+      "page": 14,
+      "title": "September 2026."
+    },
+    "100": {
+      "page": 14,
+      "title": "m measurement support distinguished from interpolated display rasters; accessed 27 September 2026."
+    }
+  },
+  "supplement": {
+    "S1": {
+      "page": 2,
+      "title": "Frozen domains and source provenance"
+    },
+    "S2": {
+      "page": 3,
+      "title": "Historical lineage and non-equivalent statistics"
+    },
+    "S3": {
+      "page": 3,
+      "title": "Downstream exposure examples and the Iran provenance cor-"
+    },
+    "S4": {
+      "page": 5,
+      "title": "Geometry, conservation and numerical checks"
+    },
+    "S5": {
+      "page": 6,
+      "title": "Reproduction and result-to-claim mapping"
+    },
+    "S6": {
+      "page": 6,
+      "title": "Method choices and comparison scope"
+    },
+    "S7": {
+      "page": 7,
+      "title": "Boundary sensitivity and internal computational recheck"
+    },
+    "S8": {
+      "page": 8,
+      "title": "Covariance identity and scale sensitivity diagnostic"
+    },
+    "S9": {
+      "page": 8,
+      "title": "A tolerance-based reporting rule for scale-dependent allocation"
+    },
+    "S10": {
+      "page": 9,
+      "title": "Spatial decomposition of Bangkok support-allocation effects"
+    },
+    "S11": {
+      "page": 9,
+      "title": "Artificial masking, error denominators and synthetic bounds"
+    },
+    "S12": {
+      "page": 11,
+      "title": "Artificial masking of observed LOS classes"
+    },
+    "S13": {
+      "page": 11,
+      "title": "Finite-domain bounds for threshold-class allocation under the"
+    },
+    "S14": {
+      "page": 12,
+      "title": "Median-class assignment and hidden fine-pixel class allocation"
+    },
+    "S15": {
+      "page": 13,
+      "title": "Actual irregular Census blocks and contiguous missingness"
+    },
+    "S16": {
+      "page": 14,
+      "title": "Expanded sampling and temporal network"
+    },
+    "S17": {
+      "page": 15,
+      "title": "Matched LiCSBAS processing and holdout"
+    },
+    "S18": {
+      "page": 17,
+      "title": "Crossed population-model and pair-selection sensitivity"
+    },
+    "S19": {
+      "page": 18,
+      "title": "Paired input-support and final-quality-mask allocation"
+    },
+    "S20": {
+      "page": 19,
+      "title": "Buffered spatial recalibration and shared-acquisition influence"
+    },
+    "S21": {
+      "page": 20,
+      "title": "Training-only quality rules and coverage\u2013residual curves"
+    },
+    "S22": {
+      "page": 21,
+      "title": "Population coverage and land-cover interpretation"
+    },
+    "S23": {
+      "page": 21,
+      "title": "Fresno 2020 Census-block support overlay"
+    },
+    "S24": {
+      "page": 22,
+      "title": "Fresno population-grid comparison with Census block totals"
+    },
+    "S25": {
+      "page": 23,
+      "title": "Fine-resolution population-allocation sensitivity in Fresno"
+    },
+    "S26": {
+      "page": 24,
+      "title": "Fresno population-grid comparison with 2017\u20132021 ACS"
+    },
+    "S27": {
+      "page": 24,
+      "title": "Municipal residential eligibility as a distinct ancillary reference"
+    },
+    "S28": {
+      "page": 25,
+      "title": "Census-block median vertical-rate classification in Fresno"
+    },
+    "S29": {
+      "page": 27,
+      "title": "Two fixed additional regions using archived ARIA products"
+    },
+    "S30": {
+      "page": 28,
+      "title": "Archived independent GNSS transfer with disjoint frame con-"
+    }
+  },
+  "reviewer_index": [
+    {
+      "comment": "Editor",
+      "main": {
+        "1": {
+          "page": 1,
+          "title": "Introduction"
+        },
+        "2": {
+          "page": 2,
+          "title": "Materials and methods"
+        },
+        "3.2": {
+          "page": 6,
+          "title": "Coarse uniform allocation increases the estimated support deficit"
+        },
+        "4": {
+          "page": 12,
+          "title": "Discussion"
+        }
+      },
+      "supplement": {
+        "S1": {
+          "page": 2,
+          "title": "Frozen domains and source provenance"
+        },
+        "S6": {
+          "page": 6,
+          "title": "Method choices and comparison scope"
+        },
+        "S7": {
+          "page": 7,
+          "title": "Boundary sensitivity and internal computational recheck"
+        },
+        "S14": {
+          "page": 12,
+          "title": "Median-class assignment and hidden fine-pixel class allocation"
+        },
+        "S30": {
+          "page": 28,
+          "title": "Archived independent GNSS transfer with disjoint frame con-"
+        }
+      }
+    },
+    {
+      "comment": "R1.1",
+      "main": {
+        "2.2": {
+          "page": 3,
+          "title": "Continuous summaries and what they do not estimate"
+        },
+        "3.4": {
+          "page": 9,
+          "title": "Controlled missingness identifies both useful and failing cases"
+        },
+        "3.5": {
+          "page": 9,
+          "title": "Input support, final quality and internal residuals"
+        },
+        "4.3": {
+          "page": 12,
+          "title": "Applicability and evidence limits"
+        }
+      },
+      "supplement": {
+        "S12": {
+          "page": 11,
+          "title": "Artificial masking of observed LOS classes"
+        },
+        "S13": {
+          "page": 11,
+          "title": "Finite-domain bounds for threshold-class allocation under the"
+        },
+        "S14": {
+          "page": 12,
+          "title": "Median-class assignment and hidden fine-pixel class allocation"
+        },
+        "S15": {
+          "page": 13,
+          "title": "Actual irregular Census blocks and contiguous missingness"
+        },
+        "S17": {
+          "page": 15,
+          "title": "Matched LiCSBAS processing and holdout"
+        },
+        "S30": {
+          "page": 28,
+          "title": "Archived independent GNSS transfer with disjoint frame con-"
+        }
+      }
+    },
+    {
+      "comment": "R1.2",
+      "main": {
+        "2.1": {
+          "page": 2,
+          "title": "Separate the geographic domain, support field and allocation model"
+        },
+        "3.1": {
+          "page": 6,
+          "title": "Spatial support and allocation have different weighted distributions"
+        },
+        "3.3": {
+          "page": 8,
+          "title": "Sampling and population choice remain consequential"
+        },
+        "3.5": {
+          "page": 9,
+          "title": "Input support, final quality and internal residuals"
+        }
+      },
+      "supplement": {
+        "S16": {
+          "page": 14,
+          "title": "Expanded sampling and temporal network"
+        },
+        "S20": {
+          "page": 19,
+          "title": "Buffered spatial recalibration and shared-acquisition influence"
+        },
+        "S21": {
+          "page": 20,
+          "title": "Training-only quality rules and coverage\u2013residual curves"
+        }
+      }
+    },
+    {
+      "comment": "R1.3",
+      "main": {
+        "2.5": {
+          "page": 4,
+          "title": "Sampling, population products and land cover"
+        },
+        "3.3": {
+          "page": 8,
+          "title": "Sampling and population choice remain consequential"
+        },
+        "4.3": {
+          "page": 12,
+          "title": "Applicability and evidence limits"
+        }
+      },
+      "supplement": {
+        "S22": {
+          "page": 21,
+          "title": "Population coverage and land-cover interpretation"
+        },
+        "S24": {
+          "page": 22,
+          "title": "Fresno population-grid comparison with Census block totals"
+        },
+        "S25": {
+          "page": 23,
+          "title": "Fine-resolution population-allocation sensitivity in Fresno"
+        },
+        "S26": {
+          "page": 24,
+          "title": "Fresno population-grid comparison with 2017\u20132021 ACS"
+        },
+        "S27": {
+          "page": 24,
+          "title": "Municipal residential eligibility as a distinct ancillary reference"
+        }
+      }
+    },
+    {
+      "comment": "R1.4",
+      "main": {
+        "4": {
+          "page": 12,
+          "title": "Discussion"
+        },
+        "5": {
+          "page": 13,
+          "title": "Conclusions"
+        }
+      },
+      "supplement": {
+        "S1": {
+          "page": 2,
+          "title": "Frozen domains and source provenance"
+        },
+        "S3": {
+          "page": 3,
+          "title": "Downstream exposure examples and the Iran provenance cor-"
+        },
+        "S12": {
+          "page": 11,
+          "title": "Artificial masking of observed LOS classes"
+        },
+        "S14": {
+          "page": 12,
+          "title": "Median-class assignment and hidden fine-pixel class allocation"
+        },
+        "S28": {
+          "page": 25,
+          "title": "Census-block median vertical-rate classification in Fresno"
+        }
+      }
+    },
+    {
+      "comment": "R2.1",
+      "main": {
+        "1": {
+          "page": 1,
+          "title": "Introduction"
+        },
+        "3.4": {
+          "page": 9,
+          "title": "Controlled missingness identifies both useful and failing cases"
+        },
+        "3.6": {
+          "page": 10,
+          "title": "Transfer across support definitions and regions"
+        }
+      },
+      "supplement": {
+        "S3": {
+          "page": 3,
+          "title": "Downstream exposure examples and the Iran provenance cor-"
+        },
+        "S6": {
+          "page": 6,
+          "title": "Method choices and comparison scope"
+        },
+        "S14": {
+          "page": 12,
+          "title": "Median-class assignment and hidden fine-pixel class allocation"
+        },
+        "S15": {
+          "page": 13,
+          "title": "Actual irregular Census blocks and contiguous missingness"
+        },
+        "S29": {
+          "page": 27,
+          "title": "Two fixed additional regions using archived ARIA products"
+        },
+        "S30": {
+          "page": 28,
+          "title": "Archived independent GNSS transfer with disjoint frame con-"
+        }
+      }
+    },
+    {
+      "comment": "R2.2",
+      "main": {
+        "2.3": {
+          "page": 3,
+          "title": "Matched-target allocation and grid experiments"
+        },
+        "3.2": {
+          "page": 6,
+          "title": "Coarse uniform allocation increases the estimated support deficit"
+        },
+        "3.4": {
+          "page": 9,
+          "title": "Controlled missingness identifies both useful and failing cases"
+        },
+        "3.5": {
+          "page": 9,
+          "title": "Input support, final quality and internal residuals"
+        }
+      },
+      "supplement": {
+        "S4": {
+          "page": 5,
+          "title": "Geometry, conservation and numerical checks"
+        },
+        "S8": {
+          "page": 8,
+          "title": "Covariance identity and scale sensitivity diagnostic"
+        },
+        "S9": {
+          "page": 8,
+          "title": "A tolerance-based reporting rule for scale-dependent allocation"
+        },
+        "S12": {
+          "page": 11,
+          "title": "Artificial masking of observed LOS classes"
+        },
+        "S14": {
+          "page": 12,
+          "title": "Median-class assignment and hidden fine-pixel class allocation"
+        },
+        "S15": {
+          "page": 13,
+          "title": "Actual irregular Census blocks and contiguous missingness"
+        },
+        "S19": {
+          "page": 18,
+          "title": "Paired input-support and final-quality-mask allocation"
+        }
+      }
+    },
+    {
+      "comment": "R2.3",
+      "main": {
+        "4.3": {
+          "page": 12,
+          "title": "Applicability and evidence limits"
+        }
+      },
+      "supplement": {
+        "S1": {
+          "page": 2,
+          "title": "Frozen domains and source provenance"
+        },
+        "S3": {
+          "page": 3,
+          "title": "Downstream exposure examples and the Iran provenance cor-"
+        }
+      }
+    }
+  ]
+}

@@ -35,14 +35,28 @@ jobs:
         run: python revision_2026/reproduce.py check-code
       - name: Check intersection and registration mathematics
         run: python -m unittest discover -s revision_2026/core -p test_geometry.py
-      - name: Reproduce S21-S24 and compare tables
+      - name: Check undefined-unit handling
+        run: python -m unittest discover -s revision_2026/tests -p test_*.py
+      - name: Reproduce bounds, masking, tolerance and ACS tables
         run: python revision_2026/reproduce.py quick --workspace reproduction_output
-      - name: Recompute all six additional experiments S25-S30
+      - name: Preserve quick-suite report
+        run: python -c "import shutil; shutil.copyfile('reproduction_output/reproduction_verification.json', 'reproduction_output/verification_quick.json')"
+      - name: Recompute annualized DWR classes, transitions and persistence
+        run: python revision_2026/reproduce.py dwr-rate-suite --workspace reproduction_output
+      - name: Preserve DWR-suite report
+        run: python -c "import shutil; shutil.copyfile('reproduction_output/reproduction_verification.json', 'reproduction_output/verification_dwr.json')"
+      - name: Recompute the full observed-LOS masking factorial
+        run: python revision_2026/reproduce.py observed-los-masking --workspace reproduction_output
+      - name: Preserve observed-LOS report
+        run: python -c "import shutil; shutil.copyfile('reproduction_output/reproduction_verification.json', 'reproduction_output/verification_los.json')"
+      - name: Recompute all six additional experiments
         run: python revision_2026/reproduce.py additional --workspace reproduction_output
       - name: Preserve numerical verification
         if: always()
         uses: actions/upload-artifact@v7
         with:
           name: reproduction-${{ matrix.os }}
-          path: reproduction_output/reproduction_verification.json
+          path: |
+            reproduction_output/reproduction_verification.json
+            reproduction_output/verification_*.json
           if-no-files-found: warn

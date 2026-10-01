@@ -1,0 +1,7 @@
+period,source_pixels_on_DWR_footprint,blocks_with_valid_pixels,complete_block_population,population_in_blocks_with_valid_pixels,share_of_complete_Census_population_in_valid_blocks_pct,median_pixel_rate_mm_per_year,population_assigned_by_block_median_ge_0,population_assigned_by_block_median_minus3_to_0,population_assigned_by_block_median_minus5_to_minus3,population_assigned_by_block_median_minus10_to_minus5,population_assigned_by_block_median_lt_minus10,uniform_within_block_population_ge_0,uniform_within_block_population_minus3_to_0,uniform_within_block_population_minus5_to_minus3,uniform_within_block_population_minus10_to_minus5,uniform_within_block_population_lt_minus10
+2015-10 to 2016-10 annual,0,0,0,0,0.0,0.01251974162031999,0,0,874,-138,-736,0.0,0.0,1569.5270161844091,-1141.7731280784355,-427.7538881060318
+2020-10 to 2021-10 annual,0,0,0,0,0.0,0.004829406076578557,0,0,0,0,0,0.0,0.0,-1.1333333333333258,1.133333333333212,0.0
+2023-10 to 2024-10 annual,0,0,0,0,0.0,0.00552665217913173,0,957,-904,129,-182,0.0,866.7477429072605,-735.1052830008412,75.57078705898311,-207.21324696545344
+2025-04 to 2026-04 annual,0,0,0,0,0.0,-0.006101325261480994,0,0,0,-503,503,0.0,0.0,-5.0,-341.88952551502734,346.88952551505645
+2015-10 to 2021-10 temporal median of annual rates,0,0,0,0,0.0,0.0027495369315149176,0,0,1236,-1236,0,0.0,0.0,657.1912686549476,-662.9608764981967,5.769607843138147
+2015-06 to 2021-01 cumulative average rate,0,0,0,0,0.0,0.0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0

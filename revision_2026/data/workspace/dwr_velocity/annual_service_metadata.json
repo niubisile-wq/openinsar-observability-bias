@@ -1,0 +1,292 @@
+{
+  "currentVersion": 11.3,
+  "serviceDescription": "<div style='text-align:Left;'><div><div><p><span>This mosaic dataset represents measurements of vertical ground surface displacement in more than 200 of the high-use and populated groundwater basins across the State of California. Image resolution (X,Y) is 0.0011335842, 0.00089982004 degrees, or approximately 100 meters. Vertical ground surface displacement estimates are derived from Interferometric Synthetic Aperture Radar (InSAR) data that are collected by the European Space Agency (ESA) Sentinel-1A satellite and processed by TRE ALTAMIRA, under contract with to the California Department of Water Resources (DWR) as part of DWR\u2019s SGMA technical assistance to provide important SGMA-relevant data to GSAs for GSP development and implementation. Sentinel-1A InSAR data coverage for the entire study area began in June 13, 2015. Included in this dataset are for annual vertical displacement rates with earlier coverage for some areas, in monthly time steps. The Department of Water Resources makes no warranties, representations or guarantees, either expressed or implied, as to the accuracy, completeness, correctness, or timeliness of the information in this dataset, nor accepts or assumes any liability arising from use of these data. Neither the Department nor any of the sources of this information shall be responsible for any errors or omissions, or for the use or results obtained from the use of this information. A Groundwater Sustainability Agency is not required to use this data, and their use does not guarantee the adequacy of a Groundwater Sustainability Plan that relies on such data. This is an official DWR Image Service, published in 06/2026 by DWR Geomatics Office, who may be contacted at gis@water.ca.gov. Date of acquisition: Between January of 2015 and April of 2026. Date of production: 2026. Date of delivery of product: Delivered from TRE ALTAMIRA to DWR in June of 2026. Processing steps: See Technical Report: InSAR Land Surveying and Mapping Services to DWR supporting SGMA, TRE ALTAMIRA, 2026. Pixel value definitions: Vertical ground surface displacement in feet for time period specified above. Positional accuracy: See: InSAR Data Accuracy for California Groundwater Basins - CPGS Data Comparative Analysis - January 2015 to October 2025, Towill Inc., 2026. </span></p></div></div></div>",
+  "name": "SAR/Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate_Mosaic",
+  "description": "",
+  "extent": {
+    "xmin": -124.42233689190881,
+    "ymin": 32.31752728112403,
+    "xmax": -115.40703995129694,
+    "ymax": 42.25513975862853,
+    "spatialReference": {
+      "wkid": 4326,
+      "latestWkid": 4326
+    }
+  },
+  "initialExtent": {
+    "xmin": -124.42233689190881,
+    "ymin": 32.31752728112403,
+    "xmax": -115.40703995129694,
+    "ymax": 42.25513975862853,
+    "spatialReference": {
+      "wkid": 4326,
+      "latestWkid": 4326
+    }
+  },
+  "fullExtent": {
+    "xmin": -124.42233689190881,
+    "ymin": 32.31752728112403,
+    "xmax": -115.40703995129694,
+    "ymax": 42.25513975862853,
+    "spatialReference": {
+      "wkid": 4326,
+      "latestWkid": 4326
+    }
+  },
+  "sortableFields": "MinPS,MaxPS,LowPS,HighPS,CenterX,CenterY,ZOrder,Shape_Length,Shape_Area,DateFrom,DateTo",
+  "bandCount": 1,
+  "pixelType": "F32",
+  "minValues": [
+    -1.1889731884002686
+  ],
+  "maxValues": [
+    0.11069540679454803
+  ],
+  "meanValues": [
+    -0.053985155080485445
+  ],
+  "stdvValues": [
+    0.143216108812502
+  ],
+  "hasMultidimensions": false,
+  "pixelSizeX": 0.0008998200359928013,
+  "pixelSizeY": 0.0008998200359928017,
+  "meanPixelSize": 100.16750821230376,
+  "datasetFormat": "AMD",
+  "uncompressedSize": 442599344,
+  "blockWidth": 2048,
+  "blockHeight": 256,
+  "compressionType": "None",
+  "bandNames": [
+    "Band_1"
+  ],
+  "allowCopy": true,
+  "allowAnalysis": true,
+  "itemAccess": false,
+  "inspectionCapabilities": "",
+  "minPixelSize": 0,
+  "maxPixelSize": 0,
+  "copyrightText": "California Department of Water Resources",
+  "serviceDataType": "esriImageServiceDataTypeGeneric",
+  "serviceSourceType": "esriImageServiceSourceTypeMosaicDataset",
+  "objectIdField": "OBJECTID",
+  "fields": [
+    {
+      "name": "OBJECTID",
+      "type": "esriFieldTypeOID",
+      "alias": "OBJECTID",
+      "domain": null
+    },
+    {
+      "name": "Shape",
+      "type": "esriFieldTypeGeometry",
+      "alias": "Shape",
+      "domain": null
+    },
+    {
+      "name": "Name",
+      "type": "esriFieldTypeString",
+      "alias": "Name",
+      "domain": null,
+      "length": 200
+    },
+    {
+      "name": "MinPS",
+      "type": "esriFieldTypeDouble",
+      "alias": "MinPS",
+      "domain": null
+    },
+    {
+      "name": "MaxPS",
+      "type": "esriFieldTypeDouble",
+      "alias": "MaxPS",
+      "domain": null
+    },
+    {
+      "name": "LowPS",
+      "type": "esriFieldTypeDouble",
+      "alias": "LowPS",
+      "domain": null
+    },
+    {
+      "name": "HighPS",
+      "type": "esriFieldTypeDouble",
+      "alias": "HighPS",
+      "domain": null
+    },
+    {
+      "name": "Category",
+      "type": "esriFieldTypeInteger",
+      "alias": "Category",
+      "domain": {
+        "type": "codedValue",
+        "name": "MosaicCatalogItemCategoryDomain",
+        "description": "Catalog item categories.",
+        "codedValues": [
+          {
+            "name": "Unknown",
+            "code": 0
+          },
+          {
+            "name": "Primary",
+            "code": 1
+          },
+          {
+            "name": "Overview",
+            "code": 2
+          },
+          {
+            "name": "Unprocessed Overview",
+            "code": 3
+          },
+          {
+            "name": "Partial Overview",
+            "code": 4
+          },
+          {
+            "name": "Inactive",
+            "code": 5
+          },
+          {
+            "name": "Uploaded",
+            "code": 253
+          },
+          {
+            "name": "Incomplete",
+            "code": 254
+          },
+          {
+            "name": "Custom",
+            "code": 255
+          }
+        ],
+        "mergePolicy": "esriMPTDefaultValue",
+        "splitPolicy": "esriSPTDefaultValue"
+      }
+    },
+    {
+      "name": "Tag",
+      "type": "esriFieldTypeString",
+      "alias": "Tag",
+      "domain": null,
+      "length": 100
+    },
+    {
+      "name": "GroupName",
+      "type": "esriFieldTypeString",
+      "alias": "GroupName",
+      "domain": null,
+      "length": 100
+    },
+    {
+      "name": "ProductName",
+      "type": "esriFieldTypeString",
+      "alias": "ProductName",
+      "domain": null,
+      "length": 100
+    },
+    {
+      "name": "CenterX",
+      "type": "esriFieldTypeDouble",
+      "alias": "CenterX",
+      "domain": null
+    },
+    {
+      "name": "CenterY",
+      "type": "esriFieldTypeDouble",
+      "alias": "CenterY",
+      "domain": null
+    },
+    {
+      "name": "ZOrder",
+      "type": "esriFieldTypeInteger",
+      "alias": "ZOrder",
+      "domain": null
+    },
+    {
+      "name": "Shape_Length",
+      "type": "esriFieldTypeDouble",
+      "alias": "Shape_Length",
+      "domain": null
+    },
+    {
+      "name": "Shape_Area",
+      "type": "esriFieldTypeDouble",
+      "alias": "Shape_Area",
+      "domain": null
+    },
+    {
+      "name": "DateFrom",
+      "type": "esriFieldTypeDate",
+      "alias": "DateFrom",
+      "domain": null,
+      "length": 8
+    },
+    {
+      "name": "DateTo",
+      "type": "esriFieldTypeDate",
+      "alias": "DateTo",
+      "domain": null,
+      "length": 8
+    }
+  ],
+  "capabilities": "Catalog,Mensuration,Image,Metadata",
+  "defaultMosaicMethod": "Northwest",
+  "allowedMosaicMethods": "NorthWest,Center,LockRaster,ByAttribute,Nadir,Viewpoint,Seamline,None",
+  "sortField": "",
+  "sortValue": null,
+  "sortAscending": true,
+  "mosaicOperator": "First",
+  "maxDownloadSizeLimit": 2048,
+  "defaultCompressionQuality": 75,
+  "defaultResamplingMethod": "Bilinear",
+  "maxImageHeight": 4100,
+  "maxImageWidth": 15000,
+  "maxRecordCount": 1000,
+  "maxDownloadImageCount": 20,
+  "maxMosaicImageCount": 20,
+  "allowRasterFunction": true,
+  "rasterFunctionInfos": [
+    {
+      "name": "Annual_Classification_8classes",
+      "description": "A raster function template.",
+      "help": ""
+    },
+    {
+      "name": "None",
+      "description": "",
+      "help": ""
+    }
+  ],
+  "rasterTypeInfos": [
+    {
+      "name": "Raster Dataset",
+      "description": "Supports all ArcGIS Raster Datasets",
+      "help": ""
+    }
+  ],
+  "mensurationCapabilities": "Basic",
+  "hasHistograms": true,
+  "hasColormap": false,
+  "hasRasterAttributeTable": false,
+  "minScale": 0,
+  "maxScale": 0,
+  "exportTilesAllowed": false,
+  "supportsStatistics": true,
+  "supportsAdvancedQueries": true,
+  "editFieldsInfo": null,
+  "ownershipBasedAccessControlForRasters": null,
+  "allowComputeTiePoints": false,
+  "useStandardizedQueries": true,
+  "advancedQueryCapabilities": {
+    "useStandardizedQueries": true,
+    "supportsStatistics": true,
+    "supportsOrderBy": true,
+    "supportsDistinct": true,
+    "supportsPagination": true
+  },
+  "spatialReference": {
+    "wkid": 4326,
+    "latestWkid": 4326
+  }
+}

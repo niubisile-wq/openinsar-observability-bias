@@ -1,8 +1,8 @@
 cff-version: 1.2.0
-message: "This v0.4.3 release updates manuscript/response documents. Cite fixed v0.4.1 for the scientific reproduction package; the earlier Zenodo DOI archives v0.3.0."
+message: "Cite v0.6.0 for the corrected scientific revision. The earlier Zenodo DOI archives v0.3.0 only."
 title: "Code for Quantifying how spatial allocation and sampling alter population-weighted InSAR support summaries"
 type: software
-version: 0.4.3
+version: 0.6.0
 date-released: 2026-10-01
 license: CC-BY-4.0
 authors:
@@ -11,4 +11,4 @@ authors:
   - family-names: Xiong
     given-names: Wei
 repository-code: "https://github.com/niubisile-wq/openinsar-observability-bias"
-url: "https://github.com/niubisile-wq/openinsar-observability-bias/releases/tag/v0.4.3"
+url: "https://github.com/niubisile-wq/openinsar-observability-bias/releases/tag/v0.6.0"

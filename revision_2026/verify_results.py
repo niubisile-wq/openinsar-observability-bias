@@ -48,10 +48,12 @@ TABLES = {
                 'bangkok_spatial_decomposition/bangkok_spatial_effect_summary.csv')],
     'census-support': [('analysis/census_block_analysis/fresno_block_support_summary.csv',
                        'census_block_analysis/fresno_block_support_summary.csv')],
-    'census-rates': [('analysis/census_block_velocity_analysis/fresno_census_block_velocity_summary.csv',
-                      'census_block_velocity_analysis/fresno_census_block_velocity_summary.csv')],
-    'temporal': [('analysis/census_block_velocity_analysis/fresno_population_temporal_stability_summary.csv',
-                  'census_block_velocity_analysis/fresno_population_temporal_stability_summary.csv')],
+    'census-rates': [('analysis/census_block_velocity_analysis/'+x,'census_block_velocity_analysis/'+x)
+                     for x in ['fresno_census_block_velocity_summary.csv','fresno_census_block_velocity_by_block.csv','fresno_dwr_rate_pixels_by_block.csv']],
+    'temporal': [('analysis/census_block_velocity_analysis/'+x,'census_block_velocity_analysis/'+x)
+                 for x in ['fresno_population_temporal_stability_summary.csv','fresno_block_temporal_class_transitions.csv','fresno_population_rate_class_transition_2015_21_to_2025_26.csv']],
+    'persistence': [('analysis/census_block_velocity_analysis/'+x,'census_block_velocity_analysis/'+x)
+                    for x in ['fresno_six_year_below5_persistence.csv','fresno_six_annual_block_classifications.csv','fresno_six_annual_block_medians.csv']],
     'spatial-dependence': [],
 }
 
