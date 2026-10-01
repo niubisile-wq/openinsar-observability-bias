@@ -1,0 +1,3 @@
+﻿v0.4.2: reviewer-response access clarification
+
+Editorial/documentation update only. The point-by-point response now identifies the public v0.4.1 scientific reproduction tag and commit, links the versioned reviewer resources, explains that the earlier Zenodo DOI covers v0.3.0 only, and states that a new DOI has not yet been minted. The v0.4.1 scientific results, code and source-input bundle are unchanged.

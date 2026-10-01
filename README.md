@@ -19,6 +19,8 @@ For Windows, use the explicit PowerShell commands in the [reproduction guide](re
 
 The [v0.4.1 release](https://github.com/niubisile-wq/openinsar-observability-bias/releases/tag/v0.4.1) also provides a checksum-verified companion archive of the complete upstream ACS source files and the official Census archives used by S20. These files can still be fetched directly with the documented downloader.
 
+Release [v0.4.2](https://github.com/niubisile-wq/openinsar-observability-bias/releases/tag/v0.4.2) updates the point-by-point response with the exact public reproducibility location and clarifies the scope of the older DOI. It makes no changes to the scientific results; v0.4.1 remains the identified scientific reproduction package.
+
 - [Current clean manuscript](revision_2026/manuscript/manuscript.pdf)
 - [Supplementary Information, S1–S24](revision_2026/manuscript/supplementary.pdf)
 - [Point-by-point response](revision_2026/manuscript/response.pdf)

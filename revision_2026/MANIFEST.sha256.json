@@ -6,8 +6,8 @@
   },
   {
     "path": "CITATION.cff",
-    "bytes": 601,
-    "sha256": "12ab4ef7618a296f378a0d71828c29763b1ae71670adec39b939d9b9d33d1df8"
+    "bytes": 659,
+    "sha256": "fd97efafa5ac362963ef4355b973ed4ac03193a6e473bf2586ac6616fbb55acb"
   },
   {
     "path": "core/analyse_timeseries.py",
@@ -671,13 +671,13 @@
   },
   {
     "path": "manuscript/response.pdf",
-    "bytes": 167150,
-    "sha256": "b0ef3f32e53e765c15256bf18f1e0d25802f5f093781e778faaccdb0b21cef48"
+    "bytes": 190875,
+    "sha256": "143cdb2b816c862982020e88d295be205a73c7e8fe8a101dfcd60ebba8935d61"
   },
   {
     "path": "manuscript/response.tex",
-    "bytes": 37950,
-    "sha256": "0959715e45dac1296707674403859647bce862fc3df5fab1d6089e207c2dd5a4"
+    "bytes": 38381,
+    "sha256": "295780808a2623d81c0806c680ee2612100113b8f86946ed524a626e62cf5777"
   },
   {
     "path": "manuscript/round2_boundary_table.tex",
@@ -1558,6 +1558,11 @@
     "path": "RELEASE_NOTES_v0.4.1.txt",
     "bytes": 638,
     "sha256": "c1e5a8a728002e3eb218e515ccf200326d9fd88827a95050de0a65bda04d154d"
+  },
+  {
+    "path": "RELEASE_NOTES_v0.4.2.txt",
+    "bytes": 413,
+    "sha256": "1ccb22edc38cd3cc2cd800d0b30c9b7143ad4dcd750ea487cfc2943ab473c1a4"
   },
   {
     "path": "reproduce.py",
