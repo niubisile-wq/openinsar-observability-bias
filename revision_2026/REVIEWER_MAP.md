@@ -14,6 +14,17 @@ The exact point-by-point responses are in [`manuscript/response.pdf`](manuscript
 
 Additional experiments strengthen several comments simultaneously. E4 reports variation conditional on the fixed 224-pair pool and preserves catalogue/network provenance; legacy-28 versus expanded-224 differences also change composition. The spatial Moran's I results are descriptive for the fixed Fresno domain. S23 tolerances are illustrative choices, not safety standards.
 
-**Evidence limit:** There is still no matched independent GNSS/leveling validation. Census/ACS benchmarks do not establish household locations or deformation in truly unsupported cells. These limits are part of the response, rather than missing outputs being described as completed validation.
+## Added S25-S30 evidence
+
+| Added evidence | Relevant comments | What it adds and its limit |
+| --- | --- | --- |
+| S25 `additional-real-blocks` | R1.1, R1.2, R2.2 | Actual irregular Census blocks, 30 repeated masks, contiguous holes, estimator availability, common-computable errors and whole-known-domain bounds. Does not establish genuinely missing motion. |
+| S26 `additional-dependence` | R1.2, R1.3, R2.2 | Buffered training-only spatial recalibration and 225 shared-date deletions. Released-grid recalibration is not original model-training CV; date deletions do not re-invert velocities. |
+| S27 `additional-quality` | R1.1, R1.2, R2.2 | All 18 training-only quality rules, 44 excluded edges, coverage and internal weighted errors. These dependent displacement residuals are not external annual-rate accuracy. |
+| S28 `additional-regions` | Editor contribution/scope, R2.1, R2.2 | Two regions fixed before outcome calculation; retain all 96 designs and small effects. Published averaged-coherence support differs from pair support and limits magnitude transfer. |
+| S29 `additional-residential` | R1.3, R2.2 | Independent municipal land-use eligibility with strict/broad definitions. Household truth is unavailable; the common Census domain fails the initial 90% coverage diagnostic. |
+| S30 `additional-gnss` | R1.1, R2.1 | Archived independent observations compared with external LOS products; exclude all control sites and retain all radii, reference frames and large residuals. Source-date conflicts and temporal-model mismatch limit the comparison. |
+
+**Evidence limit:** S30 supplies an archived external-product GNSS consistency comparison, including the negative Davis-Sacramento result. There is still no matched independent GNSS/leveling accuracy validation of our Bangkok inversion. Census/ACS and municipal-use benchmarks do not establish household locations or deformation in truly unsupported cells. These limits are explicit in the manuscript and replies.
 
 **Editorial code-access item:** This GitHub revision supplies versioned code, inputs, tables and runnable instructions. A new DOI deposit and journal portal submission are separate remaining operations.

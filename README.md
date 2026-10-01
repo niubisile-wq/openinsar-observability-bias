@@ -19,18 +19,18 @@ For Windows, use the explicit PowerShell commands in the [reproduction guide](re
 
 The [v0.4.1 release](https://github.com/niubisile-wq/openinsar-observability-bias/releases/tag/v0.4.1) also provides a checksum-verified companion archive of the complete upstream ACS source files and the official Census archives used by S20. These files can still be fetched directly with the documented downloader.
 
-Release [v0.4.3](https://github.com/niubisile-wq/openinsar-observability-bias/releases/tag/v0.4.3) finalizes the manuscript and response wording, evidence limits, source attribution, actual line references and consistent manuscript variants. It makes no changes to scientific inputs, figures or results; [v0.4.1](https://github.com/niubisile-wq/openinsar-observability-bias/releases/tag/v0.4.1), commit `5bf98f19abbed981989f9c97ef9b118eea524c5b`, remains the fixed scientific reproduction package.
+Release [v0.5.1](https://github.com/niubisile-wq/openinsar-observability-bias/releases/tag/v0.5.1) integrates six new experiments, figures, Supplementary S25-S30 and regenerated response locators. Its document asset includes six final PDFs and two self-contained source archives verified by independent recompilation. Science is fixed at [v0.5.0](https://github.com/niubisile-wq/openinsar-observability-bias/releases/tag/v0.5.0), commit `f70124f1cdc11e43848ce97c01f49fad6f7efb62`; this includes 21 new numerical output comparisons, bundled portable inputs and 44.7-MB/586.3-MB companion assets. The earlier S1-S24 baseline and complete ACS/Census source asset remain available at v0.4.1.
 
 - [Current clean manuscript](revision_2026/manuscript/manuscript.pdf)
 - [Numbered manuscript for response locations](revision_2026/manuscript/manuscript_numbered.pdf)
 - [Manuscript marked against the retained local baseline](revision_2026/manuscript/manuscript_marked_local_baseline.pdf)
-- [Supplementary Information, S1–S24](revision_2026/manuscript/supplementary.pdf)
+- [Supplementary Information, S1–S30](revision_2026/manuscript/supplementary.pdf)
 - [Point-by-point response](revision_2026/manuscript/response.pdf)
 - [Reviewer-to-experiment map](revision_2026/REVIEWER_MAP.md)
 - [Scientific reference outputs](revision_2026/reference_outputs/)
 - [Frozen analysis inputs and provenance](revision_2026/data/)
 
-The quick route reruns S21–S24 and checks scientific results against frozen tables. The wider suite replays the main allocation, masking, sampling, population-model and paired/LOS analyses from processed inputs. The retained raw-processing code, pinned LiCSBAS commit and acquisition manifests document the separate upstream-data route.
+The quick route reruns S21–S24 and checks scientific results against frozen tables. `python revision_2026/reproduce.py additional` reruns all six S25-S30 analyses and checks every new table, including block, replicate, tile and station rows. The standard suite combines old and new analyses from processed inputs. Windows/Linux CI executes the quick and additional suites. The retained raw-processing code, pinned LiCSBAS commit and acquisition manifests document the separate upstream-data route.
 
 ## Version history and DOI
 

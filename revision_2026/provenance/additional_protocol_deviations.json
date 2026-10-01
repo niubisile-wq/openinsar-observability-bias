@@ -1,0 +1,36 @@
+{
+  "protocol_original_unchanged": true,
+  "purpose": "Disclose the actual completed analyses and limits relative to protocol_v1; no retrospective preregistration claim.",
+  "items": [
+    {
+      "section": "S26",
+      "item": "Population recalibration",
+      "actual": "Exploratory training-only recalibration of released population grids, with buffered spatial holdouts.",
+      "not_claimed": "Original population-model training cross-validation or household-population accuracy."
+    },
+    {
+      "section": "S29",
+      "item": "90% common-domain diagnostic",
+      "actual": "Diagnostic gate introduced in the residential analysis script before outcomes, not in protocol_v1. Both definitions failed (89.13-89.22%). Limited common-domain results and unmapped fractions retained.",
+      "not_claimed": "A passed full-domain residential validation or a preregistered protocol_v1 gate."
+    },
+    {
+      "section": "S30",
+      "item": "Full daily GNSS candidate and time-block sensitivity",
+      "planned_candidate": "Full contemporaneous NGL daily fits with time-block sensitivity.",
+      "actual": "Archived provider-computed, period-specific GNSS LOS trends compared with external published velocity fields. All reference/control stations excluded from validation. Native source-window sampling checked at three radii.",
+      "not_executed": [
+        "Fresh daily GNSS refitting",
+        "Temporal-block refitting sensitivity",
+        "Independent ground validation of the Bangkok inversion"
+      ],
+      "not_claimed": "A new daily GNSS solution, matched temporal models, or completed independent accuracy validation of our processing."
+    },
+    {
+      "section": "S28/S30",
+      "item": "A137 date metadata",
+      "actual": "Completed notebook outputs and publication identify the 2017-2023 period; stale configuration/run metadata identify 2016-2022. Both are retained and the conflict is disclosed.",
+      "not_claimed": "The GeoTIFF alone certifies the acquisition period."
+    }
+  ]
+}

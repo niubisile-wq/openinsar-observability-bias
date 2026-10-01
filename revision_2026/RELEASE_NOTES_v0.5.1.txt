@@ -1,0 +1,11 @@
+Final manuscript and reviewer-response integration for Supplementary S25-S30.
+
+This release integrates all six additional scientific experiments into the main manuscript, Supplementary Information, point-by-point responses and figures. It regenerates every final page/line locator, preserves all original comment blocks, and synchronizes the clean, numbered, locally marked and single-file manuscript versions. Six final PDFs and independently recompiled self-contained manuscript/SI source archives are supplied in reviewer-documents-v0.5.1.zip.
+
+The fixed scientific package is v0.5.0, commit f70124f1cdc11e43848ce97c01f49fad6f7efb62. All 21 additional CSVs are numerically recomputed from public portable inputs. Companion analysis inputs and selected full sources remain at v0.5.0; complete earlier ACS/Census sources remain at v0.4.1. Windows/Linux CI runs S21-S30.
+
+An old writing-only S22 percentage-point double conversion is corrected from unchanged numerical outputs: random/clustered median-rule errors are +0.0190/+0.0194 percentage points, not +1.9. The correction and final document audits are included in provenance.
+
+Small external-region effects, the failed municipal common-domain coverage diagnostic, and negative Davis-Sacramento GNSS results are retained. The external GNSS archive has temporal-model and source-date limits and does not validate the Bangkok inversion. No household truth or true missing-cell deformation is claimed.
+
+The marked manuscript compares the preceding local final-writing baseline, not the original submission. Journal submission has not been performed. The old Zenodo DOI remains for v0.3.0; an updated DOI is still pending.

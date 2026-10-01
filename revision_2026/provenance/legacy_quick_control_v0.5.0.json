@@ -1,0 +1,75 @@
+{
+  "status": "PASS",
+  "relative_tolerance": 1e-08,
+  "absolute_tolerance": 1e-06,
+  "fraction_absolute_tolerance": 1e-09,
+  "scope": "Scientific computation from frozen analysis inputs; not independent physical validation.",
+  "tables": [
+    {
+      "mode": "partial-identification",
+      "table": "partial_identification/bounds.csv",
+      "rows": 3,
+      "columns": 10,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "published-method-benchmark",
+      "table": "published_method_benchmark/replicates.csv",
+      "rows": 4800,
+      "columns": 17,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "published-method-benchmark",
+      "table": "published_method_benchmark/summary.csv",
+      "rows": 12,
+      "columns": 10,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "reporting-tolerance",
+      "table": "reporting_tolerance/tolerance_summary.csv",
+      "rows": 24,
+      "columns": 10,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "acs-population-benchmark",
+      "table": "acs_population_benchmark/blockgroup_counts.csv",
+      "rows": 319,
+      "columns": 8,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "acs-population-benchmark",
+      "table": "acs_population_benchmark/model_summary.csv",
+      "rows": 3,
+      "columns": 17,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    }
+  ],
+  "timings": [
+    {
+      "mode": "partial-identification",
+      "seconds": 0.729
+    },
+    {
+      "mode": "published-method-benchmark",
+      "seconds": 48.338
+    },
+    {
+      "mode": "reporting-tolerance",
+      "seconds": 0.72
+    },
+    {
+      "mode": "acs-population-benchmark",
+      "seconds": 8.125
+    }
+  ]
+}

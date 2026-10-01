@@ -1,0 +1,603 @@
+{
+  "status": "PASS",
+  "relative_tolerance": 1e-08,
+  "absolute_tolerance": 1e-06,
+  "fraction_absolute_tolerance": 1e-09,
+  "scope": "Scientific computation from frozen analysis inputs; not independent physical validation.",
+  "tables": [
+    {
+      "mode": "partial-identification",
+      "table": "partial_identification/bounds.csv",
+      "rows": 3,
+      "columns": 10,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "published-method-benchmark",
+      "table": "published_method_benchmark/replicates.csv",
+      "rows": 4800,
+      "columns": 17,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "published-method-benchmark",
+      "table": "published_method_benchmark/summary.csv",
+      "rows": 12,
+      "columns": 10,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "reporting-tolerance",
+      "table": "reporting_tolerance/tolerance_summary.csv",
+      "rows": 24,
+      "columns": 10,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "acs-population-benchmark",
+      "table": "acs_population_benchmark/blockgroup_counts.csv",
+      "rows": 319,
+      "columns": 8,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "acs-population-benchmark",
+      "table": "acs_population_benchmark/model_summary.csv",
+      "rows": 3,
+      "columns": 17,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "dwr-allocation",
+      "table": "core/dwr/summary.csv",
+      "rows": 2,
+      "columns": 5,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "dwr-allocation",
+      "table": "core/dwr/scale_origin_comparison.csv",
+      "rows": 64,
+      "columns": 12,
+      "max_absolute_numeric_difference": 0.00016231881454586983,
+      "pass": true
+    },
+    {
+      "mode": "population-analysis",
+      "table": "core/population/model_epoch_comparison.csv",
+      "rows": 64,
+      "columns": 11,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "population-analysis",
+      "table": "core/population/model_curves.csv",
+      "rows": 3232,
+      "columns": 5,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "population-analysis",
+      "table": "core/population/landcover_strata.csv",
+      "rows": 108,
+      "columns": 7,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "sampling-analysis",
+      "table": "core/sampling/nested_summary.csv",
+      "rows": 48,
+      "columns": 5,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "sampling-analysis",
+      "table": "core/sampling/nested_curves.csv",
+      "rows": 4848,
+      "columns": 5,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "sampling-analysis",
+      "table": "core/sampling/temporal_robustness.csv",
+      "rows": 528,
+      "columns": 7,
+      "max_absolute_numeric_difference": 3.814697265625e-06,
+      "pass": true
+    },
+    {
+      "mode": "sampling-analysis",
+      "table": "core/sampling/conditional_sampling_replicates.csv",
+      "rows": 400,
+      "columns": 4,
+      "max_absolute_numeric_difference": 1.3969838619232178e-09,
+      "pass": true
+    },
+    {
+      "mode": "sampling-spatial",
+      "table": "core/sampling/spatial_blocks.csv",
+      "rows": 2855,
+      "columns": 9,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "sampling-spatial",
+      "table": "core/sampling/spatial_rank_stability.csv",
+      "rows": 10,
+      "columns": 7,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "paired",
+      "table": "paired_support_pilot/all_cases.csv",
+      "rows": 192,
+      "columns": 15,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "paired",
+      "table": "paired_support_pilot/primary_cases.csv",
+      "rows": 64,
+      "columns": 15,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "paired",
+      "table": "paired_support_pilot/convergence.csv",
+      "rows": 64,
+      "columns": 26,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "direct-geometry",
+      "table": "direct_geometry_audit/summary.csv",
+      "rows": 8,
+      "columns": 16,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "direct-geometry",
+      "table": "direct_geometry_audit/cell_intersections.csv",
+      "rows": 12182,
+      "columns": 9,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "observed-los-masking",
+      "table": "actual_los_masking/replicates.csv",
+      "rows": 57600,
+      "columns": 15,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "observed-los-masking",
+      "table": "actual_los_masking/summary.csv",
+      "rows": 576,
+      "columns": 15,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "synthetic-masking",
+      "table": "core/masking/replicates.csv",
+      "rows": 21600,
+      "columns": 14,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "synthetic-masking",
+      "table": "core/masking/summary.csv",
+      "rows": 216,
+      "columns": 11,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "synthetic-masking",
+      "table": "core/masking/synthetic_hazard_bounds.csv",
+      "rows": 3600,
+      "columns": 11,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "dwr-masking",
+      "table": "core/dwr/masking/replicates.csv",
+      "rows": 21600,
+      "columns": 14,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "dwr-masking",
+      "table": "core/dwr/masking/summary.csv",
+      "rows": 216,
+      "columns": 11,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "dwr-masking",
+      "table": "core/dwr/masking/synthetic_hazard_bounds.csv",
+      "rows": 3600,
+      "columns": 11,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "allocation",
+      "table": "core/allocation/scale_origin_comparison.csv",
+      "rows": 512,
+      "columns": 18,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "allocation",
+      "table": "core/allocation/conservation.csv",
+      "rows": 16,
+      "columns": 7,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "allocation",
+      "table": "core/allocation/primary_1000m_cells.csv",
+      "rows": 15690,
+      "columns": 9,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "cross-sensitivity",
+      "table": "core/cross_sensitivity/cross_sensitivity.csv",
+      "rows": 16,
+      "columns": 17,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "cross-sensitivity",
+      "table": "core/cross_sensitivity/integration_convergence.csv",
+      "rows": 16,
+      "columns": 31,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "cross-sensitivity",
+      "table": "core/cross_sensitivity/conservation.csv",
+      "rows": 18,
+      "columns": 6,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "followup",
+      "table": "analysis_results/allocation_covariance_bounds.csv",
+      "rows": 64,
+      "columns": 17,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "followup",
+      "table": "analysis_results/population_model_common_domain.csv",
+      "rows": 2,
+      "columns": 7,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "followup",
+      "table": "analysis_results/block_median_baseline_summary.csv",
+      "rows": 576,
+      "columns": 16,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "spatial",
+      "table": "bangkok_spatial_decomposition/bangkok_spatial_effect_summary.csv",
+      "rows": 4,
+      "columns": 17,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "population-benchmark",
+      "table": "fresno_population_benchmark/fresno_census_block_population_model_metrics.csv",
+      "rows": 5,
+      "columns": 12,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "additional-real-blocks",
+      "table": "additional/real_block_masking/real_block_unmasked_baseline.csv",
+      "rows": 9,
+      "columns": 26,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "additional-real-blocks",
+      "table": "additional/real_block_masking/real_block_masking_replicates.csv",
+      "rows": 2430,
+      "columns": 26,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "additional-real-blocks",
+      "table": "additional/real_block_masking/real_block_masking_summary.csv",
+      "rows": 81,
+      "columns": 16,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "additional-dependence",
+      "table": "additional/spatial_acquisition/spatial_calibration_baselines.csv",
+      "rows": 6,
+      "columns": 10,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "additional-dependence",
+      "table": "additional/spatial_acquisition/spatial_calibration_folds.csv",
+      "rows": 90,
+      "columns": 15,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "additional-dependence",
+      "table": "additional/spatial_acquisition/spatial_calibration_membership.csv",
+      "rows": 9570,
+      "columns": 6,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "additional-dependence",
+      "table": "additional/spatial_acquisition/spatial_calibration_summary.csv",
+      "rows": 18,
+      "columns": 12,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "additional-dependence",
+      "table": "additional/spatial_acquisition/acquisition_date_influence.csv",
+      "rows": 2700,
+      "columns": 14,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "additional-dependence",
+      "table": "additional/spatial_acquisition/acquisition_date_influence_summary.csv",
+      "rows": 12,
+      "columns": 10,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "additional-quality",
+      "table": "additional/training_quality/quality_coverage_error.csv",
+      "rows": 18,
+      "columns": 17,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "additional-quality",
+      "table": "additional/training_quality/quality_coverage_error_by_pair.csv",
+      "rows": 792,
+      "columns": 6,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "additional-regions",
+      "table": "additional/new_regions/new_region_support_baselines.csv",
+      "rows": 6,
+      "columns": 6,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "additional-regions",
+      "table": "additional/new_regions/new_region_allocation_summary.csv",
+      "rows": 96,
+      "columns": 15,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "additional-regions",
+      "table": "additional/new_regions/new_region_allocation_by_tile.csv",
+      "rows": 428736,
+      "columns": 12,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "additional-residential",
+      "table": "additional/residential_allocation/residential_allocation_summary.csv",
+      "rows": 12,
+      "columns": 11,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "additional-residential",
+      "table": "additional/residential_allocation/residential_allocation_by_block.csv",
+      "rows": 58584,
+      "columns": 5,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "additional-residential",
+      "table": "additional/residential_allocation/residential_landuse_eligibility.csv",
+      "rows": 6,
+      "columns": 10,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "additional-gnss",
+      "table": "additional/gnss_transfer/gnss_transfer_summary.csv",
+      "rows": 12,
+      "columns": 14,
+      "max_absolute_numeric_difference": 6.394884621840902e-14,
+      "pass": true
+    },
+    {
+      "mode": "additional-gnss",
+      "table": "additional/gnss_transfer/gnss_transfer_by_station.csv",
+      "rows": 90,
+      "columns": 15,
+      "max_absolute_numeric_difference": 1.0601084454719967e-09,
+      "pass": true
+    },
+    {
+      "mode": "additional-gnss",
+      "table": "additional/gnss_transfer/gnss_transfer_exclusions.csv",
+      "rows": 0,
+      "columns": 4,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "additional-gnss",
+      "table": "additional/gnss_transfer/gnss_transfer_collocation_clusters.csv",
+      "rows": 17,
+      "columns": 3,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    }
+  ],
+  "timings": [
+    {
+      "mode": "partial-identification",
+      "seconds": 0.751
+    },
+    {
+      "mode": "published-method-benchmark",
+      "seconds": 46.039
+    },
+    {
+      "mode": "reporting-tolerance",
+      "seconds": 0.732
+    },
+    {
+      "mode": "acs-population-benchmark",
+      "seconds": 3.779
+    },
+    {
+      "mode": "dwr-allocation",
+      "seconds": 4.764
+    },
+    {
+      "mode": "population-analysis",
+      "seconds": 43.811
+    },
+    {
+      "mode": "sampling-analysis",
+      "seconds": 64.004
+    },
+    {
+      "mode": "sampling-spatial",
+      "seconds": 1.975
+    },
+    {
+      "mode": "paired",
+      "seconds": 28.038
+    },
+    {
+      "mode": "direct-geometry",
+      "seconds": 38.848
+    },
+    {
+      "mode": "observed-los-masking",
+      "seconds": 258.963
+    },
+    {
+      "mode": "synthetic-masking",
+      "seconds": 71.887
+    },
+    {
+      "mode": "dwr-masking",
+      "seconds": 12.892
+    },
+    {
+      "mode": "allocation",
+      "seconds": 224.186
+    },
+    {
+      "mode": "cross-sensitivity",
+      "seconds": 191.907
+    },
+    {
+      "mode": "followup",
+      "seconds": 155.18
+    },
+    {
+      "mode": "spatial",
+      "seconds": 1.615
+    },
+    {
+      "mode": "population-benchmark",
+      "seconds": 7.563
+    },
+    {
+      "mode": "additional-real-blocks",
+      "seconds": 3.581
+    },
+    {
+      "mode": "additional-dependence",
+      "seconds": 11.359
+    },
+    {
+      "mode": "additional-quality",
+      "seconds": 2.761
+    },
+    {
+      "mode": "additional-regions",
+      "seconds": 115.607
+    },
+    {
+      "mode": "additional-residential",
+      "seconds": 49.328
+    },
+    {
+      "mode": "additional-gnss",
+      "seconds": 1.171
+    }
+  ]
+}

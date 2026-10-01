@@ -220,4 +220,37 @@
 \newblock
   \urlprefix\url{https://www2.census.gov/programs-surveys/acs/replicate_estimates/2021/documentation/5-year/2017-2021_Variance_Replicate_Table_Documentation.pdf}.
 
+\bibitem{sangha2026california}
+\bibinfo{author}{Sangha, S.~S.}, \bibinfo{author}{Funning, G.~J.},
+  \bibinfo{author}{Govorcin, M.} \& \bibinfo{author}{Bekaert, D. P.~S.}
+\newblock \bibinfo{title}{A statewide insar velocity map for california
+  produced by a comprehensive large scale analysis of aria standard products}.
+\newblock \emph{\bibinfo{journal}{Earth and Space Science}}
+  \textbf{\bibinfo{volume}{13}}, \bibinfo{pages}{e2026EA005214}
+  (\bibinfo{year}{2026}).
+
+\bibitem{sangha2026data}
+\bibinfo{author}{Sangha, S.}, \bibinfo{author}{Funning, G.},
+  \bibinfo{author}{Govorcin, M.} \& \bibinfo{author}{Bekaert, D.}
+\newblock \bibinfo{title}{Data and software for sangha et al., 2026: A
+  statewide insar velocity map for california} (\bibinfo{year}{2026}).
+\newblock \bibinfo{note}{Fixed April 2026 archived version; CC BY 4.0}.
+
+\bibitem{fresno2026landuse}
+\bibinfo{author}{{City of Fresno}}.
+\newblock \bibinfo{title}{Public existing land use gis layer}
+  (\bibinfo{year}{2026}).
+\newblock
+  \urlprefix\url{https://services2.arcgis.com/WkBUojyNPhsWOk1W/arcgis/rest/services/Existing_Land_Use/FeatureServer/19}.
+\newblock \bibinfo{note}{Hosted FeatureServer layer 19; ObjectID, ELU, ELUText
+  and LayerRefreshDate; accessed 1 October 2026}.
+
+\bibitem{ngl2026holdings}
+\bibinfo{author}{{Nevada Geodetic Laboratory}}.
+\newblock \bibinfo{title}{Gnss station data holdings and coordinate metadata}
+  (\bibinfo{year}{2026}).
+\newblock
+  \urlprefix\url{https://geodesy.unr.edu/NGLStationPages/DataHoldings.txt}.
+\newblock \bibinfo{note}{University of Nevada, Reno; accessed 1 October 2026}.
+
 \end{thebibliography}

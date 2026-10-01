@@ -2,19 +2,19 @@
   "main": {
     "Introduction": {
       "page": 1,
-      "line": 47,
+      "line": 45,
       "text": "1 Introduction",
       "clean_page": 1
     },
     "Materials and methods": {
       "page": 2,
-      "line": 95,
+      "line": 93,
       "text": "2 Materials and methods",
       "clean_page": 2
     },
     "Separate the geographic domain, support field and allocation model": {
       "page": 2,
-      "line": 97,
+      "line": 95,
       "text": "2.1 Separate the geographic domain, support field and allocation model",
       "clean_page": 2
     },
@@ -54,89 +54,107 @@
       "text": "2.7 Matched processing and a second published-support case",
       "clean_page": 5
     },
-    "Spatial support and allocation have different weighted distributions": {
+    "Additional robustness and transfer tests": {
       "page": 5,
-      "line": 288,
-      "text": "3.1 Spatial support and allocation have different weighted distributions",
+      "line": 286,
+      "text": "2.8 Additional robustness and transfer tests",
       "clean_page": 5
     },
-    "Coarse uniform allocation changes the target materially": {
+    "Spatial support and allocation have different weighted distributions": {
       "page": 6,
-      "line": 339,
-      "text": "3.2 Coarse uniform allocation changes the target materially",
+      "line": 319,
+      "text": "3.1 Spatial support and allocation have different weighted distributions",
       "clean_page": 6
     },
-    "Controlled missingness identifies both useful and failing cases": {
+    "Coarse uniform allocation changes the target materially": {
       "page": 7,
-      "line": 381,
-      "text": "3.3 Controlled missingness identifies both useful and failing cases",
+      "line": 373,
+      "text": "3.2 Coarse uniform allocation changes the target materially",
       "clean_page": 7
+    },
+    "Controlled missingness identifies both useful and failing cases": {
+      "page": 8,
+      "line": 415,
+      "text": "3.3 Controlled missingness identifies both useful and failing cases",
+      "clean_page": 8
     },
     "Sampling and population choice remain consequential": {
       "page": 8,
-      "line": 432,
+      "line": 465,
       "text": "3.4 Sampling and population choice remain consequential",
       "clean_page": 8
     },
     "Matched processing and transfer to actual published support": {
       "page": 9,
-      "line": 486,
+      "line": 522,
       "text": "3.5 Matched processing and transfer to actual published support",
       "clean_page": 9
     },
-    "The aggregation effect and its dependence on inputs": {
+    "Further stress tests and external transfer": {
       "page": 11,
-      "line": 611,
-      "text": "4.1 The aggregation effect and its dependence on inputs",
+      "line": 639,
+      "text": "3.6 Further stress tests and external transfer",
       "clean_page": 11
+    },
+    "The aggregation effect and its dependence on inputs": {
+      "page": 12,
+      "line": 673,
+      "text": "4.1 The aggregation effect and its dependence on inputs",
+      "clean_page": 12
     },
     "Mechanism and choice of allocation method": {
-      "page": 11,
-      "line": 621,
+      "page": 12,
+      "line": 683,
       "text": "4.2 Mechanism and choice of allocation method",
-      "clean_page": 11
+      "clean_page": 12
     },
     "Applicability and evidence limits": {
-      "page": 11,
-      "line": 638,
+      "page": 12,
+      "line": 700,
       "text": "4.3 Applicability and evidence limits",
-      "clean_page": 11
+      "clean_page": 12
     },
     "What the additional evidence supports.": {
-      "page": 12,
-      "line": 655,
+      "page": 13,
+      "line": 718,
       "text": "What the additional evidence supports.",
-      "clean_page": 12
+      "clean_page": 13
     },
     "Earlier estimates and source attribution.": {
-      "page": 12,
-      "line": 664,
+      "page": 13,
+      "line": 738,
       "text": "Earlier estimates and source attribution.",
-      "clean_page": 12
+      "clean_page": 13
+    },
+    "Limits revealed by the added tests.": {
+      "page": 13,
+      "line": 729,
+      "text": "Limits revealed by the added tests.",
+      "clean_page": 13
     },
     "Conclusions": {
-      "page": 12,
-      "line": 674,
+      "page": 13,
+      "line": 749,
       "text": "5 Conclusions",
-      "clean_page": 12
+      "clean_page": 13
     },
     "Data Availability": {
-      "page": 12,
-      "line": 686,
+      "page": 13,
+      "line": 764,
       "text": "Data Availability",
-      "clean_page": 12
+      "clean_page": 13
     },
     "Code Availability": {
-      "page": 12,
-      "line": 695,
+      "page": 14,
+      "line": 774,
       "text": "Code Availability",
-      "clean_page": 12
+      "clean_page": 14
     },
     "References": {
-      "page": 12,
-      "line": 706,
+      "page": 14,
+      "line": 787,
       "text": "References",
-      "clean_page": 12
+      "clean_page": 14
     }
   },
   "supplementary": {
@@ -235,9 +253,33 @@
     "S24": {
       "page": 26,
       "heading": "S24. Fresno population-grid comparison with 2017\u20132021 ACS"
+    },
+    "S25": {
+      "page": 27,
+      "heading": "S25. Actual irregular Census blocks and contiguous missingness"
+    },
+    "S26": {
+      "page": 29,
+      "heading": "S26. Buffered spatial recalibration and shared-acquisition influence"
+    },
+    "S27": {
+      "page": 30,
+      "heading": "S27. Training-only quality rules and coverage\u2013residual curves"
+    },
+    "S28": {
+      "page": 31,
+      "heading": "S28. Two fixed additional regions using archived ARIA products"
+    },
+    "S29": {
+      "page": 32,
+      "heading": "S29. Municipal residential eligibility as a distinct ancillary reference"
+    },
+    "S30": {
+      "page": 34,
+      "heading": "S30. Archived independent GNSS transfer with disjoint frame con-"
     }
   },
-  "numbered_pages": 14,
-  "clean_pages": 14,
-  "supplementary_pages": 28
+  "numbered_pages": 16,
+  "clean_pages": 16,
+  "supplementary_pages": 37
 }

@@ -2,7 +2,7 @@
 
 **Manuscript:** *Quantifying how spatial allocation and sampling alter population-weighted InSAR support summaries* (Scientific Reports revision).
 
-**Version scope:** v0.5.0 adds six scientific experiments (S25-S30), all portable analysis inputs, 21 full numerical output comparisons and selected-source companion assets. See the [additional experiment guide](additional/README.md) and run `python revision_2026/reproduce.py additional`. The preceding S1-S24 baseline remains v0.4.1, commit `5bf98f19abbed981989f9c97ef9b118eea524c5b`. The v0.5.0 science release retains the preceding v0.4.3 editorial documents; the following v0.5.1 package integrates the new sections and regenerates every response locator. Document verification records identify their actual version.
+**Version scope:** v0.5.1 integrates six additional experiments into the manuscript, Supplementary S25-S30, all reviewer responses, scientific figures and regenerated line/page locators. The fixed scientific release is [v0.5.0](https://github.com/niubisile-wq/openinsar-observability-bias/releases/tag/v0.5.0), commit `f70124f1cdc11e43848ce97c01f49fad6f7efb62`, including all portable inputs, 21 additional numerical comparisons and two selected-source assets. See the [additional experiment guide](additional/README.md) and run `python revision_2026/reproduce.py additional`. The preceding S1-S24 scientific baseline remains v0.4.1, commit `5bf98f19abbed981989f9c97ef9b118eea524c5b`. The [v0.5.1 document asset](https://github.com/niubisile-wq/openinsar-observability-bias/releases/download/v0.5.1/reviewer-documents-v0.5.1.zip) contains the six final PDFs and two independently recompiled, self-contained LaTeX archives. Document verification records identify the exact current snapshot.
 
 This directory is the current revision. The older `14_esin_strengthened_v1/` manuscript and Zenodo DOI `10.5281/zenodo.21444768` describe an earlier version. That DOI does **not** archive the new experiments. The updated Zenodo deposit remains pending.
 
@@ -42,7 +42,7 @@ The end of a successful run prints `"status": "PASS"`. The machine-readable comp
 python revision_2026/reproduce.py standard --workspace reproduction_output
 ```
 
-This includes the four quick analyses, E1 allocation, E3 synthetic masking in both regions, E4 conditional sampling/nested summaries, E5 population/land-cover comparisons, E6 Fresno allocation, crossed population/sampling sensitivity, paired support, direct polygon intersections, and actual-LOS masking. The two synthetic experiments each generate 21,600 replicate rows, actual-LOS masking generates 57,600 rows, and the published-method benchmark generates 4,800 rows.
+This includes the four quick analyses, E1 allocation, E3 synthetic masking in both regions, E4 conditional sampling/nested summaries, E5 population/land-cover comparisons, E6 Fresno allocation, crossed population/sampling sensitivity, paired support, direct polygon intersections, actual-LOS masking, and all six additional S25-S30 analyses. The two synthetic experiments each generate 21,600 replicate rows, actual-LOS masking generates 57,600 rows, and the published-method benchmark generates 4,800 rows. S20 provider-download modes and the Census/DWR polygon mode remain separate commands below.
 
 Run individual modes with the same `--workspace` argument:
 
@@ -65,6 +65,12 @@ Run individual modes with the same `--workspace` argument:
 | S22 | `published-method-benchmark` | Recompute the three estimator rules under fixed controlled masks |
 | S23 | `reporting-tolerance` | Recompute declared tolerance decisions from the frozen S20 scale/origin table |
 | S24 | `acs-population-benchmark` | Redo geometry overlay and exact 80-replicate aggregate ACS MOE |
+| S25 | `additional-real-blocks` | Actual Census-block geometry and random/one-hole/four-hole masks; retain undefined results and partial-identification bounds |
+| S26 | `additional-dependence` | Buffered training-only recalibration and deletion of all edges sharing each acquisition date |
+| S27 | `additional-quality` | All 18 training-only post-filter rules on 44 excluded-edge residuals |
+| S28 | `additional-regions` | Both fixed external regions and all 96 threshold/scale/origin designs |
+| S29 | `additional-residential` | Two municipal residential definitions, six conserved allocations and incomplete common-domain coverage |
+| S30 | `additional-gnss` | All validation sites, two excluded-control reference frames and three source-window sampling radii |
 
 The standard suite creates sizable intermediate reprojection arrays. Reserve several GB of free memory and disk space. Outputs are written to the chosen workspace, leaving the released input/reference files unchanged. `compare` checks all available rerun tables:
 
@@ -111,10 +117,10 @@ The 437-pair full/training LiCSBAS stacks and all 224 pair-level fine support ar
 
 ## Locate the paper and evidence
 
-The local publication audit covers 21 distinct analysis modes, 49 scientific-table comparisons across 22 data-based runs, and five geometry tests. The full ACS and Census/DWR download routes were also executed. See `provenance/current_reproduction_verification.json` for the numerical differences and precise scope; the cross-platform quick check is run by GitHub Actions.
+The preceding S1-S24 publication audit covered 21 distinct analysis modes, 49 scientific-table comparisons across 22 data-based runs, and five geometry tests; full ACS and Census/DWR download routes were also executed. Its record remains in `provenance/current_reproduction_verification.json`. The new six-mode numerical rerun compares all 21 additional tables; GitHub Actions executes both S21-S24 and S25-S30 on Windows and Linux. Current audit records are retained separately, so the historical audit is not described as a run of the new manuscript. The current standard rerun completed 24 modes and 62 numerical table comparisons; see `provenance/current_standard_reproduction_v0.5.0.json`. These counts already include the six additional modes and their 21 tables; they are not added again.
 
 - [`manuscript/manuscript.pdf`](manuscript/manuscript.pdf): current clean manuscript.
-- [`manuscript/supplementary.pdf`](manuscript/supplementary.pdf): Supplementary S1–S24.
+- [`manuscript/supplementary.pdf`](manuscript/supplementary.pdf): Supplementary S1–S30.
 - [`manuscript/response.pdf`](manuscript/response.pdf): point-by-point response to all seven reviewer comments.
 - [`REVIEWER_MAP.md`](REVIEWER_MAP.md): comments, changes, experiment entries and scope limits.
 - `reference_outputs/`: retained scientific tables and full replicate tables.
@@ -126,6 +132,6 @@ The LaTeX source uses the included Springer Nature class/styles and prebuilt `.b
 
 ## Interpretation and attribution
 
-These analyses concern population-weighted support, allocation, aggregation and sampling. GHSL/WorldPop/CA-POP are allocation models. ACS is a coarse survey benchmark with uncertainty; CA-POP shares the Census block totals. Controlled masks hide originally observed data and do not validate genuinely unsupported locations. No matched independent GNSS/leveling validation has been obtained, and the earlier unvalidated exposed-person interpretation is withdrawn.
+These analyses concern population-weighted support, allocation, aggregation and sampling. GHSL/WorldPop/CA-POP are allocation models. ACS is a coarse survey benchmark with uncertainty; CA-POP shares the Census block totals. Controlled masks hide originally observed data and do not validate genuinely unsupported locations. S30 provides an archived independent-GNSS comparison of external California LOS products, with conflicting source-date metadata, different temporal models and large negative residuals explicitly retained. It does not validate our Bangkok inversion; no matched independent GNSS/leveling accuracy validation of that inversion has been obtained. The earlier unvalidated exposed-person interpretation is withdrawn.
 
 Author-owned code and aggregate outputs retain the release's CC BY 4.0 terms. Third-party data, derived arrays and LaTeX support files retain their applicable provider terms; see [`DATA_LICENSES.md`](DATA_LICENSES.md) and `THIRD_PARTY_NOTICES.txt`. Updated DOI publication and journal submission are separate from this GitHub release.

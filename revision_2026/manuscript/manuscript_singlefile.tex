@@ -6,7 +6,7 @@
 \raggedbottom
 \setlength{\bibsep}{0pt}
 
-% Begin included source: numbers.tex
+% begin numbers.tex
 \newcommand{\PopTwenty}{1.665}
 \newcommand{\BuiltTwenty}{197.5}
 \newcommand{\PopPctTwenty}{7.40}
@@ -41,10 +41,10 @@
 \newcommand{\DWRUniformMin}{9022}
 \newcommand{\DWRUniformMax}{9556}
 
-% End included source: numbers.tex
+% end numbers.tex
 
 
-% Begin included source: round2_numbers.tex
+% begin round2_numbers.tex
 \newcommand{\InteriorPopulationMin}{99.27}
 \newcommand{\InteriorPopulationMax}{99.49}
 \newcommand{\InteriorBiasMin}{58.24}
@@ -52,16 +52,16 @@
 \newcommand{\InteriorErrorMin}{98.55}
 \newcommand{\InteriorErrorMax}{98.87}
 
-% End included source: round2_numbers.tex
+% end round2_numbers.tex
 
 
-% Begin included source: cross_numbers.tex
+% begin cross_numbers.tex
 \newcommand{\CrossGHLow}{51.3}
 \newcommand{\CrossGHHigh}{55.6}
 \newcommand{\CrossWPLow}{8.6}
 \newcommand{\CrossWPHigh}{9.1}
 
-% End included source: cross_numbers.tex
+% end cross_numbers.tex
 
 \begin{document}
 \title[Spatial allocation and InSAR support]{Quantifying how spatial allocation and sampling alter population-weighted InSAR support summaries}
@@ -70,7 +70,7 @@
 \affil[1]{\orgname{Detroit Green Technology Institute, Hubei University of Technology}, \orgaddress{\city{Wuhan}, \postcode{430068}, \country{China}}}
 \affil[2]{\orgname{School of Electrical and Electronic Engineering, Hubei University of Technology}, \orgaddress{\city{Wuhan}, \postcode{430068}, \country{China}}}
 \affil[3]{\orgname{Department of Computer Science and Engineering, University of South Carolina}, \orgaddress{\city{Columbia}, \postcode{29201}, \state{SC}, \country{USA}}}
-\abstract{Population-weighted summaries of interferometric synthetic aperture radar (InSAR) support depend on how population and observations align within reporting units. We quantify this interaction using matched-input allocation comparisons, controlled missingness and crossed population-model and sampling experiments. In a fixed Chao Phraya footprint, native GHSL allocation gives a mean area--pair support deficit of \PopThirty{} million allocation units. Redistributing the same population uniformly within 1-km cells increases this quantity by \UniformBiasMin{}--\UniformBiasMax{}\% (+7.75--7.78 percentage points of the fixed population total). Within-cell population--support covariance explains the difference, which persists after boundary-crossing cells are excluded. On a common domain with equal population totals, crossing GHSL and WorldPop with 28- and 224-pair selections yields positive differences in every tested grid origin: \CrossGHLow{}--\CrossGHHigh{}\% for GHSL and \CrossWPLow{}--\CrossWPHigh{}\% for WorldPop. Controlled masks produce both bias directions and small aggregate bias under density-independent missingness. A connected LiCSBAS experiment distinguishes sampled support from final processing quality: under the actual final mask, the corresponding allocation shift is only 0.108--0.117 percentage points. Actual Fresno observation polygons test transfer to a published footprint. The results establish a population-model-dependent aggregation effect and conditions for transparent support accounting. The deficit represents model allocation averaged over area and pairs; it does not establish deformation in missing locations.}
+\abstract{Population-weighted InSAR support summaries depend on the alignment of population and observations within reporting units. We quantify this interaction with matched-input allocation comparisons, controlled missingness and population-model/sampling sensitivities. In a fixed Chao Phraya footprint, native GHSL allocation gives a mean area--pair support deficit of 3.020 million allocation units. Uniform allocation of the same population within 1-km cells raises the deficit by 57.7--57.9\% (+7.75--7.78 percentage points of total allocation). Within-cell covariance explains this effect, which persists after boundary cells are excluded. Crossing GHSL and WorldPop with two pair selections preserves its direction while changing its magnitude. A connected LiCSBAS experiment separates sampled support from final quality; the final-mask allocation shift is only 0.108--0.117 percentage points. Further tests use actual Census blocks, contiguous holes, training-only quality curves, spatial/date dependence, municipal eligibility and two California regions. Small regional effects, unidentified allocation under contiguous holes and mixed external GNSS consistency constrain generalization. The results support mass-preserving accounting with explicit allocation and coverage limits. The deficit averages model allocation over area and pairs; it does not establish deformation in missing locations.}
 \keywords{InSAR, population allocation, observation support, coherence, spatial scale, reproducibility}
 \maketitle
 % The sn-jnl class globally disables top floats while formatting the title.
@@ -147,17 +147,29 @@ An OpenAI Codex assistant was used during this revision to assist experimental c
 
 \subsection{Matched processing and a second published-support case}
 
-% Begin included source: matched_methods.tex
+% begin matched_methods.tex
 We define a separate Bangkok urban--periurban rectangle (100.35--100.65$^\circ$ E, 13.65--14.05$^\circ$ N) before examining processing outcomes. All 437 catalogue pairs with both dates in 2019--2020 and temporal baseline at most 96 days are retrieved and checked. This date graph contains 104 acquisitions and is connected. Native unwrapped phase and byte coherence are aligned by nearest sampling, using each source's actual GDAL transform, onto the first unwrapped raster's approximately $0.001^\circ$ grid. LiCSBAS2 steps 11--16 provide quality rejection, loop closure, small-baseline inversion, velocity spread, multi-index masking and filtering \citep{morishita2020licsbas,licsbas2}. We retain upstream scientific routines and fixed C-band defaults; automatic relaxation of masking thresholds is disabled. Supplementary S7 records the exact version and parameters.
 
 Before reading pixel quality, 44 pair edges are randomly selected for holdout while preserving global acquisition-date connectivity. The other 393 pairs are processed separately through the same workflow. Held-out phase differences are converted to relative line-of-sight (LOS) displacement and referenced to the training solution's reference pixel. Predicted differences come from the unfiltered training cumulative displacements at those two dates. On observations evaluable by all methods, we also compare predictions from the training linear velocity and from zero relative displacement. Missing training dates or invalid held-out phase at the training reference are recorded as exclusions. Predictive strata use training-pair support and the training mask, excluding held-out coherence from their definition. All held-out dates remain represented in training; this tests edge reconstruction rather than forecasting new acquisition dates. Pairs share acquisitions and date-dependent atmospheric phase, so we report descriptive residuals without an independent-replicate confidence interval. No GNSS calibration, vertical decomposition or recovery of permanently absent observations is claimed.
 
 We separately compare legacy 28-pair support and matched-stack support with the full-stack quality mask, reporting pixel- and population-weighted confusion counts, support-bin validity, velocity spread and inversion residuals. Native GHSL counts are transferred by source-area fractions to the processing grid. Mask association is partly built into the algorithm because coherence contributes to its quality criteria; the edge holdout adds a distinct internal predictive check. The legacy comparison additionally differs in acquisition period (2016--2022 versus 2019--2020); the matched input diagnostic provides a within-period comparison. This experiment evaluates a specified LiCSAR/LiCSBAS chain and does not test the validity of the WabInSAR source raster.
 
-% End included source: matched_methods.tex
+% end matched_methods.tex
 
 
 For the independent geometry case, we select a fixed Fresno rectangle (119.9--119.7$^\circ$ W, 36.6--36.85$^\circ$ N) before inspecting its support results. The California Department of Water Resources (DWR) 2026Q1 service supplies actual polygons representing its 100-m measurement cells \citep{dwr2026,dwrdocumentation}. We download all 38,738 intersecting cells, verify their geometry, clip them to the AOI and compute their nonduplicated union within native GHSL pixels. We do not assign the full population of a source pixel separately to each measurement point. The same metric scale/origin comparison is repeated in UTM zone 11N, and artificial masking is repeated within the published observed footprint. This case tests transfer of support accounting to a final published observation footprint; its polygon layer alone provides no per-cell velocity or uncertainty. We do not infer motion in its gaps. Its 2015--2026 observation record and 2020 population also have an explicit temporal mismatch.
+
+
+% begin additional_methods.tex
+\subsection{Additional robustness and transfer tests}
+We extend the controlled comparison to actual irregular 2020 Census blocks in Fresno. Complete-block GHSL allocations are normalized to the official P1 total before restriction to cells with known DWR annual rates for 1 October 2020--1 October 2021. Random removals and one or four contiguous holes remove 10, 30 or 50\% of known-rate cells, with 30 repetitions and fixed thresholds of $-3$, $-5$ and $-10$ mm yr$^{-1}$. Native observed-allocation prevalence, observed-area prevalence and a published pixel-centre unit-median-rate rule use identical masks. Blocks without the information required by a rule remain undefined. We report method-specific unestimated allocation, error on the common-computable domain and worst-case bounds on the whole originally known domain (Supplementary S25).
+
+To address dependence, we perform exploratory five-band spatial holdouts for recalibrating released population grids against ACS, with west--east and south--north designs and 0-, 1- and 3-km exclusion buffers. The total multiplier uses training groups only; this is not cross-validation of the original population-model training. We also remove all sampled pairs incident to each acquisition date from the 224-pair support pool and recompute equal-pair/equal-quarter summaries, without re-inverting velocities (S26). For the connected processing stack, 18 rules based only on training-mask, coherence, residual or velocity-standard-deviation information are applied to the fixed training inversion. Full-domain coverage and internal displacement residuals across all 44 excluded edges are reported jointly; no threshold is chosen from held-out error (S27).
+
+Two further rectangles, Los Angeles and Davis--Sacramento, are fixed before outcome inspection and evaluated across three coherence cutoffs, four metric scales and four origins using archived ARIA California LOS/coherence products \citep{sangha2026california,sangha2026data} (S28). An independent municipal land-use classification supplies residential eligibility in Fresno, with strict and broader mixed-use rules and an explicit unmapped category \citep{fresno2026landuse} (S29). Finally, archived NGL GNSS LOS estimates are compared with the external California product over its documented track periods. Provider reference sites and one location-selected local frame-control site per region are excluded from every validation metric. The two spatial-frame choices and all three sampling radii are retained. Archived linear GNSS fits differ from the InSAR temporal model; this comparison is neither a fresh daily-GNSS refit nor validation of our Bangkok inversion (S30).
+
+% end additional_methods.tex
+
 
 \section{Results}
 \subsection{Spatial support and allocation have different weighted distributions}
@@ -170,7 +182,7 @@ The fixed Chao Phraya footprint contains \PopTotal{} million GHSL population uni
 \begin{table}[htbp]\centering
 \refstepcounter{table}\label{tab:baseline}
 
-% Begin included source: baseline_table.tex
+% begin baseline_table.tex
 \begin{tabular}{lrrrr}\toprule
 Support rule & Population & Pop. (\%) & Built surface & Area (\%)\\\midrule
 Valid unwrapped & 0.268 & 1.19 & 31.9 & 17.89 \\
@@ -179,7 +191,7 @@ Joint, $q=0.3$ & 3.020 & 13.42 & 325.6 & 68.77 \\
 Joint, $q=0.4$ & 4.891 & 21.74 & 464.6 & 76.83 \\
 \bottomrule\end{tabular}
 
-% End included source: baseline_table.tex
+% end baseline_table.tex
 
 \end{table}
 
@@ -233,15 +245,15 @@ On pixels jointly valid in the four population/epoch layers, the $q=0.3$ deficit
 \end{figure}
 
 
-% Begin included source: cross_results.tex
+% begin cross_results.tex
 \paragraph{Crossing population model and pair selection.} On the fixed GHSL--WorldPop common domain, both models are normalized to 22.358 million population units. At 1 km, uniform allocation exceeds the native-model deficit by 55.38--55.64\% for GHSL with the legacy 28 pairs and 51.29--51.51\% with the expanded 224 pairs. The corresponding WorldPop differences are 9.03--9.07\% and 8.64--8.68\%. All 16 model--sample--origin combinations have positive differences; normalized by the common total, these span 7.40--7.53 percentage points for GHSL and 2.09--2.13 for WorldPop. The direction therefore persists across these inputs, while its magnitude is strongly population-model dependent. The original approximately 58\% difference is specific to its full-domain GHSL case. Changing 28 to 224 pairs changes selection and composition as well as sample size; the comparison is not an isolated sample-size effect. Supplementary S12 reports every origin and the numerical convergence check.
 
-% End included source: cross_results.tex
+% end cross_results.tex
 
 
 \subsection{Matched processing and transfer to actual published support}
 
-% Begin included source: matched_results.tex
+% begin matched_results.tex
 Full-stack quality rejection leaves 431 of 437 pairs for inversion; the training branch retains 382 of 393 inputs. The full quality mask accepts 97.02\% of pixels and 99.71\% of the small area's allocated population. Among pixels with matched-input mean support below 0.2, 83.34\% still pass the fixed multi-index mask; the 0.8--1 group has 99.72\% acceptance. Low coherence-screened support is therefore not equivalent to final processing rejection (Fig.~\ref{fig:matched}). Neither acceptance nor rejection is independent physical truth.
 
 At a legacy-support threshold of 0.5, the low-support/accepted and high-support/rejected categories contain 208,609 and 30,637 population allocation units, respectively. That legacy comparison also changes the acquisition period and sample. The matched-input bins provide the within-period comparison: median bootstrap velocity spread is 1.343 versus 1.185 mm yr$^{-1}$ and median inversion residual is 0.673 versus 0.368 mm for the lowest and highest support groups. These associations describe quality differences rather than a binary validity surrogate.
@@ -258,7 +270,7 @@ We also imposed known masks on actual fitted LOS velocities, but only among pixe
 \refstepcounter{figure}\label{fig:matched}
 \end{figure}
 
-% End included source: matched_results.tex
+% end matched_results.tex
 
 
 In Fresno, the union of DWR observation cells covers 78.49\% of the 495.51-km$^2$ AOI but contains \DWRSupportPct{}\% of its allocated GHSL population. Of \DWRTotal{} population units, \DWRUnsupported{} fall outside the published footprint under the native allocation model. At 1 km, uniform allocation gives \DWRUniformMin{}--\DWRUniformMax{} units outside support. This is a substantial multiplier of a small baseline, but only about 1.2--1.3 percentage points of the AOI population in additional error. Both denominators matter. The larger origin sensitivity of center sampling illustrates a separate grid-placement vulnerability (Fig.~\ref{fig:dwr}). These are observations about coverage geometry and population allocation, not evidence of subsidence in the gaps. Using actual 2020 Census block geometries over the same complete-block domain, the Census-population-weighted mean DWR area-coverage fraction is 99.19\%, compared with 99.74\% under the native GHSL allocation; assigning whole Census block counts to blocks with at least 50\% observed area gives 99.41\%. These are cross-scale support statistics, not velocity classes, and the Census totals differ from GHSL (Supplementary S16). We additionally applied a published median-rate block classification to separate DWR/TRE ALTAMIRA vertical-rate rasters. For the 2015--2021 median of six annual products, valid rates cover blocks containing 95.70\% of complete-block Census population; 65.23\% of that covered population is assigned to blocks with median rates below $-5$ mm yr$^{-1}$. This is a transfer analysis using an interpolated vertical-rate product, not the manuscript's LOS field or an independent validation; annual and cumulative rate estimands yield materially different classes (Supplementary S17). A matched-domain comparison of GHSL and WorldPop 1-km allocations with Census block totals shows that both outperform an area-only allocation baseline, while normalized block-level WAPE remains 57--59\%; this coarse agreement test does not validate within-block population locations (Supplementary S19). A matched 100-m comparison that normalizes GHSL and CA-POP to identical Census block counts changes the outside-footprint allocation by 0.143 percentage points of the common Census total, with mixed tract-level directions; CA-POP uses those same block counts as source data (Supplementary S20). At the coarser 2020 block-group scale, the ACS 2017--2021 survey estimate totals 493,571; Census P1 is 0.36\% lower, while GHSL and WorldPop totals are 10.57\% and 6.03\% higher. This is a survey-based block-group agreement benchmark with unresolved source independence. It does not establish household locations or validate LOS deformation (Supplementary S24).
@@ -269,6 +281,24 @@ In Fresno, the union of DWR observation cells covers 78.49\% of the 495.51-km$^2
 \end{figure}
 
 \FloatBarrier
+
+% begin additional_results.tex
+\subsection{Further stress tests and external transfer}
+Actual irregular blocks expose an availability problem hidden by conditional error. At 30\% removal, native prevalence leaves 0.20\% of allocation unestimated under random pixels, versus 23.01\% under one hole and 28.64\% under four holes. The median rule leaves 9.41, 26.80 and 32.61\%, respectively. Native prevalence has smaller mean local L1 error at $-5$ mm yr$^{-1}$ on common-computable blocks, but whole-domain bound widths average 30.02, 24.02 and 30.97 pp. Small conditional errors do not identify class allocation under contiguous gaps (S25).
+
+Spatially held-out recalibration gives GHSL WAPE 33.24--33.85\% versus 33.16\% in sample, and WorldPop 32.34--32.98\% versus 32.29\%. Local disagreement remains. Deleting each shared acquisition date changes the $q=0.3$ equal-quarter population deficit by $-0.386$ to $+0.165$ pp; these are dependent support sensitivities, not velocity re-inversions or confidence intervals (S26).
+
+Raising training coherence from 0.2 to 0.4 reduces accepted population allocation from 99.40 to 95.34\% while pooled excluded-edge displacement RMSE falls from 0.491 to 0.388 mm; population-weighted RMSE changes from 0.344 to 0.336 mm. At 0.7, only 41.04\% of allocation remains. All 18 rules are retained, including nonmonotonic error under other metrics. These are post-filters on a fixed inversion, not absolute velocity accuracy (S27).
+
+Across 96 fixed-region scale/origin/cutoff designs, uniform-minus-native differences are only 0.026--0.186 pp in Los Angeles and 0.051--0.372 pp in Davis--Sacramento. The direction transfers, but these small effects do not generalize the approximately 58\% primary-case relative difference (S28).
+
+Strict municipal residential eligibility contains 85.22\% of mapped GHSL allocation and 89.30\% of mapped CA-POP allocation; 32.22 and 31.26\% of complete allocation lack mapped classification. Restricting weights to eligibility changes common-domain deficits from 0.0927/0.0572\% to 0.0508/0.0414\%. The joint domain covers only 89.13\% of complete Census population, failing the initial 90\% diagnostic gate. This is limited-domain sensitivity, not household-placement validation (S29).
+
+External GNSS consistency is mixed. Native-pixel RMSE in Los Angeles is 14.49 mm yr$^{-1}$ under provider reference P597 and 1.30 under location-selected local control MHMS (11 validation stations). Davis--Sacramento gives 8.94 under P266 and 10.85 under UCD1 (four stations). All controls are excluded from validation; all sampling-radius outcomes remain. Archived source-version conflicts, different temporal models and dependent stations prevent uniform physical-validation claims or transfer to our Bangkok inversion (S30).
+
+% end additional_results.tex
+
+
 \section{Discussion}
 \subsection{The aggregation effect and its dependence on inputs}
 The matched-input comparisons establish a material change in population-weighted support summaries when fine spatial allocation is replaced by uniform coarse allocation. The effect persists in complete interior cells, so boundary handling does not explain the primary result. Crossing population models and pair selections gives a consistent positive direction across the 16 tested cases, but the relative difference is much smaller with WorldPop than with GHSL. This distinction matters: the approximately 58\% primary-case result demonstrates a consequential aggregation effect, while the crossed experiment measures how its magnitude depends on the selected population distribution. It does not establish a universal correction factor.
@@ -281,20 +311,27 @@ Method choice follows the available information. A complete-case overlay describ
 \subsection{Applicability and evidence limits}
 The principal Chao Phraya statistic averages over area and selected interferometric pairs. It cannot identify how many unique residents lacked all observations, nor whether a final product is valid at their locations. A coherence pass is insufficient for a reliable velocity, and a failed pass does not prove permanent radar blindness. The matched processing experiment adds evidence about one specified processing chain: sampled support and its final quality mask are distinct, while held-out edge residuals assess internal reconstruction. Shared acquisition dates and atmospheric signals limit the physical interpretation of those residuals.
 
-The crossed comparison and separate common-coverage population summaries both show that population-model choice is consequential. Local census geography, building occupancy and rapidly changing settlements are not measured by this overlay. The two domains and deliberate sampling design do not establish a worldwide error magnitude. The primary domain inherits the finite source-VLM footprint; conclusions do not extend to locations outside it. LiCSAR's sampled pair support and DWR's published observation footprint remain different support objects, even though the same mass-preserving accounting protocol can be applied to both.
+The crossed comparison and separate common-coverage population summaries both show that population-model choice is consequential. Local census geography, building occupancy and rapidly changing settlements are not measured by this overlay. The primary domains, added California rectangles and deliberate sampling designs do not establish a worldwide error magnitude. The primary domain inherits the finite source-VLM footprint; conclusions do not extend to locations outside it. LiCSAR's sampled pair support and DWR's published observation footprint remain different support objects, even though the same mass-preserving accounting protocol can be applied to both.
 
-\paragraph{What the additional evidence supports.} Controlled masks and geometry/conservation checks evaluate numerical accounting against declared references. LiCSBAS excluded-edge residuals evaluate internal reconstruction, while the published DWR footprint and rate examples test transfer across product definitions. Census/CA-POP comparisons assess population-model allocation at reporting-unit scale, and ACS supplies a survey-based aggregate agreement benchmark with replicate-based uncertainty. These sources do not establish household locations or deformation in permanently unsupported pixels. No matched independent GNSS or leveling validation has been obtained for the LOS results reported here.
+\paragraph{What the additional evidence supports.} Controlled masks and geometry/conservation checks evaluate numerical accounting against declared references. LiCSBAS excluded-edge residuals evaluate internal reconstruction, while the published DWR footprint and rate examples test transfer across product definitions. Census/CA-POP comparisons assess population-model allocation at reporting-unit scale, and ACS supplies a survey-based aggregate agreement benchmark with replicate-based uncertainty. These sources do not establish household locations or deformation in permanently unsupported pixels. The added California comparison supplies archived independent GNSS observations for an external LOS product, with mixed results and a temporal-model limitation; it does not validate our Bangkok inversion. No matched independent GNSS or leveling validation has been obtained for that inversion.
+
+
+% begin additional_discussion.tex
+\paragraph{Limits revealed by the added tests.} Small conditional error can coexist with large unestimated allocation, and stricter filters can reduce residuals by discarding coverage. Spatial recalibration does not remove population disagreement; small regional effects limit transfer of the primary magnitude. Municipal eligibility has incomplete coverage and a different vintage. Mixed California GNSS consistency supplies independent observations on an external product, with disjoint controls and temporal-model limits, but does not validate Bangkok, household placement or missing deformation. Availability and sensitivity should accompany any reported allocation effect.
+
+% end additional_discussion.tex
+
 
 \paragraph{Earlier estimates and source attribution.} The submitted 3.772492-million center-majority total is reproducible, but it is not a verified count of people exposed to subsidence in missing areas. The revised mean support-deficit estimand and its references are stated explicitly. Supplementary S2 retains the factorial lineage audit and conflicting archive branches. We have removed the exploratory Iran branch from quantitative applications. Its archived rate and mask correspond to the 2014--2020 product associated with Haghshenas Haghighi and Motagh (2024). No Iran result or new/old Iranian product comparison contributes to the quantitative conclusions. Supplementary S8 documents the attribution correction and distinguishes the newer products of Payne et al.\ \citep{haghshenas2024iran,payne2025iran,payne2024data}.
 
 \section{Conclusions}
-Spatial aggregation materially changes population-weighted InSAR support summaries by omitting the within-cell population--support cross moment. The same-input and complete-interior comparisons establish this effect; controlled missingness explains when its direction reverses or aggregate bias is small. Crossing population models with pair selections preserves the positive direction in the tested cases while showing strong variation in magnitude. Published observation polygons demonstrate transfer to a second support definition. A useful reporting protocol therefore specifies its geographic denominator and support field, preserves extensive quantities and their cross moments, and reports allocation, population-model and sampling sensitivity. These results support transparent population-weighted accounting while keeping missing deformation an unresolved physical quantity.
+Spatial aggregation materially changes population-weighted InSAR support summaries by omitting the within-cell population--support cross moment. The same-input and complete-interior comparisons establish this effect; controlled missingness explains when its direction reverses or aggregate bias is small. Crossing population models with pair selections preserves the positive direction in the tested cases while showing strong variation in magnitude. Published observation polygons and two further California regions demonstrate transfer across support definitions while showing that the magnitude is case dependent. Actual irregular blocks, dependence checks, quality curves and municipal eligibility identify additional coverage and allocation limits; the external GNSS comparison yields mixed physical consistency. A useful reporting protocol therefore specifies its geographic denominator and support field, preserves extensive quantities and their cross moments, and reports allocation, population-model and sampling sensitivity. These results support transparent population-weighted accounting while keeping missing deformation an unresolved physical quantity.
 
 \section*{Data Availability}
-Public input data are obtained from COMET LiCSAR, GHSL, WorldPop, ESA WorldCover, the U.S. Census Bureau and California DWR. Exact source-product identifiers, acquisition methods and input checksums are documented in the Supplementary Information and accompanying reproducibility materials. Source-provider terms govern access to and reuse of third-party inputs. Frozen processed analysis inputs, full reference and replicate tables, figure source data and the manuscript number ledger are publicly available with the versioned scientific reproduction package.
+Public input data are obtained from COMET LiCSAR, GHSL, WorldPop, ESA WorldCover, the U.S. Census Bureau, California DWR, the archived ARIA California products, NGL and City of Fresno municipal GIS. Exact source-product identifiers, acquisition methods and input checksums are documented in the Supplementary Information and accompanying reproducibility materials. Source-provider terms govern access to and reuse of third-party inputs. Frozen processed analysis inputs, full reference and replicate tables, figure source data and the manuscript number ledger are publicly available with the versioned scientific reproduction package.
 
 \section*{Code Availability}
-The scientific reproduction package is publicly available at the fixed GitHub release \href{https://github.com/niubisile-wq/openinsar-observability-bias/releases/tag/v0.4.1}{v0.4.1}, commit \path{5bf98f19abbed981989f9c97ef9b118eea524c5b}. It contains the experiment code, configurations, input manifests and checksums, processed analysis inputs, full reference outputs, environment records and reviewer reproduction instructions. A companion release asset supplies the complete ACS source files and the official Census source archives used in S20, with file-level checksums. Other provider-controlled original products and the complete interferogram processing stacks are obtained separately through the documented acquisition routes. The earlier DOI \href{https://doi.org/10.5281/zenodo.21444768}{10.5281/zenodo.21444768} archives v0.3.0; a revised DOI deposit remains pending.
+The scientific reproduction package is publicly available at the fixed GitHub release \href{https://github.com/niubisile-wq/openinsar-observability-bias/releases/tag/v0.5.0}{v0.5.0}, commit \path{f70124f1cdc11e43848ce97c01f49fad6f7efb62}. It contains the experiment code, configurations, input manifests and checksums, processed analysis inputs, full reference outputs, environment records and reviewer reproduction instructions. Companion assets supply portable inputs and selected complete source products for S25--S30, with file-level checksums. The complete ACS files and official Census source archives used in S20 remain available at v0.4.1. All six new experiments are numerically rerun and compared with their full reference tables. Other provider-controlled original products and the complete interferogram processing stacks are obtained separately through the documented acquisition routes. The earlier DOI \href{https://doi.org/10.5281/zenodo.21444768}{10.5281/zenodo.21444768} archives v0.3.0; a revised DOI deposit remains pending.
 \def\bibfont{\small}
 \begin{thebibliography}{10}
 \expandafter\ifx\csname url\endcsname\relax
@@ -522,6 +559,31 @@ The scientific reproduction package is publicly available at the fixed GitHub re
   \urlprefix\url{https://sgma.water.ca.gov/webgis/config/custom/html/SGMADataViewer/doc/}.
 \newblock \bibinfo{note}{100 m measurement support distinguished from
   interpolated display rasters; accessed 27 September 2026}.
+
+\bibitem{sangha2026california}
+\bibinfo{author}{Sangha, S.~S.}, \bibinfo{author}{Funning, G.~J.},
+  \bibinfo{author}{Govorcin, M.} \& \bibinfo{author}{Bekaert, D. P.~S.}
+\newblock \bibinfo{title}{A statewide insar velocity map for california
+  produced by a comprehensive large scale analysis of aria standard products}.
+\newblock \emph{\bibinfo{journal}{Earth and Space Science}}
+  \textbf{\bibinfo{volume}{13}}, \bibinfo{pages}{e2026EA005214}
+  (\bibinfo{year}{2026}).
+
+\bibitem{sangha2026data}
+\bibinfo{author}{Sangha, S.}, \bibinfo{author}{Funning, G.},
+  \bibinfo{author}{Govorcin, M.} \& \bibinfo{author}{Bekaert, D.}
+\newblock \bibinfo{title}{Data and software for sangha et al., 2026: A
+  statewide insar velocity map for california} (\bibinfo{year}{2026}).
+\newblock \bibinfo{note}{Fixed April 2026 archived version; CC BY 4.0}.
+
+\bibitem{fresno2026landuse}
+\bibinfo{author}{{City of Fresno}}.
+\newblock \bibinfo{title}{Public existing land use gis layer}
+  (\bibinfo{year}{2026}).
+\newblock
+  \urlprefix\url{https://services2.arcgis.com/WkBUojyNPhsWOk1W/arcgis/rest/services/Existing_Land_Use/FeatureServer/19}.
+\newblock \bibinfo{note}{Hosted FeatureServer layer 19; ObjectID, ELU, ELUText
+  and LayerRefreshDate; accessed 1 October 2026}.
 
 \bibitem{haghshenas2024iran}
 \bibinfo{author}{Haghshenas~Haghighi, M.} \& \bibinfo{author}{Motagh, M.}

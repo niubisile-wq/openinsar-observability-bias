@@ -1,20 +1,20 @@
 {
   "pages": {
-    "manuscript": 14,
-    "manuscript_numbered": 14,
-    "manuscript_marked_local_baseline": 14,
-    "response": 8,
+    "manuscript": 16,
+    "manuscript_numbered": 16,
+    "manuscript_marked_local_baseline": 16,
+    "response": 9,
+    "supplementary": 37,
     "cover_letter": 1
   },
-  "comment_blocks_unchanged": true,
-  "retained_comment_blocks": 8,
-  "numerical_macro_files_unchanged": {
+  "original_comment_blocks_unchanged": true,
+  "original_comment_blocks": 8,
+  "macro_files_unchanged": {
     "numbers.tex": true,
     "round2_numbers.tex": true,
-    "cross_numbers.tex": true,
-    "references.bib": true
+    "cross_numbers.tex": true
   },
-  "figure_files_unchanged": {
+  "baseline_figures_unchanged": {
     "F1_chao_spatial.pdf": true,
     "F2_support_curves.pdf": true,
     "F3_allocation_scale.pdf": true,
@@ -31,28 +31,29 @@
   "text_comparison": {
     "numbered": {
       "word_sequence_identical_to_clean": true,
-      "text_identical_after_hyphenation_normalization": true,
-      "clean_word_count": 7768,
-      "other_word_count": 7768,
-      "similarity": 1.0
+      "normalized_text_identical": true,
+      "clean_words": 8750,
+      "other_words": 8750
     },
     "marked": {
       "word_sequence_identical_to_clean": true,
-      "text_identical_after_hyphenation_normalization": true,
-      "clean_word_count": 7768,
-      "other_word_count": 7768,
-      "similarity": 1.0
+      "normalized_text_identical": true,
+      "clean_words": 8750,
+      "other_words": 8750
     },
     "singlefile": {
       "word_sequence_identical_to_clean": true,
-      "text_identical_after_hyphenation_normalization": true,
-      "clean_word_count": 7768,
-      "other_word_count": 7768,
-      "similarity": 1.0
+      "normalized_text_identical": true,
+      "clean_words": 8750,
+      "other_words": 8750
+    },
+    "SI_singlefile": {
+      "normalized_text_identical": true
     }
   },
   "out_of_page_text_blocks": [],
-  "response_has_no_locator_placeholders": true,
+  "layout_or_reference_errors": [],
+  "approx_main_words_excluding_methods_abstract_references_legends": 4492,
   "contact_sheets": [
     "04_Verification/manuscript_contact_01.png",
     "04_Verification/manuscript_contact_02.png",
@@ -65,19 +66,117 @@
     "04_Verification/manuscript_marked_local_baseline_contact_03.png",
     "04_Verification/response_contact_01.png",
     "04_Verification/response_contact_02.png",
+    "04_Verification/supplementary_contact_01.png",
+    "04_Verification/supplementary_contact_02.png",
+    "04_Verification/supplementary_contact_03.png",
+    "04_Verification/supplementary_contact_04.png",
+    "04_Verification/supplementary_contact_05.png",
+    "04_Verification/supplementary_contact_06.png",
+    "04_Verification/supplementary_contact_07.png",
     "04_Verification/cover_letter_contact_01.png"
   ],
-  "scope": "Writing/locators/resource access update; no scientific data or experiment results changed.",
+  "S22_units_correction": {
+    "issue": "S22 writing table and R2.1 reply applied x100 again to outputs already expressed in percentage points.",
+    "numeric_scripts_and_reference_tables_changed": false,
+    "affected_writing": [
+      "S22 table",
+      "R2.1 paragraph"
+    ],
+    "source_table": "github_original_source\\revision_2026\\reference_outputs\\published_method_benchmark\\summary.csv",
+    "corrected_random_median_pp": 0.0190156318697538,
+    "corrected_cluster_median_pp": 0.0194157245043547,
+    "table_values_regenerated_from_output": true
+  },
   "visual_review": {
     "completed": true,
-    "method": "Poppler renders; all pages reviewed in contact sheets; changed pages reviewed at full resolution.",
-    "documents": [
-      "manuscript",
-      "manuscript_numbered",
-      "manuscript_marked_local_baseline",
-      "response",
-      "cover_letter"
-    ],
-    "defects_found_after_final_sync": []
+    "method": "Visual inspection of all final Poppler contact sheets, refreshed affected sheets, and full-resolution S27/S30 pages.",
+    "finding": "Legible tables and plots; no clipping, overlap, blank pages or unintended placement identified.",
+    "scope": "Six final PDF variants; blue changes compare the preceding local final-writing baseline.",
+    "reviewed_images": [
+      {
+        "path": "04_Verification/manuscript_contact_01.png",
+        "sha256": "03f1812e99a93448d2f3ceb70a31e4a83e53a3eb8e0d931341dae9e2e20f1023"
+      },
+      {
+        "path": "04_Verification/manuscript_contact_02.png",
+        "sha256": "5c8db50357257b54a7b24945e0311ca31ad5c96039bdaf9dddcc1ee85c6bc4d5"
+      },
+      {
+        "path": "04_Verification/manuscript_contact_03.png",
+        "sha256": "06f2e265dfef13db701defc3b70f8161407e1ae6369b3f0f15be333f3ba8739b"
+      },
+      {
+        "path": "04_Verification/manuscript_numbered_contact_01.png",
+        "sha256": "6142f0a5631bd3ded7c45b747860de1cb3361304e46cffe03674441b84c1d72c"
+      },
+      {
+        "path": "04_Verification/manuscript_numbered_contact_02.png",
+        "sha256": "7dda2719fa1a4ec8c9a77f742ed95d07f4bbd579f8324e2e36ca867179481ced"
+      },
+      {
+        "path": "04_Verification/manuscript_numbered_contact_03.png",
+        "sha256": "1e54a90b7c8096edd1e120dfc7c4b712e0398702aa1b8d7e8d6e47813ee67924"
+      },
+      {
+        "path": "04_Verification/manuscript_marked_local_baseline_contact_01.png",
+        "sha256": "5891341466fc08c55db0f6daef956774875160d4f7f416ea22028a28b15d4570"
+      },
+      {
+        "path": "04_Verification/manuscript_marked_local_baseline_contact_02.png",
+        "sha256": "9c3146790cad6594b3c21b38834ad8c1335ff2bcba1288824cf6a677996adeb2"
+      },
+      {
+        "path": "04_Verification/manuscript_marked_local_baseline_contact_03.png",
+        "sha256": "9731420b23e0cbbe9d2e6ef70bb4b89ac74fa649b23de3ec70e49b7d06987149"
+      },
+      {
+        "path": "04_Verification/response_contact_01.png",
+        "sha256": "6846dbb3029ecdc206d0a1e92a608479b061c723150391242f85d444857a0c87"
+      },
+      {
+        "path": "04_Verification/response_contact_02.png",
+        "sha256": "6684a25ca84f185ec056fd28e4a670a95a66a9abcd7bd0981d28982dc8b06d19"
+      },
+      {
+        "path": "04_Verification/supplementary_contact_01.png",
+        "sha256": "47c747001a1456bd207e9cf1984ffce318586dc01b475e4223fd3c6625d0149a"
+      },
+      {
+        "path": "04_Verification/supplementary_contact_02.png",
+        "sha256": "07900fed566093b6d2ff8b238e452698ec7e7ef98c97fe7207805a6782323ffd"
+      },
+      {
+        "path": "04_Verification/supplementary_contact_03.png",
+        "sha256": "2770637b24abfc02e7fd22ad9ab632cdac6a26927b4ac385c2a441b0820ba9e3"
+      },
+      {
+        "path": "04_Verification/supplementary_contact_04.png",
+        "sha256": "ec8764333287935ece7b187219602fb5c347a621daebc68e86fb4625bf1f6894"
+      },
+      {
+        "path": "04_Verification/supplementary_contact_05.png",
+        "sha256": "c23de7c391ea746d437a598852f0df4d1720091e18afb0c7c523100aec89961a"
+      },
+      {
+        "path": "04_Verification/supplementary_contact_06.png",
+        "sha256": "6543a2e6b6aac5581a4afc671b91dc19a804b3806a5388a809aea85c8e2b3c43"
+      },
+      {
+        "path": "04_Verification/supplementary_contact_07.png",
+        "sha256": "1af75c529ebd0f209d25d685ef6198f74cbefa0cf6e9a5556c761597f9cf9124"
+      },
+      {
+        "path": "04_Verification/cover_letter_contact_01.png",
+        "sha256": "802704c18f5fd57057b431ab45ba4beeced3e2fa24517ff68795e1b492c74172"
+      },
+      {
+        "path": "04_Verification/SI_quality_full-30.png",
+        "sha256": "f6f2d8e80928c14b5e84a5a7794f87935ab942754afef9bc9943a7a5f3caedf7"
+      },
+      {
+        "path": "04_Verification/SI_GNSS_full-34.png",
+        "sha256": "e3de65a69910316d84c912a4179d380f3575d3e9309c64601cefdd7dfce629c6"
+      }
+    ]
   }
 }

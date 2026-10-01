@@ -1,0 +1,203 @@
+{
+  "status": "PASS",
+  "relative_tolerance": 1e-08,
+  "absolute_tolerance": 1e-06,
+  "fraction_absolute_tolerance": 1e-09,
+  "scope": "Scientific computation from frozen analysis inputs; not independent physical validation.",
+  "tables": [
+    {
+      "mode": "additional-real-blocks",
+      "table": "additional/real_block_masking/real_block_unmasked_baseline.csv",
+      "rows": 9,
+      "columns": 26,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "additional-real-blocks",
+      "table": "additional/real_block_masking/real_block_masking_replicates.csv",
+      "rows": 2430,
+      "columns": 26,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "additional-real-blocks",
+      "table": "additional/real_block_masking/real_block_masking_summary.csv",
+      "rows": 81,
+      "columns": 16,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "additional-dependence",
+      "table": "additional/spatial_acquisition/spatial_calibration_baselines.csv",
+      "rows": 6,
+      "columns": 10,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "additional-dependence",
+      "table": "additional/spatial_acquisition/spatial_calibration_folds.csv",
+      "rows": 90,
+      "columns": 15,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "additional-dependence",
+      "table": "additional/spatial_acquisition/spatial_calibration_membership.csv",
+      "rows": 9570,
+      "columns": 6,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "additional-dependence",
+      "table": "additional/spatial_acquisition/spatial_calibration_summary.csv",
+      "rows": 18,
+      "columns": 12,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "additional-dependence",
+      "table": "additional/spatial_acquisition/acquisition_date_influence.csv",
+      "rows": 2700,
+      "columns": 14,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "additional-dependence",
+      "table": "additional/spatial_acquisition/acquisition_date_influence_summary.csv",
+      "rows": 12,
+      "columns": 10,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "additional-quality",
+      "table": "additional/training_quality/quality_coverage_error.csv",
+      "rows": 18,
+      "columns": 17,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "additional-quality",
+      "table": "additional/training_quality/quality_coverage_error_by_pair.csv",
+      "rows": 792,
+      "columns": 6,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "additional-regions",
+      "table": "additional/new_regions/new_region_support_baselines.csv",
+      "rows": 6,
+      "columns": 6,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "additional-regions",
+      "table": "additional/new_regions/new_region_allocation_summary.csv",
+      "rows": 96,
+      "columns": 15,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "additional-regions",
+      "table": "additional/new_regions/new_region_allocation_by_tile.csv",
+      "rows": 428736,
+      "columns": 12,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "additional-residential",
+      "table": "additional/residential_allocation/residential_allocation_summary.csv",
+      "rows": 12,
+      "columns": 11,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "additional-residential",
+      "table": "additional/residential_allocation/residential_allocation_by_block.csv",
+      "rows": 58584,
+      "columns": 5,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "additional-residential",
+      "table": "additional/residential_allocation/residential_landuse_eligibility.csv",
+      "rows": 6,
+      "columns": 10,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "additional-gnss",
+      "table": "additional/gnss_transfer/gnss_transfer_summary.csv",
+      "rows": 12,
+      "columns": 14,
+      "max_absolute_numeric_difference": 6.394884621840902e-14,
+      "pass": true
+    },
+    {
+      "mode": "additional-gnss",
+      "table": "additional/gnss_transfer/gnss_transfer_by_station.csv",
+      "rows": 90,
+      "columns": 15,
+      "max_absolute_numeric_difference": 1.0601084454719967e-09,
+      "pass": true
+    },
+    {
+      "mode": "additional-gnss",
+      "table": "additional/gnss_transfer/gnss_transfer_exclusions.csv",
+      "rows": 0,
+      "columns": 4,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "additional-gnss",
+      "table": "additional/gnss_transfer/gnss_transfer_collocation_clusters.csv",
+      "rows": 17,
+      "columns": 3,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    }
+  ],
+  "timings": [
+    {
+      "mode": "additional-real-blocks",
+      "seconds": 3.469
+    },
+    {
+      "mode": "additional-dependence",
+      "seconds": 11.144
+    },
+    {
+      "mode": "additional-quality",
+      "seconds": 2.681
+    },
+    {
+      "mode": "additional-regions",
+      "seconds": 111.736
+    },
+    {
+      "mode": "additional-residential",
+      "seconds": 47.867
+    },
+    {
+      "mode": "additional-gnss",
+      "seconds": 1.137
+    }
+  ]
+}

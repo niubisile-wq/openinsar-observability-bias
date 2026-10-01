@@ -1,0 +1,26 @@
+{
+  "manuscript_zip": {
+    "name": "Manuscript_LaTeX_Source.zip",
+    "members": 13,
+    "bytes": 643747,
+    "sha256": "f542a1cbbb60fe5e1e3eb7fcec6d81e1aad0d90565fdabeb50e43fa200b39c4c"
+  },
+  "supplementary_zip": {
+    "name": "Supplementary_LaTeX_Source.zip",
+    "members": 17,
+    "bytes": 734590,
+    "sha256": "2367cdfc44300eed954c26f347cd77546519e2fc62477b533825ce7bd326baf8"
+  },
+  "independent_builds": [
+    {
+      "archive": "Manuscript_LaTeX_Source.zip",
+      "compiled_in_independent_directory": true,
+      "text_matches_final_pdf": true
+    },
+    {
+      "archive": "Supplementary_LaTeX_Source.zip",
+      "compiled_in_independent_directory": true,
+      "text_matches_final_pdf": true
+    }
+  ]
+}

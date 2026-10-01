@@ -1,0 +1,12 @@
+{
+  "issue": "S22 writing table and R2.1 reply applied x100 again to outputs already expressed in percentage points.",
+  "numeric_scripts_and_reference_tables_changed": false,
+  "affected_writing": [
+    "S22 table",
+    "R2.1 paragraph"
+  ],
+  "source_table": "github_original_source\\revision_2026\\reference_outputs\\published_method_benchmark\\summary.csv",
+  "corrected_random_median_pp": 0.0190156318697538,
+  "corrected_cluster_median_pp": 0.0194157245043547,
+  "table_values_regenerated_from_output": true
+}

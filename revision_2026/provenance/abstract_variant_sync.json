@@ -1,14 +1,13 @@
-[
-  {
-    "file": "manuscript_marked_local_baseline.tex",
-    "abstract_replaced_with_final_clean_abstract": true,
-    "contained_absolute_primary_shift_before": false,
-    "contained_final_mask_shift_before": false
-  },
-  {
-    "file": "manuscript_singlefile.tex",
-    "abstract_replaced_with_final_clean_abstract": true,
-    "contained_absolute_primary_shift_before": false,
-    "contained_final_mask_shift_before": false
+{
+  "abstract_word_count": 176,
+  "title_words": 11,
+  "word_limit_primary_source": "https://www.nature.com/srep/author-instructions/submission-guidelines",
+  "same_abstract_in_clean_numbered_and_regenerated_marked_singlefile": true,
+  "scientific_release": {
+    "id": 400801761,
+    "tag": "v0.5.0",
+    "url": "https://github.com/niubisile-wq/openinsar-observability-bias/releases/tag/v0.5.0",
+    "published_at": "2026-10-01T09:08:06Z",
+    "commit": "f70124f1cdc11e43848ce97c01f49fad6f7efb62"
   }
-]
+}
