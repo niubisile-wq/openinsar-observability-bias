@@ -6,8 +6,8 @@
   },
   {
     "path": "CITATION.cff",
-    "bytes": 604,
-    "sha256": "3bdbedfeb7783a3d0a3e658fd96ee1d6f36b7289f2717b05fb831f5dab272b76"
+    "bytes": 601,
+    "sha256": "12ab4ef7618a296f378a0d71828c29763b1ae71670adec39b939d9b9d33d1df8"
   },
   {
     "path": "core/analyse_timeseries.py",
@@ -396,8 +396,8 @@
   },
   {
     "path": "DATA_LICENSES.md",
-    "bytes": 3579,
-    "sha256": "7ddde8cb14ef7a84d7f1261160ccbe1ee85a276f3ff2786a60f5b63b5f68e7d6"
+    "bytes": 3937,
+    "sha256": "7961c6541796761ca78e7958a1b9bf7cf4b460a8be922ecb7a8b244610a36dd9"
   },
   {
     "path": "fetch_reviewer_inputs.py",
@@ -786,8 +786,8 @@
   },
   {
     "path": "README.md",
-    "bytes": 11903,
-    "sha256": "f3766aaf332a35af7a26a36a61f00af0258c2ee5c9b414d05a4e82a7c0a06e6f"
+    "bytes": 12402,
+    "sha256": "2085f3bff67e53c8c6f65c111c26f0ee85217d3bc80cae109d5516b5b7961807"
   },
   {
     "path": "README.txt",
@@ -1553,6 +1553,11 @@
     "path": "RELEASE_NOTES_v0.4.0.txt",
     "bytes": 1689,
     "sha256": "4402833b98803d70a61d53c0e8c555eef1ea3a0ac66e83ce495de9b3ee79ef7b"
+  },
+  {
+    "path": "RELEASE_NOTES_v0.4.1.txt",
+    "bytes": 638,
+    "sha256": "c1e5a8a728002e3eb218e515ccf200326d9fd88827a95050de0a65bda04d154d"
   },
   {
     "path": "reproduce.py",

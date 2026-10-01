@@ -86,6 +86,8 @@ The downloader verifies all retained SHA-256 hashes, extracts the official TIGER
 
 ## Full ACS source-file route
 
+For convenience, the [v0.4.1 release](https://github.com/niubisile-wq/openinsar-observability-bias/releases/tag/v0.4.1) includes a checksum-verified companion archive with all six complete ACS source files plus the two official Census archives used in S20. The archive contains a short placement guide; the downloader below remains available if you prefer a direct provider download. CA-POP is intentionally obtained from Zenodo by the downloader and is not redistributed in the companion archive.
+
 The compact ACS inputs contain all 637 Fresno County block groups, their official TIGER geometry, sequence-file estimates/MOEs and 80 variance replicates. The analysis still applies the fixed ROI criterion and selects 319 complete groups itself; neither raster-model predictions nor selected-outcome totals are embedded in that subset. Parent-file URLs and hashes are recorded under `data/workspace/inputs/acs_compact/PROVENANCE.json`.
 
 To rerun from the complete provider archives instead:

@@ -1,0 +1,5 @@
+﻿v0.4.1: companion official source inputs
+
+No changes to the scientific revision or reported results. Adds a checksum-verified companion source archive containing the six complete U.S. Census Bureau ACS inputs for S24 and the two official Census source archives for S20, plus source placement instructions. CA-POP and provider-controlled DWR/TRE products are not redistributed; use the documented verified provider download routes for those inputs.
+
+The original v0.4.0 reviewer-reproduction asset remains available. The companion bundle reduces the need for reviewers to retrieve the official ACS and Census source archives manually.
