@@ -876,8 +876,8 @@
   },
   {
     "path": "followup/fresno_six_year_persistence.py",
-    "bytes": 6158,
-    "sha256": "69930a637906e1669ec960b1e1e091040dc63701ac4e1805f9ad38ed35316c19"
+    "bytes": 6308,
+    "sha256": "c9d013f3c90feeac727a43c5cfcbc3034c36a5e0fbf48073767939b716cdba22"
   },
   {
     "path": "followup/fresno_temporal_class_stability.py",
@@ -1323,6 +1323,11 @@
     "path": "provenance/dwr_annualization_changes.csv",
     "bytes": 1486,
     "sha256": "a09621552e4e4dedc6b66d30b10938c70c40f7787e1477d908973875afad25f5"
+  },
+  {
+    "path": "provenance/dwr_cross_platform_verification.json",
+    "bytes": 3103,
+    "sha256": "d80ea613cdb2b235d0930defbd4274a610ae183c60d05a9ba8acb38f521de814"
   },
   {
     "path": "provenance/environment_licsbas.json",

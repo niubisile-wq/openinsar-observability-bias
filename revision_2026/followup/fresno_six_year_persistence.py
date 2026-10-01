@@ -7,7 +7,9 @@ from rasterio.transform import Affine
 from dwr_units import feet_to_feet_per_year,WINDOWS,DAYS_PER_YEAR
 base=Path(os.environ.get('INSAR_FOLLOWUP_ROOT', Path(__file__).resolve().parent))
 proj=Path(os.environ['INSAR_STRENGTHENING_ROOT'])
-files=list((base/'census_blocks'/'fresno_roi').glob('*.geojson'))
+# Filesystem enumeration order differs across Windows and Linux. Keep the
+# same page order as the Census-rate analysis and frozen per-block tables.
+files=sorted((base/'census_blocks'/'fresno_roi').glob('*.geojson'))
 features=[]
 for p in files: features.extend(json.loads(p.read_text(encoding='utf-8'))['features'])
 blocks=[]

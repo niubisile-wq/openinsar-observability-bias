@@ -1,0 +1,101 @@
+{
+  "status": "PASS",
+  "relative_tolerance": 1e-08,
+  "absolute_tolerance": 1e-06,
+  "fraction_absolute_tolerance": 1e-09,
+  "scope": "Scientific computation from frozen analysis inputs; not independent physical validation.",
+  "tables": [
+    {
+      "mode": "census-rates",
+      "table": "census_block_velocity_analysis/fresno_census_block_velocity_summary.csv",
+      "rows": 6,
+      "columns": 17,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "census-rates",
+      "table": "census_block_velocity_analysis/fresno_census_block_velocity_by_block.csv",
+      "rows": 40728,
+      "columns": 6,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "census-rates",
+      "table": "census_block_velocity_analysis/fresno_dwr_rate_pixels_by_block.csv",
+      "rows": 217355,
+      "columns": 5,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "temporal",
+      "table": "census_block_velocity_analysis/fresno_population_temporal_stability_summary.csv",
+      "rows": 8,
+      "columns": 2,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "temporal",
+      "table": "census_block_velocity_analysis/fresno_block_temporal_class_transitions.csv",
+      "rows": 6129,
+      "columns": 11,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "temporal",
+      "table": "census_block_velocity_analysis/fresno_population_rate_class_transition_2015_21_to_2025_26.csv",
+      "rows": 5,
+      "columns": 6,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "persistence",
+      "table": "census_block_velocity_analysis/fresno_six_year_below5_persistence.csv",
+      "rows": 7,
+      "columns": 4,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "persistence",
+      "table": "census_block_velocity_analysis/fresno_six_annual_block_classifications.csv",
+      "rows": 6129,
+      "columns": 11,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "persistence",
+      "table": "census_block_velocity_analysis/fresno_six_annual_block_medians.csv",
+      "rows": 40728,
+      "columns": 5,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    }
+  ],
+  "timings": [
+    {
+      "mode": "annual-median",
+      "seconds": 2.725
+    },
+    {
+      "mode": "census-rates",
+      "seconds": 7.667
+    },
+    {
+      "mode": "temporal",
+      "seconds": 3.297
+    },
+    {
+      "mode": "persistence",
+      "seconds": 8.703
+    }
+  ],
+  "cross_platform_correction": "Sort Census GeoJSON input pages before assigning block IDs and writing annual block medians; filesystem iteration order is not portable. No tolerances or scientific values changed.",
+  "original_failure_run": "https://github.com/niubisile-wq/openinsar-observability-bias/actions/runs/36855662353"
+}
