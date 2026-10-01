@@ -1,0 +1,23 @@
+{
+  "region": "Davis_Sacramento",
+  "track": "A137",
+  "source_name": "A137_velocity_refP266.tif",
+  "source_sha256": "fc58e651202070cdaa9e78bf70cead71b7b5e4d659848e248ddc61eba1e7a332",
+  "shape": [
+    9989,
+    5492
+  ],
+  "transform": [
+    0.000833334,
+    0.0,
+    -122.715514839,
+    0.0,
+    -0.000833334,
+    41.882950173
+  ],
+  "crs": "EPSG:4326",
+  "unit": "m/yr",
+  "window_radius": 3,
+  "selection": "All archived stations inside fixed ROI plus provider reference; no outcome screening.",
+  "purpose": "Lossless exact source windows for offline comparison; full selected GeoTIFFs supplied separately."
+}

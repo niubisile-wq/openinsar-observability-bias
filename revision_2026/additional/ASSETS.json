@@ -1,0 +1,16 @@
+{
+  "analysis_inputs": {
+    "name": "reviewer-additional-analysis-inputs-v0.5.0.zip",
+    "bytes": 44661835,
+    "sha256": "a060bf52b9d16925b22c41356a1faf5a127358d2d9a0e9cd8267e9fd1f988d4c",
+    "members": 32,
+    "url": "https://github.com/niubisile-wq/openinsar-observability-bias/releases/download/v0.5.0/reviewer-additional-analysis-inputs-v0.5.0.zip"
+  },
+  "selected_sources": {
+    "name": "reviewer-additional-selected-sources-v0.5.0.zip",
+    "bytes": 586299792,
+    "sha256": "e3f4866a4fd681909423c36caf8e498c57401d68ae0a7016b98f6cf0933b3d83",
+    "members": 332,
+    "url": "https://github.com/niubisile-wq/openinsar-observability-bias/releases/download/v0.5.0/reviewer-additional-selected-sources-v0.5.0.zip"
+  }
+}

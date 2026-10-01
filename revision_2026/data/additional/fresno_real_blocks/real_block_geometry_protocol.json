@@ -1,0 +1,26 @@
+{
+  "Census_complete_blocks": 6787,
+  "Census_complete_population": 523953.0,
+  "Census_population_with_positive_GHSL_mass": 523930.0,
+  "population_allocation_in_known_rate_footprint": 522596.7800079748,
+  "population_allocation_outside_known_rate_footprint": 1333.2199920251733,
+  "known_DWR_rate_pixels": 38569,
+  "exact_intersections_in_known_rate_footprint": 65108,
+  "GHSL_reprojection_relative_mass_error": 0.00023276926236655653,
+  "max_polygon_relative_area_closure_error": 2.3026828931959404e-10,
+  "source_sha256": {
+    "01_\u5f53\u524d\u8fd4\u4fee\u5de5\u4f5c\u533a/InSAR_revision_20260926/strengthening/results/dwr/grid.npz": "338e30cfa3860a399fb105f58d88ef3279f6c76164ce64539b1b046d4114295c",
+    "16_\u65b0\u589e\u5b9e\u9a8c\u6267\u884c\u4e0e\u6574\u5408_20261001/inputs/fresno_real_blocks/DWR_20201001_20211001.tif": "01ff9e15a505920f8d9684829d4d530f6f97dbd783dd810d36b485ff2ac98f70",
+    "01_\u5f53\u524d\u8fd4\u4fee\u5de5\u4f5c\u533a/InSAR_revision_20260926/strengthening/external/round3/ca2020.pl.zip": "e02c83c85a9a5d69ded4bf0d4c8ebe3f4bcd2d8e5911db765e9e42915ad1f753",
+    "01_\u5f53\u524d\u8fd4\u4fee\u5de5\u4f5c\u533a/InSAR_revision_20260926/strengthening/external/round3/census_blocks/tl_2020_06019_tabblock20.shp": "d3c579d7e7488ed1f8ff3d1c267b2eb677a3af04cf7d52e8d976d7bd4398adbb"
+  },
+  "estimand": "GHSL-normalized Census allocations restricted to known DWR-rate cell intersections; original unobserved locations excluded from truth.",
+  "baseline_rule": "Normalize GHSL over complete blocks before restricting to known-rate footprint; do not force all Census population into observed cells.",
+  "median_rule": "Unweighted published-rate pixel-center median within each irregular block; absence of a center remains undefined.",
+  "limits": [
+    "DWR interpolated vertical products and footprint have shared lineage and different vintages; this is a conditional method transfer, not independent physical validation.",
+    "GHSL remains modeled population, not household ground truth.",
+    "Rates are constant inside their published cells; GHSL is resampled conservatively onto that grid.",
+    "Original missing rates are never assigned known reference classes."
+  ]
+}

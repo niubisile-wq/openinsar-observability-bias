@@ -1,0 +1,9 @@
+Six additional scientific experiments and complete numerical reviewer reproduction (S25-S30).
+
+Actual irregular Census-block masking; buffered spatial recalibration and shared-acquisition influence; training-only quality/coverage curves; two fixed California regions and all 96 designs; municipal residential eligibility with incomplete-domain limits; and disjoint-frame-control GNSS transfer including negative results.
+
+The public checkout bundles all portable analysis inputs. Run `python revision_2026/reproduce.py additional` to recompute and compare all 21 new numerical CSV tables. Existing revision modes are retained. Windows/Linux CI runs S21-S30.
+
+Companion assets supply 44.7 MB of portable inputs and 586.3 MB of selected full provider sources with individual hashes and attribution. Earlier complete ACS/Census archives remain at v0.4.1.
+
+The new evidence does not establish household truth, permanent missing-cell deformation, or independent accuracy of our Bangkok inversion. GNSS is an archived external-product comparison with temporal-model and source-version limits; large Davis-Sacramento discrepancies remain in the results. This release fixes the science for the following editorial package.

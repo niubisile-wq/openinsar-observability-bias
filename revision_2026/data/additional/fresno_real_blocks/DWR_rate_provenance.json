@@ -1,0 +1,61 @@
+{
+  "source_service": "https://gis.water.ca.gov/arcgisimg/rest/services/SAR/Vertical_Displacement_TRE_ALTAMIRA_Annual_Rate_Mosaic/ImageServer",
+  "provider_image": {
+    "OBJECTID": 70,
+    "Name": "Vertical_Displacement_TRE_ALTAMIRA_v2022Q1_Annual_Rate_20201001_20211001",
+    "MinPS": 0,
+    "MaxPS": 0.03599280143971205,
+    "LowPS": 0.0008998200359928013,
+    "HighPS": 0.003599280143971205,
+    "Category": 1,
+    "Tag": "Dataset",
+    "GroupName": "",
+    "ProductName": "",
+    "CenterX": -119.91463947027114,
+    "CenterY": 37.161708444891275,
+    "ZOrder": null,
+    "Shape_Length": 37.40751434200013,
+    "Shape_Area": 87.34441176896726,
+    "DateFrom": 1601510400000,
+    "DateTo": 1633046400000
+  },
+  "request": {
+    "f": "image",
+    "bbox": "-119.90046966824156,36.59977083241381,-119.6998252715033,36.85082062245584",
+    "bboxSR": "4326",
+    "imageSR": "4326",
+    "size": "177,279",
+    "format": "tiff",
+    "pixelType": "F32",
+    "noData": "-9999",
+    "interpolation": "RSP_NearestNeighbor",
+    "adjustAspectRatio": "false",
+    "renderingRule": "{\"rasterFunction\": \"None\"}",
+    "mosaicRule": "{\"mosaicMethod\": \"esriMosaicLockRaster\", \"lockRasterIds\": [70], \"mosaicOperation\": \"MT_FIRST\"}"
+  },
+  "raster": {
+    "shape": [
+      279,
+      177
+    ],
+    "crs": "EPSG:4326",
+    "transform": [
+      0.0011335841623630236,
+      0.0,
+      -119.90046966824156,
+      0.0,
+      -0.0008998200359929458,
+      36.85082062245584
+    ],
+    "nodata": -9999.0,
+    "dtype": "float32",
+    "valid_pixels": 48587,
+    "minimum": -0.04324432089924812,
+    "maximum": 0.041941042989492416
+  },
+  "sha256": "01ff9e15a505920f8d9684829d4d530f6f97dbd783dd810d36b485ff2ac98f70",
+  "units": "Provider feet over the stated annual period; convert to millimetres/year using exact period duration.",
+  "duration_years": 0.9993360575508052,
+  "footprint_source": "Frozen 38,738 DWR observation-cell polygons, cross-vintage support benchmark",
+  "purpose": "Controlled masking on known published DWR values; not independent validation of InSAR or original missing cells."
+}

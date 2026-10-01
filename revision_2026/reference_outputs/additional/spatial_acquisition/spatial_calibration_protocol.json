@@ -1,0 +1,27 @@
+{
+  "status": "Completed exploratory robustness analysis; holds out recalibration targets, not source-model training",
+  "region": "Same fixed 319 complete Fresno block groups as S24",
+  "target": "ACS 2017-2021 point estimates with published 80 variance replicates",
+  "partition": "Five coordinate-rank geographic bands; west-east and south-north; no outcome used to construct folds",
+  "buffers_m": [
+    0,
+    1000,
+    3000
+  ],
+  "buffer_rule": "Exclude training polygons within buffer of heldout polygon union",
+  "calibration": "One multiplier fitted from training groups only; no heldout ACS totals used in that multiplier",
+  "uncertainty": "4/80 replicate-squared-difference SE of fold signed error; ACS survey design component only",
+  "limits": [
+    "Frozen GHSL/WorldPop models may use related source information; source independence is unresolved.",
+    "This holds out recalibration targets, not the original population-model training pipeline.",
+    "Block-group agreement does not validate household placement or missing-cell deformation.",
+    "Spatial folds and buffers are sensitivity designs, not independent region replicates.",
+    "The target spans 2017-2021 while grids and Census are 2020."
+  ],
+  "checks": {
+    "train_test_disjoint": true,
+    "buffer_exclusions_verified": true,
+    "every_group_predicted_once_per_design": true,
+    "survey_targets_match_retained_S24_table": true
+  }
+}

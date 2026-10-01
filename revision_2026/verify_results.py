@@ -56,6 +56,18 @@ TABLES = {
 }
 
 
+ADDITIONAL_TABLES = {
+    'additional-real-blocks': ('real_block_masking', ['real_block_unmasked_baseline.csv', 'real_block_masking_replicates.csv', 'real_block_masking_summary.csv']),
+    'additional-dependence': ('spatial_acquisition', ['spatial_calibration_baselines.csv', 'spatial_calibration_folds.csv', 'spatial_calibration_membership.csv', 'spatial_calibration_summary.csv', 'acquisition_date_influence.csv', 'acquisition_date_influence_summary.csv']),
+    'additional-quality': ('training_quality', ['quality_coverage_error.csv', 'quality_coverage_error_by_pair.csv']),
+    'additional-regions': ('new_regions', ['new_region_support_baselines.csv', 'new_region_allocation_summary.csv', 'new_region_allocation_by_tile.csv']),
+    'additional-residential': ('residential_allocation', ['residential_allocation_summary.csv', 'residential_allocation_by_block.csv', 'residential_landuse_eligibility.csv']),
+    'additional-gnss': ('gnss_transfer', ['gnss_transfer_summary.csv', 'gnss_transfer_by_station.csv', 'gnss_transfer_exclusions.csv', 'gnss_transfer_collocation_clusters.csv']),
+}
+for mode, (folder, names) in ADDITIONAL_TABLES.items():
+    TABLES[mode] = [('additional/'+folder+'/'+name, 'additional/'+folder+'/'+name) for name in names]
+
+
 def verify_results(root, workspace, modes=None):
     import numpy as np
     import pandas as pd

@@ -37,6 +37,8 @@ jobs:
         run: python -m unittest discover -s revision_2026/core -p test_geometry.py
       - name: Reproduce S21-S24 and compare tables
         run: python revision_2026/reproduce.py quick --workspace reproduction_output
+      - name: Recompute all six additional experiments S25-S30
+        run: python revision_2026/reproduce.py additional --workspace reproduction_output
       - name: Preserve numerical verification
         if: always()
         uses: actions/upload-artifact@v7

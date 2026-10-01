@@ -2,7 +2,7 @@
 
 **Manuscript:** *Quantifying how spatial allocation and sampling alter population-weighted InSAR support summaries* (Scientific Reports revision).
 
-**Version scope:** v0.4.3 updates manuscript/response documents only. The numerical experiments and frozen inputs remain those identified by [v0.4.1](https://github.com/niubisile-wq/openinsar-observability-bias/releases/tag/v0.4.1), commit `5bf98f19abbed981989f9c97ef9b118eea524c5b`. The current [numbered manuscript](manuscript/manuscript_numbered.pdf) supplies every main-text line locator in the [response](manuscript/response.pdf); clean, numbered, marked and singlefile sources contain the same scientific text. Document and location checks are retained in `provenance/final_document_audit.json` and `provenance/reviewer_final_locators.json`.
+**Version scope:** v0.5.0 adds six scientific experiments (S25-S30), all portable analysis inputs, 21 full numerical output comparisons and selected-source companion assets. See the [additional experiment guide](additional/README.md) and run `python revision_2026/reproduce.py additional`. The preceding S1-S24 baseline remains v0.4.1, commit `5bf98f19abbed981989f9c97ef9b118eea524c5b`. The v0.5.0 science release retains the preceding v0.4.3 editorial documents; the following v0.5.1 package integrates the new sections and regenerates every response locator. Document verification records identify their actual version.
 
 This directory is the current revision. The older `14_esin_strengthened_v1/` manuscript and Zenodo DOI `10.5281/zenodo.21444768` describe an earlier version. That DOI does **not** archive the new experiments. The updated Zenodo deposit remains pending.
 

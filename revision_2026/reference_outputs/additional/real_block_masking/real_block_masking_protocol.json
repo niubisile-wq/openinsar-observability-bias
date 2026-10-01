@@ -1,0 +1,22 @@
+{
+  "input_sha256": "d77dd0bdda90c1003ff35f110c6eb0b5df5436d20935a5a5aea7d47121a7fa8d",
+  "seed": 20261001,
+  "repetitions": 30,
+  "mask_fraction_definition": "Count of originally valid rate pixels, not a preset fraction of population allocation",
+  "masks": "Random cell order; nearest distance to one or four random centers in EPSG:3310; nested 10/30/50% deletions",
+  "whole_domain_bounds": "Known retained class allocation <= full controlled known-domain class allocation <= retained class allocation + all withheld allocation",
+  "fair_comparison": "Each comparator scored against the same unmasked native class allocation on common computable real blocks. Undefined units also reported per method.",
+  "native_fraction": "Observed allocation-weighted class proportion extrapolated only inside computable blocks; it is a conditional estimator, not truth for hidden cells.",
+  "limits": [
+    "All references are from the original known DWR footprint; no reference for genuinely missing deformation.",
+    "The pixel-center median is discontinuous and may be undefined in small irregular blocks even before masking.",
+    "Population is a Census-total-normalized GHSL allocation, not household locations.",
+    "The deterministically correct bounds can be wide; narrow conditional errors do not establish identification.",
+    "No confidence intervals or independence assumptions across spatial repetitions."
+  ],
+  "checks": {
+    "all_2430_controlled_method_rows": true,
+    "all_bounds_contain_reference": true,
+    "no_missing_comparator_values_replaced_by_zero": true
+  }
+}

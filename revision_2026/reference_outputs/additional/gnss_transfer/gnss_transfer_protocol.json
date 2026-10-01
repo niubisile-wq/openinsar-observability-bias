@@ -1,0 +1,26 @@
+{
+  "reference_type": "Independent NGL GNSS LOS estimates archived by Sangha et al. 2026, corresponding to each track period and source geometry.",
+  "reference_processing": "Provider notebook cell 38 omits the model argument. Archived MintPy time_func.py confirms default polynomial degree 1, without seasonal/step terms; InSAR trend includes annual/semiannual and earthquake-step terms. This temporal-model mismatch is a limitation.",
+  "calibration_validation_disjoint": true,
+  "local_control_selection": "Nearest box-center archived station, using coordinates alone: MHMS / UCD1; these and provider reference P597 / P266 excluded from every reported validation metric.",
+  "frame_method": "Subtract the same named station from both LOS products; no regression/ramp fit using validation stations.",
+  "sample_method": "Containing native raster cell using floor through rasterio.index; 1/3-pixel-radius median sensitivity; no rounded pixel-corner indexing.",
+  "dependence": "Station errors, shared reference and nearby monuments are dependent; metrics are descriptive, with no iid confidence interval.",
+  "source_sha256": {
+    "A064_archived_rates_with_coordinates.csv": "224cc4600f5c98fcd06fc67f5521a27d07e820388abc2057590354c07545216d",
+    "A137_archived_rates_with_coordinates.csv": "a3a6de894b17c8ca831d15669369196c0d678bb9b6a25e88d97f0644841fa723"
+  },
+  "checks": {
+    "no_validation_site_used_for_frame_control": true,
+    "local_control_chosen_from_location_only": true,
+    "all_eligible_archived_stations_and_unavailable_samples_retained": true,
+    "collocated_sites_not_counted_as_independent_replication": true
+  },
+  "limits": [
+    "Reanalysis of a published external LOS product, not independent validation of our Bangkok inversion or real missing cells.",
+    "Archived GNSS trend outputs preserve the provider station screening and processing; raw daily-series refitting has not been claimed.",
+    "Exact GNSS-projection geometry and time-function choices belong to the provider; archived notebook and implementation preserved for audit.",
+    "Monument/radar scattering targets, source screening, vintage and processing choices may differ.",
+    "Small residuals would not validate population placement or support masks, and large residuals are retained."
+  ]
+}

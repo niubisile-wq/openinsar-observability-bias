@@ -1,0 +1,41 @@
+{
+  "name": "Davis_Sacramento",
+  "track": "A137",
+  "bbox_wgs84": [
+    -121.9,
+    38.4,
+    -121.6,
+    38.7
+  ],
+  "observed_start": "20170303",
+  "observed_end": "20230829",
+  "date_provenance": "Archived completed notebook velocity figure date range, verified against Sangha et al. 2026 Table 1; config run_notes can be stale for A137.",
+  "LOS_sign": "Positive toward satellite",
+  "velocity_unit": "m/year in archived source; no physical velocity classes are inferred here",
+  "reference_station": "P266",
+  "population_epoch": 2020,
+  "population_release": "GHS-POP R2023A 3 arc-second cell counts",
+  "population_units": 167055.45324607336,
+  "area_m2": 870905767.5820534,
+  "native_cells": 130321,
+  "mean_coherence_units": "unitless, archived mean spatial coherence",
+  "support_rule": "Finite, nonzero archived relative LOS velocity and finite mean spatial coherence >= threshold; zero treated as excluded according to provider notebook.",
+  "geometric_method": "Exact geographic rectangle overlap with longitude/sine-latitude area weights, clipped to fixed ROI; GHSL density homogeneous within each source cell. Project clipped source cells to EPSG:3310 for reporting-unit overlap.",
+  "checks": {
+    "region_chosen_before_outcomes": true,
+    "velocity_coherence_grids_identical": true,
+    "support_range_0_1": true,
+    "no_center_only_support_assignment": true
+  },
+  "limits": [
+    "Not a newly processed SAR inversion or new independent population truth.",
+    "Mean spatial coherence and finite rate masks give a product-support criterion, not external physical accuracy.",
+    "Regional population-weighted comparisons are conditional on GHS-POP allocations and their 2020 epoch.",
+    "Fractional support is integrated at GHSL scale then held constant inside each clipped GHSL cell when forming larger reporting units."
+  ],
+  "source_sha256": {
+    "16_\u65b0\u589e\u5b9e\u9a8c\u6267\u884c\u4e0e\u6574\u5408_20261001/inputs/population/GHS_POP_E2020_GLOBE_R2023A_4326_3ss_V1_0_R6_C6.tif": "75b2236218a7f48652e874fdac4e9c741f44ddca78272dfa1a1d7f47a87db736",
+    "16_\u65b0\u589e\u5b9e\u9a8c\u6267\u884c\u4e0e\u6574\u5408_20261001/inputs/aria_california/A137_velocity_refP266.tif": "fc58e651202070cdaa9e78bf70cead71b7b5e4d659848e248ddc61eba1e7a332",
+    "16_\u65b0\u589e\u5b9e\u9a8c\u6267\u884c\u4e0e\u6574\u5408_20261001/inputs/aria_california/A137_avgSpatialCoh.tif": "6b0eba4eca31616bb7e0fe5df0839c10120390bb56f24304432d68a9e5e2c71c"
+  }
+}

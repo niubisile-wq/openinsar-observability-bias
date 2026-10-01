@@ -1,0 +1,25 @@
+{
+  "archive": {
+    "id": "17d0bbe8-c93f-4474-8b1c-ee50ebd6560c",
+    "key": "software.zip",
+    "size": 98686044,
+    "checksum": "md5:67d799b123e3160016fad77d0c72b3b5",
+    "links": {
+      "self": "https://zenodo.org/api/records/19493073/files/software.zip/content"
+    }
+  },
+  "members": {
+    "software/MintPy/src/mintpy/utils/time_func.py": {
+      "sha256": "8c8e25d59203e5ee2f98c9657ec6550177a5467195b3179a542284030f684421",
+      "bytes": 19557
+    },
+    "software/MintPy/LICENSE": {
+      "sha256": "2c786535db9cc27ea36a2a569498023ff087e724ace1ade9682382a2d9b12290",
+      "bytes": 35900
+    }
+  },
+  "gnss_notebook_model_argument": "Not supplied: get_los_obs(...), model=None",
+  "gnss_default": "See retained source excerpt: polynomial degree 1; no periodic or step terms.",
+  "insar_model": "Provider paper: linear trend, annual/semiannual terms and earthquake steps.",
+  "claim_limit": "Periods and spatial LOS frame are matched, but temporal models are not identical. Archived GNSS screening and fits are retained; this is not a fresh raw-daily refit."
+}

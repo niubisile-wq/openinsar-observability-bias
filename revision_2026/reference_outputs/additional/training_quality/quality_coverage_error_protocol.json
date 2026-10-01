@@ -1,0 +1,21 @@
+{
+  "input_sha256": "340b644f55c4d225eee36e46019b0bb060a4ffc50f27e455feac983e00a7c947",
+  "training_only_filters": true,
+  "post_filter_of_fixed_training_solution": true,
+  "heldout_edges": 44,
+  "prespecified_rules": 18,
+  "population_denominator": 11314756.61992068,
+  "area_denominator_m2": 1448996341.7879248,
+  "common_per_rule_evaluation": "Same frozen pair residuals and valid-prediction fields; report changed spatial coverage explicitly",
+  "uncertainty": "Pair ranges describe shared-date, spatially dependent internal prediction errors; no iid confidence interval.",
+  "limits": [
+    "Held-out edge residuals are internal LOS displacement prediction errors, not external mm/yr velocity or vertical-motion accuracy.",
+    "Filters cannot validate locations with no predictions or missing observations.",
+    "Rules were fixed before this curve was read; no optimal threshold is selected using held-out error.",
+    "No new inversion is fitted for any post-filter. The historic default training mask is retained as the base."
+  ],
+  "checks": {
+    "training_filter_nested_coverage": true,
+    "all_rules_have_evaluable_observations": true
+  }
+}

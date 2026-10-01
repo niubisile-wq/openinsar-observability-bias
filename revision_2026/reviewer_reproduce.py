@@ -42,11 +42,19 @@ PAIRED = {
     'direct-geometry': 'direct_geometry_audit.py',
     'observed-los-masking': 'actual_los_masking.py',
 }
+ADDITIONAL = {
+    'additional-real-blocks': ('real_block_masking.py', 'fresno_real_blocks/real_block_masking_inputs.npz', 'real_block_masking'),
+    'additional-dependence': ('spatial_acquisition_robustness.py', None, 'spatial_acquisition'),
+    'additional-quality': ('quality_coverage_error.py', 'training_quality/quality_curve_inputs.npz', 'training_quality'),
+    'additional-regions': ('new_region_allocation.py', 'new_regions', 'new_regions'),
+    'additional-residential': ('residential_allocation.py', 'residential_reference/residential_allocation_inputs.npz', 'residential_allocation'),
+    'additional-gnss': ('independent_gnss_transfer.py', '.', 'gnss_transfer'),
+}
 QUICK = ['partial-identification', 'published-method-benchmark',
          'reporting-tolerance', 'acs-population-benchmark']
 STANDARD = [*QUICK, 'dwr-allocation', 'population-analysis', 'sampling-analysis', 'sampling-spatial',
             'paired', 'direct-geometry', 'observed-los-masking',
-            'synthetic-masking', 'dwr-masking', 'allocation', 'cross-sensitivity', 'followup', 'spatial', 'population-benchmark']
+            'synthetic-masking', 'dwr-masking', 'allocation', 'cross-sensitivity', 'followup', 'spatial', 'population-benchmark', *ADDITIONAL]
 
 
 def sha256(path):
@@ -107,7 +115,14 @@ def run_mode(mode, workspace, strengthening_override=None):
                 'INSAR_FOLLOWUP_ROOT': str(analysis), 'INSAR_PAIRED_ROOT': str(analysis),
                 'INSAR_BASE': str(analysis), 'BASE': str(analysis),
                 'PROJROOT': str(strengthening.parent)})
-    if mode in CORE:
+    if mode in ADDITIONAL:
+        name, input_name, folder = ADDITIONAL[mode]
+        script = ROOT / 'additional' / name
+        output = workspace / 'additional' / folder
+        env.update({'INSAR_BASELINE_REVISION': str(ROOT), 'INSAR_NEW_OUTPUT': str(output)})
+        extra = [] if input_name is None else ['--inputs', str(ROOT/'data/additional'/input_name), '--output', str(output)]
+        if mode == 'additional-gnss': extra += ['--sample-source', 'windows']
+    elif mode in CORE:
         name, extra = CORE[mode]
         script = ROOT / 'core' / name
     elif mode in FOLLOWUP:
@@ -129,8 +144,8 @@ def compare(workspace, modes=None):
 
 
 def main():
-    choices = ['check-code', 'prepare', 'quick', 'standard', 'compare', 'fetch-inputs',
-               *CORE, *FOLLOWUP, *PAIRED]
+    choices = ['check-code', 'prepare', 'quick', 'standard', 'additional', 'compare', 'fetch-inputs',
+               *CORE, *FOLLOWUP, *PAIRED, *ADDITIONAL]
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('mode', choices=choices)
     parser.add_argument('--workspace', type=Path, default=ROOT / 'reproduction_output')
@@ -156,7 +171,7 @@ def main():
         strengthening, analysis = prepare(workspace)
         print(json.dumps({'strengthening': str(strengthening), 'analysis': str(analysis)}))
         return
-    modes = QUICK if args.mode == 'quick' else STANDARD if args.mode == 'standard' else [args.mode]
+    modes = QUICK if args.mode == 'quick' else STANDARD if args.mode == 'standard' else list(ADDITIONAL) if args.mode == 'additional' else [args.mode]
     timings = [run_mode(mode, workspace, args.strengthening_root) for mode in modes]
     if args.mode in {'annual-median','persistence'}:
         report={'status':'GENERATED','mode':args.mode,'timings':timings,

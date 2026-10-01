@@ -1,0 +1,23 @@
+{
+  "region": "Los_Angeles",
+  "track": "A064",
+  "source_name": "A064_velocity_refP597.tif",
+  "source_sha256": "c41fedc7de30c341e60e308e66ddce3ae959b04983b768ecb555557ab5ca169b",
+  "shape": [
+    10193,
+    5499
+  ],
+  "transform": [
+    0.000833334,
+    0.0,
+    -120.393012981,
+    0.0,
+    -0.000833334,
+    40.845449343
+  ],
+  "crs": "EPSG:4326",
+  "unit": "m/yr",
+  "window_radius": 3,
+  "selection": "All archived stations inside fixed ROI plus provider reference; no outcome screening.",
+  "purpose": "Lossless exact source windows for offline comparison; full selected GeoTIFFs supplied separately."
+}

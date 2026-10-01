@@ -1,0 +1,17 @@
+{
+  "regions": 2,
+  "summary_designs": 96,
+  "source_sha256": {
+    "Davis_Sacramento.npz": "1c4263380282d36bb03755c14874c028164e92e9e88bdcb4bef360435708112b",
+    "Los_Angeles.npz": "9d211c8170f711433c1dc7ca3a4a46e198ef17b97d70d6d0f02876860da63673"
+  },
+  "checks": {
+    "area_and_population_conserved_per_partition": true,
+    "per_tile_Cauchy_bound_verified": true
+  },
+  "limits": [
+    "Transfer of an allocation/support identity to two published InSAR product regions; no new velocity truth is supplied.",
+    "Fixed region and threshold/scale/origin designs retain positive, negative and small effects.",
+    "Top-decile overlaps describe the fixed allocation/support deficit rankings, not physical risk priorities."
+  ]
+}

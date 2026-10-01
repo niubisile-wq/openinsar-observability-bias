@@ -1,0 +1,18 @@
+{
+  "status": "Completed exploratory robustness analyses; no independent source-model validation claim",
+  "source_scientific_release": "v0.4.1",
+  "inputs_sha256": {
+    "reference_outputs/acs_population_benchmark/blockgroup_counts.csv": "3cbfea0183eded77fdf09bbc4e30e775019c510a2268664e0b729b8eccf7742d",
+    "data/workspace/inputs/acs_compact/fresno_block_groups.geojson": "21aee6c390408a1e6dadb0919a301fcad351569d049c5bb29fc31a90b8d404a0",
+    "data/workspace/inputs/acs_compact/fresno_acs_values.json": "459e6f6f94dea6586808d70e48aad9880e92dd1fb2f5bb25d79b769bab810e66",
+    "data/strengthening/results/sampling/expanded_pair_exposure.csv": "10011c65ca22b983734f89acafcf060c2433d295804f18cb1bfccfffecba94a9"
+  },
+  "environment": {
+    "python": "3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]",
+    "numpy": "1.26.4",
+    "pandas": "2.3.3",
+    "shapely": "2.1.2",
+    "pyproj": "3.7.1",
+    "networkx": "3.4.2"
+  }
+}

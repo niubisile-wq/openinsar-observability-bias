@@ -1,0 +1,16 @@
+{
+  "input_sha256": "15884226b72efdbb5ae802181e8c6a3c0e2072113425d52cf30ed2231ab44898",
+  "definitions": 2,
+  "allocation_rules": 6,
+  "common_domain_rule": "Positive Census/GHSL/CA-POP and residential reference mass for every compared allocation; report excluded units.",
+  "checks": {
+    "Census_totals_conserved_per_common_block": true,
+    "unmapped_classification_separate_from_nonresidential": true
+  },
+  "limits": [
+    "Independent evidence is land-use classification, not independent resident counts or household placement.",
+    "Eligibility disagreement is not a false-population count: mixed use, group quarters, grid mixing and vintage mismatch can contribute.",
+    "No residential rule is presented as a universal replacement for satellite population models.",
+    "Spatially averaged DWR support inside 100m cells cannot resolve house-level coverage."
+  ]
+}

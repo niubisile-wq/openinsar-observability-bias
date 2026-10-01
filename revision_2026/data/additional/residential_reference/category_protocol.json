@@ -1,0 +1,28 @@
+{
+  "strict_residential_codes": [
+    "rh",
+    "rl",
+    "rm",
+    "rmh",
+    "rmht",
+    "rml",
+    "rr",
+    "run"
+  ],
+  "broader_eligibility_codes": [
+    "cce",
+    "cmx",
+    "raur",
+    "rh",
+    "rl",
+    "rm",
+    "rmh",
+    "rmht",
+    "rml",
+    "rmx",
+    "rr",
+    "run"
+  ],
+  "code_choice": "Existing residential categories plus mobile-home parks; broader sensitivity adds explicitly mixed-use/residential-agricultural categories.",
+  "target": "Residential land-use eligibility, not resident counts, households or demographic locations."
+}

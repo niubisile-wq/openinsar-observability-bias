@@ -1,0 +1,24 @@
+{
+  "status": "Completed finite-pool shared-acquisition sensitivity analysis",
+  "baseline": {
+    "pairs": 224,
+    "dates": 225,
+    "components": 29,
+    "year_quarter_strata": 28
+  },
+  "deletion_unit": "One acquisition date and every interferogram incident to it",
+  "estimands": [
+    "Equal retained-pair mean",
+    "Equal original year-quarter stratum mean after date deletion"
+  ],
+  "checks": {
+    "all_original_strata_retained": true,
+    "node_incident_edges_deleted_together": true
+  },
+  "limits": [
+    "Finite-pool support sensitivity only; no velocity time-series refit.",
+    "No iid pair or date assumption and no jackknife confidence interval.",
+    "The 224-pair sample graph is disconnected; this analysis does not establish processing connectivity.",
+    "Acquisition deletion does not supply new observations or external physical validation."
+  ]
+}
