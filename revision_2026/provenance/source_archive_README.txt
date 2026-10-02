@@ -1,3 +1,5 @@
+Historical v0.4.0 source-archive description retained for provenance. Its section numbering and archive scope describe that version. For the current manuscript and full reproduction routes, use revision_2026/README.md.
+
 InSAR scientific revision code, version 0.4.0
 
 Manuscript: Quantifying how spatial allocation and sampling alter population-weighted InSAR support summaries.

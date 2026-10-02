@@ -1,6 +1,6 @@
 # Open InSAR observability-bias manuscript repository
 
-The current scientific revision is **[Quantifying how spatial allocation and sampling alter population-weighted InSAR support summaries](revision_2026/manuscript/manuscript.pdf)**.
+The current scientific revision is **[Spatial aggregation alters population-weighted estimates of InSAR observation support](revision_2026/manuscript/manuscript.pdf)**.
 
 ## Current revision and reviewer reproduction
 
@@ -20,6 +20,8 @@ For Windows, use the explicit PowerShell commands in the [reproduction guide](re
 The [v0.4.1 release](https://github.com/niubisile-wq/openinsar-observability-bias/releases/tag/v0.4.1) also provides a checksum-verified companion archive of the complete upstream ACS source files and the official Census archives used by current SI S25 (historical S20). These files can still be fetched directly with the documented downloader.
 
 Release **[v0.6.0](https://github.com/niubisile-wq/openinsar-observability-bias/releases/tag/v0.6.0)** corrects missing-unit estimation and DWR annualization, adds complete raw cropped DWR windows and class tables, and delivers the reorganized manuscript/SI and reviewer responses. Corrected error, availability and bounds are reported together. The 15 affected tables have been rerun from a fresh workspace. See the [correction record](revision_2026/REVIEW_CORRECTIONS_v0.6.0.txt) and [old/new SI crosswalk](revision_2026/provenance/section_crosswalk.csv). Earlier releases remain historical and are superseded where stated.
+
+The current **[v0.6.1](https://github.com/niubisile-wq/openinsar-observability-bias/releases/tag/v0.6.1) document update** synchronizes the 2 October title, abstract, introduction and writing revisions. It also embeds references in the submission source ZIPs, orders the seven upload figures correctly, and supplies the final response locations. Scientific code, inputs and numerical reference outputs are unchanged from v0.6.0.
 
 - [Current clean manuscript](revision_2026/manuscript/manuscript.pdf)
 - [Numbered manuscript for response locations](revision_2026/manuscript/manuscript_numbered.pdf)

@@ -1,0 +1,35 @@
+{
+  "numerical_macros_baseline_table_bibliography_and_template_unchanged": true,
+  "all_figure_assets_unchanged": true,
+  "equations_and_table_numeric_entries_unchanged": true,
+  "all_30_SI_headings_and_source_hashes_preserved": true,
+  "reviewer_comments_preserved_verbatim": true,
+  "prior_manuscript_sources_untouched": true,
+  "pdfs": {
+    "manuscript": {
+      "pages": 15,
+      "sha256": "d1da9f9ac93bccb1ae4d5380920f2247fbf41c77d96e484e568df20ee8b24191"
+    },
+    "supplementary": {
+      "pages": 31,
+      "sha256": "d1d190e6b7279095beaa34c924c134ddd063810ed0f817ed20e7bf59dcd86823"
+    },
+    "response": {
+      "pages": 10,
+      "sha256": "baf54b8a1dcc86d12bdd857186f52a04e3f33d32dbcdf74bbbf53cb08bfd39fc"
+    },
+    "cover_letter": {
+      "pages": 1,
+      "sha256": "ade469717e0c1c2adf4b22cc288fb22db1bbdcb612e6f66ff7efc95af1ec0e2f"
+    },
+    "manuscript_numbered": {
+      "pages": 15,
+      "sha256": "d66d73f722cdeb00a5f57a214e3b8378b4e785bcadbdad4bdb3aa7114542bf19"
+    },
+    "manuscript_marked_local_baseline": {
+      "pages": 17,
+      "sha256": "eef52373645f9332e83cda72ecaffc482b4503ae2a6f1dd09444d432aa8c1c91"
+    }
+  },
+  "addressed_audit_ids": 108
+}

@@ -1,8 +1,8 @@
 [
   {
     "path": "CITATION.cff",
-    "bytes": 644,
-    "sha256": "7996890938ee17929da755d548356273c0f55882377c3f9e2e3a46ef7a803809"
+    "bytes": 366,
+    "sha256": "cd6699539a31a8a6e25b3a57bbab9873342732824eac830e3b00acaf21bbe5cb"
   },
   {
     "path": "core/analyse_timeseries.py",
@@ -36,8 +36,8 @@
   },
   {
     "path": "core/common.py",
-    "bytes": 6394,
-    "sha256": "beeda7c083b55ff6f89638944d0db03c3bd5f20fc6be3773731bb0f5867c39ef"
+    "bytes": 6308,
+    "sha256": "04d9b3ee3ed28728ae5dce876eaaaf9f660346b658ecf47505d8a7af7770c15d"
   },
   {
     "path": "core/config.json",
@@ -61,13 +61,13 @@
   },
   {
     "path": "core/experiment_cross_sensitivity.py",
-    "bytes": 7943,
-    "sha256": "80a1381fc212c2051c1bbbf5e328b588ad2fef2c70ac67f70ada637ce672c2b3"
+    "bytes": 7967,
+    "sha256": "0e02b740cca935da47aa1bf5e1153f1f03eca599854e4c7746afad6f108972f1"
   },
   {
     "path": "core/experiment_dwr.py",
-    "bytes": 8238,
-    "sha256": "1a3ee62d4f7fd4ec05208fb5dc6161c8301c61221b568cf401f323d06a4a4e7a"
+    "bytes": 7784,
+    "sha256": "4b7b1c8852fe9f3660fd9b90cfe5ce832a5ec9b48bd1f099f7f711edfa9dff3f"
   },
   {
     "path": "core/experiment_lineage.py",
@@ -81,13 +81,13 @@
   },
   {
     "path": "core/experiment_population.py",
-    "bytes": 7224,
-    "sha256": "a785bcacdaea84b21827f626d3ba9deae25a344ea34279b3958185dc7093d929"
+    "bytes": 6645,
+    "sha256": "4d9fefaf9a634d2febbcb6c415c865cb5af07c08a6b1d7b17fc0af0fab606c8a"
   },
   {
     "path": "core/experiment_sampling.py",
-    "bytes": 7482,
-    "sha256": "364e3dad7b9d41e40a2aa1f10c3f3ae860c79183a6384f2dc19994d1dbce9d75"
+    "bytes": 6681,
+    "sha256": "d46fcdc084019fb97cac7931ae1568e21345e6f5209d9950af6d0e0d531577c2"
   },
   {
     "path": "core/fetch_ancillary.py",
@@ -231,8 +231,8 @@
   },
   {
     "path": "followup/acs_population_benchmark.py",
-    "bytes": 13544,
-    "sha256": "776d512d78a1c2a166d2840ad3e65a53fb49efd83e78c04d99d59cc7e640891d"
+    "bytes": 12464,
+    "sha256": "e400f61530c11a507ecee7f38fd97ee73a029f18f36f966af8b25fc92595048d"
   },
   {
     "path": "followup/bangkok_spatial_effect_decomposition.py",
@@ -241,8 +241,8 @@
   },
   {
     "path": "followup/build_dwr_annual_rate_median.py",
-    "bytes": 2902,
-    "sha256": "411a532a5aa3b5dfc2164661c7b36b6630692bd150dd7f025c8b12f95f65d6f3"
+    "bytes": 2657,
+    "sha256": "8f3bda8c82f4732c147aceba831541f9ff70f90ec036041426e604e625b2ce7e"
   },
   {
     "path": "followup/download_fresno_population_rasters.py",
@@ -251,18 +251,18 @@
   },
   {
     "path": "followup/dwr_census_velocity_analysis.py",
-    "bytes": 10532,
-    "sha256": "c004cf8659bb6b1f274f42ea6684f570ac2088aa38ade64239f3198c34f2d102"
+    "bytes": 9927,
+    "sha256": "7b8a25bf48c6e58bf57a6a687a7fdb85a3a566efa25378873679e28dcb69973f"
   },
   {
     "path": "followup/followup_quality.py",
-    "bytes": 15151,
-    "sha256": "5cc65172d8fae1420148be38e011deaee08b448b6e62df83fc8351279fc32a50"
+    "bytes": 14717,
+    "sha256": "9fdaf8479d1cc41f078a7bc5e20e0cad102e8792a4e1b516e8375d9474edfdf3"
   },
   {
     "path": "followup/fresno_capop_support_sensitivity.py",
-    "bytes": 16883,
-    "sha256": "80d01085929dd62956457c9022fc7e7dc31911bea6661b5632df0c0ef0e19876"
+    "bytes": 16791,
+    "sha256": "8d323b378fced90075fb86e2d86d01e6309a532ed48cfe27e940464703307bd2"
   },
   {
     "path": "followup/fresno_census_block_analysis.py",
@@ -281,8 +281,8 @@
   },
   {
     "path": "followup/fresno_six_year_persistence.py",
-    "bytes": 6308,
-    "sha256": "c9d013f3c90feeac727a43c5cfcbc3034c36a5e0fbf48073767939b716cdba22"
+    "bytes": 5946,
+    "sha256": "63aab4b4d1850dfa56781d62a5d7a74fa2c5269ac4a6727e2a34c7847eb75db9"
   },
   {
     "path": "followup/fresno_temporal_class_stability.py",
@@ -296,8 +296,8 @@
   },
   {
     "path": "followup/published_method_benchmark.py",
-    "bytes": 3841,
-    "sha256": "70229245e59d918193176bdbbc02a2920758069c1eda4283b47460bd3ceba382"
+    "bytes": 9574,
+    "sha256": "5b9a73d5c270f77bb15a777e1d444df3cc6bbc5d656c59741846821e4b525590"
   },
   {
     "path": "followup/reporting_tolerance_audit.py",
@@ -311,13 +311,13 @@
   },
   {
     "path": "followup/spatial_dependence_audit.py",
-    "bytes": 3065,
-    "sha256": "0f4f076b9fc91dfed8ca37d64ec73dbc543498c55b86084a9179cd13ef12cc41"
+    "bytes": 3022,
+    "sha256": "a71aa6081e688a03c8552f6b1cc55a61dd568d4fc600bff92df14377989be416"
   },
   {
     "path": "INPUT_ACQUISITION.txt",
-    "bytes": 6125,
-    "sha256": "78d9746f69f0a75cb59d584be12ab70833bfa2413d82e6f98a2da91eaa5bfd3a"
+    "bytes": 5208,
+    "sha256": "96c1b24f09ae3546f62dad1666266fec92fe1868578ae71e4f0f857716977cb0"
   },
   {
     "path": "input_manifests/followup_input_hashes.json",
@@ -351,8 +351,8 @@
   },
   {
     "path": "paired_support/actual_los_masking.py",
-    "bytes": 4044,
-    "sha256": "7260cb9ebf03f6e119b22b87d7f48ab45b24a7bcf9c17f75f17a3a4f8d9cb06f"
+    "bytes": 7232,
+    "sha256": "a553363eb550c921cbfb033999400b7d85c548d82599efb21205580d545b2cb4"
   },
   {
     "path": "paired_support/direct_geometry_audit.py",
@@ -366,18 +366,18 @@
   },
   {
     "path": "README.txt",
-    "bytes": 449,
-    "sha256": "d70085429533f44a8396436f85d262dde05333b4532db90a683efd42a5644c82"
+    "bytes": 5337,
+    "sha256": "2cf60ed6d7f828abd3065a04c91aec517ac91ac65abb38c4d16c65d7fb28afe3"
   },
   {
     "path": "reference_outputs/actual_los_masking/method.json",
-    "bytes": 1221,
-    "sha256": "3ec0a2754ba9047b8dcb9fa17c8c28aaff50e44048a1b4d20313e86dd3f306b2"
+    "bytes": 1438,
+    "sha256": "313c5fa8a90b45878217c7268a8aefb61dfd7bbc07e17af518649a60cac1603f"
   },
   {
     "path": "reference_outputs/actual_los_masking/summary.csv",
-    "bytes": 196693,
-    "sha256": "f970b269e4a0d1857e4454c655403087f619a311bed407d0519caf2d8f912590"
+    "bytes": 119098,
+    "sha256": "4ee537413090e334dd59650a5ff5ee844485870dfacc038c398b686c71bc3cbc"
   },
   {
     "path": "reference_outputs/analysis_results/allocation_covariance_bounds.csv",
@@ -421,28 +421,28 @@
   },
   {
     "path": "reference_outputs/census_block_velocity_analysis/fresno_census_block_velocity_summary.csv",
-    "bytes": 1871,
-    "sha256": "b3b41ada721526ac1d32aa53decd65b66f61a941f7026d815a971274eec3156e"
+    "bytes": 1873,
+    "sha256": "1f0f5ef87b873ed691b6fe2c1d21dd4df82614b74f5db5e2527b855c777acd1a"
   },
   {
     "path": "reference_outputs/census_block_velocity_analysis/fresno_population_temporal_stability_summary.csv",
-    "bytes": 496,
-    "sha256": "46314b28657dc6b4a3550be4ed6c5d54473acb6dbafa818adb5c66c88bcfb18e"
+    "bytes": 495,
+    "sha256": "0d0b18b60f911247f1133fa286c286d2e005330e5793b4917f3648e4e4d5a7c7"
   },
   {
     "path": "reference_outputs/census_block_velocity_analysis/fresno_six_year_stability_method.json",
-    "bytes": 2465,
-    "sha256": "e995238cc594f9dc21711f78bdb6e7a586af6e10d6db79efd98d96e4a62d48fb"
+    "bytes": 1903,
+    "sha256": "3ead9c7e8c88904dbdbd8071f44ca2536eac9b86d38a2cf8a8ecd803eb70e026"
   },
   {
     "path": "reference_outputs/census_block_velocity_analysis/fresno_temporal_stability_method.json",
-    "bytes": 1506,
-    "sha256": "caa938951011ef74acf7585d5c448ae21c959415bafa7445d8ad4d7e7eb42fbb"
+    "bytes": 1363,
+    "sha256": "e2552d55d485a2a4b21c420689eb7fe579f4cb708a2ee5a12f1eb7d2623f39dc"
   },
   {
     "path": "reference_outputs/census_block_velocity_analysis/method.json",
-    "bytes": 3718,
-    "sha256": "09039926d41d72228b04226dcc222c511bb8edb371f2f3cd525023b52aab99d8"
+    "bytes": 2815,
+    "sha256": "7cad9ad9fb5c6eb92c798527e66ae47477a236f35206e4760f054c2f4046a65c"
   },
   {
     "path": "reference_outputs/core/allocation/conservation.csv",
@@ -606,18 +606,23 @@
   },
   {
     "path": "RELEASE_NOTES_v0.4.0.txt",
-    "bytes": 1689,
-    "sha256": "4402833b98803d70a61d53c0e8c555eef1ea3a0ac66e83ce495de9b3ee79ef7b"
+    "bytes": 1424,
+    "sha256": "56f53f13d53724e7d04946a0ae21dabff811d55e67b3bc6662ef3149c7f153fe"
   },
   {
     "path": "reproduce.py",
-    "bytes": 3918,
-    "sha256": "07eabb0808e3d2736e97b04852239610a64853e09cf1334a2e4e9a34cc3559c8"
+    "bytes": 3854,
+    "sha256": "933e0a81470c90d3e3ed7ef1aa57820796a3b1bf7998c9c1b52aa920a5cc1992"
   },
   {
     "path": "requirements_followup.txt",
     "bytes": 174,
     "sha256": "84570ac3a007a6e3ab7dc9f8473d58877812b12db00156e2b4c584b8d79b7fd3"
+  },
+  {
+    "path": "RERUN_VERIFICATION.json",
+    "bytes": 3368,
+    "sha256": "2525f910a365e7495044d20935c08def84a0a98d22c534d04b58c77b8c8ae239"
   },
   {
     "path": "source_provenance.json",
@@ -626,12 +631,12 @@
   },
   {
     "path": "THIRD_PARTY_NOTICES.txt",
-    "bytes": 534,
-    "sha256": "48e0f2855d1a38f378781842243a17a1c7727919057828cc705208068db24c54"
+    "bytes": 1071,
+    "sha256": "6b4335a15b84a1eeaa13a184a0ce5ade50085129f547d6d5c0a2f706de2846bb"
   },
   {
     "path": "VERSION",
     "bytes": 7,
-    "sha256": "f5ec409041ad1a0e6348478c4e94611f7a757a9a4a9f1d0f3d3e00d570a71fee"
+    "sha256": "be36d0066e8b6749a88a1c6bf1ce96482157ec618cb7f2aab162d3efae41f4d9"
   }
 ]

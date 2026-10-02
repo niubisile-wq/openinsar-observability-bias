@@ -1,0 +1,54 @@
+{
+  "date": "2026-10-02",
+  "scope": "Submission bibliography packaging, figure upload order, table legend and final document consistency",
+  "pages_rendered": 89,
+  "all_contact_sheets_opened_and_inspected": [
+    "cover_letter\\contact-01.png",
+    "manuscript\\contact-01.png",
+    "manuscript\\contact-09.png",
+    "manuscript_marked_local_baseline\\contact-01.png",
+    "manuscript_marked_local_baseline\\contact-09.png",
+    "manuscript_marked_local_baseline\\contact-17.png",
+    "manuscript_numbered\\contact-01.png",
+    "manuscript_numbered\\contact-09.png",
+    "response\\contact-01.png",
+    "response\\contact-09.png",
+    "supplementary\\contact-01.png",
+    "supplementary\\contact-09.png",
+    "supplementary\\contact-17.png",
+    "supplementary\\contact-25.png"
+  ],
+  "full_page_checks": [
+    "manuscript/page-06.png",
+    "manuscript/page-15.png",
+    "manuscript_marked_local_baseline/page-17.png",
+    "response/page-10.png"
+  ],
+  "result": "No clipped/overlapping text, broken tables, misplaced figures or unreadable new glyphs found. Clean, numbered and marked layouts checked; final response index verified.",
+  "tex_logs": [
+    {
+      "document": "manuscript",
+      "no_overfull_or_unresolved_reference_warnings": true
+    },
+    {
+      "document": "supplementary",
+      "no_overfull_or_unresolved_reference_warnings": true
+    },
+    {
+      "document": "response",
+      "no_overfull_or_unresolved_reference_warnings": true
+    },
+    {
+      "document": "cover_letter",
+      "no_overfull_or_unresolved_reference_warnings": true
+    },
+    {
+      "document": "manuscript_numbered",
+      "no_overfull_or_unresolved_reference_warnings": true
+    },
+    {
+      "document": "manuscript_marked_local_baseline",
+      "no_overfull_or_unresolved_reference_warnings": true
+    }
+  ]
+}

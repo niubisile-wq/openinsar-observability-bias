@@ -1,0 +1,28 @@
+[
+  {
+    "name": "manuscript",
+    "pages": 15,
+    "standalone_zip_rebuild_passed": true,
+    "fresh_directory": true,
+    "references_embedded_in_tex": true,
+    "reference_count": 33,
+    "bibtex_invocations": 0,
+    "no_external_bib_or_bbl_required": true,
+    "page_text_identical_to_delivered_pdf": true,
+    "all_rendered_pages_identical_to_delivered_pdf": true,
+    "final_compile_warning_free": true
+  },
+  {
+    "name": "supplementary",
+    "pages": 31,
+    "standalone_zip_rebuild_passed": true,
+    "fresh_directory": true,
+    "references_embedded_in_tex": true,
+    "reference_count": 30,
+    "bibtex_invocations": 0,
+    "no_external_bib_or_bbl_required": true,
+    "page_text_identical_to_delivered_pdf": true,
+    "all_rendered_pages_identical_to_delivered_pdf": true,
+    "final_compile_warning_free": true
+  }
+]

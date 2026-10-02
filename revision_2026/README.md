@@ -1,10 +1,12 @@
 # Reproduce the 2026 scientific revision
 
-**Manuscript:** *Quantifying how spatial allocation and sampling alter population-weighted InSAR support summaries* (Scientific Reports revision).
+**Manuscript:** *Spatial aggregation alters population-weighted estimates of InSAR observation support* (Scientific Reports revision).
+
+**Current documents: [v0.6.1](https://github.com/niubisile-wq/openinsar-observability-bias/releases/tag/v0.6.1) (2 October 2026).** The current title, abstract, introduction and writing revision are synchronized across manuscript, SI and response. Both submission LaTeX ZIPs embed their references and rebuild with pdflatex alone; all 46 manuscript/SI pages match the delivered PDFs in text and raster output. Main upload figures are named Figure_1.pdf through Figure_7.pdf in manuscript order.
 
 **Version scope: v0.6.0.** This release corrects unavailable-unit handling in both observed-LOS masking experiments, consistently annualizes exact DWR displacement windows, and reorganizes the manuscript and all 30 supplementary sections. It includes the raw cropped DWR rasters, their service metadata and checksums, complete block/pixel class outputs, corrected replicate tables, and regression tests. The preceding v0.5.0/v0.5.1 releases remain historical snapshots; their masking zero-fill results and unannualized DWR class tables are superseded. See [REVIEW_CORRECTIONS_v0.6.0.txt](REVIEW_CORRECTIONS_v0.6.0.txt) and the [section crosswalk](provenance/section_crosswalk.csv).
 
-The six current PDFs and independently recompiled manuscript/SI source archives are in the v0.6.0 document asset. All corrected calculations have been rerun from a fresh workspace and compared across 15 affected result tables. Earlier complete source assets for ACS/Census (v0.4.1) and the six added analyses (v0.5.0) remain usable; the release manifests identify the current numerical references.
+The six current PDFs and independently recompiled manuscript/SI source archives are in the v0.6.1 document asset. All corrected calculations have been rerun from a fresh workspace and compared across 15 affected result tables. Earlier complete source assets for ACS/Census (v0.4.1) and the six added analyses (v0.5.0) remain usable; the release manifests identify the current numerical references.
 
 This directory is the current revision. The older `14_esin_strengthened_v1/` manuscript and Zenodo DOI `10.5281/zenodo.21444768` describe an earlier version. That DOI does **not** archive the new experiments. The updated Zenodo deposit remains pending.
 

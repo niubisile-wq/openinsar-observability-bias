@@ -1,0 +1,9 @@
+This document update synchronizes the 2 October 2026 writing revision with the public repository.
+
+- Current title: Spatial aggregation alters population-weighted estimates of InSAR observation support. The revised abstract, introduction and author-voice edits are included in the main manuscript, SI, response and cover letter.
+- Both submission source ZIPs embed their complete reference lists directly in the .tex files. No .bib database, external .bbl or BibTeX invocation is needed. Fresh-directory rebuilds match all 46 delivered manuscript/SI pages in text and raster output.
+- The seven upload figures are numbered in manuscript order. Full main figure and table legends follow the references. The point-by-point response location index is regenerated from the final PDFs.
+- Six PDFs (15-page main, 31-page SI, 10-page response, one-page cover, 15-page numbered main, 17-page local comparison) compile without unresolved-reference or overfull-box warnings. All 89 pages were rendered and inspected. The marked comparison is against the local 1 October writing package, not the original journal submission.
+- Repository title, citation metadata and document version identifiers are synchronized. Scientific routines, input data, figure assets and numerical reference outputs are unchanged from v0.6.0; its companion scientific inputs remain applicable.
+
+Download reviewer-documents-v0.6.1.zip for the PDFs, submission sources, figures and verification records. Start scientific reproduction with revision_2026/README.md. The existing scientific limitations remain as stated in the manuscript. This release does not submit the revision to the journal.

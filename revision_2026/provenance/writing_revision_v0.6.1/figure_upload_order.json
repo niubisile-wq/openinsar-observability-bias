@@ -1,0 +1,44 @@
+[
+  {
+    "figure": 1,
+    "upload_file": "Figure_1.pdf",
+    "editable_source": "figures/F1_chao_spatial.pdf",
+    "sha256": "5c8809b70422dcde9b2ae0ca4ec3d8eaf90a4366c80a42c4aacb68024d3ceffe"
+  },
+  {
+    "figure": 2,
+    "upload_file": "Figure_2.pdf",
+    "editable_source": "figures/F2_support_curves.pdf",
+    "sha256": "b6fec4fac358e51016c4f6c8ac7bc17b7dc993bf6e8d4202908f26429b8816f6"
+  },
+  {
+    "figure": 3,
+    "upload_file": "Figure_3.pdf",
+    "editable_source": "figures/F3_allocation_scale.pdf",
+    "sha256": "b73d79c6c4a5eb8700ee4c88146a0abbe85f8a36349d27587d2fa6290953d45b"
+  },
+  {
+    "figure": 4,
+    "upload_file": "Figure_4.pdf",
+    "editable_source": "figures/F5_population_models.pdf",
+    "sha256": "85f39fa9088923d7a8c31799ee9362a25514bdd7ef9131f6e48a1caf01a3bf2c"
+  },
+  {
+    "figure": 5,
+    "upload_file": "Figure_5.pdf",
+    "editable_source": "figures/F4_masking.pdf",
+    "sha256": "a8f93f51a9398e5d197b752f77628b0c35c0c083b21b4e4985c645280af9711b"
+  },
+  {
+    "figure": 6,
+    "upload_file": "Figure_6.pdf",
+    "editable_source": "figures/F7_matched_processing.pdf",
+    "sha256": "148ff5e5e84c8c1c3b670761ba0c4825478038b1549ae5a9653b09bed87b65f8"
+  },
+  {
+    "figure": 7,
+    "upload_file": "Figure_7.pdf",
+    "editable_source": "figures/F6_dwr.pdf",
+    "sha256": "b538cf3eee86fa11de1047a1559772fdb92ac5625759647de93198ff3fe049ec"
+  }
+]

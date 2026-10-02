@@ -7,6 +7,39 @@
 \providecommand{\doi}[1]{\url{https://doi.org/#1}}
 \bibcommenthead
 
+\bibitem{ao2024national}
+\bibinfo{author}{Ao, Z.}, \bibinfo{author}{Hu, X.}, \bibinfo{author}{Tao, S.},
+  \bibinfo{author}{Hu, X.} \emph{et~al.}
+\newblock \bibinfo{title}{A national-scale assessment of land subsidence in
+  {China}'s major cities}.
+\newblock \emph{\bibinfo{journal}{Science}} \textbf{\bibinfo{volume}{384}},
+  \bibinfo{pages}{301--306} (\bibinfo{year}{2024}).
+
+\bibitem{xiong2026nationwide}
+\bibinfo{author}{Xiong, Z.} \emph{et~al.}
+\newblock \bibinfo{title}{Nationwide mapping and characterization of land
+  subsidence in the {United States} using {InSAR}}.
+\newblock \emph{\bibinfo{journal}{Remote Sensing of Environment}}
+  \textbf{\bibinfo{volume}{333}}, \bibinfo{pages}{115134}
+  (\bibinfo{year}{2026}).
+
+\bibitem{yang2026buildingrisk}
+\bibinfo{author}{Yang, M.}, \bibinfo{author}{Huang, W.}, \bibinfo{author}{Li,
+  M.} \& \bibinfo{author}{Chang, L.}
+\newblock \bibinfo{title}{From {PS-InSAR} observations to building-level risk:
+  A data-driven framework for urban structural resilience}.
+\newblock \emph{\bibinfo{journal}{Remote Sensing of Environment}}
+  \textbf{\bibinfo{volume}{341}}, \bibinfo{pages}{115454}
+  (\bibinfo{year}{2026}).
+
+\bibitem{oelsmann2026coastal}
+\bibinfo{author}{Oelsmann, J.}, \bibinfo{author}{Nicholls, R.~J.},
+  \bibinfo{author}{Lincke, D.} \emph{et~al.}
+\newblock \bibinfo{title}{Subsidence more than doubles sea-level rise today
+  along densely populated coasts}.
+\newblock \emph{\bibinfo{journal}{Nature Communications}}
+  \textbf{\bibinfo{volume}{17}}, \bibinfo{pages}{4382} (\bibinfo{year}{2026}).
+
 \bibitem{ferretti2001ps}
 \bibinfo{author}{Ferretti, A.}, \bibinfo{author}{Prati, C.} \&
   \bibinfo{author}{Rocca, F.}
@@ -67,14 +100,6 @@
   \textbf{\bibinfo{volume}{120}}, \bibinfo{pages}{1577--1601}
   (\bibinfo{year}{2024}).
 
-\bibitem{ao2024national}
-\bibinfo{author}{Ao, Z.}, \bibinfo{author}{Hu, X.}, \bibinfo{author}{Tao, S.},
-  \bibinfo{author}{Hu, X.} \emph{et~al.}
-\newblock \bibinfo{title}{A national-scale assessment of land subsidence in
-  {China}'s major cities}.
-\newblock \emph{\bibinfo{journal}{Science}} \textbf{\bibinfo{volume}{384}},
-  \bibinfo{pages}{301--306} (\bibinfo{year}{2024}).
-
 \bibitem{ohenhen2025uscities}
 \bibinfo{author}{Ohenhen, L.~O.}, \bibinfo{author}{Zhai, G.},
   \bibinfo{author}{Lucy, J.} \emph{et~al.}
@@ -82,39 +107,6 @@
   metropolises}.
 \newblock \emph{\bibinfo{journal}{Nature Cities}} \textbf{\bibinfo{volume}{2}},
   \bibinfo{pages}{543--554} (\bibinfo{year}{2025}).
-
-\bibitem{xiong2026nationwide}
-\bibinfo{author}{Xiong, Z.} \emph{et~al.}
-\newblock \bibinfo{title}{Nationwide mapping and characterization of land
-  subsidence in the {United States} using {InSAR}}.
-\newblock \emph{\bibinfo{journal}{Remote Sensing of Environment}}
-  \textbf{\bibinfo{volume}{333}}, \bibinfo{pages}{115134}
-  (\bibinfo{year}{2026}).
-
-\bibitem{yang2026buildingrisk}
-\bibinfo{author}{Yang, M.}, \bibinfo{author}{Huang, W.}, \bibinfo{author}{Li,
-  M.} \& \bibinfo{author}{Chang, L.}
-\newblock \bibinfo{title}{From {PS-InSAR} observations to building-level risk:
-  A data-driven framework for urban structural resilience}.
-\newblock \emph{\bibinfo{journal}{Remote Sensing of Environment}}
-  \textbf{\bibinfo{volume}{341}}, \bibinfo{pages}{115454}
-  (\bibinfo{year}{2026}).
-
-\bibitem{oelsmann2026coastal}
-\bibinfo{author}{Oelsmann, J.}, \bibinfo{author}{Nicholls, R.~J.},
-  \bibinfo{author}{Lincke, D.} \emph{et~al.}
-\newblock \bibinfo{title}{Subsidence more than doubles sea-level rise today
-  along densely populated coasts}.
-\newblock \emph{\bibinfo{journal}{Nature Communications}}
-  \textbf{\bibinfo{volume}{17}}, \bibinfo{pages}{4382} (\bibinfo{year}{2026}).
-
-\bibitem{murray2025hawaii}
-\bibinfo{author}{Murray, K.}, \bibinfo{author}{Barbee, M.},
-  \bibinfo{author}{Thompson, P.} \& \bibinfo{author}{Fletcher, C.}
-\newblock \bibinfo{title}{Coastal land subsidence accelerates timelines for
-  future flood exposure in {Hawai}'i}.
-\newblock \emph{\bibinfo{journal}{Communications Earth \& Environment}}
-  \textbf{\bibinfo{volume}{6}}, \bibinfo{pages}{123} (\bibinfo{year}{2025}).
 
 \bibitem{luachapichatikul2020bangkok}
 \bibinfo{author}{Luachapichatikul, S.}
@@ -140,6 +132,14 @@
 \newblock \bibinfo{type}{Master's thesis}, \bibinfo{school}{Chulalongkorn
   University} (\bibinfo{year}{2022}).
 \newblock \urlprefix\url{https://digital.car.chula.ac.th/chulaetd/6585/}.
+
+\bibitem{murray2025hawaii}
+\bibinfo{author}{Murray, K.}, \bibinfo{author}{Barbee, M.},
+  \bibinfo{author}{Thompson, P.} \& \bibinfo{author}{Fletcher, C.}
+\newblock \bibinfo{title}{Coastal land subsidence accelerates timelines for
+  future flood exposure in {Hawai}'i}.
+\newblock \emph{\bibinfo{journal}{Communications Earth \& Environment}}
+  \textbf{\bibinfo{volume}{6}}, \bibinfo{pages}{123} (\bibinfo{year}{2025}).
 
 \bibitem{eicher2001dasymetric}
 \bibinfo{author}{Eicher, C.~L.} \& \bibinfo{author}{Brewer, C.~A.}
