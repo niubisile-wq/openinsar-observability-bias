@@ -7,7 +7,7 @@
   {
     "path": "CITATION.cff",
     "bytes": 666,
-    "sha256": "8e0b029153c38d15f1ef9983a494542b8a27ef257ce3289abc9c3a5f127491de"
+    "sha256": "4670914175757fd6fafcb07b9f9134731f6df4b960d5fde7fe23ab51d570f892"
   },
   {
     "path": "DATA_LICENSES.md",
@@ -26,13 +26,13 @@
   },
   {
     "path": "README.md",
-    "bytes": 19189,
-    "sha256": "2880314fba546c1bf445a3754bed1b3cf90899b7ef1158d6f6aa5657a3af9bf6"
+    "bytes": 19681,
+    "sha256": "84a962559df86beed599b88de56fccd4122837aab886b2c7ab881d44b3df1d87"
   },
   {
     "path": "README.txt",
-    "bytes": 837,
-    "sha256": "b99ebe9cbecba5c3c2f9eb505416d0605b0edae86eea98746a49feb75ce561e5"
+    "bytes": 843,
+    "sha256": "00c93ac4c2805283ef9c0d417e416159a51754443e0fbed68fb5d5a77cb2f571"
   },
   {
     "path": "RELEASE_NOTES_v0.4.0.txt",
@@ -80,6 +80,11 @@
     "sha256": "769548477eab21578ba227ef65664392e78f87281f5b837510ed17989a823153"
   },
   {
+    "path": "RELEASE_NOTES_v0.6.4.txt",
+    "bytes": 1222,
+    "sha256": "02d4c56eca85137212e6c1c5a68bbb186d298cb154cc822d0a9efef3430c3e61"
+  },
+  {
     "path": "REVIEWER_MAP.md",
     "bytes": 5523,
     "sha256": "c229d2f9a13d70fe6e7e2d1b4b9288267aa48b9bf6d48b06be595a0da9684898"
@@ -91,8 +96,8 @@
   },
   {
     "path": "SOURCE_RELEASE_MANIFEST.sha256.json",
-    "bytes": 24915,
-    "sha256": "e4d30d4834edbac371a22aeae1d361d712dcf444190873f1e7d4226e53e9d9b1"
+    "bytes": 26582,
+    "sha256": "02ed6097442336a8249553ad7b1e2c11f2099c6e3cd61cb9e93bb2088d518a37"
   },
   {
     "path": "THIRD_PARTY_NOTICES.txt",
@@ -102,7 +107,7 @@
   {
     "path": "VERSION",
     "bytes": 6,
-    "sha256": "c9f56eb9348cbc8345bdaea7ca24c9f960e1598af05472794760a2682ff07a8c"
+    "sha256": "20c121886eb4f762044c6507745f6494525432ac22b41f5a73a8e5bf15b8b90e"
   },
   {
     "path": "additional/ASSETS.json",
@@ -1047,8 +1052,8 @@
   },
   {
     "path": "manuscript/README.txt",
-    "bytes": 1367,
-    "sha256": "f34c8b51d8112e928903c9a12cc39474802292e9985748111def8ece7e46bac2"
+    "bytes": 1373,
+    "sha256": "d07e7ab6e255e702d805fe7d3e0a4f7f71d7e212c55200e35a2f761abaeddb0d"
   },
   {
     "path": "manuscript/additional_methods.tex",
@@ -2804,6 +2809,137 @@
   },
   {
     "path": "submission_20261003_final/supporting_records/source_manifest.json",
+    "bytes": 1647,
+    "sha256": "f1a8bbd4b30b1067abe50b2ad60a57c0e32a9bc7bb9dab6cb97017d1c4b552e5"
+  },
+  {
+    "path": "submission_20261003_response/README.txt",
+    "bytes": 1016,
+    "sha256": "c196b877e8e0c511f07740f6911e37e9be49c5147a000ebd3de78845dee5e887"
+  },
+  {
+    "path": "submission_20261003_response/audits/Figure_Source_Data.zip",
+    "bytes": 111676,
+    "sha256": "6cc9e5696bdfe92728f3d6c8294b79a4704d9aaa845fae7b3123c7d03cc45882"
+  },
+  {
+    "path": "submission_20261003_response/audits/Local_Validation_Audit.zip",
+    "bytes": 457612,
+    "sha256": "66669248333c915bf0b87c2547a515027b6e195af6b6da8fbf3ad746cd116117"
+  },
+  {
+    "path": "submission_20261003_response/audits/Reproducibility_Records.zip",
+    "bytes": 8370,
+    "sha256": "70ea9c49dd04a332d07e954c1b0301a7a0e0fd8f7a262e0e688388c58ecce089"
+  },
+  {
+    "path": "submission_20261003_response/audits/SBKK_Support_Audit.zip",
+    "bytes": 22467,
+    "sha256": "bdb21428e157c9c0414ac6d2972b2acf725d1fd22bf5e9cacb9d85b313dff50e"
+  },
+  {
+    "path": "submission_20261003_response/documents/cover_letter.pdf",
+    "bytes": 108938,
+    "sha256": "7ec3f8372451e8c85db7e1f3036cfdaddd07710d158403ef4e28038b25a8d4f9",
+    "pages": 1
+  },
+  {
+    "path": "submission_20261003_response/documents/manuscript.pdf",
+    "bytes": 664423,
+    "sha256": "3a80fc34ab810a5b4f3e2bdc2360f036684d46d8cbe19534a8923b4ab0bbff9d",
+    "pages": 28
+  },
+  {
+    "path": "submission_20261003_response/documents/manuscript_numbered.pdf",
+    "bytes": 669339,
+    "sha256": "c0f8a2709a449819152ecad0e5192d12673a186f302de4e5ab054b55579ff364",
+    "pages": 28
+  },
+  {
+    "path": "submission_20261003_response/documents/response.pdf",
+    "bytes": 160075,
+    "sha256": "5cb1d4293e2fef50dd044378e7025f0469d51e583ce2e6c1155c5b03796724ef",
+    "pages": 5
+  },
+  {
+    "path": "submission_20261003_response/documents/supplementary.pdf",
+    "bytes": 1934490,
+    "sha256": "7af7a2422bd419696aa9f45fdb60b8ca16bf5908f6241ad7dfa32e4e8c7d440b",
+    "pages": 37
+  },
+  {
+    "path": "submission_20261003_response/figures/Figure_1.pdf",
+    "bytes": 80182,
+    "sha256": "11b19a02289b485e4f0b6f652415d18e63dc850569720f713142f7e8ca08b9f5",
+    "pages": 1
+  },
+  {
+    "path": "submission_20261003_response/figures/Figure_2.pdf",
+    "bytes": 49247,
+    "sha256": "26cea344fae7663d35c3d49bc549901538e72201b4c588c83c47afcdcb4c2e99",
+    "pages": 1
+  },
+  {
+    "path": "submission_20261003_response/figures/Figure_3.pdf",
+    "bytes": 32251,
+    "sha256": "eb443eb7ae8e91c101f3f028051fac4e8246d5ca80e55ce0a24923e238639146",
+    "pages": 1
+  },
+  {
+    "path": "submission_20261003_response/figures/Figure_4.pdf",
+    "bytes": 29652,
+    "sha256": "eba876efea8983c2832368f6a04999d68e1e3d75f196dd0b3bc311a391266554",
+    "pages": 1
+  },
+  {
+    "path": "submission_20261003_response/figures/Figure_5.pdf",
+    "bytes": 32981,
+    "sha256": "8f5d50c2450ba93fe1d13652dceaf7cdae08ce30c29d00435449db39b710468f",
+    "pages": 1
+  },
+  {
+    "path": "submission_20261003_response/figures/Figure_6.pdf",
+    "bytes": 54498,
+    "sha256": "2743f7472a0e3ed61e5926f11ec5b116e43f38a4379e313120c725fbec64d678",
+    "pages": 1
+  },
+  {
+    "path": "submission_20261003_response/section_output_index.json",
+    "bytes": 26337,
+    "sha256": "a83934e0c8aa59404333bb44bb7da9a6db0caaf5923d8cf69ae39302425f9078"
+  },
+  {
+    "path": "submission_20261003_response/source/LaTeX_Source.zip",
+    "bytes": 1765447,
+    "sha256": "1bdea0dd9d9ffe11f6ace3100efafe8f9f07e86f5b87e89885e56f9ec1615678"
+  },
+  {
+    "path": "submission_20261003_response/submission_manifest.json",
+    "bytes": 4367,
+    "sha256": "3b1516806ae550cdd67ac85d4d98082ffa1b07851b3b09d374117a46fbb03752"
+  },
+  {
+    "path": "submission_20261003_response/supporting_records/README.txt",
+    "bytes": 1143,
+    "sha256": "9190517bc975663cc1ec2ba2132b7c42ef0b6c0eae05e156ef9bbe46272ffb31"
+  },
+  {
+    "path": "submission_20261003_response/supporting_records/literature/bangkok_leveling_pairs.csv",
+    "bytes": 389,
+    "sha256": "b3c340b9b8d76edceb00df93ec7598ac7c0fafa55417c4a502719aa2b25ee3f6"
+  },
+  {
+    "path": "submission_20261003_response/supporting_records/literature/bangkok_leveling_source_audit.json",
+    "bytes": 1216,
+    "sha256": "bd6488510b39b4c8319b74088b258739e572e4092f10c0a09996538059bbe632"
+  },
+  {
+    "path": "submission_20261003_response/supporting_records/numerical_checks.json",
+    "bytes": 766,
+    "sha256": "8836521be359604c38ac53e70e40de68094d49e6f1dbce378c7a07931828146a"
+  },
+  {
+    "path": "submission_20261003_response/supporting_records/source_manifest.json",
     "bytes": 1647,
     "sha256": "f1a8bbd4b30b1067abe50b2ad60a57c0e32a9bc7bb9dab6cb97017d1c4b552e5"
   },

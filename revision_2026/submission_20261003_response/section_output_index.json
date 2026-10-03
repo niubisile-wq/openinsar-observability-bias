@@ -1,0 +1,578 @@
+{
+  "schema_version": 1,
+  "snapshot": "submission_20261003_final",
+  "planned_release": "v0.6.3",
+  "path_base": "repository root",
+  "scientific_baseline": {
+    "tag": "v0.6.0",
+    "commit": "0dd41575840917186aa504677d08996e34004b44"
+  },
+  "preceding_document_snapshot": {
+    "tag": "v0.6.2",
+    "commit": "e493b61624fdc08a89e7f7f9809709481196d043"
+  },
+  "scope": "Verified path index for current S1-S31; not a claim that every current number is in a single ledger or that all experiments were rerun for this document update. The separately listed submission audit ZIPs are supplied with the current document snapshot and checked by its final manifest.",
+  "section_numbering": "Stable code/folder identifiers retain historical numbering. historical_pre_v0_6_0_section follows provenance/section_crosswalk.csv; S31 is the additional-figure display section.",
+  "logical_path_mapping": [
+    {
+      "historical_logical_path": "results/lineage/",
+      "public_path": "revision_2026/reference_outputs/core/lineage/"
+    },
+    {
+      "historical_logical_path": "results/fine/",
+      "public_path": "revision_2026/reference_outputs/core/fine/"
+    },
+    {
+      "historical_logical_path": "results/allocation/",
+      "public_path": "revision_2026/reference_outputs/core/allocation/"
+    },
+    {
+      "historical_logical_path": "results/masking/",
+      "public_path": "revision_2026/reference_outputs/core/masking/"
+    },
+    {
+      "historical_logical_path": "results/sampling/",
+      "public_path": "revision_2026/reference_outputs/core/sampling/"
+    },
+    {
+      "historical_logical_path": "results/population/",
+      "public_path": "revision_2026/reference_outputs/core/population/"
+    },
+    {
+      "historical_logical_path": "results/dwr/",
+      "public_path": "revision_2026/reference_outputs/core/dwr/"
+    },
+    {
+      "historical_logical_path": "results/timeseries/",
+      "public_path": "revision_2026/reference_outputs/core/timeseries/"
+    },
+    {
+      "historical_logical_path": "results/cross_sensitivity/",
+      "public_path": "revision_2026/reference_outputs/core/cross_sensitivity/"
+    },
+    {
+      "historical_logical_path": "revision_round2/evidence/",
+      "public_path": "revision_2026/reference_outputs/round2/evidence/"
+    },
+    {
+      "historical_logical_path": "partial_identification/",
+      "public_path": "revision_2026/reference_outputs/partial_identification/"
+    },
+    {
+      "historical_logical_path": "reporting_tolerance/",
+      "public_path": "revision_2026/reference_outputs/reporting_tolerance/"
+    },
+    {
+      "historical_logical_path": "scale_method_sensitivity.csv",
+      "public_path": "revision_2026/reference_outputs/followup/fresno_population_allocation/scale_method_sensitivity.csv"
+    },
+    {
+      "historical_logical_path": "integration_convergence.csv",
+      "public_path": "revision_2026/reference_outputs/core/allocation/integration_convergence.csv"
+    },
+    {
+      "historical_logical_path": "results/numerical_checks.json",
+      "public_path": "revision_2026/submission_20261003_final/supporting_records/numerical_checks.json"
+    },
+    {
+      "historical_logical_path": "results/literature/bangkok_leveling_pairs.csv",
+      "public_path": "revision_2026/submission_20261003_final/supporting_records/literature/bangkok_leveling_pairs.csv"
+    },
+    {
+      "historical_logical_path": "results/literature/bangkok_leveling_source_audit.json",
+      "public_path": "revision_2026/submission_20261003_final/supporting_records/literature/bangkok_leveling_source_audit.json"
+    }
+  ],
+  "ledgers": [
+    {
+      "path": "revision_2026/manuscript_number_ledger.json",
+      "scope": "Selected printed macro values and TeX source names; source CSV mapping below. Not a complete ledger of the current manuscript.",
+      "macro_source_mapping": [
+        {
+          "macros": [
+            "PopTwenty",
+            "BuiltTwenty",
+            "PopPctTwenty",
+            "PopThirty",
+            "BuiltThirty",
+            "PopPctThirty",
+            "PopForty",
+            "BuiltForty",
+            "PopPctForty",
+            "PopTotal",
+            "BuiltTotal"
+          ],
+          "source_csv": "revision_2026/reference_outputs/core/fine/allocation_summary.csv"
+        },
+        {
+          "macros": [
+            "UniformOneMin",
+            "UniformBiasMin",
+            "UniformOneMax",
+            "UniformBiasMax"
+          ],
+          "source_csv": "revision_2026/reference_outputs/core/allocation/scale_origin_comparison.csv"
+        },
+        {
+          "macros": [
+            "GHSLJointPct",
+            "GHSLJointCommon",
+            "WPJointPct",
+            "WPJointCommon",
+            "EpochOldPct",
+            "EpochOldCommon",
+            "EpochNewPct",
+            "EpochNewCommon",
+            "JointExcluded"
+          ],
+          "source_csv": "revision_2026/reference_outputs/core/population/model_epoch_comparison.csv"
+        },
+        {
+          "macros": [
+            "SampleTwentyEight",
+            "SampleFiftySix",
+            "SampleOneTwelve",
+            "SampleTwoTwentyFour"
+          ],
+          "source_csv": "revision_2026/reference_outputs/core/sampling/nested_summary.csv"
+        },
+        {
+          "macros": [
+            "DWRTotal",
+            "DWRUnsupported",
+            "DWRSupportPct"
+          ],
+          "source_csv": "revision_2026/reference_outputs/core/dwr/summary.csv"
+        },
+        {
+          "macros": [
+            "DWRUniformMin",
+            "DWRUniformMax"
+          ],
+          "source_csv": "revision_2026/reference_outputs/core/dwr/scale_origin_comparison.csv"
+        },
+        {
+          "macros": [
+            "CrossGHLow",
+            "CrossGHHigh",
+            "CrossWPLow",
+            "CrossWPHigh"
+          ],
+          "source_csv": "revision_2026/reference_outputs/core/cross_sensitivity/cross_sensitivity.csv"
+        },
+        {
+          "macros": [
+            "InteriorPopulationMin",
+            "InteriorPopulationMax",
+            "InteriorBiasMin",
+            "InteriorBiasMax",
+            "InteriorErrorMin",
+            "InteriorErrorMax"
+          ],
+          "source_csv": "revision_2026/reference_outputs/round2/evidence/boundary_allocation.csv"
+        }
+      ]
+    },
+    {
+      "path": "revision_2026/reference_outputs/round2/evidence/round2_number_ledger.json",
+      "scope": "Six interior/boundary summaries; source boundary_allocation.csv in the same directory."
+    },
+    {
+      "path": "revision_2026/additional/scientific_number_ledger.json",
+      "scope": "Retained table records for E7-E12 and their interpretation limits; paths are relative to reference_outputs/additional/.",
+      "experiment_mapping": [
+        {
+          "experiment": "E7",
+          "current_section": "S15",
+          "reference_paths": [
+            "revision_2026/reference_outputs/additional/real_block_masking/real_block_unmasked_baseline.csv",
+            "revision_2026/reference_outputs/additional/real_block_masking/real_block_masking_summary.csv"
+          ]
+        },
+        {
+          "experiment": "E8",
+          "current_section": "S20",
+          "reference_paths": [
+            "revision_2026/reference_outputs/additional/spatial_acquisition/spatial_calibration_baselines.csv",
+            "revision_2026/reference_outputs/additional/spatial_acquisition/spatial_calibration_summary.csv",
+            "revision_2026/reference_outputs/additional/spatial_acquisition/acquisition_date_influence_summary.csv"
+          ]
+        },
+        {
+          "experiment": "E9",
+          "current_section": "S21",
+          "reference_paths": [
+            "revision_2026/reference_outputs/additional/training_quality/quality_coverage_error.csv"
+          ]
+        },
+        {
+          "experiment": "E10",
+          "current_section": "S29",
+          "reference_paths": [
+            "revision_2026/reference_outputs/additional/new_regions/new_region_support_baselines.csv",
+            "revision_2026/reference_outputs/additional/new_regions/new_region_allocation_summary.csv"
+          ]
+        },
+        {
+          "experiment": "E11",
+          "current_section": "S27",
+          "reference_paths": [
+            "revision_2026/reference_outputs/additional/residential_allocation/residential_allocation_summary.csv",
+            "revision_2026/reference_outputs/additional/residential_allocation/residential_landuse_eligibility.csv"
+          ]
+        },
+        {
+          "experiment": "E12",
+          "current_section": "S30",
+          "reference_paths": [
+            "revision_2026/reference_outputs/additional/gnss_transfer/gnss_transfer_summary.csv"
+          ]
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "section": "S1",
+      "title": "Frozen domains and source provenance",
+      "historical_pre_v0_6_0_section": "S1",
+      "reference_paths": [
+        "revision_2026/reference_outputs/core/fine/grid.json",
+        "revision_2026/reference_outputs/core/fine/pair_manifest.json",
+        "revision_2026/reference_outputs/core/dwr/polygon_audit.json",
+        "revision_2026/reference_outputs/core/lineage/velocity_unit_investigation.json"
+      ]
+    },
+    {
+      "section": "S2",
+      "title": "Original binary statistic and sensitivity analysis",
+      "historical_pre_v0_6_0_section": "S2",
+      "reference_paths": [
+        "revision_2026/reference_outputs/core/lineage/archive_branches.csv",
+        "revision_2026/reference_outputs/core/lineage/encoding_registration_validity_factorial.csv"
+      ]
+    },
+    {
+      "section": "S3",
+      "title": "Downstream exposure examples and the Iran provenance correction",
+      "historical_pre_v0_6_0_section": "S8",
+      "reference_paths": [
+        "revision_2026/reference_outputs/core/lineage/iran_actual_file_match.json",
+        "revision_2026/submission_20261003_final/supporting_records/literature/bangkok_leveling_pairs.csv",
+        "revision_2026/submission_20261003_final/supporting_records/literature/bangkok_leveling_source_audit.json"
+      ],
+      "note": "SBKK filtered-stack support replay is separately supplied with this submission; it is not GNSS validation. The literature fact table and Iran metadata are provenance records, not primary quantitative inputs.",
+      "submission_audit_path": "revision_2026/submission_20261003_final/audits/SBKK_Support_Audit.zip"
+    },
+    {
+      "section": "S4",
+      "title": "Geometry, conservation and numerical checks",
+      "historical_pre_v0_6_0_section": "S3",
+      "reference_paths": [
+        "revision_2026/reference_outputs/core/allocation/conservation.csv",
+        "revision_2026/reference_outputs/core/allocation/integration_convergence.csv",
+        "revision_2026/reference_outputs/round2/evidence/geometry_boundary_audit.json",
+        "revision_2026/reference_outputs/round2/evidence/allocation_independent.csv",
+        "revision_2026/submission_20261003_final/supporting_records/numerical_checks.json"
+      ]
+    },
+    {
+      "section": "S5",
+      "title": "Reproducibility files",
+      "historical_pre_v0_6_0_section": "S9",
+      "reference_paths": [
+        "revision_2026/manuscript_number_ledger.json",
+        "revision_2026/additional/scientific_number_ledger.json",
+        "revision_2026/provenance/section_crosswalk.csv"
+      ],
+      "note": "The selected macro ledger records printed values and TeX sources, not a complete result-to-claim ledger. This section index supplies actual output paths."
+    },
+    {
+      "section": "S6",
+      "title": "Method choices and comparison scope",
+      "historical_pre_v0_6_0_section": "S10",
+      "reference_paths": [
+        "revision_2026/reference_outputs/core/allocation/method.json",
+        "revision_2026/reference_outputs/core/masking/method.json",
+        "revision_2026/reference_outputs/core/dwr/method.json"
+      ]
+    },
+    {
+      "section": "S7",
+      "title": "Boundary sensitivity and numerical verification",
+      "historical_pre_v0_6_0_section": "S11",
+      "reference_paths": [
+        "revision_2026/reference_outputs/round2/evidence/boundary_allocation.csv",
+        "revision_2026/reference_outputs/round2/evidence/round2_number_ledger.json",
+        "revision_2026/reference_outputs/round2/evidence/geometry_boundary_audit.json"
+      ]
+    },
+    {
+      "section": "S8",
+      "title": "Covariance identity and scale sensitivity diagnostic",
+      "historical_pre_v0_6_0_section": "S15",
+      "reference_paths": [
+        "revision_2026/reference_outputs/analysis_results/allocation_covariance_bounds.csv",
+        "revision_2026/reference_outputs/analysis_results/allocation_local_effects.csv",
+        "revision_2026/reference_outputs/analysis_results/block_median_baseline_summary.csv",
+        "revision_2026/reference_outputs/analysis_results/population_model_common_domain.csv"
+      ]
+    },
+    {
+      "section": "S9",
+      "title": "A tolerance-based reporting rule for scale-dependent allocation error",
+      "historical_pre_v0_6_0_section": "S23",
+      "reference_paths": [
+        "revision_2026/reference_outputs/reporting_tolerance/tolerance_summary.csv",
+        "revision_2026/reference_outputs/followup/fresno_population_allocation/scale_method_sensitivity.csv"
+      ]
+    },
+    {
+      "section": "S10",
+      "title": "Spatial decomposition of Bangkok support-allocation effects",
+      "historical_pre_v0_6_0_section": "S18",
+      "reference_paths": [
+        "revision_2026/reference_outputs/bangkok_spatial_decomposition/bangkok_spatial_effect_summary.csv",
+        "revision_2026/reference_outputs/bangkok_spatial_decomposition/bangkok_1km_support_local_effects.csv",
+        "revision_2026/reference_outputs/bangkok_spatial_decomposition/bangkok_5km_support_local_effects.csv"
+      ]
+    },
+    {
+      "section": "S11",
+      "title": "Artificial masking, error denominators and synthetic bounds",
+      "historical_pre_v0_6_0_section": "S4",
+      "reference_paths": [
+        "revision_2026/reference_outputs/core/masking/replicates.csv",
+        "revision_2026/reference_outputs/core/masking/summary.csv",
+        "revision_2026/reference_outputs/core/masking/synthetic_hazard_bounds.csv",
+        "revision_2026/reference_outputs/core/dwr/masking/replicates.csv",
+        "revision_2026/reference_outputs/core/dwr/masking/summary.csv"
+      ]
+    },
+    {
+      "section": "S12",
+      "title": "Artificial masking of observed LOS classes",
+      "historical_pre_v0_6_0_section": "S14",
+      "reference_paths": [
+        "revision_2026/reference_outputs/actual_los_masking/summary.csv",
+        "revision_2026/reference_outputs/actual_los_masking/replicates.csv",
+        "revision_2026/reference_outputs/actual_los_masking/paper_table_minus5_1km_30pct.csv"
+      ]
+    },
+    {
+      "section": "S13",
+      "title": "Finite-domain bounds for threshold-class allocation under the actual final mask",
+      "historical_pre_v0_6_0_section": "S21",
+      "reference_paths": [
+        "revision_2026/reference_outputs/partial_identification/bounds.csv",
+        "revision_2026/reference_outputs/partial_identification/method.json"
+      ]
+    },
+    {
+      "section": "S14",
+      "title": "Median-class assignment and hidden fine-pixel class allocation",
+      "historical_pre_v0_6_0_section": "S22",
+      "reference_paths": [
+        "revision_2026/reference_outputs/published_method_benchmark/summary.csv",
+        "revision_2026/reference_outputs/published_method_benchmark/replicates.csv"
+      ]
+    },
+    {
+      "section": "S15",
+      "title": "Actual irregular Census blocks and contiguous missingness",
+      "historical_pre_v0_6_0_section": "S25",
+      "reference_paths": [
+        "revision_2026/reference_outputs/additional/real_block_masking/real_block_unmasked_baseline.csv",
+        "revision_2026/reference_outputs/additional/real_block_masking/real_block_masking_summary.csv",
+        "revision_2026/reference_outputs/additional/real_block_masking/real_block_masking_replicates.csv"
+      ]
+    },
+    {
+      "section": "S16",
+      "title": "Expanded sampling and temporal network",
+      "historical_pre_v0_6_0_section": "S5",
+      "reference_paths": [
+        "revision_2026/reference_outputs/core/sampling/nested_summary.csv",
+        "revision_2026/reference_outputs/core/sampling/temporal_robustness.csv",
+        "revision_2026/reference_outputs/core/sampling/network.json",
+        "revision_2026/reference_outputs/core/sampling/conditional_sampling_replicates.csv",
+        "revision_2026/reference_outputs/core/sampling/spatial_rank_stability.csv"
+      ]
+    },
+    {
+      "section": "S17",
+      "title": "Matched LiCSBAS processing and holdout",
+      "historical_pre_v0_6_0_section": "S7",
+      "reference_paths": [
+        "revision_2026/reference_outputs/core/timeseries/geometry.json",
+        "revision_2026/reference_outputs/core/timeseries/matched_summary.json",
+        "revision_2026/reference_outputs/core/timeseries/support_finalmask_confusion.csv",
+        "revision_2026/reference_outputs/core/timeseries/support_quality_bins.csv",
+        "revision_2026/reference_outputs/core/timeseries/heldout_pairs.csv",
+        "revision_2026/reference_outputs/core/timeseries/heldout_support_bins.csv",
+        "revision_2026/reference_outputs/core/timeseries/heldout_prediction_comparison.csv",
+        "revision_2026/reference_outputs/core/timeseries/descriptive_correlations.csv",
+        "revision_2026/reference_outputs/core/timeseries/audit.json"
+      ],
+      "note": "CUSV/CUUT local feasibility is separately supplied with this submission; the historical scientific release alone does not contain that audit.",
+      "submission_audit_path": "revision_2026/submission_20261003_final/audits/Local_Validation_Audit.zip"
+    },
+    {
+      "section": "S18",
+      "title": "Crossed population-model and pair-selection sensitivity",
+      "historical_pre_v0_6_0_section": "S12",
+      "reference_paths": [
+        "revision_2026/reference_outputs/core/cross_sensitivity/cross_sensitivity.csv",
+        "revision_2026/reference_outputs/core/cross_sensitivity/integration_convergence.csv",
+        "revision_2026/reference_outputs/core/cross_sensitivity/conservation.csv",
+        "revision_2026/reference_outputs/core/cross_sensitivity/audit.json"
+      ]
+    },
+    {
+      "section": "S19",
+      "title": "Paired input-support and final-quality-mask allocation",
+      "historical_pre_v0_6_0_section": "S13",
+      "reference_paths": [
+        "revision_2026/reference_outputs/paired_support_pilot/primary_cases.csv",
+        "revision_2026/reference_outputs/paired_support_pilot/all_cases.csv",
+        "revision_2026/reference_outputs/paired_support_pilot/projection_ledger.csv",
+        "revision_2026/reference_outputs/direct_geometry_audit/summary.csv",
+        "revision_2026/reference_outputs/direct_geometry_audit/cell_intersections.csv"
+      ]
+    },
+    {
+      "section": "S20",
+      "title": "Buffered spatial recalibration and shared-acquisition influence",
+      "historical_pre_v0_6_0_section": "S26",
+      "reference_paths": [
+        "revision_2026/reference_outputs/additional/spatial_acquisition/spatial_calibration_baselines.csv",
+        "revision_2026/reference_outputs/additional/spatial_acquisition/spatial_calibration_summary.csv",
+        "revision_2026/reference_outputs/additional/spatial_acquisition/acquisition_date_influence_summary.csv"
+      ]
+    },
+    {
+      "section": "S21",
+      "title": "Training-only quality rules and coverage--residual curves",
+      "historical_pre_v0_6_0_section": "S27",
+      "reference_paths": [
+        "revision_2026/reference_outputs/additional/training_quality/quality_coverage_error.csv",
+        "revision_2026/reference_outputs/additional/training_quality/quality_coverage_error_by_pair.csv"
+      ]
+    },
+    {
+      "section": "S22",
+      "title": "Population coverage and land-cover interpretation",
+      "historical_pre_v0_6_0_section": "S6",
+      "reference_paths": [
+        "revision_2026/reference_outputs/core/population/model_epoch_comparison.csv",
+        "revision_2026/reference_outputs/core/population/model_curves.csv",
+        "revision_2026/reference_outputs/core/population/landcover_strata.csv"
+      ]
+    },
+    {
+      "section": "S23",
+      "title": "Fresno 2020 Census-block support overlay",
+      "historical_pre_v0_6_0_section": "S16",
+      "reference_paths": [
+        "revision_2026/reference_outputs/census_block_analysis/fresno_block_support_summary.csv",
+        "revision_2026/reference_outputs/census_block_analysis/fresno_block_support_method.json"
+      ]
+    },
+    {
+      "section": "S24",
+      "title": "Fresno population-grid comparison with Census block totals",
+      "historical_pre_v0_6_0_section": "S19",
+      "reference_paths": [
+        "revision_2026/reference_outputs/fresno_population_benchmark/fresno_census_block_population_model_metrics.csv",
+        "revision_2026/reference_outputs/fresno_population_benchmark/fresno_census_block_population_model_counts.csv"
+      ]
+    },
+    {
+      "section": "S25",
+      "title": "Fine-resolution population-allocation sensitivity in Fresno",
+      "historical_pre_v0_6_0_section": "S20",
+      "reference_paths": [
+        "revision_2026/reference_outputs/followup/fresno_population_allocation/method_summary.csv",
+        "revision_2026/reference_outputs/followup/fresno_population_allocation/per_block.csv",
+        "revision_2026/reference_outputs/followup/fresno_population_allocation/scale_method_sensitivity.csv",
+        "revision_2026/reference_outputs/followup/fresno_population_allocation/spatial_autocorrelation.json",
+        "revision_2026/reference_outputs/followup/fresno_population_allocation/tract_decomposition.csv"
+      ]
+    },
+    {
+      "section": "S26",
+      "title": "Fresno population-grid comparison with 2017--2021 ACS block-group estimates",
+      "historical_pre_v0_6_0_section": "S24",
+      "reference_paths": [
+        "revision_2026/reference_outputs/acs_population_benchmark/model_summary.csv",
+        "revision_2026/reference_outputs/acs_population_benchmark/blockgroup_counts.csv",
+        "revision_2026/reference_outputs/acs_population_benchmark/method.json"
+      ]
+    },
+    {
+      "section": "S27",
+      "title": "Municipal residential eligibility as a distinct ancillary reference",
+      "historical_pre_v0_6_0_section": "S29",
+      "reference_paths": [
+        "revision_2026/reference_outputs/additional/residential_allocation/residential_allocation_summary.csv",
+        "revision_2026/reference_outputs/additional/residential_allocation/residential_landuse_eligibility.csv",
+        "revision_2026/reference_outputs/additional/residential_allocation/residential_allocation_by_block.csv"
+      ]
+    },
+    {
+      "section": "S28",
+      "title": "Census-block median vertical-rate classification in Fresno",
+      "historical_pre_v0_6_0_section": "S17",
+      "reference_paths": [
+        "revision_2026/reference_outputs/census_block_velocity_analysis/fresno_census_block_velocity_summary.csv",
+        "revision_2026/reference_outputs/census_block_velocity_analysis/fresno_census_block_velocity_by_block.csv",
+        "revision_2026/reference_outputs/census_block_velocity_analysis/fresno_dwr_rate_pixels_by_block.csv",
+        "revision_2026/reference_outputs/census_block_velocity_analysis/fresno_six_annual_block_classifications.csv",
+        "revision_2026/reference_outputs/census_block_velocity_analysis/fresno_six_year_below5_persistence.csv",
+        "revision_2026/reference_outputs/census_block_velocity_analysis/fresno_population_temporal_stability_summary.csv"
+      ]
+    },
+    {
+      "section": "S29",
+      "title": "Two fixed additional regions using archived ARIA products",
+      "historical_pre_v0_6_0_section": "S28",
+      "reference_paths": [
+        "revision_2026/reference_outputs/additional/new_regions/new_region_support_baselines.csv",
+        "revision_2026/reference_outputs/additional/new_regions/new_region_allocation_summary.csv",
+        "revision_2026/reference_outputs/additional/new_regions/new_region_allocation_by_tile.csv"
+      ]
+    },
+    {
+      "section": "S30",
+      "title": "Archived independent GNSS transfer with disjoint frame controls",
+      "historical_pre_v0_6_0_section": "S30",
+      "reference_paths": [
+        "revision_2026/reference_outputs/additional/gnss_transfer/gnss_transfer_summary.csv",
+        "revision_2026/reference_outputs/additional/gnss_transfer/gnss_transfer_by_station.csv",
+        "revision_2026/reference_outputs/additional/gnss_transfer/gnss_transfer_collocation_clusters.csv",
+        "revision_2026/reference_outputs/additional/gnss_transfer/gnss_transfer_exclusions.csv"
+      ]
+    },
+    {
+      "section": "S31",
+      "title": "Spatial, allocation, masking and processing displays",
+      "historical_pre_v0_6_0_section": null,
+      "reference_paths": [
+        "revision_2026/reference_outputs/core/fine/allocation_summary.csv",
+        "revision_2026/reference_outputs/core/fine/support_curves.csv",
+        "revision_2026/reference_outputs/core/allocation/scale_origin_comparison.csv",
+        "revision_2026/reference_outputs/core/dwr/summary.csv",
+        "revision_2026/reference_outputs/core/dwr/scale_origin_comparison.csv",
+        "revision_2026/reference_outputs/core/sampling/nested_summary.csv",
+        "revision_2026/reference_outputs/core/timeseries/matched_summary.json",
+        "revision_2026/reference_outputs/core/cross_sensitivity/cross_sensitivity.csv",
+        "revision_2026/reference_outputs/additional/real_block_masking/real_block_masking_summary.csv",
+        "revision_2026/reference_outputs/additional/training_quality/quality_coverage_error.csv",
+        "revision_2026/reference_outputs/additional/new_regions/new_region_allocation_summary.csv",
+        "revision_2026/reference_outputs/additional/residential_allocation/residential_allocation_summary.csv",
+        "revision_2026/reference_outputs/additional/gnss_transfer/gnss_transfer_summary.csv"
+      ],
+      "note": "Displays reuse results indexed in their scientific sections. Figure/table numbering belongs to the final submission PDFs; this index does not freeze layout or add another numerical experiment."
+    }
+  ]
+}

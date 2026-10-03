@@ -1,0 +1,16 @@
+{
+  "max_baseline_conservation_relative": 1.9867670935212194e-15,
+  "max_covariance_identity_absolute": 5.960464477539063e-08,
+  "allocation_rows": 512,
+  "analytic_covariance_positive_negative_zero": "pass",
+  "exact_cdf_integral_minus_deficit": 0.0,
+  "diagnostic_25m_A_relative_mass_drift": -1.659732292913496e-05,
+  "diagnostic_25m_S_relative_mass_drift": -2.058368404800337e-05,
+  "diagnostic_25m_P_relative_mass_drift": -4.110312748939471e-06,
+  "diagnostic_25m_H_relative_mass_drift": -3.283700012124413e-06,
+  "integration_grid_max_difference_fraction_total": 2.394851018987832e-06,
+  "masking_replicate_rows": 21600,
+  "dwr/masking_replicate_rows": 21600,
+  "dwr_mass_conservation": "pass",
+  "population_common_total_normalization": "pass"
+}

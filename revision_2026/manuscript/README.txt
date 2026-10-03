@@ -1,7 +1,7 @@
 Historical manuscript documents: v0.6.1, 2 October 2026.
 
-Current v0.6.3 submission documents are in ../submission_20261003_final/documents/. The current portable
-source is ../submission_20261003_final/source/LaTeX_Source.zip; its README and manifest identify all files.
+Current v0.6.4 submission documents are in ../submission_20261003_response/documents/. The current portable
+source is ../submission_20261003_response/source/LaTeX_Source.zip; its README and manifest identify all files.
 This directory retains the earlier writing snapshot and its historical figure order and marked
 comparison. Do not use these PDFs or source files in place of the current submission.
 

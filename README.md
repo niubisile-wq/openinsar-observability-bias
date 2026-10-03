@@ -1,6 +1,6 @@
 # Open InSAR observability-bias manuscript repository
 
-The current scientific revision is **[Spatial aggregation alters population-weighted estimates of InSAR observation support](revision_2026/submission_20261003_final/documents/manuscript.pdf)**.
+The current scientific revision is **[Spatial aggregation alters population-weighted estimates of InSAR observation support](revision_2026/submission_20261003_response/documents/manuscript.pdf)**.
 
 ## Current revision and reviewer reproduction
 
@@ -21,16 +21,16 @@ The [v0.4.1 release](https://github.com/niubisile-wq/openinsar-observability-bia
 
 Release **[v0.6.0](https://github.com/niubisile-wq/openinsar-observability-bias/releases/tag/v0.6.0)** corrects missing-unit estimation and DWR annualization, adds complete raw cropped DWR windows and class tables, and delivers the reorganized manuscript/SI and reviewer responses. Corrected error, availability and bounds are reported together. The 15 affected tables have been rerun from a fresh workspace. See the [correction record](revision_2026/REVIEW_CORRECTIONS_v0.6.0.txt) and [old/new SI crosswalk](revision_2026/provenance/section_crosswalk.csv). Earlier releases remain historical and are superseded where stated.
 
-The current **[v0.6.3](https://github.com/niubisile-wq/openinsar-observability-bias/releases/tag/v0.6.3) submission snapshot** is [revision_2026/submission_20261003_final/](revision_2026/submission_20261003_final/README.txt). It contains five current PDFs, their portable LaTeX source, six main-figure PDFs, two local audit packages, supporting records and figure source data. The main text has six figures and two tables; the SI has 31 sections, 20 figures and 29 tables. Scientific routines, processed inputs and numerical reference outputs retain the v0.6.0 baseline. The files in `revision_2026/manuscript/` are the historical v0.6.1 writing snapshot; its marked comparison is not a current submission document.
+The current **[v0.6.4](https://github.com/niubisile-wq/openinsar-observability-bias/releases/tag/v0.6.4) submission snapshot** is [revision_2026/submission_20261003_response/](revision_2026/submission_20261003_response/README.txt). It contains five current PDFs, their portable LaTeX source, six main-figure PDFs, two local audit packages, supporting records and figure source data. The main text has six figures and two tables; the SI has 31 sections, 20 figures and 29 tables. Scientific routines, processed inputs and numerical reference outputs retain the v0.6.0 baseline. The files in `revision_2026/manuscript/` are the historical v0.6.1 writing snapshot; its marked comparison is not a current submission document.
 
-- [Current clean manuscript](revision_2026/submission_20261003_final/documents/manuscript.pdf)
-- [Current manuscript with line numbers](revision_2026/submission_20261003_final/documents/manuscript_numbered.pdf)
-- [Current Supplementary Information, S1–S31](revision_2026/submission_20261003_final/documents/supplementary.pdf)
-- [Current point-by-point response](revision_2026/submission_20261003_final/documents/response.pdf)
-- [Current cover letter](revision_2026/submission_20261003_final/documents/cover_letter.pdf)
-- [Portable LaTeX source](revision_2026/submission_20261003_final/source/LaTeX_Source.zip) and [six main figures](revision_2026/submission_20261003_final/figures/)
-- [Two local audit packages, reproducibility records and figure source data](revision_2026/submission_20261003_final/audits/)
-- [Current section-to-output index](revision_2026/submission_20261003_final/section_output_index.json) and [file hashes/page counts](revision_2026/submission_20261003_final/submission_manifest.json)
+- [Current clean manuscript](revision_2026/submission_20261003_response/documents/manuscript.pdf)
+- [Current manuscript with line numbers](revision_2026/submission_20261003_response/documents/manuscript_numbered.pdf)
+- [Current Supplementary Information, S1–S31](revision_2026/submission_20261003_response/documents/supplementary.pdf)
+- [Current point-by-point response](revision_2026/submission_20261003_response/documents/response.pdf)
+- [Current cover letter](revision_2026/submission_20261003_response/documents/cover_letter.pdf)
+- [Portable LaTeX source](revision_2026/submission_20261003_response/source/LaTeX_Source.zip) and [six main figures](revision_2026/submission_20261003_response/figures/)
+- [Two local audit packages, reproducibility records and figure source data](revision_2026/submission_20261003_response/audits/)
+- [Current section-to-output index](revision_2026/submission_20261003_response/section_output_index.json) and [file hashes/page counts](revision_2026/submission_20261003_response/submission_manifest.json)
 - [Reviewer-to-experiment map](revision_2026/REVIEWER_MAP.md)
 - [Scientific reference outputs](revision_2026/reference_outputs/)
 - [Frozen analysis inputs and provenance](revision_2026/data/)
@@ -44,3 +44,5 @@ The earlier manuscript in `14_esin_strengthened_v1/` and the historical folders 
 This repository release does not submit the manuscript to a journal. Numerical reproduction verifies computations for defined inputs and does not provide independent geodetic or household-population validation.
 
 The previous v0.6.2 submission document snapshot remains unchanged at `revision_2026/submission_20261003/` (or `submission_20261003/` from this directory). The v0.6.3 update restores author context and makes targeted literature, rationale, cross-reference and bibliography corrections; the numerical results and figure assets are unchanged.
+
+Response-only update v0.6.4: reviewer comments are retained and replies are shortened. The main and line-numbered articles, Supplementary Information, cover letter, figures, scientific audit archives and numerical results are unchanged from v0.6.3. Main/SI references to v0.6.3 remain fixed scientific-reproduction references. The v0.6.3 snapshot at `submission_20261003_final/` and all prior tags remain unchanged.

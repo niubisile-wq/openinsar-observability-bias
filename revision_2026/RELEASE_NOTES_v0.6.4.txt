@@ -1,0 +1,16 @@
+v0.6.4 | Concise point-by-point response | 3 October 2026
+
+The current document snapshot is revision_2026/submission_20261003_response/.
+This patch shortens the author replies, retains all reviewer comments, removes the unnecessary
+"original wording" labels, and places exact page/section references with each reply instead of a
+separate location index. The response source and PDF, complete source ZIP and journal upload bundle
+are synchronized. The unused response_locations.tex member is omitted from the source archive.
+
+Main article, line-numbered article, Supplementary Information, cover letter, figures, scientific
+audit archives, supporting records and numerical results are byte-identical to v0.6.3. The single-entry
+main and supplementary journal-source ZIPs are unchanged. Main/SI v0.6.3 links remain valid fixed
+reproduction references; scientific routines and numerical references retain the v0.6.0 baseline.
+
+The v0.6.3 and v0.6.2 document snapshots, earlier tags and release assets remain unchanged. No old
+tag is moved and no new scientific experiment is claimed. File hashes and actual PDF page counts
+are recorded in the new submission_manifest.json. Publishing this patch does not submit to a journal.
