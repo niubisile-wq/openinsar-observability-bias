@@ -1,7 +1,25 @@
 See DATA_LICENSES.md for input-specific attribution and terms.
 Author-owned code and aggregate outputs retain CC BY 4.0.
-Bundled GHSL/WorldPop and Census subsets, processed satellite/support/model arrays,
-and the unmodified Springer Nature LaTeX support files retain provider terms.
-Raw LiCSAR/LiCSBAS stacks, original DWR/TRE velocity rasters and observation polygons,
-and the CA-POP source raster are obtained separately from the documented providers.
-The authors do not assert a new license for these third-party materials.
+Third-party data, derived arrays, provider code and LaTeX support files retain their applicable terms.
+
+The checkout includes attributed GHSL/WorldPop and Census subsets, processed LiCSAR/LiCSBAS/support/model
+arrays, the fixed-ROI DWR measurement-cell polygons, and nine raw cropped DWR displacement TIFFs with
+service catalogs, exact DateFrom/DateTo windows, export requests and SHA-256 hashes. DWR raw feet must be
+converted to mm/year using the exact interval in days / 365.2425; they are not raw feet/year values.
+The DWR files are selected provider extracts, not the complete statewide archive. Preserve California
+DWR/TRE ALTAMIRA attribution and provider conditions; the authors assert no new license for these inputs.
+
+The v0.4.1 official-source companion contains six complete ACS files and two PL 94-171/TIGER archives.
+The v0.5.0 portable-input companion duplicates the additional analysis inputs. Its selected-source
+companion contains the selected complete A064/A137 ARIA velocity/coherence maps, notebooks/configuration
+metadata, GHSL, all selected Fresno municipal land-use query pages, a 2020-2021 DWR crop and archived
+GNSS/coordinate excerpts. Preserve the individual source notices and provenance in those archives.
+Sangha et al. (2026) ARIA California data retain their archived CC BY 4.0 terms. Archived MintPy code
+excerpts retain the accompanying GPL license. Unmodified Springer Nature class/styles retain their
+original headers and LaTeX Project Public License notices.
+
+CA-POP and complete original LiCSAR/LiCSBAS processing stacks are obtained separately through the
+provider routes in INPUT_ACQUISITION.txt. Not every original statewide ARIA time series is distributed.
+The 2026-10-03 local GNSS and SBKK audit archives retain their own source attribution and provenance.
+This inventory supersedes the old blanket statement that DWR crops/polygons must all be acquired
+separately. It records what is distributed without relicensing third-party material.

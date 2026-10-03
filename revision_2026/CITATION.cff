@@ -1,9 +1,9 @@
 cff-version: 1.2.0
-message: "Cite v0.6.1 for the current documents; scientific routines and reference results are unchanged from v0.6.0. The earlier Zenodo DOI archives v0.3.0 only."
+message: "Cite v0.6.2 for the current submission documents and local audit packages; scientific routines and reference results are unchanged from v0.6.0. The earlier Zenodo DOI archives v0.3.0 only."
 title: "Code for Spatial aggregation alters population-weighted estimates of InSAR observation support"
 type: software
-version: 0.6.1
-date-released: 2026-10-02
+version: 0.6.2
+date-released: 2026-10-03
 license: CC-BY-4.0
 authors:
   - family-names: Liu
@@ -11,4 +11,4 @@ authors:
   - family-names: Xiong
     given-names: Wei
 repository-code: "https://github.com/niubisile-wq/openinsar-observability-bias"
-url: "https://github.com/niubisile-wq/openinsar-observability-bias/releases/tag/v0.6.1"
+url: "https://github.com/niubisile-wq/openinsar-observability-bias/releases/tag/v0.6.2"

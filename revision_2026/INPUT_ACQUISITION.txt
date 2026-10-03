@@ -1,6 +1,6 @@
 External inputs for the current scientific revision
 
-The reviewer checkout bundles attributed processed analysis inputs, Census subsets, and two Fresno population grids. Complete provider archives and raw processing stacks are separate. Obtain the following inputs from their providers and preserve source-provider terms.
+The reviewer checkout bundles attributed processed analysis inputs, Census subsets, two Fresno population grids, nine cropped raw DWR displacement exports, and the fixed-ROI DWR observation-cell polygons. Selected complete provider files are also supplied in the versioned companion assets listed below; complete original interferogram stacks are separate. Preserve source-provider terms for both bundled and newly acquired materials.
 The input manifests give the retained hashes; a live provider may update byte serialization or product versions.
 Do not substitute a changed input silently. Compare identities, geometries, vintages and reported checksums.
 
@@ -22,7 +22,10 @@ ESA WorldCover 2021 v200, tile N12E099. See the source metadata and core/fetch_a
 https://gis.water.ca.gov/arcgis/rest/services/Elevation/Vertical_Displacement_Point_Data_Locations_2026Q1/MapServer/0
 Query fixed ROI [-119.9,36.6,-119.7,36.85] in WGS84. core/fetch_dwr.py preserves the query and retrieves
 38,738 actual observation-cell polygons, plus the fine GHSL tile. core/experiment_dwr.py builds the retained
-results/dwr/grid.npz. The layer represents observation footprints, not invented point buffers.
+results/dwr/grid.npz. The layer represents observation footprints, not invented point buffers. The retained query is bundled at
+data/strengthening/external/dwr/roi_features.json; the processed integration grid is at
+data/strengthening/results/dwr/grid.npz. The provider route is for reacquisition, not a prerequisite
+for inspecting the bundled polygons. Preserve California DWR/TRE ALTAMIRA attribution and provider conditions.
 
 4. Fresno Census blocks
 https://services.arcgis.com/P3ePLMYs2RVChkJx/ArcGIS/rest/services/USA_Census_2020_DHC_Blocks/FeatureServer/1
@@ -38,13 +41,24 @@ https://gis.water.ca.gov/arcgisimg/rest/services/SAR/Vertical_Displacement_TRE_A
 Obtain raw floating-point annual rasters, with no classification render function. Document raster catalog
 selection and dates. The six annual windows are October 2015-October 2016 through October 2020-October 2021.
 Additional sensitivities use October 2023-October 2024, April 2025-April 2026 and the separate cumulative
-June 2015-January 2021 product. Exact filenames and hashes are in followup_input_hashes.json and S17 methods.
-Retained exports have 177 rows x 279 columns, EPSG:4326, source-grid alignment, nearest-neighbor export and
-adjustAspectRatio=false. Retained values are feet/year; the script converts by 304.8 to mm/year.
-Use the retained exact source exports for byte-identical reproduction; live ImageServer exports may differ.
-Do not redistribute these source files from the code archive.
+June 2015-January 2021 product. Exact filenames, source items, DateFrom/DateTo, export requests and SHA-256 hashes are in
+data/workspace/dwr_velocity/raw_input_manifest.json; the current SI methods are in S28.
+The nine retained exports have 279 rows x 177 columns, EPSG:4326, source-grid alignment, nearest-neighbor
+export and adjustAspectRatio=false (the ImageServer size parameter is width,height = 177,279).
+Raw values are interval displacement in feet, including products named Annual_Rate. Convert each window as
+mm/year = raw feet * 304.8 / ((DateTo - DateFrom in days) / 365.2425). Do not treat raw values as feet/year
+or multiply by 304.8 alone. The April 2025-April 2026 interval differs from the October-to-October windows;
+the cumulative June 2015-January 2021 product uses its own exact interval.
+The raw TIFF crops, annual/cumulative service catalogs, service metadata and manifest are bundled at
+data/workspace/dwr_velocity/. Run reproduce.py dwr-rate-suite --workspace OUTPUT for the annualization
+and downstream class tables. Reacquire with followup/fetch_dwr_rate_inputs.py --output OUTPUT and compare
+the retained hashes; live ImageServer exports may differ. These are selected cropped provider exports,
+not the complete statewide DWR archive. Preserve California DWR/TRE ALTAMIRA attribution and applicable
+provider conditions; the authors do not relicense these third-party materials.
+This paragraph supersedes the pre-3-October acquisition guide wording that called the raw values
+feet/year and said the cropped exports and observation polygons were absent from the code archive.
 
-6. Fresno 1-km population grids (S19)
+6. Fresno 1-km population grids (current S24)
 GHSL tile GHS_POP_E2020_GLOBE_R2023A_54009_1000_V1_0_R5_C8.zip:
 https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GHSL/GHS_POP_GLOBE_R2023A/GHS_POP_E2020_GLOBE_R2023A_54009_1000/V1-0/tiles/GHS_POP_E2020_GLOBE_R2023A_54009_1000_V1_0_R5_C8.zip
 WorldPop USA 2020 UN-adjusted 1-km raster:
@@ -54,16 +68,35 @@ WorldPop exact record 34816, DOI 10.5258/SOTON/WP00671; GHSL dataset DOI 10.2905
 Both are CC BY 4.0 with attribution. Use the exact Census block pages described above.
 
 
-7. Fresno 100-m allocation-model sensitivity (S20)
+7. Fresno 100-m allocation-model sensitivity (current S25; stable dataset identifier s20)
 2020 Census California PL94-171 P1 block population: https://www2.census.gov/programs-surveys/decennial/2020/data/01-Redistricting_File--PL_94-171/California/ca2020.pl.zip
 2020 TIGER/Line Fresno County tabulation blocks: https://www2.census.gov/geo/tiger/TIGER2020PL/STATE/06_CALIFORNIA/06019/tl_2020_06019_tabblock20.zip
 CA-POP total-population raster, 100 m, DOI 10.5281/zenodo.5874927; study: https://doi.org/10.1371/journal.pone.0270746
 Exact downloaded artifacts, sizes and SHA-256 values are recorded in followup/fresno_population_source_manifest.json.
-CA-POP shares the Census block totals by construction; S20 is model sensitivity, not independent sub-block validation.
+CA-POP shares the Census block totals by construction; S25 is model sensitivity, not independent sub-block validation.
 
-8. ACS source archives and reviewer subsets (S24)
+8. ACS source archives and reviewer subsets (current S26)
 All official source URLs and SHA-256 values are in input_manifests/acs_population_source_manifest.json.
 Run reproduce.py fetch-inputs --dataset acs --workspace OUTPUT, followed by acs-population-benchmark.
 The no-download route uses all 637 Fresno county block groups in the compact Census value/geography subset, applies ROI selection itself, and reruns raster overlays and 80-replicate MOE aggregation.
 The compact subset provenance and parent checksums are in data/workspace/inputs/acs_compact/PROVENANCE.json.
-S20 is acquired by reproduce.py fetch-inputs --dataset s20. The actual Zenodo CA-POP archive has an owner-prefixed name and contains a nested TOTAL raster ZIP; the downloader handles both.
+The current S25 source bundle is acquired by reproduce.py fetch-inputs --dataset s20. The actual Zenodo CA-POP archive has an owner-prefixed name and contains a nested TOTAL raster ZIP; the downloader handles both.
+
+9. Versioned companion release assets and exclusions
+The stable script/dataset identifiers predate the current SI numbering. See provenance/section_crosswalk.csv
+and submission_20261003/section_output_index.json for the current S1-S31 paths.
+- v0.4.1/reviewer-official-source-inputs-v0.4.1.zip supplies all six complete ACS source files and two
+  official PL 94-171/TIGER source archives, with SHA256SUMS.json and a placement guide. CA-POP is not in it.
+- v0.5.0/reviewer-additional-analysis-inputs-v0.5.0.zip duplicates the six additional experiments' portable
+  inputs bundled under data/additional/; it includes provenance, archived projected GNSS rates and windows.
+- v0.5.0/reviewer-additional-selected-sources-v0.5.0.zip supplies complete selected A064/A137 velocity and
+  coherence TIFFs, completed notebooks/configuration metadata, a GHSL tile, all 247 selected City of Fresno
+  land-use query pages, the 2020-2021 DWR crop, and archived GNSS/coordinate excerpts and provider code notices.
+  It does not supply every statewide ARIA time series, a new daily-GNSS fit or the full LiCSAR stack.
+The asset URLs and digests are recorded in additional/ASSETS.json (v0.5.0); the v0.4.1 asset contains its own
+source manifest. Historical v0.5.0 derived masking/class outputs are superseded by the corrected v0.6.0
+references; use current reference_outputs and exact-window annualization with retained source inputs.
+CA-POP and full original interferogram/processing stacks still require their documented provider route.
+See DATA_LICENSES.md and THIRD_PARTY_NOTICES.txt; inclusion does not substitute the authors' code license
+for any provider's terms. Neither the v0.4.1 nor v0.5.0 assets contain the current SBKK or CUSV/CUUT audits;
+those are separately versioned with the 2026-10-03 submission snapshot.

@@ -1,8 +1,53 @@
 [
   {
     "path": "CITATION.cff",
-    "bytes": 644,
-    "sha256": "7996890938ee17929da755d548356273c0f55882377c3f9e2e3a46ef7a803809"
+    "bytes": 666,
+    "sha256": "17d4aa7d127a83fcfbf466e264b2a5c24667455d75691c530c30488f4e3a00af"
+  },
+  {
+    "path": "DATA_LICENSES.md",
+    "bytes": 6572,
+    "sha256": "282903c54ebbd3b5d459ad242613abc5f104c48bfe91d9e4f14cb43c6b71d797"
+  },
+  {
+    "path": "INPUT_ACQUISITION.txt",
+    "bytes": 9560,
+    "sha256": "4547abfc24ae49d148e5dc9978c77ecd11fbecfd659b961c8ae095c0e97ddece"
+  },
+  {
+    "path": "LICENSE.txt",
+    "bytes": 384,
+    "sha256": "e05597ec76dd34365ed58411caead4ebe0ec1bdedcf4a272c471738930cb3f60"
+  },
+  {
+    "path": "README.md",
+    "bytes": 18697,
+    "sha256": "9619935e76d97aab436e5a882e9b4f316f19ca1b026a0765f31c4188f79485e9"
+  },
+  {
+    "path": "README.txt",
+    "bytes": 825,
+    "sha256": "89ba06cc6abc34f232b4e4fa08ca74d618b4f7c58842623f09d9f3600587db35"
+  },
+  {
+    "path": "RELEASE_NOTES_v0.4.0.txt",
+    "bytes": 1689,
+    "sha256": "4402833b98803d70a61d53c0e8c555eef1ea3a0ac66e83ce495de9b3ee79ef7b"
+  },
+  {
+    "path": "RELEASE_NOTES_v0.6.2.txt",
+    "bytes": 4009,
+    "sha256": "9ec64b38557e70f0e995d47427a2c46ae4b90a9f1887c06a20cd48b92c2a01a7"
+  },
+  {
+    "path": "THIRD_PARTY_NOTICES.txt",
+    "bytes": 2104,
+    "sha256": "01482a18cdd372b36cd05c05f39131d1ea22629a258afdfbf1f78cc2073ba5d6"
+  },
+  {
+    "path": "VERSION",
+    "bytes": 6,
+    "sha256": "a466ef209f5c3aee5ff0c702e2e9d5cced4783d2a655e8ab66330f21a5557b3f"
   },
   {
     "path": "core/analyse_timeseries.py",
@@ -230,6 +275,11 @@
     "sha256": "7d519149d37045e1fec13122920de65e8fec10ee23ee4a800e0e938b4d6dc214"
   },
   {
+    "path": "followup/S20_README.txt",
+    "bytes": 1468,
+    "sha256": "aabd8e2b4e577eea722a001d527768b30f19a5f1612f57dd04df8e4918579956"
+  },
+  {
     "path": "followup/acs_population_benchmark.py",
     "bytes": 13544,
     "sha256": "776d512d78a1c2a166d2840ad3e65a53fb49efd83e78c04d99d59cc7e640891d"
@@ -305,19 +355,9 @@
     "sha256": "e137503cae7cfc7b54ae4d3065850cf83c07c1b7a339125a7c3142f9d0898a05"
   },
   {
-    "path": "followup/S20_README.txt",
-    "bytes": 1468,
-    "sha256": "aabd8e2b4e577eea722a001d527768b30f19a5f1612f57dd04df8e4918579956"
-  },
-  {
     "path": "followup/spatial_dependence_audit.py",
     "bytes": 3065,
     "sha256": "0f4f076b9fc91dfed8ca37d64ec73dbc543498c55b86084a9179cd13ef12cc41"
-  },
-  {
-    "path": "INPUT_ACQUISITION.txt",
-    "bytes": 6125,
-    "sha256": "78d9746f69f0a75cb59d584be12ab70833bfa2413d82e6f98a2da91eaa5bfd3a"
   },
   {
     "path": "input_manifests/followup_input_hashes.json",
@@ -340,9 +380,9 @@
     "sha256": "82641b4b9536c691208d7ae9682944c25650dd1456c57e0fce01446bd848b18d"
   },
   {
-    "path": "LICENSE.txt",
-    "bytes": 384,
-    "sha256": "e05597ec76dd34365ed58411caead4ebe0ec1bdedcf4a272c471738930cb3f60"
+    "path": "manuscript/README.txt",
+    "bytes": 1355,
+    "sha256": "638f526dc5c58788e10115b1fc3b91b07f17a94cb354eeca02eb88bf8805e956"
   },
   {
     "path": "manuscript_number_ledger.json",
@@ -363,11 +403,6 @@
     "path": "paired_support/paired_support_pilot.py",
     "bytes": 10968,
     "sha256": "dccf9a23c0e014c9e357ea49bd158eaf6c457a8231e883f0dd67f856cc969b73"
-  },
-  {
-    "path": "README.txt",
-    "bytes": 449,
-    "sha256": "d70085429533f44a8396436f85d262dde05333b4532db90a683efd42a5644c82"
   },
   {
     "path": "reference_outputs/actual_los_masking/method.json",
@@ -605,11 +640,6 @@
     "sha256": "95e54aa0ba2737a0c2f424d57882ba59c8427bb1db813fc5ad1d2733c77f5f7e"
   },
   {
-    "path": "RELEASE_NOTES_v0.4.0.txt",
-    "bytes": 1689,
-    "sha256": "4402833b98803d70a61d53c0e8c555eef1ea3a0ac66e83ce495de9b3ee79ef7b"
-  },
-  {
     "path": "reproduce.py",
     "bytes": 3918,
     "sha256": "07eabb0808e3d2736e97b04852239610a64853e09cf1334a2e4e9a34cc3559c8"
@@ -625,13 +655,43 @@
     "sha256": "e50002d406c21f529fa38e46a2fc88e157a94b931491692d9a6bd9ff472689a2"
   },
   {
-    "path": "THIRD_PARTY_NOTICES.txt",
-    "bytes": 534,
-    "sha256": "48e0f2855d1a38f378781842243a17a1c7727919057828cc705208068db24c54"
+    "path": "submission_20261003/README.txt",
+    "bytes": 4213,
+    "sha256": "e956d8371af4ce3a9fd398a9d2d6984ecb00a69cd3131e4d19d22ea282669537"
   },
   {
-    "path": "VERSION",
-    "bytes": 7,
-    "sha256": "f5ec409041ad1a0e6348478c4e94611f7a757a9a4a9f1d0f3d3e00d570a71fee"
+    "path": "submission_20261003/section_output_index.json",
+    "bytes": 26861,
+    "sha256": "663513839040e4a562fe826e33144d3319cd36e4e3b6f86d09609d6ec172e011"
+  },
+  {
+    "path": "submission_20261003/submission_manifest.json",
+    "bytes": 4071,
+    "sha256": "4a6f13c8d2ddf5f4705872526f21c2cfca1422af9916c68d42b8cdce87e183fd"
+  },
+  {
+    "path": "submission_20261003/supporting_records/README.txt",
+    "bytes": 1143,
+    "sha256": "9190517bc975663cc1ec2ba2132b7c42ef0b6c0eae05e156ef9bbe46272ffb31"
+  },
+  {
+    "path": "submission_20261003/supporting_records/literature/bangkok_leveling_pairs.csv",
+    "bytes": 389,
+    "sha256": "b3c340b9b8d76edceb00df93ec7598ac7c0fafa55417c4a502719aa2b25ee3f6"
+  },
+  {
+    "path": "submission_20261003/supporting_records/literature/bangkok_leveling_source_audit.json",
+    "bytes": 1216,
+    "sha256": "bd6488510b39b4c8319b74088b258739e572e4092f10c0a09996538059bbe632"
+  },
+  {
+    "path": "submission_20261003/supporting_records/numerical_checks.json",
+    "bytes": 766,
+    "sha256": "8836521be359604c38ac53e70e40de68094d49e6f1dbce378c7a07931828146a"
+  },
+  {
+    "path": "submission_20261003/supporting_records/source_manifest.json",
+    "bytes": 1657,
+    "sha256": "6a92cea607bdd95c0ca678c907788906a0cfdcfb158982975214970d1571684b"
   }
 ]

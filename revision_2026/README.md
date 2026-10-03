@@ -2,15 +2,15 @@
 
 **Manuscript:** *Spatial aggregation alters population-weighted estimates of InSAR observation support* (Scientific Reports revision).
 
-**Current documents: [v0.6.1](https://github.com/niubisile-wq/openinsar-observability-bias/releases/tag/v0.6.1) (2 October 2026).** The current title, abstract, introduction and writing revision are synchronized across manuscript, SI and response. Both submission LaTeX ZIPs embed their references and rebuild with pdflatex alone; all 46 manuscript/SI pages match the delivered PDFs in text and raster output. Main upload figures are named Figure_1.pdf through Figure_7.pdf in manuscript order.
+**Current documents: [v0.6.2](https://github.com/niubisile-wq/openinsar-observability-bias/releases/tag/v0.6.2) (3 October 2026).** Use [submission_20261003/](submission_20261003/README.txt) for the five current PDFs: clean manuscript, line-numbered manuscript, SI, response and cover letter. The main text has six figures and two tables; the SI has 31 sections, 20 figures and 29 tables. The same snapshot supplies `source/LaTeX_Source.zip`, `figures/Figure_1.pdf` through `Figure_6.pdf`, two local audit ZIPs, `Reproducibility_Records.zip`, `Figure_Source_Data.zip`, and the section-to-output index. The file hashes and actual PDF page counts are recorded in `submission_20261003/submission_manifest.json`.
 
-**Version scope: v0.6.0.** This release corrects unavailable-unit handling in both observed-LOS masking experiments, consistently annualizes exact DWR displacement windows, and reorganizes the manuscript and all 30 supplementary sections. It includes the raw cropped DWR rasters, their service metadata and checksums, complete block/pixel class outputs, corrected replicate tables, and regression tests. The preceding v0.5.0/v0.5.1 releases remain historical snapshots; their masking zero-fill results and unannualized DWR class tables are superseded. See [REVIEW_CORRECTIONS_v0.6.0.txt](REVIEW_CORRECTIONS_v0.6.0.txt) and the [section crosswalk](provenance/section_crosswalk.csv).
+**Numerical baseline: v0.6.0.** That release corrected unavailable-unit handling in both observed-LOS masking experiments, consistently annualized exact DWR displacement windows, and reorganized its manuscript and SI. It includes the raw cropped DWR rasters, their service metadata and checksums, complete block/pixel class outputs, corrected replicate tables, and regression tests. The preceding v0.5.0/v0.5.1 releases remain historical snapshots; their masking zero-fill results and unannualized DWR class tables are superseded. See [REVIEW_CORRECTIONS_v0.6.0.txt](REVIEW_CORRECTIONS_v0.6.0.txt) and the [section crosswalk](provenance/section_crosswalk.csv).
 
-The six current PDFs and independently recompiled manuscript/SI source archives are in the v0.6.1 document asset. All corrected calculations have been rerun from a fresh workspace and compared across 15 affected result tables. Earlier complete source assets for ACS/Census (v0.4.1) and the six added analyses (v0.5.0) remain usable; the release manifests identify the current numerical references.
+The `manuscript/` directory and its six PDFs are the historical v0.6.1 writing snapshot. Current documents are only in `submission_20261003/documents/`; the line-numbered manuscript is not a marked comparison. The retained v0.6.0 correction audit reran 15 affected result tables from a fresh workspace. This document and audit-package update retains those scientific routines, inputs and reference values. Earlier complete source assets for ACS/Census (v0.4.1) and the six added analyses (v0.5.0) remain usable; the release manifests identify the numerical references.
 
 This directory is the current revision. The older `14_esin_strengthened_v1/` manuscript and Zenodo DOI `10.5281/zenodo.21444768` describe an earlier version. That DOI does **not** archive the new experiments. The updated Zenodo deposit remains pending.
 
-The checkout contains current manuscript/Supplementary Information PDFs and LaTeX, all retained experiment code, frozen analysis inputs, full reference tables including replicate-level results, input provenance, and numerical comparison commands. The supplied arrays are processed analysis inputs. Recomputing from these arrays reproduces the reported statistical analyses; it does not independently reproduce every raw-interferogram processing step or establish external geodetic accuracy.
+The checkout contains the current submission snapshot and its portable LaTeX archive, historical manuscript sources, all retained experiment code, frozen analysis inputs, full reference tables including replicate-level results, input provenance, and numerical comparison commands. The supplied arrays are processed analysis inputs. Recomputing from these arrays reproduces the reported statistical analyses; it does not independently reproduce every raw-interferogram processing step or establish external geodetic accuracy.
 
 ## Start here
 
@@ -123,16 +123,24 @@ The 437-pair full/training LiCSBAS stacks and all 224 pair-level fine support ar
 
 The preceding v0.5.0 standard audit completed 24 modes and 62 numerical table comparisons; its historical record is `provenance/current_standard_reproduction_v0.5.0.json`. The corrected v0.6.0 affected-suite audit reran 15 tables from a fresh workspace; see `provenance/fresh_reproduction_verification.json` and `provenance/final_acceptance.json`. The latter also records nine geometry/availability regression tests and both source-ZIP recompilations. Windows/Linux CI checks the quick suite, all nine annualized DWR tables, the full observed-LOS masking factorial and all 21 additional-experiment tables. Counts from different versions are not added together, and computational reproduction does not establish independent physical validation.
 
-- [`manuscript/manuscript.pdf`](manuscript/manuscript.pdf): current clean manuscript.
-- [`manuscript/supplementary.pdf`](manuscript/supplementary.pdf): Supplementary S1–S30.
-- [`manuscript/response.pdf`](manuscript/response.pdf): point-by-point response to all seven reviewer comments.
+- [`submission_20261003/documents/manuscript.pdf`](submission_20261003/documents/manuscript.pdf): current clean manuscript.
+- [`submission_20261003/documents/manuscript_numbered.pdf`](submission_20261003/documents/manuscript_numbered.pdf): current manuscript with line numbers.
+- [`submission_20261003/documents/supplementary.pdf`](submission_20261003/documents/supplementary.pdf): current SI, S1–S31.
+- [`submission_20261003/documents/response.pdf`](submission_20261003/documents/response.pdf): current point-by-point response.
+- [`submission_20261003/documents/cover_letter.pdf`](submission_20261003/documents/cover_letter.pdf): current cover letter.
+- [`submission_20261003/source/LaTeX_Source.zip`](submission_20261003/source/LaTeX_Source.zip): portable current sources; follow its build README.
+- [`submission_20261003/figures/`](submission_20261003/figures/): six current main-figure PDFs.
+- [`submission_20261003/audits/`](submission_20261003/audits/): the SBKK and CUSV/CUUT audits, reproducibility-record archive and figure-source-data archive.
+- [`submission_20261003/section_output_index.json`](submission_20261003/section_output_index.json): current S1–S31, retained ledgers and actual public output paths.
+- [`submission_20261003/submission_manifest.json`](submission_20261003/submission_manifest.json): current file hashes and PDF page counts.
+- [`manuscript/README.txt`](manuscript/README.txt): historical v0.6.1 document scope.
 - [`REVIEWER_MAP.md`](REVIEWER_MAP.md): comments, changes, experiment entries and scope limits.
 - `reference_outputs/`: retained scientific tables and full replicate tables.
 - `data/`: frozen analysis inputs and public-data subsets with provenance.
 - `MANIFEST.sha256.json`: release integrity for code, inputs, outputs and manuscripts.
 - `provenance/`: environment/build records and the current reproduction verification.
 
-The LaTeX source uses the included Springer Nature class/styles and prebuilt `.bbl` files. Compile from `manuscript/` with `pdflatex manuscript.tex` twice and likewise `supplementary.tex` and `response.tex`, or use `latexmk -pdf`. The shipped PDFs are the verified manuscript snapshot; regenerated layout depends on the TeX distribution.
+For the current documents, extract `submission_20261003/source/LaTeX_Source.zip`, preserve its directory structure, and follow its `README.txt`. It includes the Springer Nature class/styles and required bibliography material. The `manuscript/` sources compile the historical v0.6.1 snapshot, not the current submission. PDF layout depends on the TeX distribution; document rebuilding and numerical reproduction are separate checks.
 
 ## Interpretation and attribution
 

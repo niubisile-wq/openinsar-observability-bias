@@ -1,0 +1,49 @@
+v0.6.2 | Current submission documents and portable local audits | 3 October 2026
+
+The current submission snapshot is revision_2026/submission_20261003/.
+It contains five current PDFs: clean manuscript, line-numbered manuscript, Supplementary Information,
+response and cover letter. The main text presents six figures and two tables; the SI has 31 sections,
+20 figures and 29 tables. Six main-figure PDFs and Figure_Source_Data.zip accompany the documents.
+LaTeX_Source.zip contains the corresponding portable sources. The snapshot manifest records each
+file's SHA-256, byte count and PDF page count. A line-numbered manuscript is not a marked comparison.
+The old manuscript/ directory remains the historical v0.6.1 writing snapshot.
+
+Newly supplied local evidence
+- SBKK_Support_Audit.zip includes a lossless local filtered LiCSBAS window, all 104 acquisition dates,
+  geometry, source hashes, original reference outputs and h5py-free portable replay. This resolves the
+  missing local inputs for the S3 product-support check and does not provide GNSS accuracy validation.
+- Local_Validation_Audit.zip retains CUSV/CUUT GNSS feasibility inputs, spatial/date sampling options,
+  provenance and offline replay. Near-colocation and the missing independent common datum remain explicit.
+- Reproducibility_Records.zip and supporting_records/ retain the numerical-check summary, published
+  Bangkok comparison facts/source audit and section-to-output index. The source thesis PDF is not included.
+- section_output_index.json maps S1-S31 and historical logical paths to actual released files. The
+  selected manuscript macro ledger is not presented as a complete ledger of every current result.
+
+Documentation corrections
+INPUT_ACQUISITION.txt, DATA_LICENSES.md and THIRD_PARTY_NOTICES.txt now consistently describe the nine
+bundled DWR raw crops, original ROI observation-cell polygons, and v0.4.1/v0.5.0 companion asset scope.
+Raw DWR values are interval displacement in feet, converted to mm/year using exact days / 365.2425.
+The retained crops are 279 rows by 177 columns; ImageServer size is width,height = 177,279.
+Provider attribution and conditions remain in force; no new third-party license is asserted.
+
+Numerical scope and version history
+Scientific routines, frozen inputs and numerical reference outputs retain the corrected v0.6.0 baseline.
+v0.6.1 remains the earlier writing snapshot. Neither historical tag or asset is silently replaced.
+This update provides documents and small additional replay packages; it does not claim a new full
+interferogram-stack rerun or independent common-datum validation of the Bangkok inversion.
+Document compilation, file integrity, portable local replay and statistical reproduction are separate
+checks. Final verification records identify the checks performed for this submission snapshot.
+
+Verification for this submission snapshot
+- The final portable source ZIP was independently extracted and rebuilt using only its extracted
+  contents and the system MiKTeX/fonts. All five PDFs match the delivered versions in page text and
+  96-dpi raster pixel hashes on all 101 pages: 27 clean-main, 27 numbered-main, 37 SI, 9 response and
+  1 cover-letter page. The rebuild does not read the original author workspace.
+- Repacking changed only ZIP container timestamps: member names, counts, byte lengths and SHA-256
+  hashes are identical, and the final ZIP was checked. Source-member identity and document-rendering
+  equivalence are separate from statistical reproduction.
+- The portable SBKK replay and the unchanged original script against the complete filtered HDF5
+  reproduce both original outputs byte-for-byte. The two delivered local-audit ZIPs are checksum-
+  identical to their verified submission copies. These audits do not establish local GNSS accuracy.
+- The public partial-identification entry point passed in a fresh workspace for its three threshold
+  rows and one reference table. This is a lightweight check, not a claim of rerunning the full suite.
