@@ -2,11 +2,11 @@
 
 **Manuscript:** *Spatial aggregation alters population-weighted estimates of InSAR observation support* (Scientific Reports revision).
 
-**Current documents: [v0.6.2](https://github.com/niubisile-wq/openinsar-observability-bias/releases/tag/v0.6.2) (3 October 2026).** Use [submission_20261003/](submission_20261003/README.txt) for the five current PDFs: clean manuscript, line-numbered manuscript, SI, response and cover letter. The main text has six figures and two tables; the SI has 31 sections, 20 figures and 29 tables. The same snapshot supplies `source/LaTeX_Source.zip`, `figures/Figure_1.pdf` through `Figure_6.pdf`, two local audit ZIPs, `Reproducibility_Records.zip`, `Figure_Source_Data.zip`, and the section-to-output index. The file hashes and actual PDF page counts are recorded in `submission_20261003/submission_manifest.json`.
+**Current documents: [v0.6.3](https://github.com/niubisile-wq/openinsar-observability-bias/releases/tag/v0.6.3) (3 October 2026).** Use [submission_20261003_final/](submission_20261003_final/README.txt) for the five current PDFs: clean manuscript, line-numbered manuscript, SI, response and cover letter. The main text has six figures and two tables; the SI has 31 sections, 20 figures and 29 tables. The same snapshot supplies `source/LaTeX_Source.zip`, `figures/Figure_1.pdf` through `Figure_6.pdf`, two local audit ZIPs, `Reproducibility_Records.zip`, `Figure_Source_Data.zip`, and the section-to-output index. The file hashes and actual PDF page counts are recorded in `submission_20261003_final/submission_manifest.json`.
 
 **Numerical baseline: v0.6.0.** That release corrected unavailable-unit handling in both observed-LOS masking experiments, consistently annualized exact DWR displacement windows, and reorganized its manuscript and SI. It includes the raw cropped DWR rasters, their service metadata and checksums, complete block/pixel class outputs, corrected replicate tables, and regression tests. The preceding v0.5.0/v0.5.1 releases remain historical snapshots; their masking zero-fill results and unannualized DWR class tables are superseded. See [REVIEW_CORRECTIONS_v0.6.0.txt](REVIEW_CORRECTIONS_v0.6.0.txt) and the [section crosswalk](provenance/section_crosswalk.csv).
 
-The `manuscript/` directory and its six PDFs are the historical v0.6.1 writing snapshot. Current documents are only in `submission_20261003/documents/`; the line-numbered manuscript is not a marked comparison. The retained v0.6.0 correction audit reran 15 affected result tables from a fresh workspace. This document and audit-package update retains those scientific routines, inputs and reference values. Earlier complete source assets for ACS/Census (v0.4.1) and the six added analyses (v0.5.0) remain usable; the release manifests identify the numerical references.
+The `manuscript/` directory and its six PDFs are the historical v0.6.1 writing snapshot. Current documents are only in `submission_20261003_final/documents/`; the line-numbered manuscript is not a marked comparison. The retained v0.6.0 correction audit reran 15 affected result tables from a fresh workspace. This document and audit-package update retains those scientific routines, inputs and reference values. Earlier complete source assets for ACS/Census (v0.4.1) and the six added analyses (v0.5.0) remain usable; the release manifests identify the numerical references.
 
 This directory is the current revision. The older `14_esin_strengthened_v1/` manuscript and Zenodo DOI `10.5281/zenodo.21444768` describe an earlier version. That DOI does **not** archive the new experiments. The updated Zenodo deposit remains pending.
 
@@ -123,16 +123,16 @@ The 437-pair full/training LiCSBAS stacks and all 224 pair-level fine support ar
 
 The preceding v0.5.0 standard audit completed 24 modes and 62 numerical table comparisons; its historical record is `provenance/current_standard_reproduction_v0.5.0.json`. The corrected v0.6.0 affected-suite audit reran 15 tables from a fresh workspace; see `provenance/fresh_reproduction_verification.json` and `provenance/final_acceptance.json`. The latter also records nine geometry/availability regression tests and both source-ZIP recompilations. Windows/Linux CI checks the quick suite, all nine annualized DWR tables, the full observed-LOS masking factorial and all 21 additional-experiment tables. Counts from different versions are not added together, and computational reproduction does not establish independent physical validation.
 
-- [`submission_20261003/documents/manuscript.pdf`](submission_20261003/documents/manuscript.pdf): current clean manuscript.
-- [`submission_20261003/documents/manuscript_numbered.pdf`](submission_20261003/documents/manuscript_numbered.pdf): current manuscript with line numbers.
-- [`submission_20261003/documents/supplementary.pdf`](submission_20261003/documents/supplementary.pdf): current SI, S1–S31.
-- [`submission_20261003/documents/response.pdf`](submission_20261003/documents/response.pdf): current point-by-point response.
-- [`submission_20261003/documents/cover_letter.pdf`](submission_20261003/documents/cover_letter.pdf): current cover letter.
-- [`submission_20261003/source/LaTeX_Source.zip`](submission_20261003/source/LaTeX_Source.zip): portable current sources; follow its build README.
-- [`submission_20261003/figures/`](submission_20261003/figures/): six current main-figure PDFs.
-- [`submission_20261003/audits/`](submission_20261003/audits/): the SBKK and CUSV/CUUT audits, reproducibility-record archive and figure-source-data archive.
-- [`submission_20261003/section_output_index.json`](submission_20261003/section_output_index.json): current S1–S31, retained ledgers and actual public output paths.
-- [`submission_20261003/submission_manifest.json`](submission_20261003/submission_manifest.json): current file hashes and PDF page counts.
+- [`submission_20261003_final/documents/manuscript.pdf`](submission_20261003_final/documents/manuscript.pdf): current clean manuscript.
+- [`submission_20261003_final/documents/manuscript_numbered.pdf`](submission_20261003_final/documents/manuscript_numbered.pdf): current manuscript with line numbers.
+- [`submission_20261003_final/documents/supplementary.pdf`](submission_20261003_final/documents/supplementary.pdf): current SI, S1–S31.
+- [`submission_20261003_final/documents/response.pdf`](submission_20261003_final/documents/response.pdf): current point-by-point response.
+- [`submission_20261003_final/documents/cover_letter.pdf`](submission_20261003_final/documents/cover_letter.pdf): current cover letter.
+- [`submission_20261003_final/source/LaTeX_Source.zip`](submission_20261003_final/source/LaTeX_Source.zip): portable current sources; follow its build README.
+- [`submission_20261003_final/figures/`](submission_20261003_final/figures/): six current main-figure PDFs.
+- [`submission_20261003_final/audits/`](submission_20261003_final/audits/): the SBKK and CUSV/CUUT audits, reproducibility-record archive and figure-source-data archive.
+- [`submission_20261003_final/section_output_index.json`](submission_20261003_final/section_output_index.json): current S1–S31, retained ledgers and actual public output paths.
+- [`submission_20261003_final/submission_manifest.json`](submission_20261003_final/submission_manifest.json): current file hashes and PDF page counts.
 - [`manuscript/README.txt`](manuscript/README.txt): historical v0.6.1 document scope.
 - [`REVIEWER_MAP.md`](REVIEWER_MAP.md): comments, changes, experiment entries and scope limits.
 - `reference_outputs/`: retained scientific tables and full replicate tables.
@@ -140,7 +140,7 @@ The preceding v0.5.0 standard audit completed 24 modes and 62 numerical table co
 - `MANIFEST.sha256.json`: release integrity for code, inputs, outputs and manuscripts.
 - `provenance/`: environment/build records and the current reproduction verification.
 
-For the current documents, extract `submission_20261003/source/LaTeX_Source.zip`, preserve its directory structure, and follow its `README.txt`. It includes the Springer Nature class/styles and required bibliography material. The `manuscript/` sources compile the historical v0.6.1 snapshot, not the current submission. PDF layout depends on the TeX distribution; document rebuilding and numerical reproduction are separate checks.
+For the current documents, extract `submission_20261003_final/source/LaTeX_Source.zip`, preserve its directory structure, and follow its `README.txt`. It includes the Springer Nature class/styles and required bibliography material. The `manuscript/` sources compile the historical v0.6.1 snapshot, not the current submission. PDF layout depends on the TeX distribution; document rebuilding and numerical reproduction are separate checks.
 
 ## Interpretation and attribution
 
@@ -157,3 +157,5 @@ python revision_2026/reproduce.py dwr-rate-suite --workspace reproduction_output
 This runs annualization, the six-window median, Census-block classifications, temporal transitions and six-window persistence in dependency order, then compares all nine CSV outputs. Raw values are interval displacement in feet: multiply by 304.8 and divide by exact days / 365.2425. The April 2025–April 2026 interval is distinguished from the October-to-October windows. Raw cropped rasters, original service catalogs, export requests and SHA-256 hashes are bundled in `data/workspace/dwr_velocity/`; measurement-cell polygons are bundled in `data/strengthening/external/dwr/`. To reacquire those windows from the provider, use `python revision_2026/followup/fetch_dwr_rate_inputs.py --output <directory>` and compare source hashes. Provider updates can change a future download; the bundled version fixes this release.
 
 The two LOS masking modes never assign zero to a unit lacking information. Their CSVs separately report method availability, signed and local L1 error on the same common-computable domain, method-specific conditional domains and whole-domain class bounds. The median rule is an adaptation for hidden fine-pixel allocation, not an assertion that the published whole-block target is identical. Stable script/folder names retain historical identifiers; use the crosswalk for the new SI numbering.
+
+The previous v0.6.2 submission document snapshot remains unchanged at `revision_2026/submission_20261003/` (or `submission_20261003/` from this directory). The v0.6.3 update restores author context and makes targeted literature, rationale, cross-reference and bibliography corrections; the numerical results and figure assets are unchanged.

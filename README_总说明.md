@@ -1,6 +1,6 @@
 # 当前返修与历史资料
 
-当前版本为 [v0.6.2](https://github.com/niubisile-wq/openinsar-observability-bias/releases/tag/v0.6.2)。五份当前PDF、源码、六幅主图、两个本地审计包及记录/图源数据位于 [submission_20261003](revision_2026/submission_20261003/README.txt)，科学复现入口为 [revision_2026/README.md](revision_2026/README.md)。主文为六图两表；SI为31节、20图、29表。`revision_2026/manuscript/`保留v0.6.1历史稿。
+当前版本为 [v0.6.3](https://github.com/niubisile-wq/openinsar-observability-bias/releases/tag/v0.6.3)。五份当前PDF、源码、六幅主图、两个本地审计包及记录/图源数据位于 [submission_20261003_final](revision_2026/submission_20261003_final/README.txt)，科学复现入口为 [revision_2026/README.md](revision_2026/README.md)。主文为六图两表；SI为31节、20图、29表。`revision_2026/manuscript/`保留v0.6.1历史稿。
 
 以下为2026-07-10历史工作记录，原文中的“当前”均指当时，不代表本轮返修结论或提交文件。
 

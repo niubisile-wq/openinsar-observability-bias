@@ -1,0 +1,5 @@
+benchmark,site,leveling_rate_mm_yr,descending_ps_rate_mm_yr,absolute_rate_difference_mm_yr,leveling_R2,ps_timeseries_std_mm,ps_to_benchmark_distance_m
+BM51,Wat Bo Takua Phuttharam,-3.32,-4.28,0.96,0.82,1.52,15.32
+BM52,Watjindaram School,-7.08,-6.49,0.59,0.94,1.62,196.59
+BM53,Wat Pridaram,-2.62,-3.93,1.31,0.86,1.69,120.34
+BKK6062,Klong Khun Si Bridge,-1.84,-0.88,0.96,0.1,1.41,34.89

@@ -1,0 +1,12 @@
+{
+  "source_title": "Measuring Land Subsidence with PS-InSAR in Bangkok using Sentinel-1 Time-Series Techniques",
+  "author": "Sawitree Luachapichatikul",
+  "repository": "Burapha University DSpace",
+  "landing_page": "https://ir.buu.ac.th/dspace/handle/1513/311",
+  "pdf_url": "https://ir.buu.ac.th/dspace/bitstream/1513/311/1/61910094.pdf",
+  "local_source_sha256": "052271f7c4cb44f86a787c94497b4e783785e42b83f60f35201a45fbbf59e0b1",
+  "source_rights": "Repository states all rights reserved unless otherwise indicated. PDF is retained for local fact-check only; do not redistribute.",
+  "extracted_facts": "Table 4 and pages 34-39 report four benchmark/descending-PS pairs, relative rates, leveling R-squared, InSAR time-series standard deviation, and nearest point distances. The leveling rate is vertical; the PS rate is descending-orbit LOS-relative. Thesis describes leveling observations in 2011, 2012, 2016 and 2018 and PS series January 2016 to October 2019, with rates referenced to BKK5127.",
+  "derived_table": "results/literature/bangkok_leveling_pairs.csv",
+  "interpretation": "Published precedent only; not a matched re-analysis or validation of the current LiCSAR/WabInSAR products."
+}

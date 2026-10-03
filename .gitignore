@@ -32,3 +32,9 @@ _tmp*
 .venv*/
 reproduction_output/
 
+
+# Explicit final submission snapshot v0.6.3 (bounded public deliverables).
+!revision_2026/submission_20261003_final/documents/*.pdf
+!revision_2026/submission_20261003_final/figures/*.pdf
+!revision_2026/submission_20261003_final/source/*.zip
+!revision_2026/submission_20261003_final/audits/*.zip

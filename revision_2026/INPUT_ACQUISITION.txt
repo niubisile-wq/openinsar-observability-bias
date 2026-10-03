@@ -84,7 +84,7 @@ The current S25 source bundle is acquired by reproduce.py fetch-inputs --dataset
 
 9. Versioned companion release assets and exclusions
 The stable script/dataset identifiers predate the current SI numbering. See provenance/section_crosswalk.csv
-and submission_20261003/section_output_index.json for the current S1-S31 paths.
+and submission_20261003_final/section_output_index.json for the current S1-S31 paths.
 - v0.4.1/reviewer-official-source-inputs-v0.4.1.zip supplies all six complete ACS source files and two
   official PL 94-171/TIGER source archives, with SHA256SUMS.json and a placement guide. CA-POP is not in it.
 - v0.5.0/reviewer-additional-analysis-inputs-v0.5.0.zip duplicates the six additional experiments' portable

@@ -1,0 +1,20 @@
+v0.6.3 | Final revision document snapshot | 3 October 2026
+
+The current documents are in revision_2026/submission_20261003_final/.
+This update contains the clean and line-numbered main articles, Supplementary Information, response,
+cover letter, corresponding portable LaTeX sources, six main figures and supporting data/audit ZIPs.
+It restores author context retained in the final revision and adds targeted comparison with recent
+studies, explanation of the legacy main-display settings, a corrected SI cross-reference and corrected
+reference-author metadata. Final page/section locations in the response follow the delivered PDFs.
+
+Scientific results, numerical routines, input data and figure assets are unchanged. Numerical
+reproduction retains the corrected v0.6.0 baseline. The two portable local audits are unchanged from
+v0.6.2; the reproducibility-record index points to this final snapshot. The section/output index and
+submission manifest identify actual public paths and exact delivered bytes.
+
+v0.6.0, v0.6.1 and v0.6.2 tags, release assets and prior document snapshots remain unchanged. This
+release supersedes their document presentation only where stated; no historical tag is moved.
+LaTeX_Source.zip supplies editable modular sources. Submission_Uploads.zip supplies separate journal
+upload categories, including a main-source ZIP whose textual content and bibliography are embedded
+in one manuscript.tex. Reproduction, document rebuilding and external scientific validation remain
+distinct checks. No journal submission is performed by publishing this repository release.

@@ -1,0 +1,132 @@
+{
+  "version": "v0.6.3",
+  "scientific_baseline": "v0.6.0",
+  "files": [
+    {
+      "path": "audits/Figure_Source_Data.zip",
+      "bytes": 111676,
+      "sha256": "6cc9e5696bdfe92728f3d6c8294b79a4704d9aaa845fae7b3123c7d03cc45882"
+    },
+    {
+      "path": "audits/Local_Validation_Audit.zip",
+      "bytes": 457612,
+      "sha256": "66669248333c915bf0b87c2547a515027b6e195af6b6da8fbf3ad746cd116117"
+    },
+    {
+      "path": "audits/Reproducibility_Records.zip",
+      "bytes": 8370,
+      "sha256": "70ea9c49dd04a332d07e954c1b0301a7a0e0fd8f7a262e0e688388c58ecce089"
+    },
+    {
+      "path": "audits/SBKK_Support_Audit.zip",
+      "bytes": 22467,
+      "sha256": "bdb21428e157c9c0414ac6d2972b2acf725d1fd22bf5e9cacb9d85b313dff50e"
+    },
+    {
+      "path": "documents/cover_letter.pdf",
+      "bytes": 108938,
+      "sha256": "7ec3f8372451e8c85db7e1f3036cfdaddd07710d158403ef4e28038b25a8d4f9",
+      "pages": 1
+    },
+    {
+      "path": "documents/manuscript.pdf",
+      "bytes": 664423,
+      "sha256": "3a80fc34ab810a5b4f3e2bdc2360f036684d46d8cbe19534a8923b4ab0bbff9d",
+      "pages": 28
+    },
+    {
+      "path": "documents/manuscript_numbered.pdf",
+      "bytes": 669339,
+      "sha256": "c0f8a2709a449819152ecad0e5192d12673a186f302de4e5ab054b55579ff364",
+      "pages": 28
+    },
+    {
+      "path": "documents/response.pdf",
+      "bytes": 192024,
+      "sha256": "7086e4e516fceb35a53e6bd809c8a9d20a34a9dbd630380ea79c49f01bd96f8a",
+      "pages": 9
+    },
+    {
+      "path": "documents/supplementary.pdf",
+      "bytes": 1934490,
+      "sha256": "7af7a2422bd419696aa9f45fdb60b8ca16bf5908f6241ad7dfa32e4e8c7d440b",
+      "pages": 37
+    },
+    {
+      "path": "figures/Figure_1.pdf",
+      "bytes": 80182,
+      "sha256": "11b19a02289b485e4f0b6f652415d18e63dc850569720f713142f7e8ca08b9f5",
+      "pages": 1
+    },
+    {
+      "path": "figures/Figure_2.pdf",
+      "bytes": 49247,
+      "sha256": "26cea344fae7663d35c3d49bc549901538e72201b4c588c83c47afcdcb4c2e99",
+      "pages": 1
+    },
+    {
+      "path": "figures/Figure_3.pdf",
+      "bytes": 32251,
+      "sha256": "eb443eb7ae8e91c101f3f028051fac4e8246d5ca80e55ce0a24923e238639146",
+      "pages": 1
+    },
+    {
+      "path": "figures/Figure_4.pdf",
+      "bytes": 29652,
+      "sha256": "eba876efea8983c2832368f6a04999d68e1e3d75f196dd0b3bc311a391266554",
+      "pages": 1
+    },
+    {
+      "path": "figures/Figure_5.pdf",
+      "bytes": 32981,
+      "sha256": "8f5d50c2450ba93fe1d13652dceaf7cdae08ce30c29d00435449db39b710468f",
+      "pages": 1
+    },
+    {
+      "path": "figures/Figure_6.pdf",
+      "bytes": 54498,
+      "sha256": "2743f7472a0e3ed61e5926f11ec5b116e43f38a4379e313120c725fbec64d678",
+      "pages": 1
+    },
+    {
+      "path": "README.txt",
+      "bytes": 2471,
+      "sha256": "9fb6128fa051bb7d1127fee2c84dc08bd3e9df0e25cfb71f2ae5620d07e5a400"
+    },
+    {
+      "path": "section_output_index.json",
+      "bytes": 26337,
+      "sha256": "a83934e0c8aa59404333bb44bb7da9a6db0caaf5923d8cf69ae39302425f9078"
+    },
+    {
+      "path": "source/LaTeX_Source.zip",
+      "bytes": 1771414,
+      "sha256": "4bbdb16dd3b63583faac3906286f9827f13bd50e876b95de5a31d88ee0220d48"
+    },
+    {
+      "path": "supporting_records/literature/bangkok_leveling_pairs.csv",
+      "bytes": 389,
+      "sha256": "b3c340b9b8d76edceb00df93ec7598ac7c0fafa55417c4a502719aa2b25ee3f6"
+    },
+    {
+      "path": "supporting_records/literature/bangkok_leveling_source_audit.json",
+      "bytes": 1216,
+      "sha256": "bd6488510b39b4c8319b74088b258739e572e4092f10c0a09996538059bbe632"
+    },
+    {
+      "path": "supporting_records/numerical_checks.json",
+      "bytes": 766,
+      "sha256": "8836521be359604c38ac53e70e40de68094d49e6f1dbce378c7a07931828146a"
+    },
+    {
+      "path": "supporting_records/README.txt",
+      "bytes": 1143,
+      "sha256": "9190517bc975663cc1ec2ba2132b7c42ef0b6c0eae05e156ef9bbe46272ffb31"
+    },
+    {
+      "path": "supporting_records/source_manifest.json",
+      "bytes": 1647,
+      "sha256": "f1a8bbd4b30b1067abe50b2ad60a57c0e32a9bc7bb9dab6cb97017d1c4b552e5"
+    }
+  ]
+}

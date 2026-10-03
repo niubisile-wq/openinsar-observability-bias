@@ -1,0 +1,28 @@
+{
+  "scope": "Author-retained numerical verification summary and four published Bangkok leveling/PS comparison rows with source audit; no source thesis PDF is redistributed. These are retained records, not a new independent rerun.",
+  "records": [
+    {
+      "historical_logical_path": "results/numerical_checks.json",
+      "public_path": "revision_2026/submission_20261003_final/supporting_records/numerical_checks.json",
+      "sha256": "8836521be359604c38ac53e70e40de68094d49e6f1dbce378c7a07931828146a",
+      "bytes": 766,
+      "copy_byte_identical": true
+    },
+    {
+      "historical_logical_path": "results/literature/bangkok_leveling_pairs.csv",
+      "public_path": "revision_2026/submission_20261003_final/supporting_records/literature/bangkok_leveling_pairs.csv",
+      "sha256": "b3c340b9b8d76edceb00df93ec7598ac7c0fafa55417c4a502719aa2b25ee3f6",
+      "bytes": 389,
+      "copy_byte_identical": true
+    },
+    {
+      "historical_logical_path": "results/literature/bangkok_leveling_source_audit.json",
+      "public_path": "revision_2026/submission_20261003_final/supporting_records/literature/bangkok_leveling_source_audit.json",
+      "sha256": "bd6488510b39b4c8319b74088b258739e572e4092f10c0a09996538059bbe632",
+      "bytes": 1216,
+      "copy_byte_identical": true
+    }
+  ],
+  "literature_limit": "The published leveling rates and descending PS LOS rates have different components and intervals. This precedent does not validate the current Bangkok inversion.",
+  "original_audit_paths": "The derived_table field in the retained literature audit is an original-workspace logical path; use the public_path mapping above."
+}
